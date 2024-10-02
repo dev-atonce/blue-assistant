@@ -54,35 +54,32 @@ export default function Header({ logo, contact }: any) {
   return (
     <div className="shadow-md bg-white ">
       <div className="bg-[#3662AE] h-2 w-full"></div>
-      <div className="flex">
+      {/* <div className="flex">
         <div
           className={`fixed block lg:none top-0 left-0 h-full w-80 text-black bg-slate-200 transition-transform duration-300 z-40 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          {/* <div className="grid content-stretch">
+          <div className="grid content-stretch">
             <SideBar sideBar={{ toggleSubMenu, closeSideBar }} />
-          </div> */}
-        </div>
-      </div>
-      <div className="header h-full">
-        <div className="container mx-auto flex justify-between items-center h-full">
-          <div className="logo py-4">
-            <Logo img={logo} />
           </div>
-          <div className="flex items-center  bg-slate-200 h-full">
-            <div className="flex justify-end bg-yellow-500 h-full ">
-              <div className="hidden lg:block">
-                <div className="">
-                  <div className="responsive-nav">
-                    <div className="flex justify-end">
-                      <NavBar />
-                    </div>
-                    <div className="more-menu"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-center items-center lg:hidden">
+        </div>
+      </div> */}
+      <div className="header  ">
+        <div className="container mx-auto flex justify-between items-center h-full ">
+          <div className="logo  ">
+            <div className="py-4">
+              <Logo img={logo} />
+            </div>
+          </div>
+
+          <div className="lg:flex justify-end  h-full hidden gap-6">
+            <div className="flex justify-end h-full ">
+              <NavBar />
+            </div>
+            {/* <div className="more-menu"></div> */}
+
+            {/* <div className="flex justify-center items-center lg:hidden">
                 <div
                   className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
                   onClick={toggleSidebar}
@@ -109,34 +106,24 @@ export default function Header({ logo, contact }: any) {
                     } transition-transform duration-300`}
                   ></div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="hidden lg:flex items-center justify-end  pb-4 gap-4 bg-green-200 ">
-                <a href={contact?.facebook}>
-                  <Image
-                    src="/img/fbLogo.png"
-                    alt="soccial"
-                    width={25}
-                    height={25}
-                  />
-                </a>
-                <a href={contact?.instagram}>
-                  <Image
-                    src="/img/igLogo.png"
-                    alt="social"
-                    width={25}
-                    height={25}
-                  />
-                </a>
-                <a href={contact?.line}>
-                  <Image
-                    src="/img/lineLogo.png"
-                    alt="social"
-                    width={25}
-                    height={25}
-                  />
-                </a>
-              </div>
+            <div className="hidden lg:flex items-center justify-end  gap-1  ">
+              <a href="https://www.google.com">
+                {/* <a href={contact?.facebook}> */}
+                <Image src="/img/Tel.png" alt="tel" width={50} height={50} />
+              </a>
+              <a href={contact?.instagram}>
+                <Image src="/img/Line.png" alt="line" width={50} height={50} />
+              </a>
+              <a href={contact?.line}>
+                <Image
+                  src="/img/Email.png"
+                  alt="emails"
+                  width={50}
+                  height={50}
+                />
+              </a>
             </div>
           </div>
         </div>

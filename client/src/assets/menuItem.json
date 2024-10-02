@@ -1,9 +1,8 @@
 [
-  { "title": "หน้าแรก", "href": "/" },
-  { "title": "เกี่ยวกับเรา", "href": "/about-us" },
-  { "title": "บริการ", "href": "/service" },
+  { "title": "Our Business", "href": "/" },
+  { "title": "About Us", "href": "/about-us" },
 
-  { "title": "บทความ", "href": "/news-activity" },
+  { "title": "News", "href": "/news-activity" },
 
-  { "title": "ติดต่อเรา", "href": "/contact" }
+  { "title": "Contact", "href": "/contact" }
 ]
