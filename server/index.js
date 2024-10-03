@@ -7,20 +7,12 @@ const app = express();
 // CORS
 // app.use(cors());
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*"); // Allow requests from any origin
-//   // You can specify specific origins instead of '*' if needed
-//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-//   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//   next();
-// });
-
 // Connect database
 require("./configs/databases");
 
 // Body parser
-app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ extended: false, limit: "50mb" }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Passport
 require("./configs/passport");

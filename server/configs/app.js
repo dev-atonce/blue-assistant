@@ -6,7 +6,7 @@ module.exports = {
   token_exp_days: process.env.TOKEN_EXP_DAYS || 1,
   secret: process.env.NODE_ENV === "production" ? process.env.SECRET : "rent-secret",
   mongodbUri: process.env.MONGODB_URI,
-  pageLimit: process.env.PAGE_LIMIT || 10,
+  pageLimit: process.env.PAGE_LIMIT || 15,
   apiVersion: process.env.API_VERSION || 1,
 
   limitFileSize: process.env.LIMIT_FILE_SIZE || 200000,

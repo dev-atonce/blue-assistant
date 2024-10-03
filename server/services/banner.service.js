@@ -1,37 +1,40 @@
 const Banner = require("../models/Banner.js");
 const config = require("../configs/app");
 const fs = require("fs/promises");
-const multer = require("multer");
-const helper = require("../helpers");
+const { createUploader } = require("../helpers/uploader.helper.js");
 const { ErrorBadRequest, ErrorNotFound } = require("../configs/errorMethods");
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        const uploadDir = "./public/image/banner";
-        helper.checkDirectory.ensureDirectoryExistence(uploadDir);
-        cb(null, uploadDir);
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + "-" + file.originalname);
-    },
-});
-
-const upload = multer({
-    storage: storage,
-    limits: { fileSize: config.limitFileSize },
-}).single("image");
-
 const methods = {
-    async findAll(req) {
+    async find() {
         try {
-            const rows = await Banner.find().sort({ sort: "asc" });
-            const count = await Banner.countDocuments();
+            const rows = await Banner.find({ status: true }).sort({ sort: "asc" });
+            const count = await Banner.countDocuments({ status: true });
             return {
                 total: count,
                 rows: rows,
             };
         } catch (error) {
-            return Promise.reject(ErrorNotFound(error.message));
+            Promise.reject(ErrorNotFound(error.message));
+        }
+    },
+
+    async findAll(req) {
+        try {
+            const limit = +config.pageLimit;
+            const offset = +(limit * ((req.query.page || 1) - 1));
+            const rows = await Banner.find()
+                .sort({ sort: "asc" })
+                .limit(limit)
+                .skip(offset);
+            const count = await Banner.countDocuments();
+            return {
+                total: count,
+                lastPage: Math.ceil(count / limit),
+                currPage: +req.query.page || 1,
+                rows: rows,
+            };
+        } catch (error) {
+            Promise.reject(ErrorNotFound(error.message));
         }
     },
 
@@ -47,7 +50,8 @@ const methods = {
 
     async insert(req, res) {
         return new Promise((resolve, reject) => {
-            upload(req, res, async (err) => {
+            const uploader = createUploader("./public/image/banner");
+            uploader.single("image")(req, res, async (err) => {
                 if (err) {
                     return reject(ErrorBadRequest(err));
                 } else {
@@ -58,7 +62,7 @@ const methods = {
                         const inserted = await obj.save();
                         resolve(inserted);
                     } catch (error) {
-                        return reject(ErrorBadRequest(error.message));
+                        reject(ErrorBadRequest(error.message));
                     }
                 }
             });
@@ -67,7 +71,8 @@ const methods = {
 
     async update(req, res) {
         return new Promise((resolve, reject) => {
-            upload(req, res, async (err) => {
+            const uploader = createUploader("./public/image/banner");
+            uploader.single("image")(req, res, async (err) => {
                 if (err) {
                     return reject(ErrorBadRequest(err));
                 } else {

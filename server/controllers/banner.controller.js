@@ -1,9 +1,18 @@
 const Service = require("../services/banner.service");
 
 const methods = {
-  async onGetAll(req, res) {
+  async onGet(req, res) {
     try {
       let result = await Service.find(req, res);
+      res.success(result);
+    } catch (error) {
+      res.error(error);
+    }
+  },
+
+  async onGetAll(req, res) {
+    try {
+      let result = await Service.findAll(req, res);
       res.success(result);
     } catch (error) {
       res.error(error);

@@ -1,7 +1,7 @@
 const dateHelper = require("./date.helper");
 const fieldHelper = require("./field.helper");
-const checkDirectory = require("./checkDirectory.helper");
-const uploadFile = require("./uploadFile.helper");
+const checkDirectory = require("./checkdir.helper");
+const uploadFile = require("./uploader.helper");
 
 const helper = {
     dateHelper,
