@@ -1,37 +1,41 @@
+import CoverSwiper from "@/components/website/layout/CoverSwiper";
+
+import Blog from "@/components/website/layout/Blog";
 import Image from "next/image";
-import Loading from "@/components/website/layout/Loading";
-// import CoverSwiper from "@/components/main/Cover/CoverSwiper";
-// import About from "@/components/main/Home/About";
-// import TrainingBanner from "@/components/main/Home/TrainingBanner";
 
-// import Blog from "@/components/main/Home/Blog";
-// import Contact from "@/components/main/Home/Contact";
-// import Client from "@/components/main/Home/Client";
-// import Service from "@/components/main/Home/Service";
+const fetchBlog = async () => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/4`,
+    {
+      cache: "no-store",
+    }
+  );
+  const data = await res.json();
+  return data;
+};
 
-export default function Home() {
+const fetchBanner = async () => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/banner`,
+    {
+      cache: "no-store",
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
+export default async function Home() {
+  // const blogs = await fetchBlog();
+  // const banner = await fetchBanner();
+
   return (
     <>
-      <Loading />
-      <div className="min-h-[100vh]">aklsdfj</div>
-      {/* cover */}
-      {/* @ts-ignore */}
-      {/* <CoverSwiper banner={banner} /> */}
-      {/* <div className="container mx-auto"> */}
-      {/* About Us */}
-      {/* <About content={about?.aboutUsTH} /> */}
-      {/* Service */}
-      {/* <Service data={service} /> */}
-      {/* </div> */}
-      {/* About Us 2 */}
-      {/* <Contact /> */}
-      {/* <div className="container mx-auto"> */}
-      {/*Customer*/}
-      {/* <Client data={client} /> */}
-
-      {/* Blog */}
-      {/* <Blog /> */}
-      {/* </div> */}
+      <div style={{height:'80vh', overflow:'hidden',marginTop:'-65px',zIndex:0}}>
+        <Image src="/img/cover.png" width={4838} height={2198} quality={100} alt="Blue Assistance" />
+      </div>
+      <div className="container xl:px-4 2xl:px-4 px-4 mx-auto">
+      </div>
     </>
   );
 }

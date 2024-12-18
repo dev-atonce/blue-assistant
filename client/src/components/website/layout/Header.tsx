@@ -1,20 +1,18 @@
 "use client";
-// import Link from "next/link";
 import { Logo } from "../atom/logo/Logo";
-import { useEffect, useContext, useState } from "react";
-import { PageSettingContext } from "@/contexts/PageSettingContext";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import NavBar from "../organism/menu/NavBar";
-// import SideBar from "./SideBar";
-// import NavBar from "./NavBar";
+import SideBar from "./SideBar";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Script from "next/script";
+import { hasCookie, setCookie } from "cookies-next";
 
-export default function Header({ logo, contact }: any) {
+export default function Header({ logo, contact, owner, colors }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>("th");
   const [openLang, setOpenLang] = useState<Boolean>(false);
   const [openID, setOpenID] = useState<String>("");
-
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const { primaryColor }: any = useContext(PageSettingContext);
   const [openSubMenu, setOpenSubMenu] = useState<Boolean>(false);
 
   const languages = [
@@ -45,86 +43,91 @@ export default function Header({ logo, contact }: any) {
     }
   };
 
-  const adjust = () => {
-    if (window.innerWidth > 768) {
-      closeSideBar();
+  useEffect(() => {
+    // Define googleTranslateElementInit in the client
+    const googleTranslateElementInit = () => {
+      // @ts-ignore
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "auto",
+          autoDisplay: false,
+          // @ts-ignore
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        },
+        "google_translate_element"
+      );
+    };
+
+    // Ensure googleTranslateElementInit is defined on the window object in the client
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.googleTranslateElementInit = googleTranslateElementInit;
     }
+  }, []);
+
+  const switchLanguage = (lng: any) => {
+    if (hasCookie("googtrans")) {
+      setCookie("googtrans", decodeURI("/auto/" + lng));
+    } else {
+      setCookie("googtrans", "/auto/" + lng);
+    }
+    setCurrentLanguage(lng);
+    window.location.reload();
   };
 
   return (
-    <div className="shadow-md bg-white ">
-      <div className="bg-[#3662AE] h-2 w-full"></div>
-      {/* <div className="flex">
+    <div className="shadow-md bg-white relative" style={{zIndex:1}}>
+      <div className={`bg-[${colors.main}] h-2 w-full `}></div>
+      <div className="header px-4 mx-auto">
+        <div className="mx-auto flex justify-between items-center h-full ">
+          <div className="logo ">
+            <div className="py-4 flex items-end">
+              <Logo img={logo} />
+              {/* <div className="flex justify-items-end h-[100%]">
+                <span className={`text-xl text-blue-900 font-[900] sm:none`}>
+                  {owner.name.en}
+                </span>
+              </div> */}
+            </div>
+          </div>
+
+          <div className="lg:flex flex-col h-full hidden  w-[60%]">
+            <div className="flex h-full justify-end">
+              <NavBar colors={colors}/>
+            </div>
+          </div>
+          <div className="flex justify-center items-center lg:hidden ">
+            <div
+              className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
+              onClick={toggleSidebar}
+            >
+              <GiHamburgerMenu size={35} color="#ED1F23" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex">
         <div
-          className={`fixed block lg:none top-0 left-0 h-full w-80 text-black bg-slate-200 transition-transform duration-300 z-40 ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
+          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="grid content-stretch">
-            <SideBar sideBar={{ toggleSubMenu, closeSideBar }} />
-          </div>
-        </div>
-      </div> */}
-      <div className="header  ">
-        <div className="container mx-auto flex justify-between items-center h-full ">
-          <div className="logo  ">
-            <div className="py-4">
-              <Logo img={logo} />
-            </div>
-          </div>
-
-          <div className="lg:flex justify-end  h-full hidden gap-6">
-            <div className="flex justify-end h-full ">
-              <NavBar />
-            </div>
-            {/* <div className="more-menu"></div> */}
-
-            {/* <div className="flex justify-center items-center lg:hidden">
-                <div
-                  className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
-                  onClick={toggleSidebar}
-                >
-                  <div
-                    className={`w-full h-1 ${
-                      isOpen ? `bg-white` : `bg-black`
-                    } ${
-                      isOpen ? "transform rotate" : ""
-                    } transition-transform duration-300`}
-                  ></div>
-                  <div
-                    className={`w-full h-1 ${
-                      isOpen ? `bg-white` : `bg-black`
-                    } ${
-                      isOpen ? "opacity-0" : ""
-                    } transition-opacity duration-300`}
-                  ></div>
-                  <div
-                    className={`w-full h-1 ${
-                      isOpen ? `bg-white` : `bg-black`
-                    } ${
-                      isOpen ? "transform -rotate" : ""
-                    } transition-transform duration-300`}
-                  ></div>
-                </div>
-              </div> */}
-
-            <div className="hidden lg:flex items-center justify-end  gap-1  ">
-              <a href="https://www.google.com">
-                {/* <a href={contact?.facebook}> */}
-                <Image src="/img/Tel.png" alt="tel" width={50} height={50} />
-              </a>
-              <a href={contact?.instagram}>
-                <Image src="/img/Line.png" alt="line" width={50} height={50} />
-              </a>
-              <a href={contact?.line}>
-                <Image
-                  src="/img/Email.png"
-                  alt="emails"
-                  width={50}
-                  height={50}
-                />
-              </a>
-            </div>
+            <SideBar
+              contact={contact}
+              sideBar={{ toggleSubMenu, closeSideBar }}
+              language={{
+                currentLanguage,
+                setCurrentLanguage,
+                openID,
+                setOpenID,
+                openLang,
+                setOpenLang,
+                languages,
+                switchLanguage,
+              }}
+            />
           </div>
         </div>
       </div>

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import NavDropDown from "@/components/website/molecule/menu/NavDropDown";
 import menuItem from "@/assets/menuItem.json";
+import { usePathname } from "next/navigation";
 
-export default function NavBar() {
+export default function NavBar(colors:any) {
+  const pathname = usePathname();
+
   return (
     <div className="nav-menu h-full flex items-center " id="scrollable-content">
       {menuItem.map((item: any, key: number) => {
@@ -20,7 +23,11 @@ export default function NavBar() {
             <Link
               key={key}
               href={item.href}
-              className={`h-full flex items-center menu-item px-4 py-8 nav-button text-[#0C2B4B] font-bold hover:text-[#3662AE] hover:border-[#3662AE] hover:border-b-4 transition-all`}
+              className={`${
+                pathname == item?.href.toLowerCase()
+                  ? "text-[#ED1F23]"
+                  : "text-[#0C2B4B]"
+              } h-full font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#ED1F23] transition-all`}
             >
               {item.title}
             </Link>
