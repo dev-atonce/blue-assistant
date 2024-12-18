@@ -36,6 +36,7 @@ export default async function Home() {
       </div>
       <div className="container xl:px-4 2xl:px-4 px-4 mx-auto">
       </div>
+      <div className="container xl:px-4 2xl:px-4 px-4 mx-auto"></div>
     </>
   );
 }
