@@ -42,9 +42,7 @@ import { PageSettingContext } from "@/contexts/PageSettingContext";
 import Link from "next/link";
 
 import { FaPhone } from "react-icons/fa6";
-
 import Image from "next/image";
-
 import { MdEmail, MdOutlineMailOutline } from "react-icons/md";
 
 import menuItem from "@/assets/menuItem.json";
