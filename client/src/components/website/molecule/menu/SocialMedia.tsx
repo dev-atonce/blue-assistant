@@ -24,7 +24,7 @@ export default function SocialMedia()
     const PrimaryColor = '#3d5daa';
     
     return (
-        <div className="flex items-center gap-1 ms-16">
+        <div className="flex items-center gap-1 ms-20">
             <a 
                 href={`tel:098348734`}
                 target="_blank"

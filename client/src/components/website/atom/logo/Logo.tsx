@@ -10,11 +10,11 @@ export function Logo({ color, img }: any) {
           src={
             img
               ? `${process.env.NEXT_PUBLIC_BASE_URL}${img}`
-              : "/img/blue_logo.png"
+              : "/img/blue_full_logo.png"
           }
           alt="rent"
-          width={100}
-          height={400}
+          width={`400`}
+          height={100}
         />
         {/* )} */}
       </Link>

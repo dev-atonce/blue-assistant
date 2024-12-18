@@ -79,7 +79,7 @@ export default function Header({ logo, contact, owner, colors }: any) {
   return (
     <div className="shadow-md bg-white relative" style={{zIndex:1}}>
       <div className={`bg-[#3562AE] w-full h-2`}></div>
-      <div className="header ps-10 pe-10 mx-auto">
+      <div className="header ps-2 pe-2 md:ps-10 md:pe-10 mx-auto">
         <div className="mx-auto flex justify-between items-center h-full ">
           <div className="logo ">
             <div className="py-2 flex items-end">

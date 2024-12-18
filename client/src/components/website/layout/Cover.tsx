@@ -19,10 +19,10 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
             style={{ textShadow: "1px 1px #2F2F2F" }}
           >
             <p className="text-red-600  text-3xl py-4">
-              ศูนย์รวมงานบริษัทญี่ปุ่น
+            Always By Your Side
             </p>
             <p className="text-white text-3xl">
-              ล่ามภาษาญี่ปุ่น งานที่ใช้ภาษาญี่ปุ่น และตำแหน่งอื่นๆ
+            Blue Assistance Co., Ltd.
             </p>
           </div>
         </div>
