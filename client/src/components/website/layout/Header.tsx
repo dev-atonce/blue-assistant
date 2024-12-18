@@ -7,6 +7,7 @@ import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Script from "next/script";
 import { hasCookie, setCookie } from "cookies-next";
+import SocialMedia from "../molecule/menu/SocialMedia";
 
 export default function Header({ logo, contact, owner, colors }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>("th");
@@ -77,11 +78,11 @@ export default function Header({ logo, contact, owner, colors }: any) {
 
   return (
     <div className="shadow-md bg-white relative" style={{zIndex:1}}>
-      <div className={`bg-[${colors.main}] h-2 w-full `}></div>
-      <div className="header px-4 mx-auto">
+      <div className={`bg-[#3562AE] w-full h-2`}></div>
+      <div className="header ps-10 pe-10 mx-auto">
         <div className="mx-auto flex justify-between items-center h-full ">
           <div className="logo ">
-            <div className="py-4 flex items-end">
+            <div className="py-2 flex items-end">
               <Logo img={logo} />
               {/* <div className="flex justify-items-end h-[100%]">
                 <span className={`text-xl text-blue-900 font-[900] sm:none`}>
@@ -94,6 +95,7 @@ export default function Header({ logo, contact, owner, colors }: any) {
           <div className="lg:flex flex-col h-full hidden  w-[60%]">
             <div className="flex h-full justify-end">
               <NavBar colors={colors}/>
+              <SocialMedia />
             </div>
           </div>
           <div className="flex justify-center items-center lg:hidden ">

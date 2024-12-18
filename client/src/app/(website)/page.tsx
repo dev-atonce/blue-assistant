@@ -31,8 +31,8 @@ export default async function Home() {
 
   return (
     <>
-      <div style={{height:'80vh', overflow:'hidden',marginTop:'-65px',zIndex:0}}>
-        <Image src="/img/cover.png" width={4838} height={2198} quality={100} alt="Blue Assistance" />
+      <div style={{height:'80vh', overflow:'hidden',zIndex:0}}>
+        <Image src="/img/Component 44455.png" width={4838} height={2198} quality={100} alt="Blue Assistance" />
       </div>
       <div className="container xl:px-4 2xl:px-4 px-4 mx-auto">
       </div>
