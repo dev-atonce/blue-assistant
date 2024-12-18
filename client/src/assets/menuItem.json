@@ -1,8 +1,7 @@
 [
-  { "title": "Our Business", "href": "/" },
+  { "title": "Home", "href": "/" },
+  { "title": "Our Business", "href": "/our-business" },
   { "title": "About Us", "href": "/about-us" },
-
   { "title": "News", "href": "/news-activity" },
-
   { "title": "Contact", "href": "/contact" }
 ]
