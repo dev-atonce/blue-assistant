@@ -11,13 +11,17 @@ const method = {
                 cb(null, uploadDir);
             },
             filename: (req, file, cb) => {
-                cb(null, Date.now() + "-" + file.originalname);
+                const uniqueSuffix = Math.round(Math.random() * 1E9) + '-' + Date.now()
+                cb(null, file.fieldname + '-' + uniqueSuffix + '.' + file.mimetype.split("/")[1]);
             },
         });
 
         const upload = multer({
             storage: storage,
-            limits: { fileSize: config.limitFileSize },
+            limits: {
+                fileSize: 2 * 1024 * 1024,
+                fieldSize: 25 * 1024 * 1024,
+            },
         });
 
         return upload;

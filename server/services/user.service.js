@@ -9,7 +9,7 @@ const {
 
 const methods = {
   async find(req) {
-    const limit = +(req.query.size || config.pageLimit);
+    const limit = +config.pageLimit;
     const offset = +(limit * ((req.query.page || 1) - 1));
 
     try {

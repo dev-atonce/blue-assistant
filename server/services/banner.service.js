@@ -14,7 +14,7 @@ const methods = {
                 rows: rows,
             };
         } catch (error) {
-            Promise.reject(ErrorNotFound(error.message));
+            return Promise.reject(ErrorNotFound(error.message));
         }
     },
 
@@ -34,7 +34,7 @@ const methods = {
                 rows: rows,
             };
         } catch (error) {
-            Promise.reject(ErrorNotFound(error.message));
+            return Promise.reject(ErrorNotFound(error.message));
         }
     },
 
@@ -79,7 +79,7 @@ const methods = {
                     try {
                         const data = req.body;
                         const obj = await Banner.findById(req.params.id);
-                        if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
+                        if (!obj) return reject(ErrorNotFound("id: not found"));
                         if (req.file) {
                             if (obj?.image) {
                                 try {
@@ -108,6 +108,7 @@ const methods = {
     async delete(id) {
         try {
             const obj = await Banner.findOneAndDelete({ _id: id }).exec();
+            if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
             if (obj?.image) {
                 try {
                     await fs.unlink(obj.image);
@@ -119,7 +120,7 @@ const methods = {
             }
             return { msg: "deleted success" };
         } catch (error) {
-            Promise.reject(ErrorBadRequest(error.message));
+            return Promise.reject(ErrorBadRequest(error.message));
         }
     },
 };

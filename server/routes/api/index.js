@@ -1,7 +1,10 @@
 const router = require("express").Router();
-const auth = require("../auth");
 
 router.use("/users", require("./user"));
-router.use("/banner", auth.required, require("./banner"));
+router.use("/banner", require("./banner"));
+router.use("/formcontact", require("./formcontact"));
+router.use("/blog", require("./blog"));
+router.use("/seo", require("./seo"));
+router.use("/logo", require("./logo"));
 
 module.exports = router;

@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-
+import type { Metadata, ResolvingMetadata } from "next";
 import Header from "@/components/website/layout/Header";
 import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
-import { Kanit, Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { ConfigProvider } from "antd";
-
-import Favicon from "../icon.ico";
+import Favicon from "../favicon.ico";
+import "./globals.css";
+import "./../../css/all.scss";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -40,21 +42,48 @@ const colors = {
   danger : '#ED1F23',
   warning :''
 }
+const pageName = "home";
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const lng = "TH";
 
-export const metadata: Metadata = {
-  title: "Blue Assistance",
-  description: "Blue Assistance",
-};
+  const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
+
+  // fetch data
+  const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
+    res.json()
+  );
+
+  return {
+    metadataBase: new URL("https://blue-assistant.com"),
+    title: response[`seoTitle${lng}`],
+    description: response[`seoDescription${lng}`],
+    keywords: response[`seoKeyword${lng}`],
+    alternates: {
+      canonical: "./",
+    },
+    icons: [{ rel: "icon", url: Favicon.src }],
+  };
+}
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { lng },
 }: Readonly<{
   children: React.ReactNode;
+  params: { lng: string };
 }>) {
-
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(lng as any)) {
+    notFound();
+  }
+  const messages = await getMessages();
   return (
-    <html lang="en">
+    <html lang={lng}>
       <ConfigProvider
         theme={{
           token: {
@@ -72,9 +101,11 @@ export default function RootLayout({
       >
         <PageSettingProvider>
           <body className={roboto.className} >
-            <Header colors={colors} owner={owner} lng={lng}/>
-            {children}
-            {/* <Footer colors={colors} owner={owner} lng={lng}/> */}
+            <NextIntlClientProvider messages={messages}>
+              <Header colors={colors} owner={owner} lng={lng}/>
+              {children}
+              <Footer colors={colors} owner={owner} lng={lng}/>
+            </NextIntlClientProvider>
           </body>
         </PageSettingProvider>
       </ConfigProvider>

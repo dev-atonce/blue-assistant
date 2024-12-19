@@ -8,7 +8,7 @@ const schema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
       uniqueCaseInsensitive: false,
     },
@@ -42,7 +42,7 @@ schema.methods.generateJWT = function (obj) {
   };
 
   // Sign the JWT with the payload, secret key, and expiration options
-  return jwt.sign(payload, config.secret, { expiresIn: "1d" });
+  return jwt.sign(payload, config.secret, { expiresIn: config.token_exp_days });
 };
 
 // Custom JSON Response
@@ -81,4 +81,4 @@ schema.pre("updateOne", function (next) {
   next();
 });
 
-module.exports = mongoose.model("Users", schema);
+module.exports = mongoose.model("tb_user", schema);

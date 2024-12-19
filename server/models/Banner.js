@@ -30,7 +30,7 @@ schema.methods.toJSON = function () {
     id: this._id,
     title: this.title,
     image: this.image,
-    imageAlt: this.imageAlt,
+    image_alt: this.image_alt,
     link: this.link,
     status: this.status,
     sort: this.sort,
@@ -39,4 +39,4 @@ schema.methods.toJSON = function () {
   };
 };
 
-module.exports = mongoose.model("Banners", schema);
+module.exports = mongoose.model("tb_banner", schema);

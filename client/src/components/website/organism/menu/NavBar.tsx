@@ -25,9 +25,9 @@ export default function NavBar(colors:any) {
               href={item.href}
               className={`${
                 pathname == item?.href.toLowerCase()
-                  ? "text-[#ED1F23]"
+                  ? "text-[#3562AE]"
                   : "text-[#0C2B4B]"
-              } h-full font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#ED1F23] transition-all`}
+              } h-full font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#3562AE] transition-all`}
             >
               {item.title}
             </Link>

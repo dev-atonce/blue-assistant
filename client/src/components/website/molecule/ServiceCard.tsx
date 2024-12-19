@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "@/i18n/routing";
 export default function ServiceCard({ item }: any) {
   return (
     <div
@@ -28,7 +29,7 @@ export default function ServiceCard({ item }: any) {
       <div className="mb-6">
         <Link
           href={`/service/${item?.id}`}
-          className="bg-[#3562AE] text-white rounded-md py-2 px-4"
+          className="bg-[#3562AE] text-white hover:bg-yellow-400 rounded-md py-2 px-4"
         >More detail
         </Link>
       </div>

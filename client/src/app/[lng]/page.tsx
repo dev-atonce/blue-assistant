@@ -1,7 +1,11 @@
 // import CoverSwiper from "@/components/website/layout/CoverSwiper";
 // import Blog from "@/components/website/layout/Blog";
+import ContactSection from "@/components/website/layout/ContactSection";
 import Cover from "@/components/website/layout/Cover";
+import NewsSection from "@/components/website/layout/NewsSection";
+import OtherSection from "@/components/website/layout/OtherSection";
 import ServiceSection from "@/components/website/layout/ServiceSection";
+import StrongServiceSection from "@/components/website/layout/StrongServiceSection";
 import Image from "next/image";
 
 // const fetchBlog = async () => {
@@ -32,20 +36,22 @@ export default async function Home() {
 
   return (
     <>
-      <div className="relative" style={{overflow:'hidden',zIndex:0}}>
-        <Image src="/img/cover.png" width={4838} height={2198} quality={100} alt="Blue Assistance" />
-        <div className="container px-4 mx-auto">
-          <div
-            className="absolute top-0 h-full flex items-center"
-            style={{ textShadow: "1px 1px #2F2F2F" }}
-          >
-            <div>
-              <h1 className="text-white font-bold text-6xl drop-shadow-md py-4">Always By Your Side</h1>
-              <h2 className="text-white font-bold text-4xl drop-shadow-md">Blue Assistance Co., Ltd.</h2>
+      <section className="banner-section">
+        <div className="relative" style={{overflow:'hidden',zIndex:0}}>
+          <Image src="/img/cover.png" width={4838} height={2198} quality={100} alt="Blue Assistance" />
+          <div className="container px-4 mx-auto">
+            <div
+              className="absolute top-0 h-full flex items-center"
+              style={{ textShadow: "1px 1px #2F2F2F" }}
+            >
+              <div>
+                <h1 className="text-white font-bold text-6xl drop-shadow-md py-4">Always By Your Side</h1>
+                <h2 className="text-white font-bold text-4xl drop-shadow-md">Blue Assistance Co., Ltd.</h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div className="relative">
         <div className="absolute top-10 left-10 font-bold text-[#8098c2] text-[70px] md:text-[140px] xl:text-[320px] opacity-5 z-0 select-none mt-[-240px]">BLUE ASSISTANT</div>
         <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-52">
@@ -60,6 +66,10 @@ export default async function Home() {
           </div>
           <ServiceSection />
         </div>
+        <StrongServiceSection />
+        <NewsSection />
+        <ContactSection />
+        <OtherSection />
       </div>
     </>
   );
