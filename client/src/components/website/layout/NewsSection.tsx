@@ -6,7 +6,7 @@ export default function NewsSection()
         <section className="news-section bg-white">
             <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-20 py-20">
                 <h5 className="text-5xl font-bold text-[#3562AE] text-center">
-                    <span className="border-b-4 border-orange-300 w-auto">News</span>
+                    <span className="border-b-4 border-orange-300 w-auto">ブログ</span>
                 </h5>
                 <div className="mt-24 grid grid-cols-12 gap-4 news">
                     <div className="col-span-4">
@@ -50,7 +50,7 @@ export default function NewsSection()
                     </div>
                 </div>
                 <div className="flex justify-center mt-20">
-                    <Link href="/news" className="bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-yellow-400">See more</Link>
+                    <Link href="/news" className="bg-[#3562AE] text-white py-2 px-16 rounded-lg hover:bg-yellow-400">もっと見る</Link>
                 </div>
             </div>
         </section>

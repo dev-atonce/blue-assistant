@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import NavDropDown from "@/components/website/molecule/menu/NavDropDown";
 import menuItem from "@/assets/menuItem.json";
 import { usePathname } from "next/navigation";
@@ -13,7 +13,7 @@ export default function NavBar(colors:any) {
           return (
             <NavDropDown
               key={key}
-              title={item.title}
+              title={item.title.jp}
               dropdownItems={item.subMenu}
               sectionKey={key}
             />
@@ -29,7 +29,7 @@ export default function NavBar(colors:any) {
                   : "text-[#0C2B4B]"
               } h-full font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#3562AE] transition-all`}
             >
-              {item.title}
+              {item.title.jp}
             </Link>
           );
       })}

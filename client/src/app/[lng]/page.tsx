@@ -8,6 +8,9 @@ import ServiceSection from "@/components/website/layout/ServiceSection";
 import StrongServiceSection from "@/components/website/layout/StrongServiceSection";
 import Image from "next/image";
 
+interface Props {
+  params: { lng: string };
+}
 // const fetchBlog = async () => {
 //   const res = await fetch(
 //     `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/4`,
@@ -30,9 +33,9 @@ import Image from "next/image";
 //   return data;
 // };
 
-export default async function Home() {
-  // const blogs = await fetchBlog();
-  // const banner = await fetchBanner();
+export default async function Home({ params }: Props) {
+
+  const lng = params.lng;
 
   return (
     <>
@@ -59,7 +62,7 @@ export default async function Home() {
           <div className="grid grid-cols-1">
             <div className="flex items-center justify-center">
               <h3 className="font-bold text-5xl text-center relative flex items-center justify-center mb-14">
-                <div className="mb-4 text-[#3562AE]">Our Business</div>
+                <div className="mb-4 text-[#3562AE]">私たちの事業</div>
                 <div className="border-b-4 border-orange-200 w-[100px] absolute bottom-0 mt-4"></div>
               </h3>
             </div>
