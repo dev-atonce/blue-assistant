@@ -1,0 +1,38 @@
+import Link from "next/link";
+import NavDropDown from "@/components/website/molecule/menu/NavDropDown";
+import menuItem from "@/assets/menuItem.json";
+import { usePathname } from "next/navigation";
+
+export default function NavBar(colors:any) {
+  const pathname = usePathname();
+
+  return (
+    <div className="nav-menu h-full flex items-center " id="scrollable-content">
+      {menuItem.map((item: any, key: number) => {
+        if (item.subMenu)
+          return (
+            <NavDropDown
+              key={key}
+              title={item.title}
+              dropdownItems={item.subMenu}
+              sectionKey={key}
+            />
+          );
+        else
+          return (
+            <Link
+              key={key}
+              href={item.href}
+              className={`${
+                pathname == item?.href.toLowerCase()
+                  ? "text-[#3562AE]"
+                  : "text-[#0C2B4B]"
+              } h-full font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#3562AE] transition-all`}
+            >
+              {item.title}
+            </Link>
+          );
+      })}
+    </div>
+  );
+}
