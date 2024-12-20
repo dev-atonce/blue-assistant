@@ -48,7 +48,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const lng = "TH";
+  const lng = "th";
 
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
@@ -58,7 +58,7 @@ export async function generateMetadata(
   );
 
   return {
-    metadataBase: new URL("https://blue-assistant.com"),
+    metadataBase: new URL("https://siam-nistrans.com"),
     title: response[`seoTitle${lng}`],
     description: response[`seoDescription${lng}`],
     keywords: response[`seoKeyword${lng}`],

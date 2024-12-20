@@ -27,11 +27,11 @@ export default function SideBar({ sideBar, language, contact }: any) {
             <li key={index} className="menu-item rounded-lg">
               <Link
                 href={item.href}
-                title={item.title}
+                title={item.title.jp}
                 onClick={(e) => sideBar.toggleSubMenu(e)}
                 className="p-2 hover:text-red-600 flex items-center justify-between"
               >
-                {item.title}
+                {item.title.jp}
                 {/* @ts-ignore */}
                 {item?.subMenu && (
                   <FaPlus className="plus-icon transition-all duration-200" />
@@ -45,11 +45,11 @@ export default function SideBar({ sideBar, language, contact }: any) {
                     <li key={index + i}>
                       <Link
                         href={sub.href}
-                        title={sub.title}
+                        title={sub.title.jp}
                         onClick={sideBar.closeSideBar}
                         className="submenu-item"
                       >
-                        {sub.title}
+                        {sub.title.jp}
                       </Link>
                     </li>
                   ))}
@@ -106,14 +106,14 @@ export default function SideBar({ sideBar, language, contact }: any) {
             </a>
           </div>
           <div className="text-black notranslate flex gap-1">
-            <button onClick={(e: any) => language?.switchLanguage("th")}>
+            <button onClick={(e: any) => language?.switchLanguage("th")} title="thai">
               <Image src="/img/th_flag.png" alt="th" width={25} height={25} />
             </button>
-            <button onClick={(e: any) => language?.switchLanguage("en")}>
+            <button onClick={(e: any) => language?.switchLanguage("en")} title="english">
               {" "}
               <Image src="/img/uk_flag.png" alt="th" width={25} height={25} />
             </button>
-            <button onClick={(e: any) => language?.switchLanguage("ja")}>
+            <button onClick={(e: any) => language?.switchLanguage("ja")} title="japanese">
               {" "}
               <Image src="/img/jp_flag.png" alt="th" width={26} height={26} />
             </button>
