@@ -105,3 +105,5 @@
 2024-12-11 16:15:44 [undefined] error: "{\"code\":\"EADDRNOTAVAIL\",\"errno\":-4090,\"syscall\":\"listen\",\"address\":\"192.168.0.199\",\"port\":3001}"
 2024-12-19 14:00:22 [undefined] error: "[start server error]:"
 2024-12-19 14:00:22 [undefined] error: "{\"code\":\"EADDRNOTAVAIL\",\"errno\":-4090,\"syscall\":\"listen\",\"address\":\"192.168.0.199\",\"port\":3001}"
+2024-12-20 17:05:54 [undefined] error: "[start server error]:"
+2024-12-20 17:05:54 [undefined] error: "{\"code\":\"EADDRNOTAVAIL\",\"errno\":-4090,\"syscall\":\"listen\",\"address\":\"192.168.0.199\",\"port\":3001}"
