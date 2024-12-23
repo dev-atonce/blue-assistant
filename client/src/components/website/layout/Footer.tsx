@@ -19,7 +19,7 @@ export default function Footer({ contact, colors, owner, lng}: any) {
   return (
     <div className={`text-white bg-[${colors.main}]`} >
       <div className="">
-        <div className="container px-4 mx-auto py-14">
+        <div className="container py-14">
           <div className="grid grid-cols-12">
             <div className="col-span-6">
               <div className="py-5 flex items-center justify-between">

@@ -12,26 +12,13 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  style: ["normal", "italic"],
-});
-
-const notoJp = Noto_Sans_JP({
-  weight: ["300", "400", "500", "600", "700", "800"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const noto = Noto_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
 });
-const lng = "th";
+
 const owner = {
   name: {
     th: "บริษัท บลู แอสซิสแท็นซ จำกัด",
@@ -49,6 +36,7 @@ const owner = {
   instagram: "",
   gmap: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.293634429288!2d100.562314!3d13.73982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee366cbf9bf%3A0x2cd7d65872b3b0bf!2sBlue%20Assistance%20Company%20Limited!5e0!3m2!1sen!2sus!4v1731572079527!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
 };
+
 const colors = {
   main: "#3562AE",
   secondary: "",
@@ -56,7 +44,8 @@ const colors = {
   danger: "#ED1F23",
   warning: "",
 };
-const pageName = "home";
+
+// const pageName = "home";
 // export async function generateMetadata(
 //   { params, searchParams }: any,
 //   parent: ResolvingMetadata
