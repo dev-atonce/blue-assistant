@@ -72,18 +72,13 @@ const colors = {
 //   };
 // }
 
-export default async function RootLayout({
-  children,
-  params: { lng },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lng: string };
-}>) {
+export default async function RootLayout({ children, params: { lng } }: Readonly<{ children: React.ReactNode; params: { lng: string } }>) {
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(lng as any)) {
     notFound();
   }
   const messages = await getMessages();
+  
   return (
     <html lang={lng}>
       <ConfigProvider

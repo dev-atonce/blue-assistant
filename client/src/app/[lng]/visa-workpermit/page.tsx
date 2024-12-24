@@ -71,22 +71,89 @@ export default function VisaWorkpermit() {
                 </div>
                 <div className="bg-[#fafafa] py-[50px]">
                     <div className="container">
-                        <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">News</h2>
-                        <div>
+                        <div className="mb-[50px]">
+                            <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">News</h2>
                             <div>
-
+                                <div className="bg-white text-[#3D3D3D] p-6 border-b">
+                                    <Link href={"/"}><span>2023.09.05</span><span> | </span><span>When Visiting the Hospital for the First Time</span></Link>
+                                </div>
+                                <div className="bg-white text-[#3D3D3D] p-6 border-b">
+                                    <Link href={"/"}><span>2023.09.05</span><span> | </span><span>When Visiting the Hospital for the First Time</span></Link>
+                                </div>
+                                <div className="bg-white text-[#3D3D3D] p-6 border-b">
+                                    <Link href={"/"}><span>2023.09.05</span><span> | </span><span>When Visiting the Hospital for the First Time</span></Link>
+                                </div>
+                                <div className="bg-white text-[#3D3D3D] p-6 border-b">
+                                    <Link href={"/"}><span>2023.09.05</span><span> | </span><span>When Visiting the Hospital for the First Time</span></Link>
+                                </div>
+                                <div className="bg-white text-[#3D3D3D] p-6 border-b">
+                                    <Link href={"/"}><span>2023.09.05</span><span> | </span><span>When Visiting the Hospital for the First Time</span></Link>
+                                </div>
                             </div>
-                            <div>
-
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <Link className="bg-[#3462af] rounded-md py-2 px-5 " href={"/"}>See More</Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="container py-[100px] border-b">
+                    <div className="">
+                        <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">Contact</h2>
+                        <div className="grid grid-cols-2 gap-20">
+                            <div className="col-span-1 text-[#3D3D3D]">
+                                <div>
+                                    <strong>Address :</strong>
+                                    <p className="whitespace-pre-wrap">
+                                        No.D 9th Floor, PRIME BUILDING,<br />
+                                        24 Sukhumvit Soi 21(Asoke), Sukhumvit Road,<br />
+                                        Klongtoey-Nua, Wattana, Bangkok 10110, Thailand.
+                                    </p>
+                                </div>
+                                <div>
+                                    <strong>Telephone :</strong>
+                                </div>
+                                <div>
+                                    <strong>Email :</strong>
+                                </div>
                             </div>
-                            <div>
-
+                            <div className="col-span-1">
+                                <Image src={"/img/visa-workpermit/map.png"} alt="" width={600} height={400}></Image>
                             </div>
-                            <div>
+                        </div>
+                    </div>
+                </div>
+                <div className="container py-[100px]">
+                    <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">Contact Form</h2>
+                    <div className="grid grid-cols-5 gap-10">
+                        <div className="col-span-2">
+                            <Image src={"/img/visa-workpermit/contact-form.png"} alt="" width={600} height={400}></Image>
+                        </div>
+                        <div className="col-span-3 border-t">
+                            <div className="grid grid-cols-5 gap-10 py-5">
+                                <div className="col-span-2">
+                                    <div>
+                                        <strong className="text-[#3462af]">Customer Info</strong>
+                                    </div>
+                                    <div>
+                                        <strong className="text-[#3462af]">Customer Info</strong>
+                                        <input type="text" className="border"/>
+                                    </div>
+                                    <div>
 
-                            </div>
-                            <div>
-                                
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
