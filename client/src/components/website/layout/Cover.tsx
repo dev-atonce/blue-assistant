@@ -6,7 +6,7 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
       <div className="relative  lg:block hidden">
         <Image
           className="w-full shadow-sm"
-          src="/img/cover_ymc.jpg"
+          src="/img/page-cover.png"
           width={2000}
           height={500}
           quality={80}
@@ -15,18 +15,25 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
         />
         <div className="container px-4 mx-auto">
           <div
-            className="absolute top-[15%] hidden xl:block"
-            style={{ textShadow: "1px 1px #2F2F2F" }}
+            className="absolute top-[17%] hidden xl:block"
+            style={{ textShadow: "1px 1px #CAD5E4" }}
           >
-            <p className="text-red-600  text-3xl py-4">
-            Always By Your Side
+            <p className="text-[#3562AE]  text-5xl py-4 font-semibold">
+              Always By Your Side
             </p>
-            <p className="text-white text-3xl">
-            Blue Assistance Co., Ltd.
+            <p className="text-black text-3xl font-semibold">
+              Blue Assistance Co., Ltd.
             </p>
           </div>
         </div>
-        <div className="bg-slate-500/20 absolute bottom-0 w-full">
+        <div className="bg-[#3462AF]  w-full">
+          <div className="hidden md:block container xl:px-4 2xl:px-4 mx-auto py-6">
+            <p className="text-xl">
+              「親切・丁寧・迅速」なサービスをモットーに、みなさまの海外生活をサポートいたします。
+            </p>
+          </div>
+        </div>
+        <div className="bg-slate-500/10  w-full">
           <div className="hidden md:block container xl:px-4 2xl:px-4 mx-auto">
             <Breadcrumb pageName={pageName} prevPage={prevPage} />
           </div>

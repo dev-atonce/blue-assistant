@@ -3,7 +3,7 @@ import NavDropDown from "@/components/website/molecule/menu/NavDropDown";
 import menuItem from "@/assets/menuItem.json";
 import { usePathname } from "next/navigation";
 
-export default function NavBar(colors:any) {
+export default function NavBar(colors: any) {
   const pathname = usePathname();
 
   return (
@@ -21,6 +21,7 @@ export default function NavBar(colors:any) {
         else
           return (
             <Link
+              scroll={true}
               key={key}
               href={item.href}
               className={`${

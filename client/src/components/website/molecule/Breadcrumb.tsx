@@ -12,14 +12,14 @@ const Breadcrumb = ({ pageName, prevPage }: any) => {
           {prevPage.length &&
             prevPage?.map((v: any, k: any) => (
               <li key={k}>
-                <Link className="" href={v?.url}>
+                <Link className="text-blue-700" href={v?.url}>
                   {v?.pageName} |
                 </Link>
               </li>
             ))}
           {prevPage?.pageName && prevPage?.url ? (
             <li>
-              <Link className="" href={prevPage?.url}>
+              <Link className="text-blue-700" href={prevPage?.url}>
                 {prevPage?.pageName} |
               </Link>
             </li>
@@ -27,7 +27,7 @@ const Breadcrumb = ({ pageName, prevPage }: any) => {
             ``
           )}
 
-          <li className=" text-white">{pageName}</li>
+          <li className=" text-blue-700">{pageName}</li>
         </ol>
       </nav>
     </div>

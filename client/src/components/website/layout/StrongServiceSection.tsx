@@ -16,8 +16,8 @@ export default function StrongServiceSection() {
             <br />
             お困りのことがございましたら、お気軽にお問い合わせください。
           </p>
-          <div className="grid grid-cols-12 gap-8 mt-20">
-            <div className="col-span-4 bg-white p-6 rounded-2xl border">
+          <div className="grid grid-cols-12 gap-8 mt-20 text-[#0C2B4B]">
+            <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
               <div className="flex justify-center h-32">
                 <img
                   src="/img/our-business/Group 229.png"
@@ -30,7 +30,7 @@ export default function StrongServiceSection() {
                 <span className="font-bold">19年の実績と経験</span>
               </h6>
             </div>
-            <div className="col-span-4 bg-white p-6 rounded-2xl border">
+            <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
               <div className="flex justify-center h-32">
                 <img
                   src="/img/our-business/Frame.png"
@@ -43,7 +43,7 @@ export default function StrongServiceSection() {
                 <span className="font-bold">24時間サポート体制</span>
               </h6>
             </div>
-            <div className="col-span-4 bg-white p-6 rounded-2xl border">
+            <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
               <div className="flex justify-center h-32">
                 <img
                   src="/img/our-business/Frame (1).png"
@@ -59,7 +59,7 @@ export default function StrongServiceSection() {
           <div className="mt-12 flex justify-center">
             <Link
               href=""
-              className="bg-[#3562AE] py-2 px-4 rounded-md text-white hover:bg-yellow-400"
+              className="bg-[#3562AE] py-2 px-4 rounded-md text-white hover:bg-[#FDBD59]"
             >
               会社案内はこちら
             </Link>
