@@ -21,7 +21,7 @@
       "en": "About Us",
       "jp": "会社案内"
     },
-    "href": "/about-us"
+    "href": "/#about-us"
   },
   {
     "title": {
@@ -29,7 +29,7 @@
       "en": "News",
       "jp": "ブログ"
     },
-    "href": "/news-activity"
+    "href": "/#news-activity"
   },
   {
     "title": {
@@ -37,6 +37,6 @@
       "en": "Contact",
       "jp": "お問い合わせ"
     },
-    "href": "#contact"
+    "href": "/#contact"
   }
 ]

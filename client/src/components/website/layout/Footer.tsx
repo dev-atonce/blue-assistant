@@ -73,10 +73,13 @@ export default function Footer({ contact, colors, owner, lng }: any) {
               </div>
             </div>
             <div className="col-span-6 flex justify-end">
-              <div className="">
+              <a
+                className=""
+                href="https://www.google.com/maps/place/Blue+Assistance+Company+Limited/data=!4m2!3m1!1s0x0:0x2cd7d65872b3b0bf?sa=X&ved=1t:2428&ictx=111"
+              >
                 <strong className="mb-2 block">Google Map</strong>
                 <img src="/img/image.png" alt="google map" />
-              </div>
+              </a>
             </div>
           </div>
         </div>

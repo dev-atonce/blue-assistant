@@ -30,9 +30,9 @@ const App: React.FC = ({
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
-          width={width || "90%"}
+          width={width || "80%"}
         >
-          <div className="py-4">{modalContent}</div>
+          <div className="py-4 lg:px-4">{modalContent}</div>
         </Modal>
       </div>
     </>

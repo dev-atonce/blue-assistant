@@ -40,7 +40,7 @@ export default async function ServiceSection({ data }: any) {
         "タイ・インドシナにおける医療アシスタンス事業として、医療機関への支払い代行、国内外の医療搬送サポート業事業を行っております。",
       id: "jmd",
       image: "/img/our-business/Rectangle 162.png",
-      link: "https://ant.design/components/modal",
+      link: "https://jmd.blue-assistance.co.th",
     },
     {
       serviceNameTH: "ビザ・ワークパーミット取得代行",
@@ -61,7 +61,7 @@ export default async function ServiceSection({ data }: any) {
         "タイ・インドシナにおける医療アシスタンス事業として、医療機関への支払い代行、国内外の医療搬送サポート業事業を行っております。",
       id: "bluemed",
       image: "/img/our-business/image.png",
-      link: "https://ant.design/components/modal",
+      link: "https://blumedth.com/",
     },
   ];
 

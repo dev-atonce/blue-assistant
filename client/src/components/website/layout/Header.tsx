@@ -19,6 +19,7 @@ export default function Header({ logo, contact, owner, colors }: any) {
   const languages = [
     { label: "Thai", value: "th" },
     { label: `English`, value: "en" },
+    { label: `Japanese`, value: "jp" },
   ];
 
   const toggleSidebar = () => {

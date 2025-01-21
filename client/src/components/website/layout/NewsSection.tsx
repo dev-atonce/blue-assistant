@@ -26,7 +26,7 @@ export default function NewsSection() {
   };
   return (
     <>
-      <section className="news-section bg-white">
+      <section id="news-activity" className="news-section bg-white">
         <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-20 py-20">
           <h5 className="text-5xl font-bold text-[#3562AE] text-center mb-10">
             <span className="border-b-4 border-orange-300 w-auto">ブログ</span>
@@ -103,7 +103,7 @@ export default function NewsSection() {
           </div> */}
           <div className="flex justify-center mt-20">
             <Link
-              href="/news"
+              href="/news-activity"
               className="bg-[#3562AE] text-white py-2 px-16 rounded-lg hover:bg-[#FDBD59]"
             >
               もっと見る

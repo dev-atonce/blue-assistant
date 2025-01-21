@@ -1,9 +1,9 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 export default function StrongServiceSection() {
   return (
     <>
-      <div className="bg-[#EDF4FF]">
+      <div id="about-us" className="bg-[#EDF4FF]">
         <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-20 py-20">
           <h5 className="text-4xl font-bold text-[#3562AE] text-center tracking-widest">
             「親切・丁寧・迅速 」なサービス
