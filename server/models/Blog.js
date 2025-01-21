@@ -4,7 +4,6 @@ const uniqueValidator = require("mongoose-unique-validator");
 const schema = new mongoose.Schema(
     {
         blog_image: { type: String },
-        attachment: { type: String },
         blog_title_th: { type: String },
         blog_title_en: { type: String },
         blog_title_jp: { type: String },
@@ -15,7 +14,7 @@ const schema = new mongoose.Schema(
         blog_detail_en: { type: String },
         blog_detail_jp: { type: String },
         type: { type: String },
-        location: { type: String },
+        page: { type: String },
         slug: { type: String, required: true, unique: true },
         sort: { type: Number },
         status: { type: Boolean, default: false },

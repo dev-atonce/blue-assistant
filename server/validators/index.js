@@ -2,13 +2,11 @@ const { validationResult } = require("express-validator");
 
 // Import Validators
 const user = require("./user");
-const banner = require("./banner");
 const formcontact = require("./formcontact");
 const blog = require("./blog");
 
 const validators = {
   user,
-  banner,
   formcontact,
   blog,
 };

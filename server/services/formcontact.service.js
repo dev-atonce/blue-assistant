@@ -1,7 +1,7 @@
 const FormContact = require("../models/FormContact");
 const config = require("../configs/app");
-const nodemailer = require('nodemailer');
-const Mailgen = require('mailgen');
+const nodemailer = require("nodemailer");
+const Mailgen = require("mailgen");
 const { ErrorBadRequest, ErrorNotFound } = require("../configs/errorMethods");
 
 const configMail = {
@@ -20,16 +20,16 @@ const mailMessage = (mailTo, subject, template) => {
         to: mailTo,
         subject: subject,
         html: template,
-    }
+    };
     return messageMail;
-}
+};
 
 let MailGenerator = new Mailgen({
-    theme: 'salted',
+    theme: "salted",
     product: {
-        name: 'Siam Nistrans Co.,Ltd.',
-        link: 'https://th.nissin-asia.com/'// URL Website
-    }
+        name: "Siam Nistrans Co.,Ltd.",
+        link: "https://th.nissin-asia.com/", // URL Website
+    },
 });
 
 const methods = {
@@ -44,81 +44,95 @@ const methods = {
     },
 
     async sendEmail(req) {
-        let response = {
-            body: {
-                intro: 'You Have Inquiry From Website !',
-                table: [
-                    {
-                        // Optionally, add a title to each table.
-                        title: req.body.subject,
-                        data: [
-                            {
-                                '#': 'Name',
-                                detail: req.body.contactName,
+        const topic = req.body.topic;
+        topic.map((item) => {
+            let response = {
+                body: {
+                    intro: "You Have Inquiry From Website !",
+                    table: [
+                        {
+                            // Optionally, add a title to each table.
+                            title: req.body.subject,
+                            data: [
+                                {
+                                    "#": "Name",
+                                    detail: req.body.contactName,
+                                },
+                                {
+                                    "#": "Company",
+                                    detail: req.body.companyName,
+                                },
+                                {
+                                    "#": "Department",
+                                    detail: req.body.department,
+                                },
+                                {
+                                    "#": "Email",
+                                    detail: req.body.email,
+                                },
+                                {
+                                    "#": "Telephone",
+                                    detail: req.body.telephone,
+                                },
+                                {
+                                    "#": "Company Address",
+                                    detail: req.body.address,
+                                },
+                                {
+                                    "#": "Topic",
+                                    detail: item,
+                                },
+                                {
+                                    "#": "Details",
+                                    detail: req.body.detail,
+                                },
+                            ],
+                            columns: {
+                                // Optionally, customize the column widths
+                                customWidth: {
+                                    "#": "25%",
+                                    detail: "75%",
+                                },
+                                // Optionally, change column text alignment
+                                customAlignment: {
+                                    detail: "left",
+                                },
                             },
-                            {
-                                '#': 'Company',
-                                detail: req.body.companyName,
-                            },
-                            {
-                                '#': 'Department',
-                                detail: req.body.department,
-                            },
-                            {
-                                '#': 'Email',
-                                detail: req.body.email,
-                            },
-                            {
-                                '#': 'Telephone',
-                                detail: req.body.telephone,
-                            },
-                            {
-                                '#': 'Topic',
-                                detail: req.body.topic,
-                            },
-                            {
-                                '#': 'Details',
-                                detail: req.body.detail,
-                            },
-                        ],
-                        columns: {
-                            // Optionally, customize the column widths
-                            customWidth: {
-                                '#': '25%',
-                                detail: '75%'
-                            },
-                            // Optionally, change column text alignment
-                            customAlignment: {
-                                detail: 'left'
-                            }
+                        },
+                    ],
+                },
+            };
+
+            let mail = MailGenerator.generate(response);
+
+            return new Promise((resolve, reject) => {
+                const mailList = {
+                    
+                };
+                const mailTo = mailList[item];
+                let transporter = nodemailer.createTransport(configMail);
+                transporter.sendMail(
+                    mailMessage(mailTo, "Inquiry Website", mail),
+                    async (error, info) => {
+                        if (error) {
+                            reject(ErrorBadRequest(error.message));
+                        } else {
+                            req.body.topic = item;
+                            await methods.storeContact(req.body);
+                            resolve(info.envelope);
                         }
-                    },
-                ]
-            }
-        };
-
-        let mail = MailGenerator.generate(response);
-
-        return new Promise((resolve, reject) => {
-            const mailTo = config.mailTo;
-            let transporter = nodemailer.createTransport(configMail);
-            transporter.sendMail(mailMessage(mailTo, "Inquiry Website", mail), async (error, info) => {
-                if (error) {
-                    reject(ErrorBadRequest(error.message));
-                }
-                else {
-                    await methods.storeContact(req.body);
-                    resolve(info.envelope);
-                }
+                    }
+                );
             });
         });
     },
 
     async findAll(req) {
-        const limit = +(config.pageLimit);
+        const limit = +config.pageLimit;
         const offset = +(limit * ((req.query.page || 1) - 1));
         try {
-            const rows = await FormContact.find().sort({ sort: "asc" })
+            const rows = await FormContact.find()
+                .sort({ sort: "asc" })
                 .limit(limit)
                 .skip(offset);
             const count = await FormContact.countDocuments();
@@ -145,7 +159,11 @@ const methods = {
 
     async update(req) {
         try {
-            const obj = await FormContact.findOneAndUpdate({ _id: req.params.id }, { $set: req.body }, { new: true }).exec();
+            const obj = await FormContact.findOneAndUpdate(
+                { _id: req.params.id },
+                { $set: req.body },
+                { new: true }
+            ).exec();
             if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
             return obj;
         } catch (error) {

@@ -16,10 +16,10 @@ export default function ImagePreview({
     <div className="bg-slate-300 rounded-xl flex justify-center items-center ">
       {selectedImage ? (
         <Image
-          src={URL.createObjectURL(selectedImage)}
           alt="preview"
           width={800}
           height={400}
+          src={URL.createObjectURL(selectedImage)}
           className="h-full  object-contain"
           style={{ maxHeight: `${height}px` }}
         />

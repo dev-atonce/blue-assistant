@@ -1,7 +1,18 @@
-export default function WebPanelPage() {
+import Dashboard from "@/components/webpanel/Dashboard/Dashboard";
+import DefaultLayout from "@/components/webpanel/Layouts/DefaultLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  description: "Admin Dashboard",
+};
+
+export default function Home() {
   return (
-    <div>
-      <h1>WebPanel</h1>
-    </div>
+    <>
+      <DefaultLayout>
+        <Dashboard />
+      </DefaultLayout>
+    </>
   );
 }

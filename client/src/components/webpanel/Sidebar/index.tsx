@@ -16,59 +16,16 @@ interface SidebarProps {
 
 const menuGroups = [
   {
-    name: "RECRUITMENT",
-    menuItems: [
-      {
-        icon: "",
-        label: "Job Post",
-        route: "/webpanel/jobpost",
-        // children: [{ label: "eCommerce", route: "/" }],
-      },
-      {
-        icon: "",
-        label: "Job Application",
-        route: "/webpanel/jobapply",
-      },
-      {
-        icon: "",
-        label: "Resume Store",
-        route: "/webpanel/jobinformation",
-      },
-
-      {
-        icon: "",
-        label: "Corporate Contact",
-        route: "/webpanel/jobcorporate",
-      },
-    ],
-  },
-  {
     name: "GENERAL",
     menuItems: [
       {
         icon: "",
-        label: "Home",
-        route: "/webpanel/home",
-      },
-      {
-        icon: "",
-        label: "About Us",
-        route: "/webpanel/about-us",
-      },
-      {
-        icon: "",
-        label: "Banner",
-        route: "/webpanel/banner",
-      },
-      {
-        icon: "",
-        label: "Service",
-        route: "/webpanel/jobservice",
-      },
-      {
-        icon: "",
-        label: "Blog",
-        route: "/webpanel/blog",
+        label: "News & Activity",
+        route: "",
+        children: [
+          { label: "Blog", route: "/webpanel/blog" },
+          { label: "News", route: "/webpanel/news" },
+        ],
       },
       {
         icon: "",
@@ -97,19 +54,18 @@ const menuGroups = [
 ];
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
-  const [pageName, setPageName] = useLocalStorage("selectedMenu", "dashboard");
   const router = useRouter();
+  const [pageName, setPageName] = useLocalStorage("selectedMenu", "dashboard");
   const { role, logout } = useUsersStore();
 
   const handleLogout = async () => {
     logout();
-    router.push('/webpanel/auth/signin');
+    router.push("/webpanel/auth/signin");
   };
-
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
-        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-red-800 duration-300 ease-linear dark:bg-boxdark lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-slate-700 duration-300 ease-linear dark:bg-boxdark lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">

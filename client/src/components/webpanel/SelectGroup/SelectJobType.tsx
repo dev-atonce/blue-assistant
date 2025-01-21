@@ -26,23 +26,24 @@ const SelectJobType = ({ itemState, setItemState }: SelectJobTypeProps) => {
             setItemState(event);
             changeTextColor();
           }}
-          className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary ${isOptionSelected ? "text-black dark:text-white" : ""
-            }`}
+          className={`relative z-20 w-full appearance-none rounded border border-stroke bg-transparent px-5 py-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary ${
+            isOptionSelected ? "text-black dark:text-white" : ""
+          }`}
         >
           <option value="" disabled className="text-body dark:text-bodydark">
             Select Job Type
           </option>
           <option value="1" className="text-body dark:text-bodydark">
-            งานล่ามตำแหน่งพนักงานประจำ
+            งานประจำ
           </option>
           <option value="2" className="text-body dark:text-bodydark">
-            งานล่ามฟรีแลนซ์
+            งานฟรีแลนซ์
           </option>
           <option value="3" className="text-body dark:text-bodydark">
             ตำแหน่งงานทั่วไป
           </option>
           <option value="4" className="text-body dark:text-bodydark">
-            ตำแหน่งผู้บริหารระดับสูง
+            ผู้บริหารระดับสูง
           </option>
         </select>
 

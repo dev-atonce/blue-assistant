@@ -5,6 +5,8 @@ import AntPagination from "../Pagination/AntPagination";
 import { useEffect, useState } from "react";
 import { useJobServiceStore } from "../../../store/jobServiceStore";
 import ActionBtnGroup from "../Button/ActionBtnGroup";
+import Link from "next/link";
+import { BiEdit } from "react-icons/bi";
 
 const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
@@ -62,12 +64,14 @@ const TableJobpost = () => {
                                     </span>
                                 </td>
                                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                    <ActionBtnGroup
-                                        itemId={item.id}
-                                        link={`/webpanel/jobservice/edit/${item.id}`}
-                                        deleteItem={deleteItem}
-                                        nextLink={true}
-                                    />
+                                    <div className="flex items-center gap-1">
+                                        <Link
+                                            className="hover:text-white hover:bg-yellow-400 text-yellow-400 border-yellow-400 border p-2 rounded-full"
+                                            href={`/webpanel/jobservice/edit/${item.id}`}
+                                        >
+                                            <BiEdit size={18} />
+                                        </Link>
+                                    </div>
                                 </td>
                                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                     <SwitcherStatus
