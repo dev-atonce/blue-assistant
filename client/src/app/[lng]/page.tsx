@@ -46,6 +46,7 @@ export default async function Home({ params }: Props) {
             height={2198}
             quality={100}
             alt="Blue Assistance"
+            className="w-full"
           />
           <div className="container px-4 mx-auto">
             <div
@@ -53,12 +54,12 @@ export default async function Home({ params }: Props) {
               style={{ textShadow: "1px 1px #2F2F2F" }}
             >
               <div>
-                <h1 className="text-white font-bold text-6xl drop-shadow-md py-4">
+                <p className="text-white font-bold text-2xl xl:text-6xl drop-shadow-md py-4">
                   Always By Your Side
-                </h1>
-                <h2 className="text-white font-bold text-4xl drop-shadow-md">
+                </p>
+                <h1 className="text-white font-bold text-2xl xl:text-4xl drop-shadow-md">
                   Blue Assistance Co., Ltd.
-                </h2>
+                </h1>
               </div>
             </div>
           </div>

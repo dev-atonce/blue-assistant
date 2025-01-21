@@ -58,7 +58,7 @@ export default function StrongServiceSection() {
           </div>
           <div className="mt-12 flex justify-center">
             <Link
-              href=""
+              href="/about-us"
               className="bg-[#3562AE] py-2 px-4 rounded-md text-white hover:bg-[#FDBD59]"
             >
               会社案内はこちら
