@@ -18,10 +18,10 @@ export default function Footer({ contact, colors, owner, lng }: any) {
   return (
     <div className={`text-white bg-[${colors.main}]`}>
       <div className="">
-        <div className="container py-14">
+        <div className="container py-10">
           <div className="grid grid-cols-6 md:grid-cols-12">
             <div className="col-span-6">
-              <div className="py-5 flex items-center justify-between">
+              <div className=" flex items-center justify-between">
                 <div>
                   <div className="border-4 p-4">
                     <p className="text-2xl">{owner.name.en}</p>
@@ -72,7 +72,7 @@ export default function Footer({ contact, colors, owner, lng }: any) {
                 </div>
               </div>
             </div>
-            <div className="col-span-6 flex justify-end">
+            <div className="col-span-6 flex justify-start xl:justify-end">
               <a
                 className=""
                 href="https://www.google.com/maps/place/Blue+Assistance+Company+Limited/data=!4m2!3m1!1s0x0:0x2cd7d65872b3b0bf?sa=X&ved=1t:2428&ictx=111"

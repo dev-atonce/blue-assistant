@@ -6,17 +6,17 @@ interface BreadcrumbProps {
 }
 const Breadcrumb = ({ pageName, prevPage }: any) => {
   return (
-    <div className="py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="container mx-auto py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <nav>
         <ol className="flex items-center gap-2">
-          {prevPage.length &&
+          {/* {prevPage.length &&
             prevPage?.map((v: any, k: any) => (
               <li key={k}>
                 <Link className="text-blue-700" href={v?.url}>
                   {v?.pageName} |
                 </Link>
               </li>
-            ))}
+            ))} */}
           {prevPage?.pageName && prevPage?.url ? (
             <li>
               <Link className="text-blue-700" href={prevPage?.url}>

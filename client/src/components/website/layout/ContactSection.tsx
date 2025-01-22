@@ -2,11 +2,11 @@ export default function ContactSection() {
   return (
     <>
       <div id="contact" className="bg-[#fafafa] text-[#333333]">
-        <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-20 py-20">
+        <div className="container  mx-auto  py-20">
           <div className="grid grid-cols-1">
             <h3 className="text-5xl font-bold">
               <span className="relative text-[#3562AE] py-4">
-                Contact Form
+                お問い合わせフォーム
                 <div className="absolute border-b-4 border-orange-300 bottom-0 min-w-32"></div>
               </span>
             </h3>

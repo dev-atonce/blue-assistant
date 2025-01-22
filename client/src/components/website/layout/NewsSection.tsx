@@ -27,7 +27,7 @@ export default function NewsSection() {
   return (
     <>
       <section id="news-activity" className="news-section bg-white">
-        <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-20 py-20">
+        <div className="container  mx-auto  py-20">
           <h5 className="text-5xl font-bold text-[#3562AE] text-center mb-10">
             <span className="border-b-4 border-orange-300 w-auto">ブログ</span>
           </h5>

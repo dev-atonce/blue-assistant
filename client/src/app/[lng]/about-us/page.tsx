@@ -11,7 +11,7 @@ export default function About() {
           image="/img/service/branch_banner.jpg"
           prevPage={{ pageName: "Home", url: "/" }}
         />
-        <div className="container mx-auto px-2 md:px-0">
+        <div className="container mx-auto ">
           <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
             <div className="border-b-2 pb-6 border-slate-400">
               <MainHeading text="ご挨拶" heading="2" />

@@ -48,7 +48,7 @@ export default async function Home({ params }: Props) {
             alt="Blue Assistance"
             className="w-full"
           />
-          <div className="container px-4 mx-auto">
+          <div className="container  mx-auto">
             <div
               className="absolute top-0 h-full flex items-center"
               style={{ textShadow: "1px 1px #2F2F2F" }}
@@ -66,10 +66,10 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
       <div className="relative">
-        <div className="absolute top-10 left-10 font-bold text-[#8098c2] text-[70px] md:text-[140px] xl:text-[320px] opacity-5 z-0 select-none mt-[-240px]">
+        <div className="container mx-auto overflow-hidden absolute top-[-150px] left-0 sm:left-10 font-bold text-[#8098c2] text-[140px] xl:text-[320px] opacity-5 z-0 select-none ">
           BLUE ASSISTANT
         </div>
-        <div className="container xl:px-4 2xl:px-4 px-4 mx-auto mt-52">
+        <div className="container  mx-auto mt-32">
           {/* <img className="absolute" src="/img/our-business-bg.png" alt="" /> */}
           <div className="grid grid-cols-1">
             <div className="flex items-center justify-center">

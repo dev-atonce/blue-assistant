@@ -3,13 +3,18 @@ import Cover from "@/components/website/layout/Cover";
 import CoverVisa from "@/components/website/layout/CoverVisa";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Price() {
+  const t = useTranslations("header");
   return (
     <>
       <div className="about-us">
-        <CoverVisa />
-        <div className="container mx-auto px-2 md:px-0">
+        <CoverVisa
+          pageName="Service Fee"
+          prevPage={{ pageName: t("home"), url: "/" }}
+        />
+        <div className="container mx-auto ">
           <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
             <div className="border-b-2 pb-6 border-slate-400">
               <MainHeading text="代行サービス料金一覧" heading="1" />
