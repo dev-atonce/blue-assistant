@@ -15,7 +15,7 @@ interface FormBlogProps {
   handleEditorChange: (value: string, language: string) => void;
 }
 
-const FormBlog = ({
+const FormNews = ({
   itemState,
   setItemState,
   handleSubmit,
@@ -159,4 +159,4 @@ const FormBlog = ({
   );
 };
 
-export default FormBlog;
+export default FormNews;

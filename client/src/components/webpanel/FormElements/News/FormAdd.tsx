@@ -4,7 +4,7 @@ import { BlogProps } from "@/types/blogType";
 import { useBlogStore } from "@/store/blogStore";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import FormBlog from "./FormBlog";
+import FormBlog from "./FormNews";
 
 const FormAdd = () => {
   const router = useRouter();
@@ -52,8 +52,8 @@ const FormAdd = () => {
   };
 
   const handleSubmit = async () => {
-    await createItem(blogState, 'blog');
-    router.push("/webpanel/blog");
+    await createItem(blogState, 'news');
+    router.push("/webpanel/news");
   };
 
   return (

@@ -23,7 +23,7 @@ const TableBlog = () => {
   const [pageState, setPageState] = useState(1);
 
   useEffect(() => {
-    fetchItems(pageState);
+    fetchItems(pageState, 'blog');
   }, [pageState]);
 
   return (
@@ -45,6 +45,9 @@ const TableBlog = () => {
                 Created
               </th>
               <th className="px-4 py-4 font-medium text-black dark:text-white">
+                Module
+              </th>
+              <th className="px-4 py-4 font-medium text-black dark:text-white">
                 Action
               </th>
               <th className="px-4 py-4 font-medium text-black dark:text-white">
@@ -53,53 +56,68 @@ const TableBlog = () => {
             </tr>
           </thead>
           <tbody>
-            {items.map((item, key) => (
-              <tr key={key}>
-                <td className="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                  {(pageState - 1) * Number(process.env.NEXT_PUBLIC_PERPAGE) +
-                    (key + 1)}
-                </td>
-                <td className="border-b border-[#eee] px-4 py-2 dark:border-strokedark">
-                  <Image
-                    className="object-contain w-[100px] h-[100px]"
-                    src={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.blog_image}`}
-                    alt="image"
-                    width={100}
-                    height={100}
-                  />
-                </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <div>
-                    <strong>
-                      <small>{item?.blog_title}</small>
-                    </strong>
-                  </div>
-                </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <span className="text-white bg-cyan-400 hover:bg-cyan-500 font-medium rounded-full text-sm px-3 py-1 text-center me-2 mb-2 dark:focus:ring-yellow-900">
-                    <strong>
-                      {/* @ts-ignore */}
-                      <small>{formatDate(item?.createdAt)}</small>
-                    </strong>
-                  </span>
-                </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <ActionBtnGroup
-                    itemId={item.id}
-                    link={`/webpanel/blog/edit/${item.id}`}
-                    deleteItem={deleteItem}
-                    nextLink={true}
-                  />
-                </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <SwitcherStatus
-                    id={item?.id}
-                    status={Boolean(item?.status)}
-                    onChange={onChangeStatus}
-                  />
+            {items.length > 0 ? (
+              items.map((item, key) => (
+                <tr key={key}>
+                  <td className="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                    {(pageState - 1) * Number(process.env.NEXT_PUBLIC_PERPAGE) +
+                      (key + 1)}
+                  </td>
+                  <td className="border-b border-[#eee] px-4 py-2 dark:border-strokedark">
+                    <Image
+                      className="object-contain w-[100px] h-[100px]"
+                      src={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.blog_image}`}
+                      alt="image"
+                      width={100}
+                      height={100}
+                    />
+                  </td>
+                  <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                    <div>
+                      <strong>
+                        <small>{item?.blog_title_th}</small>
+                      </strong>
+                    </div>
+                  </td>
+                  <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                    <span className="text-white bg-cyan-400 hover:bg-cyan-500 font-medium rounded-full text-sm px-3 py-1 text-center me-2 mb-2 dark:focus:ring-yellow-900">
+                      <strong>
+                        {/* @ts-ignore */}
+                        <small>{formatDate(item?.createdAt)}</small>
+                      </strong>
+                    </span>
+                  </td>
+                  <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                    <div>
+                      <strong>
+                        <small>{item?.module?.toUpperCase()}</small>
+                      </strong>
+                    </div>
+                  </td>
+                  <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                    <ActionBtnGroup
+                      itemId={item.id}
+                      link={`/webpanel/blog/edit/${item.id}`}
+                      deleteItem={deleteItem}
+                      nextLink={true}
+                    />
+                  </td>
+                  <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                    <SwitcherStatus
+                      id={item?.id}
+                      status={Boolean(item?.status)}
+                      onChange={onChangeStatus}
+                    />
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={6} className="text-center p-5">
+                  No data
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
           {total > Number(process.env.NEXT_PUBLIC_PERPAGE) && (
             <AntPagination

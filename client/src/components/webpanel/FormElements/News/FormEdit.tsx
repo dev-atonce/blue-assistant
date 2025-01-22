@@ -2,13 +2,17 @@
 
 import { BlogProps } from "@/types/blogType";
 import { useBlogStore } from "@/store/blogStore";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import FormBlog from "./FormBlog";
+import FormBlog from "./FormNews";
 
-const FormAdd = () => {
+interface FormEditProps {
+  id: string;
+}
+
+const FormEdit = ({ id }: FormEditProps) => {
   const router = useRouter();
-  const { createItem } = useBlogStore();
+  const { items, fetchItemById, updateItem } = useBlogStore();
   const [blogState, setBlogState] = useState<
     Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
   >({
@@ -25,6 +29,33 @@ const FormAdd = () => {
     module: "",
     slug: "",
   });
+
+  const fetchData = async () => {
+    await fetchItemById(id);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (items.length > 0) {
+      setBlogState({
+        blog_title_th: items[0].blog_title_th,
+        blog_title_en: items[0].blog_title_en,
+        blog_title_jp: items[0].blog_title_jp,
+        blog_description_th: items[0].blog_description_th,
+        blog_description_en: items[0].blog_description_en,
+        blog_description_jp: items[0].blog_description_jp,
+        blog_detail_th: items[0].blog_detail_th,
+        blog_detail_en: items[0].blog_detail_en,
+        blog_detail_jp: items[0].blog_detail_jp,
+        page: items[0].page,
+        slug: items[0].slug,
+        blog_image: items[0].blog_image,
+      });
+    }
+  }, [items]);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -52,8 +83,8 @@ const FormAdd = () => {
   };
 
   const handleSubmit = async () => {
-    await createItem(blogState, 'blog');
-    router.push("/webpanel/blog");
+    await updateItem(id, blogState);
+    router.push("/webpanel/news");
   };
 
   return (
@@ -66,4 +97,4 @@ const FormAdd = () => {
   );
 };
 
-export default FormAdd;
+export default FormEdit;
