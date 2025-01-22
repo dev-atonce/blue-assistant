@@ -6,7 +6,10 @@ export default function CoverVisa({ pageName, prevPage }: any) {
     <>
       <div className="relative">
         <div className="container mx-auto">
-          <div className="absolute flex flex-col sm:gap-4 md:gap-10 xl:gap-24 text-[#3462af] drop-shadow-xl text-xl md:text-4xl xl:text-[96px] font-bold   top-6 sm:top-10 md:top-16 xl:top-24  ">
+          <div
+            style={{ textShadow: "2px 2px #2F2F2F" }}
+            className="absolute flex flex-col sm:gap-4 md:gap-10 xl:gap-24 text-[#3462af] drop-shadow-xl text-xl md:text-4xl xl:text-[96px] font-bold   top-6 sm:top-10 md:top-16 xl:top-24  "
+          >
             <span>VISA &</span>
             <span>WORK PERMIT</span>
           </div>

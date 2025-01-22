@@ -1,3 +1,4 @@
+import MainHeading from "@/components/website/atom/heading/MainHeading";
 import CoverVisa from "@/components/website/layout/CoverVisa";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
@@ -7,13 +8,11 @@ export default function VisaWorkpermit() {
     <>
       <div className="visa-workpermit">
         <CoverVisa />
-        <div className="container py-[110px]">
-          <div className="mb-[80px]">
-            <h1 className="font-bold text-[#3462af] text-[40px] mb-[80px]">
-              Services
-            </h1>
-            <div className="grid grid-cols-4 gap-5 h-[289px] text-xl text-[#3462af] font-semibold">
-              <button className="border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
+        <div className="container py-10">
+          <div className="mb-[80px] " id="service">
+            <MainHeading text="Service" heading="2" />
+            <div className="grid grid-cols-12 gap-5  text-xl text-[#3462af] font-semibold">
+              <button className="py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/service-1.png"}
                   alt=""
@@ -22,7 +21,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>タイで働くには</p>
               </button>
-              <button className="border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
+              <button className="py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/service-2.png"}
                   alt=""
@@ -31,7 +30,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>労働許可証</p>
               </button>
-              <button className="border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
+              <button className="py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/service-3.png"}
                   alt=""
@@ -40,7 +39,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>ビザ</p>
               </button>
-              <button className="border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
+              <button className="py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/service-4.png"}
                   alt=""
@@ -59,12 +58,10 @@ export default function VisaWorkpermit() {
             料金表はこちら
           </Link>
 
-          <div className="mb-[70px]">
-            <h2 className="font-bold text-[#3462af] text-[40px] mb-[80px]">
-              Help Info
-            </h2>
-            <div className="grid grid-cols-4 gap-20 h-[289px] text-xl text-[#3462af] font-semibold">
-              <button className="flex flex-col justify-center items-center gap-5">
+          <div className="mb-[70px] " id="info">
+            <MainHeading text="Help Info." heading="2" />
+            <div className="grid grid-cols-12 gap-20 h-[289px] text-xl text-[#3462af] font-semibold">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/help-1.png"}
                   alt=""
@@ -73,7 +70,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>Information on Institutions</p>
               </button>
-              <button className="flex flex-col justify-center items-center gap-5">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/help-2.png"}
                   alt=""
@@ -82,7 +79,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>Visa info for other countiries</p>
               </button>
-              <button className="flex flex-col justify-center items-center gap-5">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/help-3.png"}
                   alt=""
@@ -91,7 +88,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>Useful links</p>
               </button>
-              <button className="flex flex-col justify-center items-center gap-5">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
                 <Image
                   src={"/img/visa-workpermit/help-4.png"}
                   alt=""
@@ -103,7 +100,10 @@ export default function VisaWorkpermit() {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <Link className="bg-[#3462af] rounded-md py-2 px-5 " href={"/"}>
+            <Link
+              className="text-white bg-[#3462af] rounded-md py-2 px-5 "
+              href={"/"}
+            >
               More Info About us
             </Link>
           </div>
@@ -111,9 +111,7 @@ export default function VisaWorkpermit() {
         <div className="bg-[#fafafa] py-[50px]">
           <div className="container">
             <div className="mb-[50px]">
-              <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">
-                News
-              </h2>
+              <MainHeading text="News" heading="2" />
               <div>
                 <div className="bg-white text-[#3D3D3D] p-6 border-b">
                   <Link href={"/"}>
@@ -153,7 +151,10 @@ export default function VisaWorkpermit() {
               </div>
             </div>
             <div className="flex justify-center items-center">
-              <Link className="bg-[#3462af] rounded-md py-2 px-5 " href={"/"}>
+              <Link
+                className="text-white bg-[#3462af] rounded-md py-2 px-5 "
+                href={"/"}
+              >
                 See More
               </Link>
             </div>
@@ -161,9 +162,7 @@ export default function VisaWorkpermit() {
         </div>
         <div className="container py-[100px] border-b">
           <div className="">
-            <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">
-              Contact
-            </h2>
+            <MainHeading text="Contact" heading="2" />
             <div className="grid grid-cols-2 gap-20">
               <div className="col-span-1 text-[#3D3D3D]">
                 <div>
@@ -194,10 +193,8 @@ export default function VisaWorkpermit() {
             </div>
           </div>
         </div>
-        <div className="container py-[100px]">
-          <h2 className="font-bold text-[#3462af] text-[40px] mb-[60px]">
-            Contact Form
-          </h2>
+        <div className="container py-[100px]" id="contact">
+          <MainHeading text="Contact Form" heading="2" />
           <div className="grid grid-cols-5 gap-10">
             <div className="col-span-2">
               <Image
