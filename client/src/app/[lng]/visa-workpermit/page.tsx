@@ -53,15 +53,15 @@ export default function VisaWorkpermit() {
 
           <Link
             href="/visa-workpermit/price"
-            className="flex justify-center border-[#3462af] border-8 py-4 text-center font-semibold text-[24px] text-[#3462af] mb-[80px] w-full"
+            className="flex justify-center hover:bg-[#3462af] hover:text-white transition-all border-[#3462af] border-8 py-4 text-center font-semibold text-[24px] text-[#3462af] mb-[80px] w-full"
           >
             料金表はこちら
           </Link>
 
           <div className="mb-[70px] " id="info">
             <MainHeading text="Help Info." heading="2" />
-            <div className="grid grid-cols-12 gap-20 h-[289px] text-xl text-[#3462af] font-semibold">
-              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
+            <div className="grid grid-cols-12 gap-y-10  text-xl text-[#3462af] font-semibold ">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5 w-full">
                 <Image
                   src={"/img/visa-workpermit/help-1.png"}
                   alt=""
@@ -70,7 +70,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>Information on Institutions</p>
               </button>
-              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5 w-full">
                 <Image
                   src={"/img/visa-workpermit/help-2.png"}
                   alt=""
@@ -79,7 +79,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>Visa info for other countiries</p>
               </button>
-              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5 w-full">
                 <Image
                   src={"/img/visa-workpermit/help-3.png"}
                   alt=""
@@ -88,7 +88,7 @@ export default function VisaWorkpermit() {
                 ></Image>
                 <p>Useful links</p>
               </button>
-              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5">
+              <button className="col-span-12 md:col-span-6 xl:col-span-3 flex flex-col justify-center items-center gap-5 w-full">
                 <Image
                   src={"/img/visa-workpermit/help-4.png"}
                   alt=""
