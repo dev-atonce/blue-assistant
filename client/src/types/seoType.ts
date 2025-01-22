@@ -1,5 +1,5 @@
 export interface SeoProps {
-    id?: string;
+  id?: string;
   page?: string;
   seoDescriptionTH: string;
   seoDescriptionEN: string;

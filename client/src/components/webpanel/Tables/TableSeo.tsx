@@ -10,14 +10,15 @@ const TableSeo = () => {
   const router = useRouter();
   const { fetchItems, items, total } = useSeoStore();
   const [pageState, setPageState] = useState(1);
+
   const { role } = useUsersStore();
 
   useEffect(() => {
     fetchItems(pageState);
   }, [fetchItems, pageState]);
-  
   useEffect(() => {
     const allow = role === "super";
+
     !allow && router.push("/webpanel");
   }, []);
 
