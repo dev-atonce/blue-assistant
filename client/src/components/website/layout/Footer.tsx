@@ -24,11 +24,11 @@ export default function Footer({ contact, colors, owner, lng }: any) {
               <div className=" flex items-center justify-between">
                 <div>
                   <div className="border-4 p-4">
-                    <p className="text-2xl">{owner.name.en}</p>
+                    <p className="text-xl">{owner.name.en}</p>
                     <p>ブルーアシスタンス　株式会社</p>
                     {/* <p>{owner.name.jp}</p> */}
                   </div>
-                  <div className="mt-6">
+                  <div className="mt-6 text-sm">
                     No.D 9th Floor, PRIME BUILDING,
                     <br />
                     24 Sukhumvit Soi 21(Asoke), Sukhumvit Road,
@@ -44,7 +44,7 @@ export default function Footer({ contact, colors, owner, lng }: any) {
                         <FaPhone size="12" />
                       </div>
                     </div>
-                    <div>
+                    <div className="text-xs md:text-sm">
                       <Link href="tel:02-661-7687" className="block">
                         TEL : +66 (0)2-661-7687~88
                       </Link>
@@ -62,7 +62,7 @@ export default function Footer({ contact, colors, owner, lng }: any) {
                         <MdEmail size="12" />
                       </div>
                     </div>
-                    <div>
+                    <div className="text-xs md:text-sm">
                       <p>医療アシスタンス業務</p>
                       <p>medical@blue-assistance.co.th</p>
                       <p>ビザ&労働許可証コンサルタント業務</p>
@@ -87,9 +87,9 @@ export default function Footer({ contact, colors, owner, lng }: any) {
       <div className="bg-[#2E5BA8]">
         <div className="container px-4 mx-auto py-4 flex items-center justify-center  text-xs">
           <div>
-            <span className="">
+            <div className="text-center text-[6px]">
               ©Copyright {currentYear} {owner.name.en} - All Rights Reserved.
-            </span>
+            </div>
           </div>
         </div>
       </div>

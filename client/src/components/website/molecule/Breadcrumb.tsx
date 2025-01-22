@@ -6,9 +6,9 @@ interface BreadcrumbProps {
 }
 const Breadcrumb = ({ pageName, prevPage }: any) => {
   return (
-    <div className="container mx-auto py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <nav>
-        <ol className="flex items-center gap-2">
+    <div className="text-xs font-thin py-1 flex flex-col gap-3 sm:flex-row  ">
+      <nav className="w-full ">
+        <ol className="flex items-center gap-2  w-full">
           {/* {prevPage.length &&
             prevPage?.map((v: any, k: any) => (
               <li key={k}>

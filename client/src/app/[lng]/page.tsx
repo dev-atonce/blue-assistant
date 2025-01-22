@@ -66,7 +66,7 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
       <div className="relative">
-        <div className="container mx-auto overflow-hidden absolute top-[-150px] left-0 sm:left-10 font-bold text-[#8098c2] text-[140px] xl:text-[320px] opacity-5 z-0 select-none ">
+        <div className="container mx-auto overflow-hidden absolute top-[-150px] left-0 sm:left-10 font-bold text-[#8098c2] text-[140px] xl:text-[320px] opacity-5 z-[-20] select-none ">
           BLUE ASSISTANT
         </div>
         <div className="container  mx-auto mt-32">

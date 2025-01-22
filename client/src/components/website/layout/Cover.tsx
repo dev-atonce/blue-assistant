@@ -28,13 +28,13 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
         </div>
         <div className="bg-[#3462AF]  w-full">
           <div className=" container mx-auto py-2">
-            <p className="text-sm sm:text-base xl:text-xl">
+            <p className="text-sm sm:text-base xl:text-xl text-white">
               「親切・丁寧・迅速」なサービスをモットーに、みなさまの海外生活をサポートいたします。
             </p>
           </div>
         </div>
         <div className="bg-slate-500/10  w-full">
-          <div className="container xl:px-4 2xl:px-4 mx-auto">
+          <div className="container mx-auto">
             <Breadcrumb pageName={pageName} prevPage={prevPage} />
           </div>
         </div>

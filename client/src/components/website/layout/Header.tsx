@@ -113,7 +113,7 @@ export default function Header({ logo, contact, owner, colors }: any) {
 
       <div className="flex">
         <div
-          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${
+          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-50 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

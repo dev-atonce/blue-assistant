@@ -9,7 +9,7 @@ export default function ServiceCard({ item }: any) {
   return (
     <div
       //   href={`/service/${item?.id}`}
-      className="z-10 group flex flex-col items-center gap-3 bg-white shadow-md px-4 pb-6 transition-all duration-500 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 overflow-hidden rounded-xl border border-slate-200"
+      className=" group flex flex-col items-center gap-3 bg-white shadow-md px-4 pb-6 transition-all duration-500 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 overflow-hidden rounded-xl border border-slate-200"
     >
       {item?.link && (
         <a href={item?.link}>
@@ -29,7 +29,7 @@ export default function ServiceCard({ item }: any) {
               loading="lazy"
             />
           </div>
-          <div className="pt-2 min-h-32 overflow-hidden border-t-[2px]">
+          <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
             <p className="text-center text-sm w-full text-[#3562AE]">
               {item?.descriptionEN}
             </p>
@@ -54,7 +54,7 @@ export default function ServiceCard({ item }: any) {
               loading="lazy"
             />
           </div>
-          <div className="pt-2 min-h-32 overflow-hidden border-t-[2px]">
+          <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
             <p className="text-center text-sm w-full text-[#3562AE]">
               {item?.descriptionEN}
             </p>
@@ -80,7 +80,7 @@ export default function ServiceCard({ item }: any) {
                 loading="lazy"
               />
             </div>
-            <div className="pt-2 min-h-32 overflow-hidden border-t-[2px]">
+            <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
               <p className="text-center text-sm w-full text-[#3562AE]">
                 {item?.descriptionEN}
               </p>

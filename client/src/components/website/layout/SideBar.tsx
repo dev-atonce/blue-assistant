@@ -6,9 +6,9 @@ import { RiCloseLargeLine } from "react-icons/ri";
 
 export default function SideBar({ sideBar, language, contact }: any) {
   return (
-    <div className="flex">
+    <div className="flex ">
       <div
-        className="sidebar-wraper w-full max-h-screen "
+        className="sidebar-wraper  w-full max-h-screen "
         style={{ height: `calc(100vh - 68px)` }}
       >
         <ul className="sidebar-menu px-4 py-10">
