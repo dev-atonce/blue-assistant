@@ -105,7 +105,7 @@ export default function Header({ logo, contact, owner, colors }: any) {
               className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
               onClick={toggleSidebar}
             >
-              <GiHamburgerMenu size={35} color="#ED1F23" />
+              <GiHamburgerMenu size={35} color="#3462af" />
             </div>
           </div>
         </div>

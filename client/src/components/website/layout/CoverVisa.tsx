@@ -22,9 +22,9 @@ export default function CoverVisa({ pageName, prevPage }: any) {
           height={478}
         ></Image>
       </div>
-      <div className="shadow-lg bg-[#3462af] py-4 text-white">
-        <div className="container h-full flex justify-center items-center gap-2 sm:gap-16 text-xs lg:text-[16px] font-semibold">
-          <Link href={"/visa-workpermit"}>Visa & Work Permit</Link>
+      <div className="shadow-lg bg-[#3462af] py-4 text-white sticky top-0">
+        <div className="container h-full flex justify-center items-center gap-2 sm:gap-6 xl:gap-12 text-xs lg:text-[16px] font-semibold">
+          <Link href={"/visa-workpermit"}>Visa&Work Permit</Link>
           <Link href={"/visa-workpermit#service"}>Service</Link>
           <Link href={"/visa-workpermit#info"}>Info</Link>
           <Link href={"/visa-workpermit/news-activity"}>News</Link>

@@ -1,11 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaPlus,
-  FaFacebookF,
-  FaLine,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaPlus, FaFacebookF, FaLine, FaInstagram } from "react-icons/fa";
 import menuItem from "@/assets/menuItem.json";
 import { RiCloseLargeLine } from "react-icons/ri";
 
@@ -21,7 +16,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
             className="w-full flex justify-end"
             onClick={() => sideBar?.closeSideBar()}
           >
-            <RiCloseLargeLine size={40} color={"#ED2022"} />
+            <RiCloseLargeLine size={40} color={"#3462af"} />
           </button>
           {menuItem.map((item, index) => (
             <li key={index} className="menu-item rounded-lg">
@@ -29,7 +24,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
                 href={item.href}
                 title={item.title.jp}
                 onClick={(e) => sideBar.toggleSubMenu(e)}
-                className="p-2 hover:text-red-600 flex items-center justify-between"
+                className="p-2 hover:text-[#3462af] flex items-center justify-between"
               >
                 {item.title.jp}
                 {/* @ts-ignore */}
@@ -106,14 +101,23 @@ export default function SideBar({ sideBar, language, contact }: any) {
             </a>
           </div>
           <div className="text-black notranslate flex gap-1">
-            <button onClick={(e: any) => language?.switchLanguage("th")} title="thai">
+            <button
+              onClick={(e: any) => language?.switchLanguage("th")}
+              title="thai"
+            >
               <Image src="/img/th_flag.png" alt="th" width={25} height={25} />
             </button>
-            <button onClick={(e: any) => language?.switchLanguage("en")} title="english">
+            <button
+              onClick={(e: any) => language?.switchLanguage("en")}
+              title="english"
+            >
               {" "}
               <Image src="/img/uk_flag.png" alt="th" width={25} height={25} />
             </button>
-            <button onClick={(e: any) => language?.switchLanguage("ja")} title="japanese">
+            <button
+              onClick={(e: any) => language?.switchLanguage("ja")}
+              title="japanese"
+            >
               {" "}
               <Image src="/img/jp_flag.png" alt="th" width={26} height={26} />
             </button>

@@ -5,18 +5,18 @@ export default function StrongServiceSection() {
     <>
       <div id="about-us" className="bg-[#EDF4FF]">
         <div className="container mx-auto mt-20 py-20">
-          <h5 className="text-4xl font-bold text-[#3562AE] text-center tracking-widest">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3562AE] text-center tracking-widest">
             「親切・丁寧・迅速 」なサービス
-          </h5>
-          <h6 className="text-xl font-bold text-[#3562AE] text-center mt-6">
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl font-bold text-[#3562AE] text-center mt-6">
             をモットーに、みなさまの海外生活をサポートいたします。
-          </h6>
-          <p className="text-xl font-bold text-[#3562AE] text-center mt-6">
+          </p>
+          <p className="text-xs  sm:text-base lg:text-lg font-bold text-[#3562AE] text-center mt-6">
             ブルーアシスタンスは海外に住む日本人のお客様向けに、医療アシスタンスやビザ・ワークパーミットの取得代行のお伝いを行っております。
             <br />
             お困りのことがございましたら、お気軽にお問い合わせください。
           </p>
-          <div className="grid grid-cols-12 gap-8 mt-20 text-[#0C2B4B]">
+          <div className="grid grid-cols-12 gap-y-8 lg:gap-x-4 mt-20 text-[#0C2B4B]">
             <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
               <div className="flex justify-center h-32">
                 <img
