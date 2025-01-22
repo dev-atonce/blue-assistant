@@ -103,7 +103,7 @@ export default function NewsSection() {
           </div> */}
           <div className="flex justify-center mt-20">
             <Link
-              href="/news-activity"
+              href="/blog"
               className="bg-[#3562AE] text-white py-2 px-16 rounded-lg hover:bg-[#FDBD59]"
             >
               もっと見る

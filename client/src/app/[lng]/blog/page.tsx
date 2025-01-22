@@ -54,7 +54,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
   return (
     <>
       <Cover
-        pageName={t("news")}
+        pageName={t("blog")}
         image="/img/service/news_banner.jpg"
         prevPage={{ pageName: t("home"), url: "/" }}
         noHeading={true}
@@ -63,12 +63,6 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
         <div className="py-4 flex flex-col gap-3 mt-10">
           {/* news */}
           <h1 className="font-bold text-4xl text-[#3562AE] ">ニュース</h1>
-          <div className="h-1 w-16 bg-orange-400"></div>
-        </div>
-        <BlogSection home={false} limit={6} blogs={blogs} />
-        <div className="py-4 flex flex-col gap-3 mt-10">
-          {/* blog */}
-          <h1 className="font-bold text-4xl text-[#3562AE] ">ブログ</h1>
           <div className="h-1 w-16 bg-orange-400"></div>
         </div>
         <BlogSection home={false} limit={6} blogs={blogs} />

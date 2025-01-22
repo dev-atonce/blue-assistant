@@ -1,26 +1,18 @@
 import MainHeading from "@/components/website/atom/heading/MainHeading";
 import Cover from "@/components/website/layout/Cover";
+import CoverVisa from "@/components/website/layout/CoverVisa";
 
-export default function About() {
+export default function Price() {
   return (
     <>
       <div className="about-us">
-        <Cover
-          noHeading={true}
-          pageName={"About Us"}
-          image="/img/service/branch_banner.jpg"
-          prevPage={{ pageName: "Home", url: "/" }}
-        />
+        <CoverVisa />
         <div className="container mx-auto px-2 md:px-0">
           <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
             <div className="border-b-2 pb-6 border-slate-400">
-              <MainHeading text="ご挨拶" heading="2" />
-              <p>
-                ブルーアシスタンス㈱は2005年にタイ国内における日本人向け医療アシスタンスのクレームエージェントとして設立された、現地アシスタンス会社です。
-                親会社に当たる『ブルーグラウンド株式会社』（旅行会社）のネットワークを利用した、タイ全土での医療施設への支払い代行、
-                日本人によるアテンドサービス、国内外の医療搬送手配、インドシナなどの医療設備の整っていない地域からチャーター便などによる緊急搬送の手配および
-                支払い代行などへの業務を拡張しております。また、日系企業のお手伝いをコンセプトに、各種ビザ、労働許可証の申請代行ならびに設立、会計業務の
-                コンサルタントを行っております。『親切･丁寧･迅速』をモットーにタイ国内・インドシナにおける総合アシスタンス会社を目指し日々活動しております。
+              <MainHeading text="代行サービス料金一覧" heading="1" />
+              <p className="text-xl font-semibold">
+                ※下記料金には役所への発行手数料は含まれておりません。
               </p>
               <div className="w-full text-end">
                 <p>Managing Director</p>
@@ -29,7 +21,7 @@ export default function About() {
             </div>
             <div className="flex flex-col gap-6 border-b-2 pb-6 border-slate-400">
               <MainHeading text="当社の強み" heading="2" />
-              <p>
+              <p className="text-xl font-semibold">
                 ブルーアシスタンスは海外に住む日本人のお客様向けに、医療アシスタンスやビザ・ワークパーミットの取得代行のお伝いを行っております。
                 お困りのことがございましたら、お気軽にお問い合わせください。
               </p>
