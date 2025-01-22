@@ -4,10 +4,13 @@ export default function CoverVisa() {
   return (
     <>
       <div className="relative">
-        <div className="absolute text-[#3462af] drop-shadow-xl text-[96px] font-bold left-40 top-24">
-          VISA & <br />
-          WORK PERMIT
+        <div className="container mx-auto">
+          <div className="absolute flex flex-col gap-4 md:gap-10 xl:gap-24 text-[#3462af] drop-shadow-xl text-xl md:text-4xl xl:text-[96px] font-bold   top-10 md:top-16 xl:top-24  ">
+            <span>VISA &</span>
+            <span>WORK PERMIT</span>
+          </div>
         </div>
+
         <Image
           src="/img/visa-workpermit/banner-visa.png"
           alt="visa-workpermit"
@@ -15,14 +18,13 @@ export default function CoverVisa() {
           height={478}
         ></Image>
       </div>
-      <div className="shadow-lg bg-[#3462af] h-[70px] lg:block hidden">
-        <div className="container h-full flex justify-center items-center gap-16 text-[16px] font-semibold">
-          <Link href={"/"}>Location</Link>
-          <Link href={"/"}>About</Link>
-          <Link href={"/"}>Service</Link>
-          <Link href={"/"}>Blog</Link>
-          <Link href={"/"}>FAQ</Link>
-          <Link href={"/"}>Contact</Link>
+      <div className="shadow-lg bg-[#3462af] py-4 text-white">
+        <div className="container h-full flex justify-center items-center gap-4 sm:gap-16 text-xs lg:text-[16px] font-semibold">
+          <Link href={"/visa-workpermit#service"}>Service</Link>
+          <Link href={"/visa-workpermit#info"}>Info</Link>
+          <Link href={"/visa-workpermit/news-activity"}>News</Link>
+          <Link href={"/visa-workpermit/info#faq"}>FAQ</Link>
+          <Link href={"/visa-workpermit#contact"}>Contact</Link>
         </div>
       </div>
     </>
