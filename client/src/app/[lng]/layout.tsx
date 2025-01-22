@@ -19,6 +19,13 @@ const noto = Noto_Sans({
   display: "swap",
 });
 
+const notoJP = Noto_Sans_JP({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const owner = {
   name: {
     th: "บริษัท บลู แอสซิสแท็นซ จำกัด",
@@ -72,13 +79,16 @@ const colors = {
 //   };
 // }
 
-export default async function RootLayout({ children, params: { lng } }: Readonly<{ children: React.ReactNode; params: { lng: string } }>) {
+export default async function RootLayout({
+  children,
+  params: { lng },
+}: Readonly<{ children: React.ReactNode; params: { lng: string } }>) {
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(lng as any)) {
     notFound();
   }
   const messages = await getMessages();
-  
+
   return (
     <html lang={lng}>
       <ConfigProvider
@@ -97,7 +107,11 @@ export default async function RootLayout({ children, params: { lng } }: Readonly
         }}
       >
         <PageSettingProvider>
-          <body className={noto.className}>
+          <body
+            className={
+              lng !== "jp" ? `${noto.className}` : `${notoJP.className} `
+            }
+          >
             <NextIntlClientProvider messages={messages}>
               <Header colors={colors} owner={owner} lng={lng} />
               {children}

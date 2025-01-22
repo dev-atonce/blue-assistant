@@ -5,7 +5,7 @@ import CoverVisa from "@/components/website/layout/CoverVisa";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { FaEye } from "react-icons/fa";
+import { FaArrowCircleDown, FaEye } from "react-icons/fa";
 
 export default function Work() {
   const t = useTranslations("header");
@@ -21,7 +21,7 @@ export default function Work() {
             <div className="">
               <MainHeading text="労働許可証（ワークパーミット）" heading="1" />
               <div
-                id="t-1"
+                id="t-4"
                 className="py-4 md:py-10 border-b-2 border-slate-200 "
               >
                 <FadeHeading text="労働許可証とは" heading="2" />
@@ -192,83 +192,444 @@ export default function Work() {
                 </div>
               </div>
               <div
-                id="t-2"
+                id="t-5"
                 className="py-4 md:py-10 border-b-2 border-slate-200"
               >
-                <FadeHeading
-                  text="就労ビザ・ノンイミグラント（B）ビザの取得"
-                  heading="2"
-                />
-                <div className="flex flex-col gap-2  text-sm sm:text-base">
-                  <span>日本で取得する場合</span>
-                  <span>●必要書類</span>
-                  <ul>
-                    <li>・パスポート （有効残存期間６ヶ月以上）</li>
-                    <li>
-                      ・申請書原本（所定書式有・タイ大使館HPよりダウンロード可能）
-                    </li>
-                    <li>・写真（３cm×4.5cm / 1葉）</li>
-                    <li>・タイ側・雇用主からの英文招聘状原本（タイ側準備）</li>
-                    <li>
-                      ・英文履歴書
-                      （所定書式有・タイ大使館HPよりダウンロード可能）
-                    </li>
-                    <li>・航空券又は予約証明書 （往復又は片道）</li>
-                    <li>
-                      ・以前タイでの就労したことがある申請者は、以前の労働許可書コピー1部
-                    </li>
-                    <li>・聘招会社の会社登記証明書（ナンスー ラプローン）</li>
-                    <li>
-                      ・労働許可事前認可（書式：トートー３）
-                      <br />{" "}
-                      （※就業目的や15日以上の長期商用の場合に求められる場合があります）
-                    </li>
-                  </ul>
-                  <span>
-                    ＊トートー３は事前にタイ国労働省へ申請し、取得には１～３週間を要します。
-                  </span>
-                  <span>
-                    審査に際し上記以外の他の書類を求められる事があります。
-                  </span>
-                  <span>
-                    必要書類は各大使館、領事館によって異なる場合がございますので、詳細は申請予定のタイ国大使館ホームページ
-                    (お役立ちリンク) をご参照下さい。
-                  </span>
-                  <span>
-                    ★ビザ無しでタイへ入国後、タイ国内でノンイミグラント(B)ビザへ変ができる場合がございます。詳しい詳細はお問合せ下さいませ。
-                  </span>
+                <FadeHeading text="必要書類" heading="2" />
+                <div className="text-sm">
+                  <div className="detail-sty">
+                    <p>
+                      タイ・バンコクでのワークパーミット（労働許可証）の申請は、会社の業種や形態(現地法人／駐在員事務所など)により､提出書類が異なります。雇用する会社側は、業務内容、規模、雇用証明する書類等が、労働者に対しては、役職、職務内容、学歴職歴、技術移転能力を証明する書類等が求められます。ここでは現地一般法人企業の申請時、必要書類をご説明いたします。
+                    </p>
+
+                    <p className="text-red-700 py-6">
+                      ※下記リストは一般的な必要書類リストとなります。業務内容及び申請者の職歴によっては下記リスト以外に追加書類が必要となる場合がございます。また申請を受ける管轄役所によって必要書類が異なります。申請書類準備時に、弊社担当スタッフにご確認下さいませ。
+                    </p>
+
+                    <h3 className="py-4 font-bold text-lg text-blue-900">
+                      1.ワークパーミット（労働許可証）申請必要書類・現地企業法人一般・（様式
+                      トートー１）
+                    </h3>
+
+                    <ol className="list-decimal pl-4">
+                      <li>労働許可証申請書TT.1(書式・トートー１)</li>
+                      <li>写真（3㎝×４㎝）×３枚・６カ月以内に撮影したもの</li>
+                      <li>
+                        パスポート原本及び写し（写真ページ、Bビザページ、最新入国スタンプページ、TMカード）
+                      </li>
+                      <li>
+                        労働省規定「雇用証明書」（書式有・弊社にて代行作成いたします）
+                      </li>
+                      <li>卒業証明書（英文）及び職歴証明書（英文）写し</li>
+                      <li>タイ国医師からの健康診断書（第三期梅毒含む）原本</li>
+                      <li>
+                        会社登記証明書（ナンスーラプローン）、業務目的（ワットパソン）６カ月以内のもの・写し
+                      </li>
+                      <li>
+                        タイ人役員IDカード写し及び日本人役員の労働許可証写し
+                      </li>
+                      <li>株式名簿・６カ月以内のもの写し</li>
+                      <li>VAT登録書P.P.1(書式・ポーポー20，09,01)写し</li>
+                      <li>
+                        決算報告書（貸借対照表、損益計算書）最新のもの・写し
+                      </li>
+                      <li>
+                        社会保険申告書（書式・ソーポーソー1-10）及び領収書・最新のもの写し
+                      </li>
+                      <li>
+                        VAT申告書（書式・ポーポー30）及び申告書写し（1カ月～3カ月分）
+                      </li>
+                      <li>会社所在地地図</li>
+                      <li>
+                        その他事業ライセンス、事業実績証明等（もし有れば）写し
+                      </li>
+                    </ol>
+
+                    <br />
+
+                    <ul className="list-square">
+                      <li>
+                        ※
+                        会社関係の書類はすべて会社の認証（社印）及び、会社役員の署名が必要となります。
+                      </li>
+                      <li>※ 2,3,5,6は申請者様にてご用意いただきます。</li>
+                      <li>
+                        ※
+                        ワークパーミット（労働許可書）は会社登記の業務目的ではなく税務署に申請するVAT登録書内の業務内容を重視します。
+                      </li>
+                      <li>
+                        ※
+                        申請から取得にかかる時間は、管轄区域の労働省により異なりますが、申請後10日間～４週間ほど要します。ONE
+                        STOP SERVICEは即日決裁されます。
+                      </li>
+                    </ul>
+
+                    <br />
+
+                    <h3 className="py-4 font-bold text-lg text-blue-900">
+                      ワークパーミット（労働許可証）申請更新（2年目以降）必要書類・現地企業法人一般・（様式
+                      トートー５）
+                    </h3>
+
+                    <ol className="pl-4 list-decimal">
+                      <li>労働許可証申請書TT.1(書式・トートー5)</li>
+                      <li>写真（3㎝×４㎝）×３枚・６カ月以内に撮影したもの</li>
+                      <li>
+                        パスポート原本及び写し（写真ページ、Bビザページ、最新入国スタンプページ、TMカード）
+                      </li>
+                      <li>
+                        労働省規定「雇用証明書」（書式有・弊社にて代行作成いたします）
+                      </li>
+                      <li>タイ国医師からの健康診断書（第三期梅毒含む）原本</li>
+                      <li>
+                        会社登記証明書（ナンスーラプローン）、業務目的（ワットパソン）６カ月以内のもの・写し
+                      </li>
+                      <li>
+                        タイ人役員IDカード写し及び日本人役員の労働許可証写し
+                      </li>
+                      <li>株式名簿・６カ月以内のもの写し</li>
+                      <li>
+                        個人所得確定申告書P.N.D.91(ポーゴードー91)及び領収書・最新のもの写し
+                      </li>
+                      <li>
+                        決算報告書（貸借対照表、損益計算書）最新のもの写し
+                      </li>
+                      <li>
+                        社会保険申告書（書式・ソーポーソー1-10）及び領収書・最新のもの写し
+                      </li>
+                      <li>
+                        VAT申告書（書式・ポーポー30）及び申告書・直近3カ月分のもの写し
+                      </li>
+                    </ol>
+
+                    <br />
+
+                    <ul className="list-square">
+                      <li>
+                        ※
+                        会社関係の書類はすべて会社の認証（社印）及び、会社役員の署名が必要となります。
+                      </li>
+                      <li>※ 2,3,5は申請者様にてご用意いただきます。</li>
+                    </ul>
+                  </div>
+                  <div className="text-center py-10">
+                    <Link
+                      href="/#contact"
+                      className="hover:bg-blue-700 hover:scale-90 transition-all py-4 px-4 bg-blue-900 text-white font-semibold rounded-lg"
+                    >
+                      お問い合わせはこちら
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div
-                id="t-3"
+                id="t-6"
                 className="py-4 md:py-10 border-b-2 border-slate-200"
               >
-                <FadeHeading text="２年目以降の更新" heading="2" />
-                <div className="relative">
-                  <Image
-                    src={"/img/visa-workpermit/work-thailand-flow-2.png"}
-                    alt=""
-                    width={1900}
-                    height={1200}
-                    className="w-full "
-                  ></Image>
+                <FadeHeading text="タイ国内での転職・退職" heading="2" />
+                <h3 className="py-4 font-bold text-lg text-blue-900">
+                  タイ国内での転職
+                </h3>
+                <div className="text-sm">
+                  <div className="detail-sty">
+                    <p>
+                      タイ国内で転職をする場合、既存のワークパーミット（労働許可証）ビザ手続きについて認識しておく必要がございます。
+                      <br />
+                      退職後一旦タイ国外へ出国し、新たな滞在許可証（ノンイミグランドBビザ）を取得し再入国してから転職する方法と、出国せずにタイ国内で転職手続きが可能な場合がございます。
+                      <br />
+                      タイ国外に出国せずに、転職、ワークパーミット（労働許可証）ビザ切替手続きを行う場合、申請する時間が限られる為、事前にしっかりと書類を用意する必要がございます。
+                    </p>
+
+                    <br />
+
+                    <p className="font-semibold text-base">
+                      タイ国内でビザを切り替える際の手順は以下となります。
+                    </p>
+
+                    <ul className="pl-4 list-disc">
+                      <li>
+                        現在の勤務先の退職前から、新しい会社側の書類を準備
+                      </li>
+                      <li>
+                        現在の勤務先の就労ビザ、ワークパーミット（労働許可証）をキャンセルする
+                      </li>
+                      <li>
+                        滞在期限が残っている間に、新しい会社の書類でワークパーミット（労働許可証）及び就労ビザの滞在延長を申請
+                      </li>
+                    </ul>
+
+                    <br />
+
+                    <p>
+                      ケースによってはタイ国内で切替が出来ない場合もございます。転職を検討されている方、また採用を検討されている企業様は、転職、採用の前に切替手続きについてお問合せ下さい。
+                      <br />
+                      転職時の手続きを円滑に行うには、所属先及び転職先企業様のご協力が不可欠です。退職される場合は、所属先の規則に基づき、正式な手順で手続きを進めて行く事をお勧めいたします。
+                    </p>
+                  </div>
+                </div>
+                <h3 className="py-4 font-bold text-lg text-blue-900">
+                  退職・帰国
+                </h3>
+                <div className="box-sub-detail text-sm">
+                  <div className="detail-sty">
+                    <p>
+                      退職した場合、または日本へ帰任となった場合、必ず既存の滞在許可（ビザ）とワークパーミット（労働許可証）をキャンセルする必要がございます。キャンセル手続きを行わずに出国すると、今後タイで就業手続きを進める際に、過去の記録と照合され、問題になる可能性がございます。退職する、本帰国になる場合はしっかりとキャンセルの手続きを行いましょう。
+                      <br />
+                      キャンセル手続きは、ワークパーミット（労働許可証）は、所属している会社へ返却いただき、会社側が労働省へキャンセルの報告を行います（特に定められてた規定はありませんが、速やかに手続きを行う事をお勧めいたします）滞在許可（ビザ）キャンセルは、必要書類を揃え、移民局またはワンストップサービスへ退職日の申請とキャンセルを行います。申請時に発行された滞在期間までに出国が必要となります。
+                      <br />
+                      退職される場合、キャンセル手続きとは他に、最終勤務先より、在職証明、個人所確定申告書（書式・ポーゴード-91）、労働許可証写しを入手する事をお勧めいたします。これらの書類は、再度タイで就業手続きをする際に、必要になります。大切に保管しておきましょう。
+                    </p>
+                  </div>
+                </div>
+                <div className="text-center py-10">
                   <Link
-                    href="/visa-workpermit/work-in-thailand#t-2"
-                    className="hover:scale-110 absolute top-[22%] left-[90%] text-blue-500"
+                    href="/#contact"
+                    className="hover:bg-blue-700 hover:scale-90 transition-all py-4 px-4 bg-blue-900 text-white font-semibold rounded-lg"
                   >
-                    <FaEye size={20} />
+                    お問い合わせはこちら
                   </Link>
+                </div>
+              </div>
+              <div
+                id="t-7"
+                className="py-4 md:py-10 border-b-2 border-slate-200"
+              >
+                <FadeHeading
+                  text="BOI認可企業・ワンストップサービス"
+                  heading="2"
+                />
+                <h3 className="py-4 font-bold text-lg text-blue-900">
+                  ワンストップサービス(One Stop Service)
+                </h3>
+                <div className="detail-sty text-sm">
+                  外国人のワークパーミット（労働許可証）と滞在許可（ビザ）の申請は、一般現地法人企業が労働省や移民局で行う方法と、ワンストップサービスセンターで申請する方法があります。一般現地法人の申請はそれぞれの項目でご説明さしあげましたが、ここではワンストップサービスについて説明いたします。
+                  <br />
+                  ワンストップサービスは外国人のワークパーミット（労働許可証）及び滞在許可（ビザ）の申請と認可を一本化するために、それらを管轄する、労働省、移民局、B.O.Iの出先機関を1カ所にまとめ、手続きの優遇サービスを行う機関です。通常の一般企業での場合、申請は個々の管轄機関へ申請を行う必要がありますが、ワンストップサービスで申請の場合、ワークパーミット（労働許可証）滞在許可（ビザ）の新規申請、更新、延長手続き処理を行う事が可能です。すなわち、ワンストップサービスですべての手続きが完結いたします。ワンストップサービスの優遇サービスはすべての企業が利用できるのではなく、ある一定の対象企業のみとなります。主な対象企業として、B.O.I,工業団地公社（IEAT）,振込資本又は資産額が3,000万バーツ以上の企業、駐在員事務所、支店等がございます。
+                </div>
+
+                <h3 className="py-4 font-bold text-lg text-blue-900">
+                  B.O.I 認可企業
+                </h3>
+                <div className="detail-sty text-sm">
+                  <p>
+                    ワンストップサービスの概要について説明してまりましたが、ここでは、その対象企業となる「B.O.I認可企業」について説明いたします。
+                    <br />
+                    B.O.I（Board of
+                    Investment）、タイ投資委員会。タイ国投資奨励法に則り、B.O.I.の認可企業になれば、様々な優遇制度を受ける事が可能です。
+                    <br />
+                    輸入関税、法人税、などの税制面、株所有権、土地所有権等で権利と恩典など優遇措置がありますまた、「ワンストップサービス」でもご説明さしあげたように、
+                    <br />
+                    ワークパーミット（労働許可証）、滞在許可（ビザ）取得手続きの優遇も受ける事が可能です。
+                  </p>
+
+                  <br />
+
+                  <p>
+                    以下、B.O.I認可企業、「ワンストップサービス」での就労者、ワークパーミット（労働許可書）滞在許可（ビザ）の申請方法と必要書類一例となります。
+                  </p>
+                </div>
+                <h3 className="py-4 font-bold text-lg text-blue-900">
+                  「ワンストップサービス」B.O.I認可企業・ワークパーミット（労働許可証）・滞在許可（ビザ）必要書類
+                </h3>
+
+                <div className="text-red-700 text-sm pb-6">
+                  ※下記リストは一般的な必要書類リストとなります。業務内容及び申請者の職歴によっては下記リスト以外に追加書類が必要となる場合がございます。申請書類準備時に、弊社担当スタッフにご確認下さいませ。
+                </div>
+                <div className="text-xs sm:text-sm">
+                  <div className="table-one text-base">
+                    <table className="w-full ">
+                      <tbody>
+                        <tr className=" bg-blue-900 text-white">
+                          <th className="w-[20%] py-6">行程</th>
+                          <th className="w-[10%] border-x border-white">
+                            期間
+                          </th>
+                          <th>参考事項</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <br />
+
+                  <div className="table-two">
+                    <table className="w-full border border-slate-300">
+                      <tbody>
+                        <tr>
+                          <th className="w-[20%] py-6 bg-blue-900 text-white">
+                            タイ入国
+                          </th>
+                          <td className="text-center w-[10%] border border-slate-300"></td>
+                          <td>
+                            <p>空港で90日間の滞在許可発行</p>
+                            <p>※タイ国外でノンイミグラントBビザ取得</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="flex justify-center  py-6 text-red-700">
+                    <FaArrowCircleDown size={40} />
+                  </div>
+
+                  <div className="table-two">
+                    <table className="table table-bordered w-full border border-slate-300">
+                      <tbody>
+                        <tr>
+                          <th className="w-[20%] py-6 bg-blue-900 text-white">
+                            STEP①
+                            <br />
+                            ポジションリクエスト
+                          </th>
+                          <td className="text-center w-[10%] border border-slate-300">
+                            約５日間
+                          </td>
+                          <td>
+                            <p>
+                              B.O.I.認可会社で外国人を雇用する場合、就任する役職名、業務内容をB.O.I.に申請し認可が必要となります。申請はすべてウェッブ上で電子申請を行います。
+                            </p>
+                            <p>≪STEP① ポジションリクエスト・必要書類≫</p>
+                            <ul>
+                              <li>
+                                会社登記証明書（ナンスーラプローン）、営業目的（ワトゥパソン）：６ヶ月以内のもの写し
+                              </li>
+                              <li>株主名簿：６ヶ月以内もの写し</li>
+                              <li>会社組織図写し</li>
+                              <li>技術移転計画書</li>
+                              <li>
+                                決算報告書（貸借対照表、損益計算書）：最新分
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="flex justify-center  py-6 text-red-700">
+                    <FaArrowCircleDown size={40} />
+                  </div>
+
+                  <div className="table-two ">
+                    <table className="table table-bordered  w-full border border-slate-300">
+                      <tbody>
+                        <tr>
+                          <th className="w-[20%] py-6 bg-blue-900 text-white">
+                            STEP②
+                            <br />
+                            パーソナルリクエスト
+                          </th>
+                          <td className="text-center w-[10%] border border-slate-300">
+                            約３日間
+                          </td>
+                          <td className="">
+                            <p>
+                              STEP①で認可を得た役職に対し、実際に就労する外国人の姓名で申請して認可を得ます。
+                            </p>
+                            <p>≪STEP②・パーソナル申請・必要書類≫</p>
+                            <ol className="no-margin">
+                              <li>★パスポート（ノンイミグラントBビザ）</li>
+                              <li>★英文卒業証明書</li>
+                              <li>★英文職歴証明書</li>
+                              <li>★写真（３cm×４cm）</li>
+                            </ol>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="flex justify-center  py-6 text-red-700">
+                    <FaArrowCircleDown size={40} />
+                  </div>
+
+                  <div className="table-two">
+                    <table className="table table-bordered w-full border border-slate-300">
+                      <tbody>
+                        <tr>
+                          <th className="w-[20%] py-6 bg-blue-900 text-white">
+                            B.O.I.推薦状発行
+                          </th>
+                          <td className="text-center w-[10%] border border-slate-300"></td>
+                          <td>
+                            認可されるとB.O.I.より労働省、移民部宛の推薦状が発行されます。この推薦状には、個人名、役職名、認可期限が明記されます。
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="flex justify-center  py-6 text-red-700">
+                    <FaArrowCircleDown size={40} />
+                  </div>
+
+                  <div className="table-two">
+                    <table className="table table-bordered w-full border border-slate-300">
+                      <tbody>
+                        <tr>
+                          <th className="w-[20%] py-6 bg-blue-900 text-white">
+                            ワークパーミット（労働許可証）・滞在ビザの申請・取得
+                          </th>
+                          <td className="text-center w-[10%] border border-slate-300">
+                            1日
+                          </td>
+                          <td>
+                            <p>
+                              B.O.I.からの推薦状を基に「ワンストップサービス」に出向き、就労者のワークパーミット（労働許可証）と滞在許可（ビザ）を申請・取得します。認可期限は双方共にB.O.I.の推薦状に順じますが、役職によって最大2年まで発行されます。申請は、B.O.Iの推薦状発行日から15日以内に行う事が必要です。同日に合わせて、リエントリーパーミットの申請取得も可能です。
+                            </p>
+                            <p>≪必要書類≫</p>
+                            <ul>
+                              <li>
+                                ビザ申請用紙TM.7(弊社にて代行作成いたします)
+                              </li>
+                              <li>B.O.I.推薦状</li>
+                              <li>
+                                会社登記証明書（ナンスーラプローン）、営業目的（ワトゥパソン）：６ヶ月以内のもの写し
+                              </li>
+                              <li>
+                                代表権者（署名者）の身分証明、労働許可証 写し
+                              </li>
+                              <li>★パスポート原本及び写し</li>
+                              <li>
+                                ★写真（３cm×４cm / 3枚）、写真（4㎝×6㎝/２枚）
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="fa-sty">
+                    <i className="fa fa-arrow-down" aria-hidden="true"></i>
+                  </div>
+
+                  <div className="table-two">
+                    <table className="table table-bordered w-full border-slate-300 border">
+                      <tbody>
+                        <tr>
+                          <th className="w-[20%] py-6 bg-blue-900 text-white">
+                            90日レポート（居住地報告）
+                          </th>
+                          <td width="100" className="text-center w-[10%]">
+                            １日
+                          </td>
+                          <td className="border border-slate-300">
+                            90日を超えて継続して滞在する者は各90日毎に報告
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div className="text-center py-10">
                   <Link
-                    href="/visa-workpermit/work-in-thailand#t-2"
-                    className="hover:scale-110 absolute top-[22%] left-[50%] text-blue-500"
+                    href="/#contact"
+                    className="hover:bg-blue-700 hover:scale-90 transition-all py-4 px-4 bg-blue-900 text-white font-semibold rounded-lg"
                   >
-                    <FaEye size={20} />
-                  </Link>
-                  <Link
-                    href="/visa-workpermit/work-in-thailand#t-2"
-                    className="hover:scale-110 absolute top-[22%] left-[23%] text-blue-500"
-                  >
-                    <FaEye size={20} />
+                    お問い合わせはこちら
                   </Link>
                 </div>
               </div>
