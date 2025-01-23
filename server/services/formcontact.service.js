@@ -27,7 +27,7 @@ const mailMessage = (mailTo, subject, template) => {
 let MailGenerator = new Mailgen({
     theme: "salted",
     product: {
-        name: "Siam Nistrans Co.,Ltd.",
+        name: "Blue Assistant",
         link: "https://th.nissin-asia.com/", // URL Website
     },
 });
@@ -44,86 +44,51 @@ const methods = {
     },
 
     async sendEmail(req) {
-        const topic = req.body.topic;
-        topic.map((item) => {
-            let response = {
-                body: {
-                    intro: "You Have Inquiry From Website !",
-                    table: [
-                        {
-                            // Optionally, add a title to each table.
-                            title: req.body.subject,
-                            data: [
-                                {
-                                    "#": "Name",
-                                    detail: req.body.contactName,
-                                },
-                                {
-                                    "#": "Company",
-                                    detail: req.body.companyName,
-                                },
-                                {
-                                    "#": "Department",
-                                    detail: req.body.department,
-                                },
-                                {
-                                    "#": "Email",
-                                    detail: req.body.email,
-                                },
-                                {
-                                    "#": "Telephone",
-                                    detail: req.body.telephone,
-                                },
-                                {
-                                    "#": "Company Address",
-                                    detail: req.body.address,
-                                },
-                                {
-                                    "#": "Topic",
-                                    detail: item,
-                                },
-                                {
-                                    "#": "Details",
-                                    detail: req.body.detail,
-                                },
-                            ],
-                            columns: {
-                                // Optionally, customize the column widths
-                                customWidth: {
-                                    "#": "25%",
-                                    detail: "75%",
-                                },
-                                // Optionally, change column text alignment
-                                customAlignment: {
-                                    detail: "left",
-                                },
+        const response = {
+            body: {
+                intro: "You Have Inquiry From Website!",
+                table: [
+                    {
+                        data: [
+                            { "#": "Service", detail: req.body.service },
+                            { "#": "Customer", detail: req.body.customer },
+                            { "#": "Company", detail: req.body.company },
+                            { "#": "Name Kanji", detail: req.body.name_kanji },
+                            { "#": "Name Eng", detail: req.body.name_eng },
+                            { "#": "Email", detail: req.body.email },
+                            { "#": "Telephone", detail: req.body.phone },
+                            { "#": "Detail", detail: req.body.detail },
+                        ].filter((field) => field.detail), // Exclude fields where detail is undefined, null, or empty
+                        columns: {
+                            customWidth: {
+                                "#": "25%",
+                                detail: "75%",
+                            },
+                            customAlignment: {
+                                detail: "left",
                             },
                         },
-                    ],
-                },
-            };
+                    },
+                ],
+            },
+        };
 
-            let mail = MailGenerator.generate(response);
-
-            return new Promise((resolve, reject) => {
-                const mailList = {
-                    
-                };
-                const mailTo = mailList[item];
-                let transporter = nodemailer.createTransport(configMail);
-                transporter.sendMail(
-                    mailMessage(mailTo, "Inquiry Website", mail),
-                    async (error, info) => {
-                        if (error) {
-                            reject(ErrorBadRequest(error.message));
-                        } else {
-                            req.body.topic = item;
-                            await methods.storeContact(req.body);
-                            resolve(info.envelope);
-                        }
+        let mail = MailGenerator.generate(response);
+        
+        return new Promise((resolve, reject) => {
+            let transporter = nodemailer.createTransport(configMail);
+            transporter.sendMail(
+                mailMessage(config.mailTo, "Inquiry Website", mail),
+                async (error, info) => {
+                    if (error) {
+                        reject(ErrorBadRequest(error.message));
+                    } else {
+                        req.body.topic = item;
+                        await methods.storeContact(req.body);
+                        resolve(info.envelope);
                     }
-                );
-            });
+                }
+            );
         });
     },
 

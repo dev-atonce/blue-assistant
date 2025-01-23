@@ -59,7 +59,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
         </div>
         <StrongServiceSection />
         <NewsSection lng={params.lng} />
-        <ContactSection />
+        <ContactSection home={true} />
         <OtherSection />
       </div>
     </>

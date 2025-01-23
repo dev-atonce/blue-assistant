@@ -4,6 +4,7 @@ import NewsList from "@/components/website/layout/NewsList";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import VisaServiceSection from "@/components/website/layout/VisaServiceSection";
+import ContactSection from "@/components/website/layout/ContactSection";
 
 
 export default function VisaWorkpermit({ params }: { params: { lng: string } }) {
@@ -90,7 +91,7 @@ export default function VisaWorkpermit({ params }: { params: { lng: string } }) 
                     <div className="container">
                         <div className="mb-[50px]">
                             <MainHeading text="News" heading="2" />
-                            <NewsList lng={params.lng} limit={5} module={'visa'} forPage={'visa'}/>
+                            <NewsList lng={params.lng} limit={5} module={'visa'} forPage={'visa'} />
                         </div>
                         <div className="flex justify-center items-center">
                             <Link
@@ -135,142 +136,7 @@ export default function VisaWorkpermit({ params }: { params: { lng: string } }) 
                         </div>
                     </div>
                 </div>
-                <div className="container mx-auto lg:py-10" id="contact">
-                    <MainHeading text="Contact Form" heading="2" />
-                    <div className="grid grid-cols-6 lg:grid-cols-12 gap-10">
-                        <div className="col-span-6 hidden lg:flex">
-                            <Image
-                                src={"/img/visa-workpermit/contact-form.png"}
-                                alt=""
-                                width={600}
-                                height={400}
-                            ></Image>
-                        </div>
-                        <div className="col-span-6 border-t">
-                            <div className="grid grid-cols-12 my-8 text-slate-800 text-sm md:text-base">
-                                <div className="me-6 col-span-12 md:col-span-3 font-bold min-w-[180px] text-[#3562AE]">
-                                    お客様情報
-                                </div>
-                                <div className="flex justify-between items-stretch col-span-12 md:col-span-9">
-                                    <label className="me-6" htmlFor="customer1">
-                                        <input
-                                            type="radio"
-                                            id="customer1"
-                                            name="customer"
-                                            value="company"
-                                            className="me-2"
-                                        />
-                                        法人企業様
-                                    </label>
-                                    <label className="me-6" htmlFor="customer2">
-                                        <input
-                                            type="radio"
-                                            id="customer2"
-                                            name="customer"
-                                            value="individual"
-                                            className="me-2"
-                                        />
-                                        個人のお客様
-                                    </label>
-                                    <label htmlFor="customer3">
-                                        <input
-                                            type="radio"
-                                            id="customer3"
-                                            name="customer"
-                                            value="other"
-                                            className="me-2"
-                                        />
-                                        その他
-                                    </label>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-12 mb-4">
-                                <div className="col-span-12 md:col-span-3 font-bold min-w-[180px] text-[#3562AE]">
-                                    会社名（任意）
-                                </div>
-                                <div className="w-full col-span-12 md:col-span-9">
-                                    <input
-                                        type="text"
-                                        name="company"
-                                        placeholder={``}
-                                        className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4"
-                                    />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-12  mb-4">
-                                <div className="font-bold min-w-[180px] text-[#3562AE] col-span-12 md:col-span-3">
-                                    お名前　(漢字)
-                                </div>
-                                <div className="w-full col-span-12 md:col-span-9">
-                                    <input
-                                        type="text"
-                                        name="name_kanji"
-                                        placeholder={``}
-                                        className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4"
-                                    />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-12 mb-4">
-                                <div className="font-bold min-w-[180px] text-[#3562AE] col-span-12 md:col-span-3">
-                                    お名前　(英字)
-                                </div>
-                                <div className="w-full col-span-12 md:col-span-9">
-                                    <input
-                                        type="text"
-                                        name="name_eng"
-                                        placeholder={``}
-                                        className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4"
-                                    />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-12 mb-4">
-                                <div className="font-bold min-w-[180px] text-[#3562AE] col-span-12 md:col-span-3">
-                                    メールアドレス
-                                </div>
-                                <div className="w-full col-span-12 md:col-span-9">
-                                    <input
-                                        type="text"
-                                        name="email"
-                                        placeholder={``}
-                                        className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4"
-                                    />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-12 mb-4">
-                                <div className="font-bold min-w-[180px] text-[#3562AE] col-span-12 md:col-span-3">
-                                    電話番号
-                                </div>
-                                <div className="w-full col-span-12 md:col-span-9">
-                                    <input
-                                        type="text"
-                                        name="phone"
-                                        placeholder={``}
-                                        className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4"
-                                    />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-12 mb-4">
-                                <div className="font-bold min-w-[180px] text-[#3562AE] col-span-12 md:col-span-3">
-                                    お問い合わせ内容
-                                </div>
-                                <div className="w-full col-span-12 md:col-span-9">
-                                    <textarea
-                                        name="inqurey"
-                                        rows={5}
-                                        placeholder={``}
-                                        className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4 mb-4"
-                                    />
-                                    <button
-                                        type="submit"
-                                        className="border py-2 px-4 rounded-md bg-[#3562AE] text-white hover:bg-[#FDBD59] w-full md:w-fit"
-                                    >
-                                        Send
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ContactSection home={false} />
             </div>
         </>
     );

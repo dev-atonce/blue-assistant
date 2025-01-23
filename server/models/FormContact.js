@@ -2,14 +2,15 @@ const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema(
   {
-    companyName: { type: String, required: true },
-    contactName: { type: String, required: true },
-    department: { type: String, required: true },
+    company: { type: String, required: true },
+    customer: { type: String, required: true },
     email: { type: String, required: true },
-    telephone: { type: String, required: true },
-    detail: { type: String, required: true },
-    topic: { type: Array, required: true },
-    status: { type: Boolean, default: false },
+    inquiry: { type: String, required: true },
+    name_eng: { type: String, required: true },
+    name_kanji: { type: String, required: true },
+    phone: { type: String, required: true },
+    service: { type: String, required: true },
+    status: { type: String, default: false }
   },
   { timestamps: true }
 );
@@ -18,13 +19,14 @@ const schema = new mongoose.Schema(
 schema.methods.toJSON = function () {
   return {
     id: this._id,
-    companyName: this.companyName,
-    contactName: this.contactName,
-    department: this.department,
+    company: this.company,
+    customer: this.customer,
     email: this.email,
-    telephone: this.telephone,
-    detail: this.detail,
-    topic: this.topic,
+    inquiry: this.inquiry,
+    name_eng: this.name_eng,
+    name_kanji: this.name_kanji,
+    phone: this.phone,
+    service: this.service,
     status: this.status,
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
