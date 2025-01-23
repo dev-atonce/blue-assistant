@@ -94,7 +94,7 @@ export default async function RootLayout({
       <ConfigProvider
         theme={{
           token: {
-            fontFamily: noto.style.fontFamily,
+            fontFamily: notoJP.style.fontFamily,
           },
           components: {
             Pagination: {

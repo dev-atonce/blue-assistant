@@ -30,7 +30,7 @@ export default function CoverVisa({ pageName, prevPage }: any) {
           <Link href={"/visa-workpermit#service"}>Service</Link>
           <Link href={"/visa-workpermit#info"}>Info</Link>
           <Link href={"/visa-workpermit/news-activity"}>News</Link>
-          <Link href={"/visa-workpermit/info#faq"}>FAQ</Link>
+          <Link href={"/visa-workpermit/faq"}>FAQ</Link>
           <Link href={"/visa-workpermit#contact"}>Contact</Link>
         </div>
       </div>

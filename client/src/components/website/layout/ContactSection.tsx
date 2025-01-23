@@ -2,7 +2,7 @@ export default function ContactSection() {
   return (
     <>
       <div id="contact" className="bg-[#fafafa] text-[#333333]">
-        <div className="container  mx-auto  py-20">
+        <div className="container  mx-auto  py-20 text-slate-800">
           <div className="grid grid-cols-1">
             <h3 className="text-5xl font-bold">
               <span className="relative text-[#3562AE] py-4">
