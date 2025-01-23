@@ -67,7 +67,7 @@ export default async function ServiceSection({ data }: any) {
 
   return (
     <div className=" overflow-hidden">
-      <div className="grid grid-cols-12 gap-y-6 lg:gap-x-4 lg:px-20 pt-10 pb-20">
+      <div className="grid grid-cols-12 gap-y-6 md:gap-x-4 lg:px-20 pt-10 pb-20">
         {mocks?.map((i: any, k: any) => (
           <ServiceCard item={i} key={k} />
         ))}

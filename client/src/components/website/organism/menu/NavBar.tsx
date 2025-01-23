@@ -28,7 +28,7 @@ export default function NavBar(colors: any) {
                 pathname == item?.href.toLowerCase()
                   ? "text-[#3562AE]"
                   : "text-[#0C2B4B]"
-              } h-full font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#3562AE] transition-all`}
+              } h-full text-sm font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#3562AE] transition-all`}
             >
               {item.title.jp}
             </Link>

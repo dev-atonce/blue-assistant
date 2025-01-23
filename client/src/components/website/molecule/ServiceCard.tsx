@@ -9,7 +9,7 @@ export default function ServiceCard({ item }: any) {
   return (
     <div
       //   href={`/service/${item?.id}`}
-      className=" group flex flex-col items-center gap-3 bg-white shadow-md px-4 pb-6 transition-all duration-500 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 overflow-hidden rounded-xl border border-slate-200"
+      className=" group flex flex-col items-center gap-3 bg-white shadow-md px-4 pb-6 transition-all duration-500 col-span-12 md:col-span-6  xl:col-span-3 overflow-hidden rounded-xl border border-slate-200"
     >
       {item?.link && (
         <a href={item?.link}>
@@ -38,7 +38,7 @@ export default function ServiceCard({ item }: any) {
       )}
       {!item?.link && !item?.modal && (
         <Link href={`/${item?.id}`}>
-          <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-sm bg-[#3562AE]">
+          <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-xs bg-[#3562AE]">
             {item?.serviceNameTH}
           </h4>
           <div className="w-full h-40 overflow-hidden flex justify-center">

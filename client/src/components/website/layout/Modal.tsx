@@ -32,7 +32,7 @@ const App: React.FC = ({
           onCancel={handleCancel}
           width={width || "80%"}
         >
-          <div className="py-4 lg:px-4">{modalContent}</div>
+          <div className="py-4 lg:px-4">{modalContent || "Coming Soon"}</div>
         </Modal>
       </div>
     </>

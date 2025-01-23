@@ -94,13 +94,13 @@ export default function Header({ logo, contact, owner, colors }: any) {
             </div>
           </div>
 
-          <div className="lg:flex flex-col h-full hidden  w-[60%]">
+          <div className="xl:flex flex-col h-full hidden  w-[60%]">
             <div className="flex h-full justify-end">
               <NavBar colors={colors} />
               <SocialMedia />
             </div>
           </div>
-          <div className="flex justify-center items-center lg:hidden ">
+          <div className="flex justify-center items-center xl:hidden ">
             <div
               className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
               onClick={toggleSidebar}
@@ -113,7 +113,7 @@ export default function Header({ logo, contact, owner, colors }: any) {
 
       <div className="flex">
         <div
-          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-50 ${
+          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-9999 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

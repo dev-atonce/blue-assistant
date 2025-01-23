@@ -1,0 +1,47 @@
+jQuery(document).ready(function () {
+    if (pmenu == 200) {
+        $(".pmenu200").addClass("active");
+    }
+    if (pmenu == 201) {
+        $(".pmenu201").addClass("active");
+    }
+    if (pmenu == 202) {
+        $(".pmenu202").addClass("active");
+    }
+    if (pmenu == 203) {
+        $(".pmenu203").addClass("active");
+    }
+    if (pmenu == 204) {
+        $(".pmenu204").addClass("active");
+    }
+    if (pmenu == 205) {
+        $(".pmenu205").addClass("active");
+    }
+    if (pmenu == 206) {
+        $(".pmenu206").addClass("active");
+    }
+    if (pmenu == 207) {
+        $(".pmenu207").addClass("active");
+    }
+    if (pmenu == 208) {
+        $(".pmenu208").addClass("active");
+    }
+    if (pmenu == 209) {
+        $(".pmenu209").addClass("active");
+    }
+    if (pmenu == 210) {
+        $(".pmenu210").addClass("active");
+    }
+    if (pmenu == 211) {
+        $(".pmenu211").addClass("active");
+    }
+    if (pmenu == 212) {
+        $(".pmenu212").addClass("active");
+    }
+    if (pmenu == 213) {
+        $(".pmenu213").addClass("active");
+    }
+    if (pmenu == 214) {
+        $(".pmenu214").addClass("active");
+    }
+});
