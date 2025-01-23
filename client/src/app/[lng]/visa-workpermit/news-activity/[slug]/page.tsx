@@ -63,7 +63,7 @@ export default async function Blog({
         // @ts-ignore
         prevPage={{ pageName: pagename.home[lng], url: "/" }}
       />
-      <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black py-10">
+      <div className="container  mx-auto pb-10 text-black py-10">
         <MainHeading text={blogTitle} heading="2" />
         <div className="lg:px-20 flex justify-center">
           {blogImage && (

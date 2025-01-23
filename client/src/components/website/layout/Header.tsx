@@ -9,8 +9,9 @@ import Script from "next/script";
 import { hasCookie, setCookie } from "cookies-next";
 import SocialMedia from "../molecule/menu/SocialMedia";
 
-export default function Header({ logo, contact, owner, colors }: any) {
-  const [currentLanguage, setCurrentLanguage] = useState<string>("th");
+export default function Header({ logo, contact, owner, colors, lng }: any) {
+  // @ts-ignore
+  const [currentLanguage, setCurrentLanguage] = useState<string>(lng);
   const [openLang, setOpenLang] = useState<Boolean>(false);
   const [openID, setOpenID] = useState<String>("");
   const [isOpen, setIsOpen] = useState<Boolean>(false);
@@ -95,9 +96,20 @@ export default function Header({ logo, contact, owner, colors }: any) {
           </div>
 
           <div className="xl:flex flex-col h-full hidden  w-[60%]">
-            <div className="flex h-full justify-end">
+            <div className="flex h-full justify-end items-center">
               <NavBar colors={colors} />
-              <SocialMedia />
+              <SocialMedia
+                language={{
+                  currentLanguage,
+                  setCurrentLanguage,
+                  openID,
+                  setOpenID,
+                  openLang,
+                  setOpenLang,
+                  languages,
+                  switchLanguage,
+                }}
+              />
             </div>
           </div>
           <div className="flex justify-center items-center xl:hidden ">

@@ -30,7 +30,7 @@ export default function ServiceCard({ item }: any) {
             />
           </div>
           <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
-            <p className="text-center text-sm w-full text-[#3562AE]">
+            <p className="text-center text-sm w-full text-[#3562AE] line-clamp-6">
               {item?.descriptionEN}
             </p>
           </div>
@@ -55,7 +55,7 @@ export default function ServiceCard({ item }: any) {
             />
           </div>
           <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
-            <p className="text-center text-sm w-full text-[#3562AE]">
+            <p className="text-center text-sm w-full text-[#3562AE] line-clamp-6">
               {item?.descriptionEN}
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function ServiceCard({ item }: any) {
               />
             </div>
             <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
-              <p className="text-center text-sm w-full text-[#3562AE]">
+              <p className="text-center text-sm w-full text-[#3562AE] line-clamp-6">
                 {item?.descriptionEN}
               </p>
             </div>
