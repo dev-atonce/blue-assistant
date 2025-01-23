@@ -8,34 +8,7 @@ import ServiceSection from "@/components/website/layout/ServiceSection";
 import StrongServiceSection from "@/components/website/layout/StrongServiceSection";
 import Image from "next/image";
 
-interface Props {
-  params: { lng: string };
-}
-// const fetchBlog = async () => {
-//   const res = await fetch(
-//     `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/4`,
-//     {
-//       cache: "no-store",
-//     }
-//   );
-//   const data = await res.json();
-//   return data;
-// };
-
-// const fetchBanner = async () => {
-//   const res = await fetch(
-//     `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/banner`,
-//     {
-//       cache: "no-store",
-//     }
-//   );
-//   const data = await res.json();
-//   return data;
-// };
-
-export default async function Home({ params }: Props) {
-  const lng = params.lng;
-
+export default async function Home({ params }: { params: { lng: string } }) {
   return (
     <>
       <section className="banner-section">
@@ -85,7 +58,7 @@ export default async function Home({ params }: Props) {
           <ServiceSection />
         </div>
         <StrongServiceSection />
-        <NewsSection />
+        <NewsSection lng={params.lng} />
         <ContactSection />
         <OtherSection />
       </div>

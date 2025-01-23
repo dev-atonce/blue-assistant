@@ -26,28 +26,6 @@ const pageName = "blog";
 //     },
 //   };
 // }
-const blogs = {
-  rows: [
-    {
-      blog_title: "Title1",
-      blog_description:
-        "medical assistance services in Thailand and Indochina, we provide payment agency services to",
-      blog_img: "/img/news/image 57.png",
-    },
-    {
-      blog_title: "Title2",
-      blog_description:
-        "medical assistance services in Thailand and Indochina, we provide payment agency services to",
-      blog_img: "/img/news/image 57.png",
-    },
-    {
-      blog_title: "Title3",
-      blog_description:
-        "medical assistance services in Thailand and Indochina, we provide payment agency services to",
-      blog_img: "/img/news/image 57.png",
-    },
-  ],
-};
 
 export default function BlogPage({ params }: { params: { lng: string } }) {
   const t = useTranslations("header");
@@ -65,7 +43,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
           <h1 className="font-bold text-4xl text-[#3562AE] ">ブログ</h1>
           <div className="h-1 w-16 bg-orange-400"></div>
         </div>
-        <BlogSection home={false} limit={6} blogs={blogs} />
+        <BlogSection home={false} limit={6} type={'blog'} lng={params.lng} module="visa"/>
       </div>
     </>
   );

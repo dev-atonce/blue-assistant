@@ -20,6 +20,7 @@ const methods = {
       const _q = methods.scopeSearch(req);
       _q.query.status = true;
       _q.query.type = req.query.type;
+      _q.query.module = req.query.module;
 
       const rows = await Blog.find(_q.query)
         .sort({ createdAt: "desc" })
