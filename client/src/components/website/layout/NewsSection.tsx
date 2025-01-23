@@ -10,7 +10,7 @@ export default function NewsSection(lng: { lng: string }) {
             <span className="border-b-4 border-orange-300 w-auto">ブログ</span>
           </h5>
 
-          <BlogSection limit={3} type={'blog'} lng={lng.lng} home={true} module={'visa'}/>
+          <BlogSection limit={3} type={'blog'} lng={lng.lng} home={true} module={'visa'} forPage="blog"/>
 
           <div className="flex justify-center mt-20">
             <Link

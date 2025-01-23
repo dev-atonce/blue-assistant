@@ -90,7 +90,7 @@ export default function VisaWorkpermit({ params }: { params: { lng: string } }) 
                     <div className="container">
                         <div className="mb-[50px]">
                             <MainHeading text="News" heading="2" />
-                            <NewsList lng={params.lng} limit={5} module={'visa'} />
+                            <NewsList lng={params.lng} limit={5} module={'visa'} forPage={'visa'}/>
                         </div>
                         <div className="flex justify-center items-center">
                             <Link

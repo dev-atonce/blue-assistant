@@ -6,6 +6,7 @@ interface NewListProps {
     lng?: string;
     limit: number;
     module: string;
+    forPage: string;
 }
 
 const convertedDate = (date: any) => {
@@ -16,7 +17,7 @@ const convertedDate = (date: any) => {
     return formattedDate;
 };
 
-export default function NewsList({ lng, limit, module }: NewListProps) {
+export default function NewsList({ lng, limit, module, forPage }: NewListProps) {
     const [blogList, setBlogList] = useState([]);
 
     const fetchBlog = async () => {
@@ -34,6 +35,9 @@ export default function NewsList({ lng, limit, module }: NewListProps) {
         fetchBlog();
     }, []);
 
+    let urlBlog = '';
+    forPage === 'visa' ? urlBlog = '/visa-workpermit/news-activity/' : urlBlog = '/jmd/'
+
     return (
         <>
             {!blogList?.length ? (
@@ -42,7 +46,7 @@ export default function NewsList({ lng, limit, module }: NewListProps) {
                 blogList.map((item: any, key: any) => {
                     return (
                         <div key={key} className="bg-white text-[#3D3D3D] p-6 border-b">
-                            <Link href={`/visa-workpermit/news-activity/${item.slug}`}>
+                            <Link href={`${urlBlog}${item.slug}`}>
                                 <span>{convertedDate(item.createdAt)}</span>
                                 <span> | </span>
                                 <span>{item[`blog_title_${lng}`]}</span>

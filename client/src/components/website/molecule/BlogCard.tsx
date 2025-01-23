@@ -5,15 +5,18 @@ import { Link } from "@/i18n/routing";
 interface BlogCardProps {
   data: any[];
   lng?: string;
+  forPage: string;
 }
 
-const BlogCard = ({ data, lng }: BlogCardProps) => {
+const BlogCard = ({ data, lng, forPage }: BlogCardProps) => {
+  let urlBlog = '';
+  forPage === 'blog' ? urlBlog = '/blog/' : (forPage === 'visa' ? urlBlog = '/visa-workpermit/news-activity/' : urlBlog = '/jmd/')
+
   return data?.map((item: any, key: number) => {
     return (
       <Col xs={24} sm={24} md={8} lg={8} key={key}>
         <Link
-          // @ts-ignore
-          href={`/visa-workpermit/news-activity/${item?.slug}`}
+          href={`${urlBlog}${item?.slug}`}
         >
           <Card
             className="z-1"
