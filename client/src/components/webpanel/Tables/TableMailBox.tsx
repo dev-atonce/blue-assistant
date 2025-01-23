@@ -65,7 +65,10 @@ const TableMailBox = () => {
                 </td>
 
                 <td className="text-sm border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  {item.contact_name}
+                  <strong>{item.service}</strong>
+                  <p>{item.customer}</p>
+                  <p>{item.name_kanji}</p>
+                  <p>{item.name_eng}</p>
                 </td>
                 <td className="text-xs border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <p>{item?.phone}</p>

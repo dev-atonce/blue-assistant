@@ -1,7 +1,7 @@
 "use client";
 import Breadcrumb from "@/components/webpanel/Breadcrumbs/Breadcrumb";
-import Message from "@/components/webpanel/FormElements/JobCorporate/Message";
 import DefaultLayout from "@/components/webpanel/Layouts/DefaultLayout";
+import Message from "@/components/webpanel/Layouts/Message";
 import { useUsersStore } from "@/store/usersStore";
 import { useEffect, useState } from "react";
 
@@ -11,7 +11,7 @@ const MailBoxView = ({ params }: { params: { id: string } }) => {
   const { token } = useUsersStore();
   const { id } = params;
 
-  const fetchMsg = async (id: string, token: string) => {
+  const fetchMsg = async () => {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/formcontact/${id}`,
       {
@@ -21,25 +21,22 @@ const MailBoxView = ({ params }: { params: { id: string } }) => {
         },
       }
     );
-
     const data = await res.json();
-
     setMsg(data);
   };
 
   useEffect(() => {
-    //@ts-expect-error
-    fetchMsg(id, token);
+    fetchMsg();
   }, []);
 
   return (
     <>
       <DefaultLayout>
         <Breadcrumb
-          pageName={`Message: ${msg?.contact_name}`}
+          pageName={`Message from: ${msg?.name_kanji} - ${msg?.name_eng}`}
           module={{ pageName: "Mail Box", url: "mailbox" }}
         />
-        <Message data={msg} type="contactPage" />
+        <Message data={msg} />
       </DefaultLayout>
     </>
   );

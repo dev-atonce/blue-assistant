@@ -10,7 +10,8 @@ const schema = new mongoose.Schema(
     name_kanji: { type: String, required: true },
     phone: { type: String, required: true },
     service: { type: String, required: true },
-    status: { type: String, default: false }
+    detail: { type: String, required: true },
+    status: { type: Boolean, default: false }
   },
   { timestamps: true }
 );
@@ -27,6 +28,7 @@ schema.methods.toJSON = function () {
     name_kanji: this.name_kanji,
     phone: this.phone,
     service: this.service,
+    detail: this.detail,
     status: this.status,
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
