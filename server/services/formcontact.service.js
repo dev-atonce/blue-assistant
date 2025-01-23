@@ -74,7 +74,7 @@ const methods = {
         };
 
         let mail = MailGenerator.generate(response);
-        
+
         return new Promise((resolve, reject) => {
             let transporter = nodemailer.createTransport(configMail);
             transporter.sendMail(
@@ -83,7 +83,6 @@ const methods = {
                     if (error) {
                         reject(ErrorBadRequest(error.message));
                     } else {
-                        req.body.topic = item;
                         await methods.storeContact(req.body);
                         resolve(info.envelope);
                     }
