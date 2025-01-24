@@ -97,7 +97,7 @@ const TableBlog = () => {
                                     <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                         <ActionBtnGroup
                                             itemId={item.id}
-                                            link={`/webpanel/blog/edit/${item.id}`}
+                                            link={`/webpanel/news/edit/${item.id}`}
                                             deleteItem={deleteItem}
                                             nextLink={true}
                                         />
