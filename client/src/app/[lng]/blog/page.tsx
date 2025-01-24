@@ -40,10 +40,17 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
       <div className="container mx-auto ">
         <div className="py-4 flex flex-col gap-3 mt-10">
           {/* news */}
-          <h1 className="font-bold text-4xl text-[#3562AE] ">ブログ</h1>
+          <h1 className="font-bold text-4xl text-[#3562AE] ">{t("blog")}</h1>
           <div className="h-1 w-16 bg-orange-400"></div>
         </div>
-        <BlogSection home={false} limit={6} type={'blog'} lng={params.lng} module="visa" forPage="blog"/>
+        <BlogSection
+          home={false}
+          limit={6}
+          type={"blog"}
+          lng={params.lng}
+          module="visa"
+          forPage="blog"
+        />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Header from "@/components/website/layout/Header";
 import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
-import { Noto_Sans, Noto_Sans_JP, Roboto } from "next/font/google";
+import { Noto_Sans, Noto_Sans_JP, Roboto, Kanit } from "next/font/google";
 import { ConfigProvider } from "antd";
 import Favicon from "../favicon.ico";
 import "./globals.css";
@@ -20,6 +20,13 @@ const noto = Noto_Sans({
 });
 
 const notoJP = Noto_Sans_JP({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const kanit = Kanit({
   weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
@@ -109,7 +116,11 @@ export default async function RootLayout({
         <PageSettingProvider>
           <body
             className={
-              lng !== "jp" ? `${noto.className}` : `${notoJP.className} `
+              lng == "jp"
+                ? `${notoJP.className} `
+                : lng == "th"
+                ? `${kanit.className}`
+                : `${noto.className} `
             }
           >
             <NextIntlClientProvider messages={messages}>

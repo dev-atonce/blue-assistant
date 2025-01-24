@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Breadcrumb from "../molecule/Breadcrumb";
-export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
+import { useTranslations } from "next-intl";
+export default function Cover({
+  pageName,
+  prevPage,
+  engName,
+  noHeading,
+  lng,
+}: any) {
+  const c = useTranslations("cover");
   return (
     <div className="w-full ">
       <div className="relative  ">
@@ -29,7 +37,7 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
         <div className="bg-[#3462AF]  w-full">
           <div className=" container mx-auto py-2">
             <p className="text-sm sm:text-base xl:text-xl text-white">
-              「親切・丁寧・迅速」なサービスをモットーに、みなさまの海外生活をサポートいたします。
+              {c("banner")}
             </p>
           </div>
         </div>

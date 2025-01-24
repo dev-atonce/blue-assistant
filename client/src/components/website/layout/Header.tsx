@@ -8,6 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Script from "next/script";
 import { hasCookie, setCookie } from "cookies-next";
 import SocialMedia from "../molecule/menu/SocialMedia";
+import { usePathname } from "next/navigation";
 
 export default function Header({ logo, contact, owner, colors, lng }: any) {
   // @ts-ignore
@@ -16,6 +17,7 @@ export default function Header({ logo, contact, owner, colors, lng }: any) {
   const [openID, setOpenID] = useState<String>("");
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const [openSubMenu, setOpenSubMenu] = useState<Boolean>(false);
+  const pathname = usePathname();
 
   const languages = [
     { label: "Thai", value: "th" },
@@ -79,26 +81,61 @@ export default function Header({ logo, contact, owner, colors, lng }: any) {
   };
 
   return (
-    <div className="shadow-md bg-white relative" style={{ zIndex: 1 }}>
-      <div className={`bg-[#3562AE] w-full h-2`}></div>
-      <div className="header ps-2 pe-2 md:ps-10 md:pe-10 mx-auto">
-        <div className="mx-auto flex justify-between items-center h-full ">
-          <div className="logo ">
-            <div className="py-2 flex items-end">
-              <Logo img={logo} />
+    <div className="relative">
+      <div className="shadow-md bg-white relative" style={{ zIndex: 1 }}>
+        <div className={`bg-[#3562AE] w-full h-2`}></div>
+        <div className="header ps-2 pe-2 md:ps-10 md:pe-10 mx-auto">
+          <div className="mx-auto flex justify-between items-center h-full ">
+            <div className="logo ">
+              <div className="py-2 flex items-end">
+                <Logo img={logo} />
 
-              {/* <div className="flex justify-items-end h-[100%]">
+                {/* <div className="flex justify-items-end h-[100%]">
                 <span className={`text-xl text-blue-900 font-[900] sm:none`}>
                   {owner.name.en}
                 </span>
               </div> */}
+              </div>
+            </div>
+
+            <div className="xl:flex flex-col h-full hidden  w-[60%]">
+              <div className="flex h-full justify-end items-center">
+                <NavBar colors={colors} lng={lng} />
+                <SocialMedia
+                  language={{
+                    currentLanguage,
+                    setCurrentLanguage,
+                    openID,
+                    setOpenID,
+                    openLang,
+                    setOpenLang,
+                    languages,
+                    switchLanguage,
+                  }}
+                />
+              </div>
+            </div>
+            <div className="flex justify-center items-center xl:hidden ">
+              <div
+                className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
+                onClick={toggleSidebar}
+              >
+                <GiHamburgerMenu size={35} color="#3462af" />
+              </div>
             </div>
           </div>
+        </div>
 
-          <div className="xl:flex flex-col h-full hidden  w-[60%]">
-            <div className="flex h-full justify-end items-center">
-              <NavBar colors={colors} />
-              <SocialMedia
+        <div className="flex">
+          <div
+            className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-9999 ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <div className="grid content-stretch">
+              <SideBar
+                contact={contact}
+                sideBar={{ toggleSubMenu, closeSideBar }}
                 language={{
                   currentLanguage,
                   setCurrentLanguage,
@@ -111,39 +148,6 @@ export default function Header({ logo, contact, owner, colors, lng }: any) {
                 }}
               />
             </div>
-          </div>
-          <div className="flex justify-center items-center xl:hidden ">
-            <div
-              className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
-              onClick={toggleSidebar}
-            >
-              <GiHamburgerMenu size={35} color="#3462af" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex">
-        <div
-          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-9999 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="grid content-stretch">
-            <SideBar
-              contact={contact}
-              sideBar={{ toggleSubMenu, closeSideBar }}
-              language={{
-                currentLanguage,
-                setCurrentLanguage,
-                openID,
-                setOpenID,
-                openLang,
-                setOpenLang,
-                languages,
-                switchLanguage,
-              }}
-            />
           </div>
         </div>
       </div>

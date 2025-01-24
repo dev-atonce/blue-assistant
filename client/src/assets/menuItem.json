@@ -2,14 +2,14 @@
   {
     "title": {
       "en": "Home",
-      "th": "Home",
+      "th": "หน้าแรก",
       "jp": "ホーム"
     },
     "href": "/"
   },
   {
     "title": {
-      "th": "Our Business",
+      "th": "บริการของเรา",
       "en": "Our Business",
       "jp": "私たちの事業"
     },
@@ -17,7 +17,7 @@
   },
   {
     "title": {
-      "th": "About Us",
+      "th": "เกียวกับเรา",
       "en": "About Us",
       "jp": "会社案内"
     },
@@ -25,15 +25,15 @@
   },
   {
     "title": {
-      "th": "News",
-      "en": "News",
+      "th": "บทความ",
+      "en": "Blog",
       "jp": "ブログ"
     },
     "href": "/#news-activity"
   },
   {
     "title": {
-      "th": "Contact",
+      "th": "ติดต่อเรา",
       "en": "Contact",
       "jp": "お問い合わせ"
     },

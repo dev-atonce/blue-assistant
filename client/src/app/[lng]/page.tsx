@@ -6,9 +6,11 @@ import NewsSection from "@/components/website/layout/NewsSection";
 import OtherSection from "@/components/website/layout/OtherSection";
 import ServiceSection from "@/components/website/layout/ServiceSection";
 import StrongServiceSection from "@/components/website/layout/StrongServiceSection";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export default async function Home({ params }: { params: { lng: string } }) {
+export default function Home({ params }: { params: { lng: string } }) {
+  const h = useTranslations("header");
   return (
     <>
       <section className="banner-section">
@@ -50,12 +52,12 @@ export default async function Home({ params }: { params: { lng: string } }) {
                 id="our-business"
                 className="font-bold text-5xl text-center relative flex items-center justify-center mb-14"
               >
-                <div className="mb-4 text-[#3562AE]">私たちの事業</div>
+                <div className="mb-4 text-[#3562AE]">{h("our-business")}</div>
                 <div className="border-b-4 border-orange-200 w-[100px] absolute bottom-0 mt-4"></div>
               </h3>
             </div>
           </div>
-          <ServiceSection />
+          <ServiceSection lng={params.lng} />
         </div>
         <StrongServiceSection />
         <NewsSection lng={params.lng} />

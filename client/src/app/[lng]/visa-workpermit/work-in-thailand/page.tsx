@@ -9,7 +9,7 @@ import { FaEye } from "react-icons/fa";
 
 export default function Work() {
   const t = useTranslations("header");
-  return (
+return (
     <>
       <div className="">
         <CoverVisa

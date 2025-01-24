@@ -13,6 +13,31 @@ export default function SocialMedia({ language }: any) {
 
   return (
     <div className="flex flex-col items-end gap-2">
+      <div className="text-black notranslate flex gap-1">
+        <a
+          href={pathname.replace(`/${language.currentLanguage}`, `/th`)}
+          // onClick={(e: any) => language?.switchLanguage("th")}
+          title="thai"
+        >
+          <Image src="/img/th_flag.png" alt="th" width={18} height={18} />
+        </a>
+
+        <a
+          href={pathname.replace(`/${language.currentLanguage}`, `/en`)}
+          // onClick={(e: any) => language?.switchLanguage("en")}
+          title="english"
+        >
+          {" "}
+          <Image src="/img/uk_flag.png" alt="th" width={18} height={18} />
+        </a>
+        <a
+          href={pathname.replace(`/${language.currentLanguage}`, `/jp`)}
+          // onClick={(e: any) => language?.switchLanguage("jp")}
+          title="japanese"
+        >
+          <Image src="/img/jp_flag.png" alt="th" width={18} height={18} />
+        </a>
+      </div>
       <div className="flex items-center gap-1 ms-20 text-[#3d5daa]">
         <a
           // to do
@@ -37,31 +62,6 @@ export default function SocialMedia({ language }: any) {
           className={` hover:text-white bg-white border transition-all ease-in-out border-[#dcdcdc] drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
         >
           <MdMail size={25} />
-        </a>
-      </div>
-      <div className="text-black notranslate flex gap-1">
-        <a
-          href={pathname.replace(`/${language.currentLanguage}`, `/th`)}
-          // onClick={(e: any) => language?.switchLanguage("th")}
-          title="thai"
-        >
-          <Image src="/img/th_flag.png" alt="th" width={25} height={25} />
-        </a>
-
-        <a
-          href={pathname.replace(`/${language.currentLanguage}`, `/en`)}
-          // onClick={(e: any) => language?.switchLanguage("en")}
-          title="english"
-        >
-          {" "}
-          <Image src="/img/uk_flag.png" alt="th" width={25} height={25} />
-        </a>
-        <a
-          href={pathname.replace(`/${language.currentLanguage}`, `/jp`)}
-          // onClick={(e: any) => language?.switchLanguage("jp")}
-          title="japanese"
-        >
-          <Image src="/img/jp_flag.png" alt="th" width={26} height={26} />
         </a>
       </div>
     </div>

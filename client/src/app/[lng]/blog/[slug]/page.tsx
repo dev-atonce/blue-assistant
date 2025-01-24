@@ -18,7 +18,7 @@ const pagename = {
   home: {
     th: "หน้าแรก",
     en: "Home",
-    jp: "ホームページ",
+    jp: "ホーム",
   },
   news: {
     th: "ข่าวสารล่าสุด",
@@ -49,9 +49,15 @@ export default async function Blog({
   const blogImageKey = `blog_image`;
   const blogDetailKey = `blog_detail_${lng}`;
 
-  const blogTitle = blog[0][blogTitleKey];
+  const blogTitle =
+    blog[0][blogTitleKey] ||
+    blog[0]["blog_title_jp"] ||
+    blog[0]["blog_title_th"];
   const blogImage = blog[0][blogImageKey];
-  const blogDetail = blog[0][blogDetailKey];
+  const blogDetail =
+    blog[0][blogDetailKey] ||
+    blog[0]["blog_detail_jp"] ||
+    blog[0]["blog_detail_th"];
   const blogType = blog[0].type;
 
   return (
@@ -63,7 +69,7 @@ export default async function Blog({
         // @ts-ignore
         prevPage={{ pageName: pagename.home[lng], url: "/" }}
       />
-      <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black py-10">
+      <div className="container   mx-auto  pb-10 text-black py-10">
         <MainHeading text={blogTitle} heading="2" />
         <div className="lg:px-20 flex justify-center">
           {blogImage && (

@@ -87,7 +87,7 @@ export default function Footer({ contact, colors, owner, lng }: any) {
       <div className="bg-[#2E5BA8]">
         <div className="container px-4 mx-auto py-4 flex items-center justify-center  text-xs">
           <div>
-            <div className="text-center text-[6px]">
+            <div className="text-center text-[10px]">
               ©Copyright {currentYear} {owner.name.en} - All Rights Reserved.
             </div>
           </div>

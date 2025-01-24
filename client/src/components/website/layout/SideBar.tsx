@@ -1,5 +1,6 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { FaPlus, FaFacebookF, FaLine, FaInstagram } from "react-icons/fa";
 import menuItem from "@/assets/menuItem.json";
@@ -30,7 +31,8 @@ export default function SideBar({ sideBar, language, contact }: any) {
                 onClick={(e) => sideBar.toggleSubMenu(e)}
                 className="p-2 hover:text-[#3462af] flex items-center justify-between"
               >
-                {item.title.jp}
+                {/* @ts-ignore */}
+                {item.title[language.currentLanguage]}
                 {/* @ts-ignore */}
                 {item?.subMenu && (
                   <FaPlus className="plus-icon transition-all duration-200" />

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import Breadcrumb from "../molecule/Breadcrumb";
-export default function CoverVisa({ pageName, prevPage }: any) {
+import { useTranslations } from "next-intl";
+export default function CoverVisa({ pageName, prevPage, lng }: any) {
+  const t = useTranslations("header");
   return (
     <>
       <div className="relative ">
@@ -25,13 +27,13 @@ export default function CoverVisa({ pageName, prevPage }: any) {
         </div>
       </div>
       <div className="shadow-lg bg-[#3462af] py-4 text-white sticky top-0 z-50">
-        <div className="container h-full flex justify-center items-center gap-2 sm:gap-6 xl:gap-12 text-xs lg:text-[16px] font-semibold">
-          <Link href={"/visa-workpermit"}>Visa&Work Permit</Link>
-          <Link href={"/visa-workpermit#service"}>Service</Link>
-          <Link href={"/visa-workpermit#info"}>Info</Link>
-          <Link href={"/visa-workpermit/news-activity"}>News</Link>
-          <Link href={"/visa-workpermit/faq"}>FAQ</Link>
-          <Link href={"/visa-workpermit#contact"}>Contact</Link>
+        <div className="container h-full flex justify-center items-center gap-2 sm:gap-4 xl:gap-12 text-[8px] md:text-xs lg:text-[16px] font-semibold">
+          <Link href={"/visa-workpermit"}>{t("visa-work")}</Link>
+          <Link href={"/visa-workpermit#service"}>{t("service")}</Link>
+          <Link href={"/visa-workpermit#info"}>{t("help-info")}</Link>
+          <Link href={"/visa-workpermit/news-activity"}>{t("news")}</Link>
+          <Link href={"/visa-workpermit/faq"}>{t("faq")}</Link>
+          <Link href={"/visa-workpermit#contact"}>{t("contact")}</Link>
         </div>
       </div>
       <div className="bg-slate-500/10  w-full hidden md:block">

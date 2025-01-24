@@ -1,20 +1,22 @@
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function StrongServiceSection() {
+  const s = useTranslations("service-section");
   return (
     <>
       <div id="about-us" className="bg-[#EDF4FF]">
         <div className="container mx-auto mt-20 py-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3562AE] text-center tracking-widest">
-            「親切・丁寧・迅速 」なサービス
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3562AE] text-center ">
+            {s("strong.h1")}
           </h2>
           <p className="text-base sm:text-lg lg:text-xl font-bold text-[#3562AE] text-center mt-6">
-            をモットーに、みなさまの海外生活をサポートいたします。
+            {s("strong.h2")}
           </p>
-          <p className="text-xs  sm:text-base lg:text-lg font-bold text-[#3562AE] text-center mt-6">
-            ブルーアシスタンスは海外に住む日本人のお客様向けに、医療アシスタンスやビザ・ワークパーミットの取得代行のお伝いを行っております。
+          <p className="text-xs  sm:text-base lg:text-base font-bold text-[#3562AE] text-center mt-6">
+            {s("strong.h3")}
             <br />
-            お困りのことがございましたら、お気軽にお問い合わせください。
+            {s("strong.h4")}
           </p>
           <div className="grid grid-cols-12 gap-y-8 md:gap-2 lg:gap-x-4 mt-20 text-[#0C2B4B]">
             <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
@@ -25,9 +27,9 @@ export default function StrongServiceSection() {
                 />
               </div>
               <h6 className="mt-6 text-center">
-                タイでのアシスタンス事業
+                {s("strong.i1")}
                 <br />
-                <span className="font-bold">19年の実績と経験</span>
+                <span className="font-bold"> {s("strong.i1-2")}</span>
               </h6>
             </div>
             <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
@@ -38,9 +40,9 @@ export default function StrongServiceSection() {
                 />
               </div>
               <h6 className="mt-6 text-center">
-                日本語スタッフによる
+                {s("strong.i2")}
                 <br />
-                <span className="font-bold">24時間サポート体制</span>
+                <span className="font-bold"> {s("strong.i2-2")}</span>
               </h6>
             </div>
             <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
@@ -51,8 +53,9 @@ export default function StrongServiceSection() {
                 />
               </div>
               <h6 className="mt-6 text-center">
-                <span className="font-bold">旅行会社のノウハウ</span>を<br />
-                活かしたサービス
+                <span className="font-bold"> {s("strong.i3")}</span>
+                <br />
+                {s("strong.i3-2")}
               </h6>
             </div>
           </div>
@@ -61,7 +64,7 @@ export default function StrongServiceSection() {
               href="/about-us"
               className="bg-[#3562AE] py-2 px-4 rounded-md text-white hover:bg-[#FDBD59]"
             >
-              会社案内はこちら
+              {s("strong.read")}
             </Link>
           </div>
         </div>

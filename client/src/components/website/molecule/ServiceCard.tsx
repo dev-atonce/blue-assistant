@@ -4,8 +4,9 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useState } from "react";
 import Modal from "../layout/Modal";
-export default function ServiceCard({ item }: any) {
+export default function ServiceCard({ item, lng }: any) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const lang = lng.toUpperCase();
   return (
     <div
       //   href={`/service/${item?.id}`}
@@ -13,8 +14,8 @@ export default function ServiceCard({ item }: any) {
     >
       {item?.link && (
         <a href={item?.link}>
-          <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-sm bg-[#3562AE]">
-            {item?.serviceNameTH}
+          <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-xs bg-[#3562AE]">
+            {item[`serviceName${lang}`]}
           </h4>
           <div className="w-full h-40 overflow-hidden flex justify-center">
             <img
@@ -31,7 +32,7 @@ export default function ServiceCard({ item }: any) {
           </div>
           <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
             <p className="text-center text-sm w-full text-[#3562AE] line-clamp-6">
-              {item?.descriptionEN}
+              {item[`description${lang}`]}
             </p>
           </div>
         </a>
@@ -39,7 +40,7 @@ export default function ServiceCard({ item }: any) {
       {!item?.link && !item?.modal && (
         <Link href={`/${item?.id}`}>
           <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-xs bg-[#3562AE]">
-            {item?.serviceNameTH}
+            {item[`serviceName${lang}`]}
           </h4>
           <div className="w-full h-40 overflow-hidden flex justify-center">
             <img
@@ -56,7 +57,7 @@ export default function ServiceCard({ item }: any) {
           </div>
           <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
             <p className="text-center text-sm w-full text-[#3562AE] line-clamp-6">
-              {item?.descriptionEN}
+              {item[`description${lang}`]}
             </p>
           </div>
         </Link>
@@ -64,8 +65,8 @@ export default function ServiceCard({ item }: any) {
       {item?.modal && (
         <div>
           <button onClick={() => setIsModalOpen(true)}>
-            <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-sm bg-[#3562AE]">
-              {item?.serviceNameTH}
+            <h4 className="text-white px-1 py-3 w-full text-center rounded-bl-3xl rounded-br-3xl font-bold text-base xl:text-xs bg-[#3562AE]">
+              {item[`serviceName${lang}`]}
             </h4>
             <div className="w-full h-40 overflow-hidden flex justify-center">
               <img
@@ -82,7 +83,7 @@ export default function ServiceCard({ item }: any) {
             </div>
             <div className="pt-2 lg:min-h-32 overflow-hidden border-t-[2px]">
               <p className="text-center text-sm w-full text-[#3562AE] line-clamp-6">
-                {item?.descriptionEN}
+                {item[`description${lang}`]}
               </p>
             </div>
           </button>

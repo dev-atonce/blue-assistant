@@ -3,7 +3,7 @@ import NavDropDown from "@/components/website/molecule/menu/NavDropDown";
 import menuItem from "@/assets/menuItem.json";
 import { usePathname } from "next/navigation";
 
-export default function NavBar(colors: any) {
+export default function NavBar({ colors, lng }: any) {
   const pathname = usePathname();
 
   return (
@@ -30,7 +30,7 @@ export default function NavBar(colors: any) {
                   : "text-[#0C2B4B]"
               } h-full text-sm font-bold flex items-center menu-item px-4 py-4 nav-button hover:text-[#3562AE] transition-all`}
             >
-              {item.title.jp}
+              {item.title[lng]}
             </Link>
           );
       })}

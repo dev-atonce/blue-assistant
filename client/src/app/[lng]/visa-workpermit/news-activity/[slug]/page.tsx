@@ -49,9 +49,9 @@ export default async function Blog({
   const blogImageKey = `blog_image`;
   const blogDetailKey = `blog_detail_${lng}`;
 
-  const blogTitle = blog[0][blogTitleKey];
-  const blogImage = blog[0][blogImageKey];
-  const blogDetail = blog[0][blogDetailKey];
+  const blogTitle = blog[0][blogTitleKey] || blog[0]["blog_title_jp"];
+  const blogImage = blog[0][blogImageKey] || blog[0]["blog_title_jp"];
+  const blogDetail = blog[0][blogDetailKey] || blog[0]["blog_title_jp"];
   const blogType = blog[0].type;
 
   return (
