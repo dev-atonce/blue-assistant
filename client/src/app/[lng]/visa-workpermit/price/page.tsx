@@ -21,7 +21,7 @@ export default function Price() {
               <p className="text-xl font-semibold">
                 ※下記料金には役所への発行手数料は含まれておりません。
               </p>
-              <div className="grid grid-cols-12 gap-5 py-20 text-xl text-slate-600 font-semibold">
+              <div className="grid grid-cols-12 gap-5 py-20  text-slate-600 font-semibold">
                 <Link
                   href="/visa-workpermit/price#work-permit"
                   className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5 col-span-6 md:col-span-4"
@@ -32,7 +32,9 @@ export default function Price() {
                     width={100}
                     height={100}
                   ></Image>
-                  <p>労働許可証 Work permit</p>
+                  <p className="lg:text-base text-sm font-semibold text-center">
+                    労働許可証 Work permit
+                  </p>
                 </Link>
                 <Link
                   href="/visa-workpermit/price#visa"
@@ -44,7 +46,9 @@ export default function Price() {
                     width={100}
                     height={100}
                   ></Image>
-                  <p>滞在許可 Visa</p>
+                  <p className="lg:text-base text-sm font-semibold text-center">
+                    滞在許可 Visa
+                  </p>
                 </Link>
                 <Link
                   href="/visa-workpermit/price#ninety-day"
@@ -56,7 +60,9 @@ export default function Price() {
                     width={100}
                     height={100}
                   ></Image>
-                  <p>90日レポート 90days report</p>
+                  <p className="lg:text-base text-sm font-semibold text-center">
+                    90日レポート 90days report
+                  </p>
                 </Link>
                 <Link
                   href="/visa-workpermit/price#re-entry"
@@ -68,7 +74,9 @@ export default function Price() {
                     width={100}
                     height={100}
                   ></Image>
-                  <p>再入国許可証 Re-entry permit</p>
+                  <p className="lg:text-base text-sm font-semibold text-center">
+                    再入国許可証 Re-entry permit
+                  </p>
                 </Link>
                 <Link
                   href="/visa-workpermit/price#boi"
@@ -80,7 +88,9 @@ export default function Price() {
                     width={100}
                     height={100}
                   ></Image>
-                  <p>B.O.I</p>
+                  <p className="lg:text-base text-sm font-semibold text-center">
+                    B.O.I
+                  </p>
                 </Link>
                 <Link
                   href="/visa-workpermit/price#insurance"
@@ -92,7 +102,9 @@ export default function Price() {
                     width={100}
                     height={100}
                   ></Image>
-                  <p>Insurance</p>
+                  <p className="lg:text-base text-sm font-semibold text-center">
+                    Insurance
+                  </p>
                 </Link>
               </div>
             </div>
@@ -104,10 +116,10 @@ export default function Price() {
                 id="work-permit"
                 className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
               >
-                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                  <div className="w-[80%] text-lg">労働許可証 Work permit</div>
-                  <div className="w-[10%] text-lg">金額</div>
-                  <div className="w-[10%] text-lg">(VAT7％）</div>
+                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                  <div className="w-[80%] ">労働許可証 Work permit</div>
+                  <div className="w-[10%] ">金額</div>
+                  <div className="w-[10%] ">(VAT7％）</div>
                 </div>
                 <div className="text-slate-600">
                   <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -142,10 +154,10 @@ export default function Price() {
                 id="visa"
                 className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
               >
-                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                  <div className="w-[80%] text-lg">滞在許可 Visa</div>
-                  <div className="w-[10%] text-lg">金額</div>
-                  <div className="w-[10%] text-lg">(VAT7％）</div>
+                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                  <div className="w-[80%] ">滞在許可 Visa</div>
+                  <div className="w-[10%] ">金額</div>
+                  <div className="w-[10%] ">(VAT7％）</div>
                 </div>
                 <div className="text-slate-600">
                   <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -200,12 +212,10 @@ export default function Price() {
                 id="ninety-day"
                 className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
               >
-                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                  <div className="w-[80%] text-lg">
-                    90日レポート 90days report
-                  </div>
-                  <div className="w-[10%] text-lg">金額</div>
-                  <div className="w-[10%] text-lg">(VAT7％）</div>
+                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                  <div className="w-[80%] ">90日レポート 90days report</div>
+                  <div className="w-[10%] ">金額</div>
+                  <div className="w-[10%] ">(VAT7％）</div>
                 </div>
                 <div className="text-slate-600">
                   <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -221,12 +231,10 @@ export default function Price() {
                 id="re-entry"
                 className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
               >
-                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                  <div className="w-[80%] text-lg">
-                    再入国許可証 Re-entry permit
-                  </div>
-                  <div className="w-[10%] text-lg">金額</div>
-                  <div className="w-[10%] text-lg">(VAT7％)</div>
+                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                  <div className="w-[80%] ">再入国許可証 Re-entry permit</div>
+                  <div className="w-[10%] ">金額</div>
+                  <div className="w-[10%] ">(VAT7％)</div>
                 </div>
                 <div className="text-slate-600">
                   <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -253,10 +261,10 @@ export default function Price() {
                 id="boi"
                 className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6"
               >
-                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                  <div className="w-[80%] text-lg">新規申請及び更新手続き</div>
-                  <div className="w-[10%] text-lg">金額</div>
-                  <div className="w-[10%] text-lg">(VAT7％）</div>
+                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                  <div className="w-[80%] ">新規申請及び更新手続き</div>
+                  <div className="w-[10%] ">金額</div>
+                  <div className="w-[10%] ">(VAT7％）</div>
                 </div>
                 <div className="text-slate-600">
                   <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -289,10 +297,10 @@ export default function Price() {
                 id="insurance"
                 className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6"
               >
-                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                  <div className="w-[80%] text-lg">一般法人／個人の場合</div>
-                  <div className="w-[10%] text-lg">金額</div>
-                  <div className="w-[10%] text-lg">(VAT7％）</div>
+                <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                  <div className="w-[80%] ">一般法人／個人の場合</div>
+                  <div className="w-[10%] ">金額</div>
+                  <div className="w-[10%] ">(VAT7％）</div>
                 </div>
                 <div className="text-slate-600">
                   <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -311,10 +319,10 @@ export default function Price() {
                   </div>
                 </div>
                 <div className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6">
-                  <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                    <div className="w-[80%] text-lg">BOI企業の場合</div>
-                    <div className="w-[10%] text-lg">金額</div>
-                    <div className="w-[10%] text-lg">(VAT7％）</div>
+                  <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                    <div className="w-[80%] ">BOI企業の場合</div>
+                    <div className="w-[10%] ">金額</div>
+                    <div className="w-[10%] ">(VAT7％）</div>
                   </div>
                   <div className="text-slate-600">
                     <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -343,10 +351,10 @@ export default function Price() {
                   </div>
                 </div>
                 <div className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6">
-                  <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white">
-                    <div className="w-[80%] text-lg">リエントリービザ</div>
-                    <div className="w-[10%] text-lg">金額</div>
-                    <div className="w-[10%] text-lg">(VAT7％）</div>
+                  <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
+                    <div className="w-[80%] ">リエントリービザ</div>
+                    <div className="w-[10%] ">金額</div>
+                    <div className="w-[10%] ">(VAT7％）</div>
                   </div>
                   <div className="text-slate-600">
                     <div className="flex rounded-lg py-4 px-4 border-b border-white ">
@@ -361,6 +369,21 @@ export default function Price() {
                       <div className="w-[10%] ">THB</div>
                       <div className="w-[10%]">3,800</div>
                     </div>
+                  </div>
+                </div>
+                <div className="py-6">
+                  <span className="text-lg font-bold">⚠ ご注意 ⚠</span>
+                  <p className="text-base ">
+                    上記発生手数料は予告なしに変更する場合がございます。申請時にご確認をお願いいたします。
+                  </p>
+                  <p className="text-base text-end">更新日：2024年11月</p>
+                  <div className="text-center py-10">
+                    <Link
+                      href="/visa-workpermit#contact"
+                      className="hover:bg-blue-700 hover:scale-90 transition-all py-4 px-4 bg-blue-900 text-white font-semibold rounded-lg"
+                    >
+                      お見積りはお問い合わせフォームより
+                    </Link>
                   </div>
                 </div>
               </div>

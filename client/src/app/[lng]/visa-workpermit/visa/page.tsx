@@ -38,14 +38,14 @@ export default function Work() {
                     入国ビザを取得後、タイへ渡航となります。
                     <br />
                     日本で入国ビザの申請、取得をされる方は、各在タイ国大使館ホームページ(
-                    {/* to do */}
-                    <Link href="useful_links.php">お役立ちリンク</Link>
+                
+                    <Link href="/visa-workpermit/links" className="text-blue-800">お役立ちリンク</Link>
                     )を参照下さい。
                     <br />
                     詳細につきましては、在日タイ国大使館ホームページ(
-                    <Link href="useful_links.php">お役立ちリンク</Link>
+                    <Link href="/visa-workpermit/links" className="text-blue-800">お役立ちリンク</Link>
                     )をご参照下さい。日本以外のタイ国外でも取得が可能です。申請方法に関しましては、各国の在タイ大使館ホームページ(
-                    <Link href="useful_links.php">お役立ちリンク</Link>
+                    <Link href="/visa-workpermit/links" className="text-blue-800">お役立ちリンク</Link>
                     )をご確認下さい。
                   </div>
                 </div>
