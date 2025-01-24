@@ -121,7 +121,7 @@ export const useBlogStore = create<BlogState>((set) => ({
     // @ts-ignore
     formData.append("slug", updatedItem.slug);
     // @ts-ignore
-    formData.append("module", newItem.module);
+    formData.append("module", updatedItem.module);
     if (updatedItem.blog_image) {
       formData.append("blog_image", updatedItem.blog_image);
     }

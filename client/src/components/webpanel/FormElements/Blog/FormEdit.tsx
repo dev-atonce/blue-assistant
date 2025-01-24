@@ -50,7 +50,7 @@ const FormEdit = ({ id }: FormEditProps) => {
         blog_detail_th: items[0].blog_detail_th,
         blog_detail_en: items[0].blog_detail_en,
         blog_detail_jp: items[0].blog_detail_jp,
-        page: items[0].page,
+        module: items[0].module,
         slug: items[0].slug,
         blog_image: items[0].blog_image,
       });
