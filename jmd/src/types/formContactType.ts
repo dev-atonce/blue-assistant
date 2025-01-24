@@ -1,8 +1,11 @@
 export interface FormContactProps {
   id: string;
-  contactName: string;
-  companyName: string;
-  telephone: string;
+  service: string;
+  customer: string;
+  company: string;
+  name_kanji: string;
+  name_eng: string;
+  phone: string;
   email: string;
   detail: string;
   status: boolean;

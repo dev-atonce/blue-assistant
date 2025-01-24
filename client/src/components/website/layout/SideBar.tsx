@@ -79,7 +79,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
                 </button>
             </div> */}
         <div className="flex items-center justify-between w-full">
-          <div className="flex social-icon">
+          {/* <div className="flex social-icon">
             <a
               href={contact?.facebook}
               target="_blank"
@@ -105,7 +105,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
                 className="bg-red-500"
               />
             </a>
-          </div>
+          </div> */}
           <div className="text-black notranslate flex gap-1">
             <a
               href={pathname.replace(`/${language.currentLanguage}`, `/th`)}

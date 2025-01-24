@@ -4,7 +4,8 @@ import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
 import { Noto_Sans, Noto_Sans_JP, Roboto, Kanit } from "next/font/google";
 import { ConfigProvider } from "antd";
-import Favicon from "../favicon.ico";
+import { GoogleTagManager } from "@next/third-parties/google";
+import Favicon from "../[lng]/favicon.ico";
 import "./globals.css";
 import "./../../css/all.scss";
 import { NextIntlClientProvider } from "next-intl";
@@ -59,32 +60,32 @@ const colors = {
   warning: "",
 };
 
-// const pageName = "home";
-// export async function generateMetadata(
-//   { params, searchParams }: any,
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   // read route params
-//   const lng = "TH";
+const pageName = "home";
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const lng = params.lng?.toUpperCase();
 
-//   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
+  const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
-//   // fetch data
-//   const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
-//     res.json()
-//   );
+  // fetch data
+  const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
+    res.json()
+  );
 
-//   return {
-//     metadataBase: new URL("https://blue-assistant.com"),
-//     title: response[`seoTitle${lng}`],
-//     description: response[`seoDescription${lng}`],
-//     keywords: response[`seoKeyword${lng}`],
-//     alternates: {
-//       canonical: "./",
-//     },
-//     icons: [{ rel: "icon", url: Favicon.src }],
-//   };
-// }
+  return {
+    metadataBase: new URL("https://blue-assistant.co.th"),
+    title: response[`seoTitle${lng}`],
+    description: response[`seoDescription${lng}`],
+    keywords: response[`seoKeyword${lng}`],
+    alternates: {
+      canonical: "./",
+    },
+    icons: [{ rel: "icon", url: Favicon.src }],
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -129,6 +130,7 @@ export default async function RootLayout({
               <Footer colors={colors} owner={owner} lng={lng} />
             </NextIntlClientProvider>
           </body>
+          <GoogleTagManager gtmId="GTM-MFH3RWL8" />
         </PageSettingProvider>
       </ConfigProvider>
     </html>

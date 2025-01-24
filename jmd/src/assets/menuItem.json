@@ -1,7 +1,42 @@
 [
-  { "title": "Home", "href": "/" },
-  { "title": "Our Business", "href": "/our-business" },
-  { "title": "About Us", "href": "/about-us" },
-  { "title": "News", "href": "/news-activity" },
-  { "title": "Contact", "href": "/contact" }
+  {
+    "title": {
+      "en": "Home",
+      "th": "หน้าแรก",
+      "jp": "ホーム"
+    },
+    "href": "https://blue.oncewebdesign.com/jp"
+  },
+  {
+    "title": {
+      "th": "บริการของเรา",
+      "en": "Our Business",
+      "jp": "私たちの事業"
+    },
+    "href": "https://blue.oncewebdesign.com/jp#our-business"
+  },
+  {
+    "title": {
+      "th": "เกียวกับเรา",
+      "en": "About Us",
+      "jp": "会社案内"
+    },
+    "href": "https://blue.oncewebdesign.com/jp#about-us"
+  },
+  {
+    "title": {
+      "th": "บทความ",
+      "en": "Blog",
+      "jp": "ブログ"
+    },
+    "href": "https://blue.oncewebdesign.com/jp#news-activity"
+  },
+  {
+    "title": {
+      "th": "ติดต่อเรา",
+      "en": "Contact",
+      "jp": "お問い合わせ"
+    },
+    "href": "https://blue.oncewebdesign.com/jp#contact"
+  }
 ]

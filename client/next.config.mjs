@@ -21,6 +21,11 @@ const nextConfig = {
         hostname: "api-blue.oncewebdesign.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "api.blue-assistance.co.th",
+        port: "",
+      },
     ],
   },
 };

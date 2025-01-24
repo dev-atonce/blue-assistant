@@ -40,14 +40,15 @@ export default function SocialMedia({ language }: any) {
       </div>
       <div className="flex items-center gap-1 ms-20 text-[#3d5daa]">
         <a
-          // to do
-          href={`tel:098348734`}
+        
+          href={`tel:026617687`}
           target="_blank"
           className={` bg-white border transition-all ease-in-out border-[#dcdcdc] drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none hover:text-white hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2 flex items-center justify-center`}
         >
           <FaPhoneAlt />
         </a>
         <a
+          // to do
           href={`tel:098348734`}
           target="_blank"
           onMouseEnter={() => setBtnHover(true)}
@@ -57,7 +58,7 @@ export default function SocialMedia({ language }: any) {
           <SiLine size={25} />
         </a>
         <a
-          href={`tel:098348734`}
+          href={`mailto:medical@blue-assistance.co.th`}
           target="_blank"
           className={` hover:text-white bg-white border transition-all ease-in-out border-[#dcdcdc] drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
         >

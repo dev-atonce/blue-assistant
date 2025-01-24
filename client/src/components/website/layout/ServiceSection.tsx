@@ -1,24 +1,39 @@
 import ServiceCard from "../molecule/ServiceCard";
+const ModalContentJP = () => {
+  return (
+    <div className="text-base flex flex-col gap-4">
+      <h3 className=" text-lg font-semibold text-[#3562AE]">
+        医療アシスタンス業務
+      </h3>
+      <ul className="list-disc">
+        <li>医療機関へのキャッシュレス手配代行</li>
+        <li>日本人スタッフによるアテンド (患者様ご本人、ご家族など)</li>
+        <li>緊急搬送の代理手配 (医療機関、搬送会社との連携)</li>
+        <li>帰国搬送の代理手配 (医療機関や企業様経由)</li>
+        <li>ご遺体搬送の手配 (大使館/葬儀会社/クーリエ会社など一括手配)</li>
+        <li>クレームドキュメントのコレクションと処理手続き</li>
+        <li>各必要書類（官公庁発行書類など）の取り付け及び翻訳</li>
+      </ul>
+    </div>
+  );
+};
+
+const ModalContentEN = () => {
+  return <ModalContentJP />;
+};
+const ModalContentTH = () => {
+  return <ModalContentJP />;
+};
 
 export default async function ServiceSection({ data, lng }: any) {
-  const ModalContent = () => {
-    return (
-      <div className="text-base flex flex-col gap-4">
-        <h3 className=" text-lg font-semibold text-[#3562AE]">
-          医療アシスタンス業務
-        </h3>
-        <ul className="list-disc">
-          <li>医療機関へのキャッシュレス手配代行</li>
-          <li>日本人スタッフによるアテンド (患者様ご本人、ご家族など)</li>
-          <li>緊急搬送の代理手配 (医療機関、搬送会社との連携)</li>
-          <li>帰国搬送の代理手配 (医療機関や企業様経由)</li>
-          <li>ご遺体搬送の手配 (大使館/葬儀会社/クーリエ会社など一括手配)</li>
-          <li>クレームドキュメントのコレクションと処理手続き</li>
-          <li>各必要書類（官公庁発行書類など）の取り付け及び翻訳</li>
-        </ul>
-      </div>
+  const modalContent =
+    lng == "jp" ? (
+      <ModalContentJP />
+    ) : lng == "en" ? (
+      <ModalContentEN />
+    ) : (
+      <ModalContentTH />
     );
-  };
   const mocks = [
     {
       serviceNameTH: "ธุรกิจให้ความช่วยเหลือทางการแพทย์",
@@ -33,7 +48,7 @@ export default async function ServiceSection({ data, lng }: any) {
 
       id: "customer-support",
       image: "/img/our-business/Group 280.png",
-      modal: <ModalContent />,
+      modal: modalContent,
     },
     {
       serviceNameTH: "ศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD)",
@@ -47,7 +62,9 @@ export default async function ServiceSection({ data, lng }: any) {
         " medical assistance in Thailand, Myanmar, and Laos. Our Japanese interpreters assist with cashless medical consultations locally.",
       id: "jmd",
       image: "/img/our-business/Rectangle 162.png",
-      link: "https://jmd.blue-assistance.co.th",
+      // to do
+      // link: "https://jmd.blue-assistance.co.th",
+      link: "https://jmd.oncewebdesign.com",
     },
     {
       serviceNameTH: "ธุรกิจให้คำปรึกษาด้านวีซ่าและใบอนุญาตทำงาน",

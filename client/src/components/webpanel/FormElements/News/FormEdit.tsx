@@ -50,6 +50,7 @@ const FormEdit = ({ id }: FormEditProps) => {
         blog_detail_th: items[0].blog_detail_th,
         blog_detail_en: items[0].blog_detail_en,
         blog_detail_jp: items[0].blog_detail_jp,
+        // @ts-ignore
         page: items[0].page,
         slug: items[0].slug,
         blog_image: items[0].blog_image,
@@ -58,7 +59,9 @@ const FormEdit = ({ id }: FormEditProps) => {
   }, [items]);
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     // @ts-ignore
     const { name, value, files } = event.target;

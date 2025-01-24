@@ -11,8 +11,7 @@ export interface BlogProps {
   blog_detail_en: string;
   blog_detail_jp: string;
   type?: string;
-  attachment?: string;
-  location?: string;
+  module?: string;
   slug?: string;
   sort?: number;
   status?: boolean;

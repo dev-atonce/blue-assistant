@@ -29,6 +29,7 @@ const MailBoxView = ({ params }: { params: { id: string } }) => {
     fetchMsg();
   }, []);
 
+  console.log(msg);
   return (
     <>
       <DefaultLayout>

@@ -2,9 +2,10 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Header from "@/components/website/layout/Header";
 import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
-import { Noto_Sans, Noto_Sans_JP, Roboto } from "next/font/google";
+import { Noto_Sans, Noto_Sans_JP, Roboto, Kanit } from "next/font/google";
 import { ConfigProvider } from "antd";
-import Favicon from "../favicon.ico";
+import { GoogleTagManager } from "@next/third-parties/google";
+import Favicon from "../[lng]/favicon.ico";
 import "./globals.css";
 import "./../../css/all.scss";
 import { NextIntlClientProvider } from "next-intl";
@@ -12,26 +13,27 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  style: ["normal", "italic"],
-});
-
-const notoJp = Noto_Sans_JP({
-  weight: ["300", "400", "500", "600", "700", "800"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const noto = Noto_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
 });
-const lng = "th";
+
+const notoJP = Noto_Sans_JP({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const kanit = Kanit({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const owner = {
   name: {
     th: "บริษัท บลู แอสซิสแท็นซ จำกัด",
@@ -49,6 +51,7 @@ const owner = {
   instagram: "",
   gmap: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.293634429288!2d100.562314!3d13.73982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee366cbf9bf%3A0x2cd7d65872b3b0bf!2sBlue%20Assistance%20Company%20Limited!5e0!3m2!1sen!2sus!4v1731572079527!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
 };
+
 const colors = {
   main: "#3562AE",
   secondary: "",
@@ -56,51 +59,50 @@ const colors = {
   danger: "#ED1F23",
   warning: "",
 };
+
 const pageName = "home";
-// export async function generateMetadata(
-//   { params, searchParams }: any,
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   // read route params
-//   const lng = "TH";
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const lng = params.lng?.toUpperCase();
 
-//   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
+  const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
-//   // fetch data
-//   const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
-//     res.json()
-//   );
+  // fetch data
+  const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
+    res.json()
+  );
 
-//   return {
-//     metadataBase: new URL("https://blue-assistant.com"),
-//     title: response[`seoTitle${lng}`],
-//     description: response[`seoDescription${lng}`],
-//     keywords: response[`seoKeyword${lng}`],
-//     alternates: {
-//       canonical: "./",
-//     },
-//     icons: [{ rel: "icon", url: Favicon.src }],
-//   };
-// }
+  return {
+    metadataBase: new URL("https://blue-assistant.co.th"),
+    title: response[`seoTitle${lng}`],
+    description: response[`seoDescription${lng}`],
+    keywords: response[`seoKeyword${lng}`],
+    alternates: {
+      canonical: "./",
+    },
+    icons: [{ rel: "icon", url: Favicon.src }],
+  };
+}
 
 export default async function RootLayout({
   children,
   params: { lng },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lng: string };
-}>) {
+}: Readonly<{ children: React.ReactNode; params: { lng: string } }>) {
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(lng as any)) {
     notFound();
   }
   const messages = await getMessages();
+
   return (
     <html lang={lng}>
       <ConfigProvider
         theme={{
           token: {
-            fontFamily: noto.style.fontFamily,
+            fontFamily: notoJP.style.fontFamily,
           },
           components: {
             Pagination: {
@@ -113,13 +115,22 @@ export default async function RootLayout({
         }}
       >
         <PageSettingProvider>
-          <body className={noto.className}>
+          <body
+            className={
+              lng == "jp"
+                ? `${notoJP.className} `
+                : lng == "th"
+                ? `${kanit.className}`
+                : `${noto.className} `
+            }
+          >
             <NextIntlClientProvider messages={messages}>
               <Header colors={colors} owner={owner} lng={lng} />
               {children}
               <Footer colors={colors} owner={owner} lng={lng} />
             </NextIntlClientProvider>
           </body>
+          <GoogleTagManager gtmId="GTM-NFJTH8PW" />
         </PageSettingProvider>
       </ConfigProvider>
     </html>

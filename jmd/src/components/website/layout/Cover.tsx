@@ -1,33 +1,48 @@
 import Image from "next/image";
 import Breadcrumb from "../molecule/Breadcrumb";
-export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
+import { useTranslations } from "next-intl";
+export default function Cover({
+  pageName,
+  prevPage,
+  engName,
+  noHeading,
+  lng,
+}: any) {
+  const c = useTranslations("cover");
   return (
     <div className="w-full ">
-      <div className="relative  lg:block hidden">
+      <div className="relative  ">
         <Image
-          className="w-full shadow-sm"
-          src="/img/cover_ymc.jpg"
+          className="w-full shadow-sm lg:block hidden"
+          src="/img/page-cover.png"
           width={2000}
           height={500}
           quality={80}
           alt="cover"
           priority={true}
         />
-        <div className="container px-4 mx-auto">
+        <div className="container  mx-auto lg:block hidden">
           <div
-            className="absolute top-[15%] hidden xl:block"
-            style={{ textShadow: "1px 1px #2F2F2F" }}
+            className="absolute top-[17%] hidden xl:block"
+            style={{ textShadow: "1px 1px #CAD5E4" }}
           >
-            <p className="text-red-600  text-3xl py-4">
-            Always By Your Side
+            <p className="text-[#3562AE]  text-5xl py-4 font-semibold">
+              Always By Your Side
             </p>
-            <p className="text-white text-3xl">
-            Blue Assistance Co., Ltd.
+            <p className="text-black text-3xl font-semibold">
+              Blue Assistance Co., Ltd.
             </p>
           </div>
         </div>
-        <div className="bg-slate-500/20 absolute bottom-0 w-full">
-          <div className="hidden md:block container xl:px-4 2xl:px-4 mx-auto">
+        <div className="bg-[#3462AF]  w-full">
+          <div className=" container mx-auto py-2">
+            <p className="text-sm sm:text-base xl:text-xl text-white">
+              {c("banner")}
+            </p>
+          </div>
+        </div>
+        <div className="bg-slate-500/10  w-full">
+          <div className="container mx-auto">
             <Breadcrumb pageName={pageName} prevPage={prevPage} />
           </div>
         </div>

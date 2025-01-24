@@ -68,11 +68,10 @@ export const useBlogStore = create<BlogState>((set) => ({
     formData.append("blog_title_jp", newItem.blog_title_jp);
     // @ts-ignore
     formData.append("slug", newItem.slug);
+    // @ts-ignore
+    formData.append("module", newItem.module);
     if (newItem.blog_image) {
       formData.append("blog_image", newItem.blog_image);
-    }
-    if (newItem.attachment) {
-      formData.append("attachment", newItem.attachment);
     }
     if (newItem.blog_description_th) {
       formData.append("blog_description_th", newItem.blog_description_th);
@@ -82,9 +81,6 @@ export const useBlogStore = create<BlogState>((set) => ({
     }
     if (newItem.blog_description_jp) {
       formData.append("blog_description_jp", newItem.blog_description_jp);
-    }
-    if (newItem.location) {
-      formData.append("location", newItem.location);
     }
     formData.append("blog_detail_th", newItem.blog_detail_th);
     formData.append("blog_detail_en", newItem.blog_detail_en);
@@ -124,11 +120,10 @@ export const useBlogStore = create<BlogState>((set) => ({
     formData.append("blog_title_jp", updatedItem.blog_title_jp);
     // @ts-ignore
     formData.append("slug", updatedItem.slug);
+    // @ts-ignore
+    formData.append("module", updatedItem.module);
     if (updatedItem.blog_image) {
       formData.append("blog_image", updatedItem.blog_image);
-    }
-    if (updatedItem.attachment) {
-      formData.append("attachment", updatedItem.attachment);
     }
     if (updatedItem.blog_description_th) {
       formData.append("blog_description_th", updatedItem.blog_description_th);
@@ -138,9 +133,6 @@ export const useBlogStore = create<BlogState>((set) => ({
     }
     if (updatedItem.blog_description_jp) {
       formData.append("blog_description_jp", updatedItem.blog_description_jp);
-    }
-    if (updatedItem.location) {
-      formData.append("location", updatedItem.location);
     }
     formData.append("blog_detail_th", updatedItem.blog_detail_th);
     formData.append("blog_detail_en", updatedItem.blog_detail_en);

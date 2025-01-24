@@ -1,19 +1,19 @@
-import Link from "next/link";
+"use client";
+// import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import {
-  FaPlus,
-  FaFacebookF,
-  FaLine,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaPlus, FaFacebookF, FaLine, FaInstagram } from "react-icons/fa";
 import menuItem from "@/assets/menuItem.json";
 import { RiCloseLargeLine } from "react-icons/ri";
+import { usePathname } from "next/navigation";
 
 export default function SideBar({ sideBar, language, contact }: any) {
+  const pathname = usePathname();
+
   return (
-    <div className="flex">
+    <div className="flex ">
       <div
-        className="sidebar-wraper w-full max-h-screen "
+        className="sidebar-wraper  w-full max-h-screen "
         style={{ height: `calc(100vh - 68px)` }}
       >
         <ul className="sidebar-menu px-4 py-10">
@@ -21,17 +21,18 @@ export default function SideBar({ sideBar, language, contact }: any) {
             className="w-full flex justify-end"
             onClick={() => sideBar?.closeSideBar()}
           >
-            <RiCloseLargeLine size={40} color={"#ED2022"} />
+            <RiCloseLargeLine size={40} color={"#3462af"} />
           </button>
           {menuItem.map((item, index) => (
             <li key={index} className="menu-item rounded-lg">
               <Link
                 href={item.href}
-                title={item.title}
+                title={item.title.jp}
                 onClick={(e) => sideBar.toggleSubMenu(e)}
-                className="p-2 hover:text-red-600 flex items-center justify-between"
+                className="p-2 hover:text-[#3462af] flex items-center justify-between"
               >
-                {item.title}
+                {/* @ts-ignore */}
+                {item.title[language.currentLanguage]}
                 {/* @ts-ignore */}
                 {item?.subMenu && (
                   <FaPlus className="plus-icon transition-all duration-200" />
@@ -45,11 +46,11 @@ export default function SideBar({ sideBar, language, contact }: any) {
                     <li key={index + i}>
                       <Link
                         href={sub.href}
-                        title={sub.title}
+                        title={sub.title.jp}
                         onClick={sideBar.closeSideBar}
                         className="submenu-item"
                       >
-                        {sub.title}
+                        {sub.title.jp}
                       </Link>
                     </li>
                   ))}
@@ -78,7 +79,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
                 </button>
             </div> */}
         <div className="flex items-center justify-between w-full">
-          <div className="flex social-icon">
+          {/* <div className="flex social-icon">
             <a
               href={contact?.facebook}
               target="_blank"
@@ -104,19 +105,31 @@ export default function SideBar({ sideBar, language, contact }: any) {
                 className="bg-red-500"
               />
             </a>
-          </div>
+          </div> */}
           <div className="text-black notranslate flex gap-1">
-            <button onClick={(e: any) => language?.switchLanguage("th")}>
+            <a
+              href={pathname.replace(`/${language.currentLanguage}`, `/th`)}
+              // onClick={(e: any) => language?.switchLanguage("th")}
+              title="thai"
+            >
               <Image src="/img/th_flag.png" alt="th" width={25} height={25} />
-            </button>
-            <button onClick={(e: any) => language?.switchLanguage("en")}>
+            </a>
+
+            <a
+              href={pathname.replace(`/${language.currentLanguage}`, `/en`)}
+              // onClick={(e: any) => language?.switchLanguage("en")}
+              title="english"
+            >
               {" "}
               <Image src="/img/uk_flag.png" alt="th" width={25} height={25} />
-            </button>
-            <button onClick={(e: any) => language?.switchLanguage("ja")}>
-              {" "}
+            </a>
+            <a
+              href={pathname.replace(`/${language.currentLanguage}`, `/jp`)}
+              // onClick={(e: any) => language?.switchLanguage("jp")}
+              title="japanese"
+            >
               <Image src="/img/jp_flag.png" alt="th" width={26} height={26} />
-            </button>
+            </a>
           </div>
         </div>
       </div>

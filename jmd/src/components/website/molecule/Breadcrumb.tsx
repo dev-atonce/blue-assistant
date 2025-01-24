@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 interface BreadcrumbProps {
   pageName: any;
   prevPage: any;
@@ -6,20 +6,20 @@ interface BreadcrumbProps {
 }
 const Breadcrumb = ({ pageName, prevPage }: any) => {
   return (
-    <div className="py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <nav>
-        <ol className="flex items-center gap-2">
-          {prevPage.length &&
+    <div className="text-xs font-thin py-1 flex flex-col gap-3 sm:flex-row  ">
+      <nav className="w-full ">
+        <ol className="flex items-center gap-2  w-full">
+          {/* {prevPage.length &&
             prevPage?.map((v: any, k: any) => (
               <li key={k}>
-                <Link className="" href={v?.url}>
+                <Link className="text-blue-700" href={v?.url}>
                   {v?.pageName} |
                 </Link>
               </li>
-            ))}
+            ))} */}
           {prevPage?.pageName && prevPage?.url ? (
             <li>
-              <Link className="" href={prevPage?.url}>
+              <Link className="text-blue-700" href={prevPage?.url}>
                 {prevPage?.pageName} |
               </Link>
             </li>
@@ -27,7 +27,7 @@ const Breadcrumb = ({ pageName, prevPage }: any) => {
             ``
           )}
 
-          <li className=" text-white">{pageName}</li>
+          <li className=" text-blue-700">{pageName}</li>
         </ol>
       </nav>
     </div>
