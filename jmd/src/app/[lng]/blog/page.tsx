@@ -3,6 +3,7 @@ import Blog from "@/components/website/layout/Blog";
 import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import BlogSection from "@/components/website/organism/BlogSection";
+import CoverVisa from "@/components/website/layout/CoverVisa";
 
 const pageName = "blog";
 
@@ -36,11 +37,9 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
   const t = useTranslations("header");
   return (
     <>
-      <Cover
+      <CoverVisa
         pageName={t("blog")}
-        image="/img/service/news_banner.jpg"
         prevPage={{ pageName: t("home"), url: "/" }}
-        noHeading={true}
       />
       <div className="container mx-auto ">
         <div className="py-4 flex flex-col gap-3 mt-10">
@@ -53,7 +52,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
           limit={6}
           type={"blog"}
           lng={params.lng}
-          module="visa"
+          module="jmd"
           forPage="blog"
         />
       </div>

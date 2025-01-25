@@ -14,7 +14,7 @@ const BlogCard = ({ data, lng, forPage }: BlogCardProps) => {
     ? (urlBlog = "/blog/")
     : forPage === "visa"
     ? (urlBlog = "/visa-workpermit/news-activity/")
-    : (urlBlog = "/jmd/");
+    : (urlBlog = "/news-activity/");
 
   return data?.map((item: any, key: number) => {
     return (

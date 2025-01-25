@@ -14,7 +14,8 @@
     "faq": "FAQ",
     "location": "Location",
     "about-jmd": "About JMD",
-    "first-time": "Get Started"
+    "first-time": "Get Started",
+    "dep-guide":"Medical Department Guide"
   },
   "location": {
     "h1": "Japanese Medical Desk (JMD) in Various Countries（JMD)"

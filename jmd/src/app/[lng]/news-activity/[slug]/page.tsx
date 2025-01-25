@@ -17,9 +17,9 @@ const fetchBlog = async ({ slug }: { slug: string }) => {
 
 const pagename = {
   home: {
-    th: "หน้าแรก",
-    en: "Home",
-    jp: "ホーム",
+    th: "วีซ่า&ใบอนุญาตทำงาน",
+    en: "Visa&Work Permit",
+    jp: "ビザと労働許可証",
   },
   news: {
     th: "ข่าวสารล่าสุด",
@@ -67,9 +67,9 @@ export default async function Blog({
         // @ts-ignore
         pageName={blogTitle}
         // @ts-ignore
-        prevPage={{ pageName: pagename?.blog[lng], url: "/blog" }}
+        prevPage={{ pageName: pagename?.news[lng], url: "/news-activity" }}
       />
-      <div className="container   mx-auto  pb-10 text-black py-10">
+      <div className="container  mx-auto pb-10 text-black py-10">
         <MainHeading text={blogTitle} heading="2" />
         <div className="lg:px-20 flex justify-center">
           {blogImage && (

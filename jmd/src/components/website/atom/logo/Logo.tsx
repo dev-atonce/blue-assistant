@@ -13,8 +13,9 @@ export function Logo({ color, img }: any) {
               : "/img/blue_full_logo.png"
           }
           alt="rent"
-          width={`400`}
+          width={300}
           height={100}
+          quality={100}
         />
         {/* )} */}
       </Link>
