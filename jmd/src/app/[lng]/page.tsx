@@ -18,65 +18,120 @@ import Collapse from "@/components/website/organism/Collapse";
 import type { CollapseProps } from "antd";
 import { FaPlus } from "react-icons/fa";
 import NewsList from "@/components/website/layout/NewsList";
+const Ans = ({ text }: any) => {
+  return (
+    <div className="flex justify-between items-center text-xs md:text-sm">
+      <p>{text}</p>
+    </div>
+  );
+};
+const Q = ({ text }: any) => {
+  return (
+    <div className="flex justify-between items-center text-xs md:text-sm">
+      <p>{text}</p>
+      <FaPlus color="#3562AE" />
+    </div>
+  );
+};
+// to do jp & th qa
+const consultItems = {
+  en: [
+    {
+      key: "1",
+      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      children: (
+        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Is it necessary to make an appointment?" />,
+      children: (
+        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      children: (
+        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+      ),
+    },
+    {
+      key: "4",
+      label: <Q text="・What should I bring to the hospital?" />,
+      children: (
+        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+      ),
+    },
+  ],
+  jp: [
+    {
+      key: "1",
+      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      children: (
+        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Is it necessary to make an appointment?" />,
+      children: (
+        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      children: (
+        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+      ),
+    },
+    {
+      key: "4",
+      label: <Q text="・What should I bring to the hospital?" />,
+      children: (
+        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+      ),
+    },
+  ],
+  th: [
+    {
+      key: "1",
+      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      children: (
+        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Is it necessary to make an appointment?" />,
+      children: (
+        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      children: (
+        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+      ),
+    },
+    {
+      key: "4",
+      label: <Q text="・What should I bring to the hospital?" />,
+      children: (
+        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+      ),
+    },
+  ],
+};
 
-const items: CollapseProps["items"] = [
-  {
-    key: "1",
-    label: (
-      <div className="flex justify-between items-center text-xs md:text-sm">
-        <p>
-          弊社の代行手数料と、役所への申請料金がございます。詳細は「料金表」をご参照ください
-        </p>
-        <FaPlus color="#3562AE" />
-      </div>
-    ),
-    children: (
-      <p>
-        弊社の代行手数料と、役所への申請料金がございます。詳細は「料金表」をご参照ください
-      </p>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <div className="flex justify-between items-center text-xs md:text-sm">
-        <p>
-          弊社の代行手数料と、役所への申請料金がございます。詳細は「料金表」をご参照ください
-        </p>
-        <FaPlus color="#3562AE" />
-      </div>
-    ),
-    children: <p>タイバーツでのお支払い。クレカ対応？</p>,
-  },
-  {
-    key: "3",
-    label: (
-      <div className="flex justify-between items-center text-xs md:text-sm">
-        <p>
-          弊社の代行手数料と、役所への申請料金がございます。詳細は「料金表」をご参照ください
-        </p>
-        <FaPlus color="#3562AE" />
-      </div>
-    ),
-    children: <p>初回は来社必須？</p>,
-  },
-  {
-    key: "4",
-    label: (
-      <div className="flex justify-between items-center text-xs md:text-sm">
-        <p>
-          弊社の代行手数料と、役所への申請料金がございます。詳細は「料金表」をご参照ください
-        </p>
-        <FaPlus color="#3562AE" />
-      </div>
-    ),
-    children: <p>弊社メッセンジャーにて対応？</p>,
-  },
-];
 export default function Home({ params }: { params: { lng: string } }) {
   const h = useTranslations("header");
   const l = useTranslations("location");
   const b = useTranslations("blog-section");
+  const lang = params.lng;
   return (
     <div className="">
       <CoverVisa img="/img/cover.png" home={true} />
@@ -96,7 +151,10 @@ export default function Home({ params }: { params: { lng: string } }) {
             </div>
           </div>
           <LocationSection lng={params.lng} />
-          <div className=" text-[#3562AE] my-10  w-full shadow-lg bg-blue-100/60 rounded-2xl p-2  md:p-4 lg:p-10">
+          <div
+            id="about"
+            className=" text-[#3562AE] my-10  w-full shadow-lg bg-blue-100/60 rounded-2xl p-2  md:p-4 lg:p-10"
+          >
             <div className="mt-[-40px]">
               <MainHeading
                 text="ジャパニーズメディカル（JMD）とは"
@@ -112,15 +170,15 @@ export default function Home({ params }: { params: { lng: string } }) {
               </p>
             </div>
           </div>
-          <div className="py-t-6 pb-20 border-b border-slate-200">
+          <div id="service" className="py-t-6 pb-20 border-b border-slate-200">
             <MainHeading text="はじめての方へ" heading="2" />
             <JmdServiceSection lng={params?.lng} />
           </div>
-          <div className="py-6 border-b border-slate-100">
-            <MainHeading text="はじめての方へ" heading="2" />
+          <div id="faq" className="py-6 border-b border-slate-100">
+            <MainHeading text={h("faq")} heading="2" />
             <div className="py-4">
               {/* @ts-ignore */}
-              <Collapse items={items} />
+              <Collapse items={consultItems[lang]} />
             </div>
             <div className="flex justify-center mt-10">
               <Link

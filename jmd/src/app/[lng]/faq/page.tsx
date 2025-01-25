@@ -6,175 +6,518 @@ import Collapse from "@/components/website/organism/Collapse";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import type { CollapseProps } from "antd";
+import { FaPlus } from "react-icons/fa";
 
-const items: CollapseProps["items"] = [
-  {
-    key: "1",
-    label: "申請から許可まで何日くらいかかりますか",
-    children: <p>Coming soon</p>,
-  },
-  {
-    key: "2",
-    label: "ビザの新規申請はタイ国内でできますか",
-    children: <p>Coming soon</p>,
-  },
-  {
-    key: "3",
-    label: "観光ビザや留学、配偶者ビザから就労ビザへの切り替えは可能ですか",
-    children: <p>Coming soon</p>,
-  },
-  {
-    key: "4",
-    label: "更新の何日前までに連絡が必要ですか",
-    children: <p>Coming soon</p>,
-  },
-];
-
-const items2: CollapseProps["items"] = [
-  {
-    key: "1",
-    label: "申請から許可まで何日くらいかかりますか",
-    children: <p>Coming soon</p>,
-  },
-  {
-    key: "2",
-    label: "勤務先が変わっても有効期限内であれば使用できますか",
-    children: <p>Coming soon</p>,
-  },
-  {
-    key: "3",
-    label: "必要書類を教えてください",
-    children: <p>Coming soon</p>,
-  },
-];
-
-const items3: CollapseProps["items"] = [
-  {
-    key: "1",
-    label: "相談は無料ですか",
-    children: (
-      <p>
-        一般的な内容でございましたら無料です。書類内容の確認や、個別の案件に関する内容についてはお見積り後の対応となります。
-      </p>
-    ),
-  },
-  {
-    key: "2",
-    label: "バンコク以外でも対応可能ですか",
-    children: <p>現在はサムットプラカーンが対応可能です</p>,
-  },
-  {
-    key: "3",
-    label: "日本人以外でも相談可能ですか",
-    children: <p>Coming soon</p>,
-  },
-  {
-    key: "4",
-    label: "万が一、申請が認められなかった場合はどうなりますか",
-    children: <p>しょるい</p>,
-  },
-];
-
-const items4: CollapseProps["items"] = [
-  {
-    key: "1",
-    label: "・料金について教えてください",
-    children: (
-      <p>
-        弊社の代行手数料と、役所への申請料金がございます。詳細は「料金表」をご参照ください
-      </p>
-    ),
-  },
-  {
-    key: "2",
-    label: "お支払い方法について教えて下さい",
-    children: <p>タイバーツでのお支払い。クレカ対応？</p>,
-  },
-  {
-    key: "3",
-    label:
-      "書類の提出はメッセンジャーもしくはデリバリーサービスを使用してもよいですか",
-    children: <p>初回は来社必須？</p>,
-  },
-  {
-    key: "4",
-    label: "パスポート、労働許可証の受取は直接手渡しになりますか",
-    children: <p>弊社メッセンジャーにて対応？</p>,
-  },
-  {
-    key: "5",
-    label: "どの手続も必ず本人の出頭が必要ですか",
-    children: <p>Coming soon</p>,
-  },
-];
-
-const ContentJP = () => {
+const Ans = ({ text }: any) => {
   return (
-    <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
-      <div className="">
-        <MainHeading text="よくある質問" heading="1" />
-        <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
-          <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
-            ビザについて
-          </h2>
-          <div className="py-4">
-            {/* @ts-ignore */}
-            <Collapse items={items} />
-          </div>
-        </div>
-        <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
-          <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
-            労働許可証について
-          </h2>
-          <div className="py-4">
-            {/* @ts-ignore */}
-            <Collapse items={items2} />
-          </div>
-        </div>
-        <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
-          <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
-            弊社のサービス内容について
-          </h2>
-          <div className="py-4">
-            {/* @ts-ignore */}
-            <Collapse items={items3} />
-          </div>
-        </div>
-        <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
-          <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
-            その他
-          </h2>
-          <div className="py-4">
-            {/* @ts-ignore */}
-            <Collapse items={items4} />
-          </div>
-        </div>
-      </div>
+    <div className="flex justify-between items-center text-xs md:text-sm">
+      <p>{text}</p>
     </div>
   );
 };
-
-const ContentEN = () => {
-  return <ContentJP />;
+const Q = ({ text }: any) => {
+  return (
+    <div className="flex justify-between items-center text-xs md:text-sm">
+      <p>{text}</p>
+      <FaPlus color="#3562AE" />
+    </div>
+  );
+};
+const consultItems = {
+  en: [
+    {
+      key: "1",
+      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      children: (
+        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Is it necessary to make an appointment?" />,
+      children: (
+        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      children: (
+        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+      ),
+    },
+    {
+      key: "4",
+      label: <Q text="・What should I bring to the hospital?" />,
+      children: (
+        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+      ),
+    },
+  ],
+  jp: [
+    {
+      key: "1",
+      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      children: (
+        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Is it necessary to make an appointment?" />,
+      children: (
+        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      children: (
+        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+      ),
+    },
+    {
+      key: "4",
+      label: <Q text="・What should I bring to the hospital?" />,
+      children: (
+        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+      ),
+    },
+  ],
+  th: [
+    {
+      key: "1",
+      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      children: (
+        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Is it necessary to make an appointment?" />,
+      children: (
+        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      children: (
+        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+      ),
+    },
+    {
+      key: "4",
+      label: <Q text="・What should I bring to the hospital?" />,
+      children: (
+        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+      ),
+    },
+  ],
 };
 
-const ContentTH = () => {
-  return <ContentJP />;
+const hospitalItems = {
+  en: [
+    {
+      key: "1",
+      label: <Q text="・Are the hospital facilities well-equipped?" />,
+      children: (
+        <Ans text="・Depending on the medical standards of each country, if certain equipment is not available, we can arrange referrals or transfer procedures to other medical institutions as needed. We ensure that facilities are adequately equipped for Japanese patients to receive treatment with peace of mind." />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Q text="・If tests are required, can they be done immediately?" />
+      ),
+      children: (
+        <Ans text="・Unlike in Japan, there may be fewer available facilities. In such cases, we might need to schedule the tests for a different day." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Is there a hospital shuttle service available?" />,
+      children: (
+        <Ans text="・Please inquire with each JMD desk. For transportation costs related to hospital visits, please check with your insurance company." />
+      ),
+    },
+  ],
+  jp: [
+    {
+      key: "1",
+      label: <Q text="・Are the hospital facilities well-equipped?" />,
+      children: (
+        <Ans text="・Depending on the medical standards of each country, if certain equipment is not available, we can arrange referrals or transfer procedures to other medical institutions as needed. We ensure that facilities are adequately equipped for Japanese patients to receive treatment with peace of mind." />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Q text="・If tests are required, can they be done immediately?" />
+      ),
+      children: (
+        <Ans text="・Unlike in Japan, there may be fewer available facilities. In such cases, we might need to schedule the tests for a different day." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Is there a hospital shuttle service available?" />,
+      children: (
+        <Ans text="・Please inquire with each JMD desk. For transportation costs related to hospital visits, please check with your insurance company." />
+      ),
+    },
+  ],
+  th: [
+    {
+      key: "1",
+      label: <Q text="・Are the hospital facilities well-equipped?" />,
+      children: (
+        <Ans text="・Depending on the medical standards of each country, if certain equipment is not available, we can arrange referrals or transfer procedures to other medical institutions as needed. We ensure that facilities are adequately equipped for Japanese patients to receive treatment with peace of mind." />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Q text="・If tests are required, can they be done immediately?" />
+      ),
+      children: (
+        <Ans text="・Unlike in Japan, there may be fewer available facilities. In such cases, we might need to schedule the tests for a different day." />
+      ),
+    },
+    {
+      key: "3",
+      label: <Q text="・Is there a hospital shuttle service available?" />,
+      children: (
+        <Ans text="・Please inquire with each JMD desk. For transportation costs related to hospital visits, please check with your insurance company." />
+      ),
+    },
+  ],
+};
+const interpretItem = {
+  en: [
+    {
+      key: "1",
+      label: <Q text="・What languages are available?" />,
+      children: (
+        <Ans text="・・We provide interpretation services from Thai, Laotian, and Myanmar languages to Japanese." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Can I get support outside of JMD’s office hours?" />,
+      children: (
+        <Ans text="・We are available to assist you. Outside of regular hours, we may respond via on-call phone service. For urgent matters, please call the contact number of each JMD (Japan Medical Desk)." />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Q text="・Is interpretation available only during consultations with the doctor?" />
+      ),
+      children: (
+        <Ans text="・Yes, if you are using Japanese overseas travel insurance, JMD staff can handle communications with your insurance provider." />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Q text="・Can you communicate with my insurance company on my behalf?" />
+      ),
+      children: (
+        <Ans text="・Yes, if you are using Japanese overseas travel insurance, JMD staff can handle communications with your insurance provider." />
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Q text="・If my friend (non-Japanese) wants to receive medical treatment, can you provide interpretation if it’s in a supported language?" />
+      ),
+      children: (
+        <Ans text="・Unfortunately, JMD is a support desk specifically for Japanese patients. However, if your friend holds Japanese overseas travel insurance, we can offer support regardless of nationality." />
+      ),
+    },
+  ],
+  jp: [
+    {
+      key: "1",
+      label: <Q text="・What languages are available?" />,
+      children: (
+        <Ans text="・・We provide interpretation services from Thai, Laotian, and Myanmar languages to Japanese." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Can I get support outside of JMD’s office hours?" />,
+      children: (
+        <Ans text="・We are available to assist you. Outside of regular hours, we may respond via on-call phone service. For urgent matters, please call the contact number of each JMD (Japan Medical Desk)." />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Q text="・Is interpretation available only during consultations with the doctor?" />
+      ),
+      children: (
+        <Ans text="・Yes, if you are using Japanese overseas travel insurance, JMD staff can handle communications with your insurance provider." />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Q text="・Can you communicate with my insurance company on my behalf?" />
+      ),
+      children: (
+        <Ans text="・Yes, if you are using Japanese overseas travel insurance, JMD staff can handle communications with your insurance provider." />
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Q text="・If my friend (non-Japanese) wants to receive medical treatment, can you provide interpretation if it’s in a supported language?" />
+      ),
+      children: (
+        <Ans text="・Unfortunately, JMD is a support desk specifically for Japanese patients. However, if your friend holds Japanese overseas travel insurance, we can offer support regardless of nationality." />
+      ),
+    },
+  ],
+  th: [
+    {
+      key: "1",
+      label: <Q text="・What languages are available?" />,
+      children: (
+        <Ans text="・・We provide interpretation services from Thai, Laotian, and Myanmar languages to Japanese." />
+      ),
+    },
+    {
+      key: "2",
+      label: <Q text="・Can I get support outside of JMD’s office hours?" />,
+      children: (
+        <Ans text="・We are available to assist you. Outside of regular hours, we may respond via on-call phone service. For urgent matters, please call the contact number of each JMD (Japan Medical Desk)." />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Q text="・Is interpretation available only during consultations with the doctor?" />
+      ),
+      children: (
+        <Ans text="・Yes, if you are using Japanese overseas travel insurance, JMD staff can handle communications with your insurance provider." />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Q text="・Can you communicate with my insurance company on my behalf?" />
+      ),
+      children: (
+        <Ans text="・Yes, if you are using Japanese overseas travel insurance, JMD staff can handle communications with your insurance provider." />
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Q text="・If my friend (non-Japanese) wants to receive medical treatment, can you provide interpretation if it’s in a supported language?" />
+      ),
+      children: (
+        <Ans text="・Unfortunately, JMD is a support desk specifically for Japanese patients. However, if your friend holds Japanese overseas travel insurance, we can offer support regardless of nationality." />
+      ),
+    },
+  ],
+};
+
+const billingItems = {
+  en: [
+    {
+      key: "1",
+      label: <Q text="・What types of insurance can be used?" />,
+      children: (
+        <Ans text="・Please refer to the section on 'using overseas travel insurance'. For more details, contact each JMD." />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Q text="・I have a credit card, but I'm not sure if it includes overseas travel insurance." />
+      ),
+      children: (
+        <Ans text="・You can confirm this with your card company after arriving at the JMD. If you have time, it's smoother to contact your credit card's call center in advance." />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Q text="・Is cashless medical treatment possible if I have a valid insurance card?" />
+      ),
+      children: (
+        <Ans text="・Depending on the nature of your treatment, cashless service may not be available. Please refer to the section on using overseas travel insurance and inquire with your insurance company in advance." />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Q text="・When is it necessary to pay medical expenses out of pocket?" />
+      ),
+      children: (
+        <Ans text="・You may not be able to use cashless services if the validity of your insurance cannot be confirmed, or if the treatment might not be covered by insurance. For details, please contact each JMD or your insurance company." />
+      ),
+    },
+    {
+      key: "5",
+      label: <Q text="・Can I use a credit card for payment?" />,
+      children: (
+        <Ans text="・Credit cards are accepted at most medical institutions. For information on which types of cards are accepted, please inquire with each JMD." />
+      ),
+    },
+  ],
+  jp: [
+    {
+      key: "1",
+      label: <Q text="・What types of insurance can be used?" />,
+      children: (
+        <Ans text="・Please refer to the section on 'using overseas travel insurance'. For more details, contact each JMD." />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Q text="・I have a credit card, but I'm not sure if it includes overseas travel insurance." />
+      ),
+      children: (
+        <Ans text="・You can confirm this with your card company after arriving at the JMD. If you have time, it's smoother to contact your credit card's call center in advance." />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Q text="・Is cashless medical treatment possible if I have a valid insurance card?" />
+      ),
+      children: (
+        <Ans text="・Depending on the nature of your treatment, cashless service may not be available. Please refer to the section on using overseas travel insurance and inquire with your insurance company in advance." />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Q text="・When is it necessary to pay medical expenses out of pocket?" />
+      ),
+      children: (
+        <Ans text="・You may not be able to use cashless services if the validity of your insurance cannot be confirmed, or if the treatment might not be covered by insurance. For details, please contact each JMD or your insurance company." />
+      ),
+    },
+    {
+      key: "5",
+      label: <Q text="・Can I use a credit card for payment?" />,
+      children: (
+        <Ans text="・Credit cards are accepted at most medical institutions. For information on which types of cards are accepted, please inquire with each JMD." />
+      ),
+    },
+  ],
+  th: [
+    {
+      key: "1",
+      label: <Q text="・What types of insurance can be used?" />,
+      children: (
+        <Ans text="・Please refer to the section on 'using overseas travel insurance'. For more details, contact each JMD." />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Q text="・I have a credit card, but I'm not sure if it includes overseas travel insurance." />
+      ),
+      children: (
+        <Ans text="・You can confirm this with your card company after arriving at the JMD. If you have time, it's smoother to contact your credit card's call center in advance." />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Q text="・Is cashless medical treatment possible if I have a valid insurance card?" />
+      ),
+      children: (
+        <Ans text="・Depending on the nature of your treatment, cashless service may not be available. Please refer to the section on using overseas travel insurance and inquire with your insurance company in advance." />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Q text="・When is it necessary to pay medical expenses out of pocket?" />
+      ),
+      children: (
+        <Ans text="・You may not be able to use cashless services if the validity of your insurance cannot be confirmed, or if the treatment might not be covered by insurance. For details, please contact each JMD or your insurance company." />
+      ),
+    },
+    {
+      key: "5",
+      label: <Q text="・Can I use a credit card for payment?" />,
+      children: (
+        <Ans text="・Credit cards are accepted at most medical institutions. For information on which types of cards are accepted, please inquire with each JMD." />
+      ),
+    },
+  ],
+};
+// to do jp & th qa
+const heading = {
+  en: "Frequenly Asked Questions (FAQ)",
+  jp: "よくある質問",
+  th: "คำถามที่พบบ่อย",
 };
 export default function Work({ params }: { params: { lng: string } }) {
   const t = useTranslations("header");
   const s = useTranslations("service-section");
   const lang = params.lng;
-  const content =
-    lang == "jp" ? <ContentJP /> : lang == "en" ? <ContentEN /> : <ContentTH />;
+
   return (
     <>
       <div className="">
         <CoverVisa
           pageName={s("faq")}
-          prevPage={{ pageName: t("visa-work"), url: "/visa-workpermit" }}
+          prevPage={{ pageName: t("home"), url: "/" }}
         />
-        <div className="container mx-auto  ">{content}</div>
+        <div className="container mx-auto  ">
+          <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
+            <div className="">
+              {/* @ts-ignore */}
+              <MainHeading text={heading[lang]} heading="1" />
+              <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+                <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
+                  About Consultations
+                </h2>
+                <div className="py-4">
+                  {/* @ts-ignore */}
+                  <Collapse items={consultItems[lang]} />
+                </div>
+              </div>
+              <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+                <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
+                  Interpreter Services
+                </h2>
+                <div className="py-4">
+                  {/* @ts-ignore */}
+                  <Collapse items={interpretItem[lang]} />
+                </div>
+              </div>
+              <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+                <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
+                  About Hospitals
+                </h2>
+                <div className="py-4">
+                  {/* @ts-ignore */}
+                  <Collapse items={hospitalItems[lang]} />
+                </div>
+              </div>
+              <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+                <h2 className="py-4 font-bold text-lg lg:text-xl text-blue-900">
+                  Billing and Insurance Use
+                </h2>
+                <div className="py-4">
+                  {/* @ts-ignore */}
+                  <Collapse items={billingItems[lang]} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

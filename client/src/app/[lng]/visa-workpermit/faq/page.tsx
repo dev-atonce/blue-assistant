@@ -7,6 +7,9 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import type { CollapseProps } from "antd";
 
+// to do jp & th qa
+// to do collapse structure see jmd faq
+
 const items: CollapseProps["items"] = [
   {
     key: "1",

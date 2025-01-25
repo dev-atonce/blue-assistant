@@ -4,6 +4,7 @@ import Breadcrumb from "../molecule/Breadcrumb";
 import { useTranslations } from "next-intl";
 import StickyMenu from "../organism/menu/StickyMenu";
 export default function CoverVisa({ pageName, prevPage, lng, home, img }: any) {
+  // to do z-inddex
   const t = useTranslations("header");
   return (
     <>

@@ -37,8 +37,8 @@ export default function JmdServiceSection({ lng }: any) {
       image: "/img/jmd/s-4-1.png",
       image2: "/img/jmd/s-4-2.png",
       titleJP: "診療科別ガイド",
-      titleEN: "Others",
-      titleTH: "อื่นๆ",
+      titleEN: "診療科別ガイド",
+      titleTH: "診療科別ガイド",
       link: "/department-guide",
     },
   ];

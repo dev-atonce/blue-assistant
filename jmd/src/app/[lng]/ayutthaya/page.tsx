@@ -1,0 +1,156 @@
+import FadeHeading from "@/components/website/atom/heading/FadeHeading";
+import MainHeading from "@/components/website/atom/heading/MainHeading";
+import Cover from "@/components/website/layout/Cover";
+import CoverVisa from "@/components/website/layout/CoverVisa";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { FaArrowCircleDown, FaEye } from "react-icons/fa";
+import { Image as AntImage } from "antd";
+import Modal from "@/components/website/layout/Modal";
+import AddressModal from "@/components/website/organism/AddressModal";
+import { MdMail } from "react-icons/md";
+
+const title = {
+  th: "พระนครศรีอยุธยา",
+  en: "Ayutthaya",
+  jp: "アユタヤ",
+};
+
+const ContentEN = () => {
+  return (
+    <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
+      <div className="">
+        <MainHeading
+          text="Japanese Medical Desk (JMD) - Ayutthaya"
+          heading="1"
+        />
+        <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+          <FadeHeading text="Ayutthaya Rajthanne Hospital" heading="2" />
+
+          <div className="detail-sty text-sm ">
+            <div className="w-full grid grid-cols-6 md:grid-cols-12 gap-2 py-6">
+              <div className="flex flex-col col-span-12 lg:col-span-6">
+                <div className=" grid-flow-col grid grid-rows-2 gap-2 ">
+                  <div className="row-span-2 object-cover bg-green-200">
+                    <Image
+                      width="400"
+                      height="400"
+                      alt="hospital"
+                      src="/img/visa-workpermit/ministry_map2.png"
+                      className="object-cover h-full"
+                    />
+                  </div>
+                  <div className="row-span-1 object-cover">
+                    <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                  </div>
+
+                  <div className="row-span-1 object-cover">
+                    <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                  </div>
+                </div>
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/visa-workpermit/ministry_map2.png"
+                  className="object-cover w-full"
+                />
+              </div>
+              <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
+                <div className="pb-6">
+                  <span className="text-lg mb-2 font-semibold">
+                    JMD Reception Hours
+                  </span>
+                  <p>Mon- Fri: 8:00 - 17:00</p>
+                  <p>Sat・Sun・Public Holidays :　8:00 - 17:00</p>
+                </div>
+                <div className="pb-6">
+                  <span className="text-lg mb-2 font-semibold">
+                    Dedicated Line for JMD
+                  </span>
+                  <div className="flex gap-2 items-center">
+                    <div
+                      className={` hover:text-white bg-white border border-blue-700 transition-all ease-in-out  drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                    >
+                      <MdMail size={25} />
+                    </div>
+                    <div>
+                      <div>asdf</div>
+                      <div>asdf</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <div
+                      className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                    >
+                      <MdMail size={25} />
+                    </div>
+                    <div>
+                      <div>asdf</div>
+                      <div>asdf</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <div
+                      className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                    >
+                      <MdMail size={25} />
+                    </div>
+                    <div>
+                      <div>asdf</div>
+                      <div>asdf</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid lg:grid-cols-12 gap-4">
+                  <div className="col-span-4 font-bold">Hospital info :</div>
+                  <div className="col-span-8">
+                    ラチャタニー病院　Rajthanee Hospital
+                  </div>
+                  <div className="col-span-4 font-bold">Address：</div>
+                  <div className="col-span-8">
+                    111 Moo 3, Khlong Suan Phlu Sub-district, Phra nakhon Si
+                    Ayutthaya District, Phra Nakhon Si Ayutthaya 13000
+                  </div>
+                  <div className="col-span-4 font-bold">Reception Hours： </div>
+                  <div className="col-span-8">
+                    <p>General out-patient：8AM-8PM</p>
+                    <p>Night out-patient：8PM - 8AM</p>
+                    <p>Emergency Center: 24-hour Service</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const ContentJP = () => {
+  return <ContentEN />;
+};
+const ContentTH = () => {
+  return <ContentEN />;
+};
+export default function Work({ params }: { params: { lng: string } }) {
+  const lang = params?.lng;
+  const t = useTranslations("header");
+  const s = useTranslations("service-section");
+
+  const content =
+    lang == "jp" ? <ContentJP /> : lang == "en" ? <ContentEN /> : <ContentTH />;
+  return (
+    <>
+      <div className="">
+        <CoverVisa
+          // @ts-ignore
+          pageName={title[lang]}
+          prevPage={{ pageName: t("home"), url: "/#location" }}
+        />
+        <div className="container mx-auto  ">{content}</div>
+      </div>
+    </>
+  );
+}
