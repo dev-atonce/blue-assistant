@@ -7,416 +7,240 @@ import { useTranslations } from "next-intl";
 
 const ContentEN = () => {
   return (
-    <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
-      <div className="border-b-2 pb-6 border-slate-400">
-        <MainHeading text="代行サービス料金一覧" heading="1" />
-        <p className="text-xl font-semibold">
-          ※下記料金には役所への発行手数料は含まれておりません。
-        </p>
+    <div className="grid grid-cols-1 gap-10 text-[#333333] font-medium mb-20">
+      <div className="border-b-2 pb-15 border-[#DBDBDB]">
+        <h1 className="mt-20 text-[48px] text-[#3562AE]">Medical Department Guide</h1>
         <div className="grid grid-cols-12 gap-5 py-20  text-slate-600 font-semibold">
           <Link
-            href="/visa-workpermit/price#work-permit"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5 col-span-6 md:col-span-4"
+            href="/department-guide#internal-medicine"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5 col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/work-permit-icon.png"}
+              src={"/img/jmd/department-guide/internal-medicine.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              労働許可証 Work permit
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Internal Medicine
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#visa"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#surgery"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/visa-icon.png"}
+              src={"/img/jmd/department-guide/surgery.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              滞在許可 Visa
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Surgery
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#ninety-day"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#orthopedics"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/90-day-icon.png"}
+              src={"/img/jmd/department-guide/orthopedics.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              90日レポート 90days report
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Orthopedics
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#re-entry"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#rehabilitation"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/re-entry-icon.png"}
+              src={"/img/jmd/department-guide/rehabilitation.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              再入国許可証 Re-entry permit
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Rehabilitation
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#boi"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#ophthalmology"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/boi-icon.png"}
+              src={"/img/jmd/department-guide/ophthalmology.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              B.O.I
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Ophthalmology
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#insurance"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#otolaryngology-ent"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/insurance-icon.png"}
+              src={"/img/jmd/department-guide/otolaryngology-ent.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              Insurance
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Otolaryngology (ENT)
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#re-entry"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#emergency-medicine"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/re-entry-icon.png"}
+              src={"/img/jmd/department-guide/emergency-medicine.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              再入国許可証 Re-entry permit
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Emergency Medicine
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#boi"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#health-check-ups"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/boi-icon.png"}
+              src={"/img/jmd/department-guide/health-check-ups.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              B.O.I
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Health Check-ups
             </p>
           </Link>
           <Link
-            href="/visa-workpermit/price#insurance"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            href="/department-guide#other-information"
+            className="bg-[#FCFCFC] py-5 border rounded-3xl shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
           >
             <Image
-              src={"/img/visa-workpermit/insurance-icon.png"}
+              src={"/img/jmd/department-guide/other-information.png"}
               alt=""
-              width={100}
-              height={100}
+              width={67}
+              height={67}
             ></Image>
-            <p className="lg:text-base text-sm font-semibold text-center">
-              Insurance
+            <p className="lg:text-xl text-lg font-semibold text-center">
+              Other Information
             </p>
           </Link>
         </div>
+        <p className="text-md font-thin">Please note that the availability of each specialty and the scope of treatment may vary depending on the medical institution. For more details, please contact the Japanese Medical Desk (JMD) in each country.</p>
       </div>
-      <div className="flex flex-col gap-6 border-b-2 py-6 border-slate-400">
-        <span className="text-xl font-semibold text-[#3562AE]">
-          一般現地法人(１名/１件あたり）
-        </span>
-        <div
-          id="work-permit"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
-        >
-          <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">労働許可証 Work permit</div>
-            <div className="w-[10%] ">金額</div>
-            <div className="w-[10%] ">(VAT7％）</div>
+      <div className="gap-10">
+        <h1 className="text-[48px] text-[#3562AE]">Symptom-Based Medical Department Guide</h1>
+        <div id="internal-medicine" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Internal Medicine</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Fever, cough, sore throat, stomach ache, abdominal pain, fatigue, dizziness, high blood pressure, diabetes management, etc.</p>
           </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">新規申請手続き・1年間</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">10,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">更新手続き</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">7,500</div>
-            </div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">記載内容変更</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">3,500</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">返却</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">2,000</div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="visa"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
-        >
-          <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">滞在許可 Visa</div>
-            <div className="w-[10%] ">金額</div>
-            <div className="w-[10%] ">(VAT7％）</div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
-                ノンイミグラントBビザ・新規&更新手続き・1年間
-              </div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">12,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">タイ国内でのBビザへの切り替え</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">13,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">留学・学生ビザ</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">10,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
-                配偶者・家族　ノンイミグラントOビザ・妻
-              </div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">7,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
-                配偶者・家族　ノンイミグラントOビザ・子供
-              </div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">4,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">DTV ビザ</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">12,000</div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="ninety-day"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
-        >
-          <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">90日レポート 90days report</div>
-            <div className="w-[10%] ">金額</div>
-            <div className="w-[10%] ">(VAT7％）</div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">90日ごとのイミグレーション出頭代行</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">1,500</div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="re-entry"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
-        >
-          <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">再入国許可証 Re-entry permit</div>
-            <div className="w-[10%] ">金額</div>
-            <div className="w-[10%] ">(VAT7％)</div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
-                新規申ノンイミグラントBビザ・新規&更新手続き・1年間請手続き・1年間
-              </div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">10,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">新規申請手続き・1年間</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">10,000</div>
-            </div>
-          </div>
-        </div>
-        <span className="text-xl font-semibold text-[#3562AE]">
-          B.O.I事業（1名/１件あたり
-          ワークパーミット（労働許可証）＋滞在許可（ビザ））
-        </span>
-        <div
-          id="boi"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6"
-        >
-          <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">新規申請及び更新手続き</div>
-            <div className="w-[10%] ">金額</div>
-            <div className="w-[10%] ">(VAT7％）</div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">1年間 (New & Renew 1year)</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">20,000</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">2年間 (New & Renew 2years)</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">40,000</div>
-            </div>
-          </div>
-        </div>
-        <span className="text-xl font-semibold text-slate-800">
-          ※B.O.I企業の申請代行はB.O.Iからの認可書がある企業様の申請代行となります。
-        </span>
-        <div className="py-6">
-          <span className="text-lg font-bold">⚠ ご注意 ⚠</span>
-          <p className="text-lg ">
-            各手続きは申請者本人の役所への出頭が原則となります。バンコク郊外の場合、別途サービス料が発生いたします。申請代行料はタイ国情勢や企業設立内容により、変更になる場合がございます。
-          </p>
-        </div>
-        <span className="text-xl font-semibold text-[#3562AE]">
-          役所への発行手数料
-        </span>
-        <div
-          id="insurance"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6"
-        >
-          <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">一般法人／個人の場合</div>
-            <div className="w-[10%] ">金額</div>
-            <div className="w-[10%] ">(VAT7％）</div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">滞在許可（ビザ）</div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">1,900</div>
-            </div>
-          </div>
-          <div className="text-slate-600 bg-slate-50">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
-                労働許可証（ワークパーミット）　※原則1年
-              </div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">3,100</div>
-            </div>
-          </div>
-          <div className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6">
-            <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-              <div className="w-[80%] ">BOI企業の場合</div>
-              <div className="w-[10%] ">金額</div>
-              <div className="w-[10%] ">(VAT7％）</div>
-            </div>
-            <div className="text-slate-600">
-              <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">滞在許可（ビザ）</div>
-                <div className="w-[10%] ">THB</div>
-                <div className="w-[10%]">1,900</div>
-              </div>
-            </div>
-            <div className="text-slate-600 bg-slate-50">
-              <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">
-                  労働許可証（ワークパーミット）1年分
-                </div>
-                <div className="w-[10%] ">THB</div>
-                <div className="w-[10%]">3,000</div>
-              </div>
-            </div>
-            <div className="text-slate-600">
-              <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">
-                  労働許可証（ワークパーミット）2年以上
-                </div>
-                <div className="w-[10%] ">THB</div>
-                <div className="w-[10%]">6,000</div>
-              </div>
-            </div>
-          </div>
-          <div className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6">
-            <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-              <div className="w-[80%] ">リエントリービザ</div>
-              <div className="w-[10%] ">金額</div>
-              <div className="w-[10%] ">(VAT7％）</div>
-            </div>
-            <div className="text-slate-600">
-              <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">シングル</div>
-                <div className="w-[10%] ">THB</div>
-                <div className="w-[10%]">1,000</div>
-              </div>
-            </div>
-            <div className="text-slate-600 bg-slate-50">
-              <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">マルチプル</div>
-                <div className="w-[10%] ">THB</div>
-                <div className="w-[10%]">3,800</div>
-              </div>
-            </div>
-          </div>
-          <div className="py-6">
-            <span className="text-lg font-bold">⚠ ご注意 ⚠</span>
-            <p className="text-base ">
-              上記発生手数料は予告なしに変更する場合がございます。申請時にご確認をお願いいたします。
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Internal Medicine deals with a wide range of symptoms including common colds, influenza, gastrointestinal issues, and chronic diseases. They may also provide initial care for skin inflammation, bloodshot eyes, or ear inflammation when specialist departments are unavailable.
             </p>
-            <p className="text-base text-end">更新日：2024年11月</p>
-            <div className="text-center py-10">
-              <Link
-                href="/visa-workpermit#contact"
-                className="hover:bg-blue-700 hover:scale-90 transition-all py-4 px-4 bg-blue-900 text-white font-semibold rounded-lg"
-              >
-                お見積りはお問い合わせフォームより
-              </Link>
-            </div>
+          </div>
+        </div>
+        <div id="surgery" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Surgery</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Cuts, burns, fractures, conditions requiring surgery, skin tumors or growths, etc.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Surgery department handles injuries and conditions requiring surgical intervention. This includes emergency procedures and post-operative care.</p>
+          </div>
+        </div>
+        <div id="orthopedics" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Orthopedics</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Joint pain, muscle pain, fractures, sprains, sports injuries, rheumatism, etc</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Orthopedics specializes in bone, joint, and muscle issues. They provide comprehensive support from diagnosis to treatment and rehabilitation.</p>
+          </div>
+        </div>
+        <div id="rehabilitation" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Rehabilitation</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Post-surgery recovery, chronic back pain or stiff shoulders, sports-related rehabilitation, etc.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Rehabilitation department aims to restore and improve physical function, offering individualized rehab plans.</p>
+          </div>
+        </div>
+        <div id="ophthalmology" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Ophthalmology</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Vision loss, eye pain, blurred vision, conjunctivitis, cataracts, glaucoma, etc.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Ophthalmology conducts eye examinations, eye health checks, and treats eye diseases.</p>
+          </div>
+        </div>
+        <div id="ophthalmology-ent" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Otolaryngology (ENT)</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Tinnitus, hearing loss, nasal congestion, sore throat, hay fever, tonsillitis, sleep apnea, etc.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> ENT specializes in ear, nose, and throat issues. They also diagnose and treat allergies.</p>
+          </div>
+        </div>
+        <div id="emergency-medicine" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Emergency Medicine</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Sudden injuries or accidents, acute chest pain, difficulty breathing, loss of consciousness, severe allergic reactions, poisoning, etc.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Emergency Medicine responds quickly to life-threatening situations. They operate 24/7, providing initial treatment and referrals to specialists.</p>
+
+          </div>
+        </div>
+        <div id="health-check-ups" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Health Check-ups</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Regular health checks, early disease detection, health status confirmation. Also conducted for license renewals or work permit renewals.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Health check-ups involve comprehensive health evaluations through blood tests, urine tests, chest X-rays, ECGs, etc. Referrals to specialists are made as needed.</p>
+          </div>
+        </div>
+        <div id="other-information" className="mt-10 flex flex-col gap-2">
+          <h2 className="text-2xl">Other Information</h2>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Symptoms: </span> Regular health checks, early disease detection, health status confirmation. Also conducted for license renewals or work permit renewals.</p>
+          </div>
+          <div className="flex gap-2">
+            <Image className="object-contain object-top" src={"/img/jmd/department-guide/icon-guide.png"} alt="Internall Medicine" width={25} height={25} />
+            <p className="font-thin"><span className="font-bold">Care: </span> Health check-ups involve comprehensive health evaluations through blood tests, urine tests, chest X-rays, ECGs, etc. Referrals to specialists are made as needed.</p>
           </div>
         </div>
       </div>
