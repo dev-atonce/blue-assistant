@@ -17,7 +17,6 @@ export function Logo({ color, img }: any) {
           height={100}
           quality={100}
         />
-        {/* )} */}
       </Link>
     </div>
   );
