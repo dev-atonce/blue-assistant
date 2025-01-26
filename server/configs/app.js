@@ -4,7 +4,7 @@ module.exports = {
   port: process.env.PORT || 3000,
   isProduction: process.env.NODE_ENV === "production",
   token_exp_days: process.env.TOKEN_EXP_DAYS || 1,
-  secret: process.env.NODE_ENV === "production" ? process.env.SECRET : "nistrans-secret",
+  secret: process.env.NODE_ENV === "production" ? process.env.SECRET : "blue-assistant-secret",
   mongodbUri: process.env.MONGODB_URI,
   pageLimit: process.env.PAGE_LIMIT || 15,
   apiVersion: process.env.API_VERSION || 1,
@@ -19,5 +19,5 @@ module.exports = {
   mailPass: process.env.MAIL_PASSWORD,
   mailDefault: process.env.MAIL_SENDER_DEFAULT,
   mailTo: process.env.MAIL_TO,
-  mailToJMD: process.env.MAIL_TO_JMD,
+  mailToJMD: process.env.MAIL_TO_JMD || process.env.MAIL_TO,
 };
