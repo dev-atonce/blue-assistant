@@ -22,6 +22,7 @@ export default function Home({ params }: { params: { lng: string } }) {
             quality={100}
             alt="Blue Assistance"
             className="w-full"
+            priority={true}
           />
           <div className="container  mx-auto">
             <div
