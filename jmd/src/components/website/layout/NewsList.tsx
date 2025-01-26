@@ -1,60 +1,67 @@
-"use client"
+"use client";
 import { Link } from "@/i18n/routing";
 import { useEffect, useState } from "react";
 
 interface NewListProps {
-    lng?: string;
-    limit: number;
-    module: string;
-    forPage: string;
+  lng?: string;
+  limit: number;
+  module: string;
+  forPage: string;
 }
 
 const convertedDate = (date: any) => {
-    const parsedDate = new Date(date);
-    const formattedDate = `${parsedDate.getFullYear()}.${String(
-        parsedDate.getMonth() + 1
-    ).padStart(2, "0")}.${String(parsedDate.getDate()).padStart(2, "0")}`;
-    return formattedDate;
+  const parsedDate = new Date(date);
+  const formattedDate = `${parsedDate.getFullYear()}.${String(
+    parsedDate.getMonth() + 1
+  ).padStart(2, "0")}.${String(parsedDate.getDate()).padStart(2, "0")}`;
+  return formattedDate;
 };
 
-export default function NewsList({ lng, limit, module, forPage }: NewListProps) {
-    const [blogList, setBlogList] = useState([]);
+export default function NewsList({
+  lng,
+  limit,
+  module,
+  forPage,
+}: NewListProps) {
+  const [blogList, setBlogList] = useState([]);
 
-    const fetchBlog = async () => {
-        const res = await fetch(
-            `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=${limit}&type=news&module=${module}`,
-            {
-                cache: "no-store",
-            }
-        );
-        const data = await res.json();
-        setBlogList(data?.rows);
-    };
+  const fetchBlog = async () => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=${limit}&type=news&module=${module}`,
+      {
+        cache: "no-store",
+      }
+    );
+    const data = await res.json();
+    setBlogList(data?.rows);
+  };
 
-    useEffect(() => {
-        fetchBlog();
-    }, []);
+  useEffect(() => {
+    fetchBlog();
+  }, []);
 
-    let urlBlog = '';
-    forPage === 'visa' ? urlBlog = '/visa-workpermit/news-activity/' : urlBlog = '/jmd/'
+  let urlBlog = "";
+  forPage === "visa"
+    ? (urlBlog = "/visa-workpermit/news-activity/")
+    : (urlBlog = "/news-activity/");
 
-    return (
-        <>
-            {!blogList?.length ? (
-                <p className="text-center p-10">Coming Soon ...</p>
-            ) : (
-                blogList.map((item: any, key: any) => {
-                    return (
-                        <div key={key} className="bg-white text-[#3D3D3D] p-6 border-b">
-                            <Link href={`${urlBlog}${item.slug}`}>
-                                <span>{convertedDate(item.createdAt)}</span>
-                                <span> | </span>
-                                <span>{item[`blog_title_${lng}`]}</span>
-                            </Link>
-                        </div>
-                    )
-                }))
-            }
-        </>
-    )
+  return (
+    <>
+      {!blogList?.length ? (
+        <p className="text-center p-10">Coming Soon ...</p>
+      ) : (
+        blogList.map((item: any, key: any) => {
+          return (
+            <div key={key} className="bg-white text-[#3D3D3D] p-6 border-b">
+              <Link href={`${urlBlog}${item.slug}`}>
+                <span>{convertedDate(item.createdAt)}</span>
+                <span> | </span>
+                <span>{item[`blog_title_${lng}`]}</span>
+              </Link>
+            </div>
+          );
+        })
+      )}
+    </>
+  );
 }

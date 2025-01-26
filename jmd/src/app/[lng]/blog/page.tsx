@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import BlogSection from "@/components/website/organism/BlogSection";
 import CoverVisa from "@/components/website/layout/CoverVisa";
 
-const pageName = "blog";
+const pageName = "JMD Home";
 
 export async function generateMetadata(
   { params, searchParams }: any,

@@ -81,7 +81,7 @@ export default function Header({ logo, contact, owner, colors, lng }: any) {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-9999">
       <div className="shadow-md bg-white relative" style={{ zIndex: 1 }}>
         <div className={`bg-[#3562AE] w-full h-2`}></div>
         <div className="header ps-2 pe-2 md:ps-10 md:pe-10 mx-auto">

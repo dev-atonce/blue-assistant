@@ -11,12 +11,12 @@ export default function SideBar({ sideBar, language, contact }: any) {
   const pathname = usePathname();
 
   return (
-    <div className="flex ">
+    <div className="flex z-9999 relative ">
       <div
-        className="sidebar-wraper  w-full max-h-screen "
+        className="sidebar-wraper  w-full max-h-screen z-9999 relative "
         style={{ height: `calc(100vh - 68px)` }}
       >
-        <ul className="sidebar-menu px-4 py-10">
+        <ul className="sidebar-menu px-4 py-10 z-9999 relative">
           <button
             className="w-full flex justify-end"
             onClick={() => sideBar?.closeSideBar()}

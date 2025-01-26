@@ -20,82 +20,233 @@ const title = {
 
 const ContentEN = () => {
   return (
-    <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
-      <div className="pb-6">
-        <span className="text-lg mb-2 font-semibold">JMD Reception Hours</span>
-        <p>Mon- Fri: 8:00 - 17:00</p>
-        <p>Sat・Sun・Public Holidays :　8:00 - 17:00</p>
-      </div>
-      <div className="pb-6">
-        <span className="text-lg mb-2 font-semibold">
-          Dedicated Line for JMD
-        </span>
-        <div className="flex gap-2 items-center">
-          <div
-            className={` hover:text-white bg-white border border-blue-700 transition-all ease-in-out  drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-          >
-            <IoIosCall size={25} />
+    <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+      <FadeHeading text="ARYU Hospital" heading="2" />
+
+      <div className="detail-sty text-sm ">
+        <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
+          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
+            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
+              <div className="row-span-2 object-cover  col-span-6">
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/visa-workpermit/ministry_map2.png"
+                  className="object-cover h-full"
+                />
+              </div>
+              <div className="row-span-1 object-cover col-span-6">
+                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+              </div>
+
+              <div className="row-span-1 object-cover col-span-6">
+                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+              </div>
+            </div>
+            <a
+              className="rounded-lg shadow-lg"
+              href="https://www.google.com/maps/place/Ar+Yu+International+Hospital/@16.8103538,96.1653143,15z/data=!4m6!3m5!1s0x30c1ed1f31639c31:0x17d8229ae7004826!8m2!3d16.8128957!4d96.1757427!16s%2Fg%2F11f9v5lwp5?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+            >
+              <Image
+                width="400"
+                height="400"
+                alt="hospital"
+                src="/img/jmd/my_hos1.png"
+                className="object-cover w-full rounded-lg shadow-lg"
+              />
+            </a>
           </div>
-          <div>
-            <div>+66(0)98-815-6696 ジャイ (JAI)</div>
-            <div>+66(0)92-889-6448 プー (POOH)</div>
+          <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
+            <div className="pb-6">
+              <span className="text-lg mb-2 font-semibold">
+                JMD Reception Hours
+              </span>
+              <p>1: 8:00 - 18:00</p>
+              <p>2:　9:00 - 12:00</p>
+              <p>*Closed on Sundays and holidays</p>
+            </div>
+            <div className="pb-6">
+              <span className="text-lg mb-2 font-semibold">
+                Dedicated Line for JMD
+              </span>
+              <div className="flex gap-2 items-center">
+                <div
+                  className={` hover:text-white bg-white border border-blue-700 transition-all ease-in-out  drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                >
+                  <IoIosCall size={25} />
+                </div>
+                <div>
+                  <div>+95-(0) 9-4513-20490 </div>
+                </div>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div
+                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                >
+                  <MdMail size={25} />
+                </div>
+                <div>
+                  <div>jmd-myanmar@blue-assistance.co.th</div>
+                </div>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div
+                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                >
+                  <FaHospital size={25} />
+                </div>
+                <div>
+                  <div>+95 1 937 6200</div>
+                </div>
+              </div>
+            </div>
+            <div className="grid lg:grid-cols-12 gap-4">
+              <div className="col-span-4 font-bold">Hospital info :</div>
+              <div className="col-span-8">ARYUインターナショナル病院</div>
+              <div className="col-span-4 font-bold">Address：</div>
+              <div className="col-span-8">
+                400 Kyaik Ka San Rd., Tamwe Tsp, Yangon Myanmar　
+              </div>
+              {/* <div className="col-span-4 font-bold">Reception Hours： </div>
+              <div className="col-span-8">
+                <p>General out-patient：8AM-8PM</p>
+                <p>Night out-patient：8PM - 8AM</p>
+                <p>Emergency Center: 24-hour Service</p>
+              </div> */}
+            </div>
+            <div className="flex justify-start gap-4 mt-10">
+              <a
+                href="https://line.me/ti/p/~@197nlufp"
+                className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <FaLine size={25} /> ADD LINE
+              </a>
+              <a
+                href="https://aryuhospital.com/"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <IoIosGlobe size={25} /> WEBSITE
+              </a>
+            </div>
           </div>
         </div>
-        <div className="flex gap-2 items-center">
-          <div
-            className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-          >
-            <MdMail size={25} />
-          </div>
-          <div>
-            <div>jmd-ayu@blue-assistance.co.th</div>
-          </div>
-        </div>
-        <div className="flex gap-2 items-center">
-          <div
-            className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-          >
-            <FaHospital size={25} />
-          </div>
-          <div>
-            <div>0-3533-5555 Ext.878</div>
-          </div>
-        </div>
-      </div>
-      <div className="grid lg:grid-cols-12 gap-4">
-        <div className="col-span-4 font-bold">Hospital info :</div>
-        <div className="col-span-8">ラチャタニー病院　Rajthanee Hospital</div>
-        <div className="col-span-4 font-bold">Address：</div>
-        <div className="col-span-8">
-          111 Moo 3, Khlong Suan Phlu Sub-district, Phra nakhon Si Ayutthaya
-          District, Phra Nakhon Si Ayutthaya 13000
-        </div>
-        <div className="col-span-4 font-bold">Reception Hours： </div>
-        <div className="col-span-8">
-          <p>General out-patient：8AM-8PM</p>
-          <p>Night out-patient：8PM - 8AM</p>
-          <p>Emergency Center: 24-hour Service</p>
-        </div>
-      </div>
-      <div className="flex justify-start gap-4 mt-10">
-        <Link
-          href="/faq"
-          className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
-        >
-          <FaLine size={25} /> ADD LINE
-        </Link>
-        <Link
-          href="/faq"
-          className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
-        >
-          <IoIosGlobe size={25} /> WEBSITE
-        </Link>
       </div>
     </div>
   );
 };
 const ContentJP = () => {
-  return <ContentEN />;
+  return (
+    <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+      <FadeHeading text="ARYU Hospital" heading="2" />
+
+      <div className="detail-sty text-sm ">
+        <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
+          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
+            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
+              <div className="row-span-2 object-cover  col-span-6">
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/visa-workpermit/ministry_map2.png"
+                  className="object-cover h-full"
+                />
+              </div>
+              <div className="row-span-1 object-cover col-span-6">
+                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+              </div>
+
+              <div className="row-span-1 object-cover col-span-6">
+                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+              </div>
+            </div>
+            <a
+              className="rounded-lg shadow-lg"
+              href="https://www.google.com/maps/place/Ar+Yu+International+Hospital/@16.8103538,96.1653143,15z/data=!4m6!3m5!1s0x30c1ed1f31639c31:0x17d8229ae7004826!8m2!3d16.8128957!4d96.1757427!16s%2Fg%2F11f9v5lwp5?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+            >
+              <Image
+                width="400"
+                height="400"
+                alt="hospital"
+                src="/img/jmd/my_hos1.png"
+                className="object-cover w-full rounded-lg shadow-lg"
+              />
+            </a>
+          </div>
+          <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
+            <div className="pb-6">
+              <span className="text-lg mb-2 font-semibold">JMD受付時間</span>
+              <p>1: 8:00 - 18:00</p>
+              <p>2:　9:00 - 12:00</p>
+              <p>※日祝はお休み</p>
+            </div>
+            <div className="pb-6">
+              <span className="text-lg mb-2 font-semibold">JMD専用ライン</span>
+              <div className="flex gap-2 items-center">
+                <div
+                  className={` hover:text-white bg-white border border-blue-700 transition-all ease-in-out  drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                >
+                  <IoIosCall size={25} />
+                </div>
+                <div>
+                  <div>+95-(0) 9-4513-20490 </div>
+                </div>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div
+                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                >
+                  <MdMail size={25} />
+                </div>
+                <div>
+                  <div>jmd-myanmar@blue-assistance.co.th</div>
+                </div>
+              </div>
+              <div className="flex gap-2 items-center">
+                <div
+                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+                >
+                  <FaHospital size={25} />
+                </div>
+                <div>
+                  <div>+95 1 937 6200</div>
+                </div>
+              </div>
+            </div>
+            <div className="grid lg:grid-cols-12 gap-4">
+              <div className="col-span-4 font-bold">病院情報：</div>
+              <div className="col-span-8">ARYUインターナショナル病院</div>
+              <div className="col-span-4 font-bold">病院の住所：</div>
+              <div className="col-span-8">
+                400 Kyaik Ka San Rd., Tamwe Tsp, Yangon Myanmar　
+              </div>
+              {/* <div className="col-span-4 font-bold">Reception Hours： </div>
+              <div className="col-span-8">
+                <p>General out-patient：8AM-8PM</p>
+                <p>Night out-patient：8PM - 8AM</p>
+                <p>Emergency Center: 24-hour Service</p>
+              </div> */}
+            </div>
+            <div className="flex justify-start gap-4 mt-10">
+              <a
+                href="https://line.me/ti/p/~@197nlufp"
+                className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <FaLine size={25} /> ADD LINE
+              </a>
+              <a
+                href="https://aryuhospital.com/"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <IoIosGlobe size={25} /> WEBSITE
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 const ContentTH = () => {
   return <ContentEN />;
@@ -119,50 +270,10 @@ export default function Work({ params }: { params: { lng: string } }) {
           <div className="grid grid-cols-1 gap-6 text-[#333333] font-medium">
             <div className="">
               <MainHeading
-                text="Japanese Medical Desk (JMD) - Ayutthaya"
+                text="Japanese Medical Desk (JMD) - Myanmar"
                 heading="1"
               />
-              <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
-                <FadeHeading text="Ayutthaya Rajthanee Hospital" heading="2" />
-
-                <div className="detail-sty text-sm ">
-                  <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-                    <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-                      <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-                        <div className="row-span-2 object-cover  col-span-6">
-                          <Image
-                            width="400"
-                            height="400"
-                            alt="hospital"
-                            src="/img/visa-workpermit/ministry_map2.png"
-                            className="object-cover h-full"
-                          />
-                        </div>
-                        <div className="row-span-1 object-cover col-span-6">
-                          <AntImage src="/img/visa-workpermit/ministry_map2.png" />
-                        </div>
-
-                        <div className="row-span-1 object-cover col-span-6">
-                          <AntImage src="/img/visa-workpermit/ministry_map2.png" />
-                        </div>
-                      </div>
-                      <a
-                        className="rounded-lg shadow-lg"
-                        href="https://www.google.com/maps/search/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@14.346045,100.5912173,14z?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
-                      >
-                        <Image
-                          width="400"
-                          height="400"
-                          alt="hospital"
-                          src="/img/jmd/ay_hos.png"
-                          className="object-cover w-full rounded-lg shadow-lg"
-                        />
-                      </a>
-                    </div>
-                    {content}
-                  </div>
-                </div>
-              </div>
+              {content}
             </div>
           </div>
         </div>

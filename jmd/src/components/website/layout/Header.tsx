@@ -81,8 +81,8 @@ export default function Header({ logo, contact, owner, colors, lng }: any) {
   };
 
   return (
-    <div className="relative">
-      <div className="shadow-md bg-white relative" style={{ zIndex: 1 }}>
+    <div className="relative z-9999">
+      <div className="shadow-md bg-white relative z-9999" style={{ zIndex: 1 }}>
         <div className={`bg-[#3562AE] w-full h-2`}></div>
         <div className="header ps-2 pe-2 md:ps-10 md:pe-10 mx-auto">
           <div className="mx-auto flex justify-between items-center h-full ">
@@ -126,13 +126,13 @@ export default function Header({ logo, contact, owner, colors, lng }: any) {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flex z-9999">
           <div
             className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-9999 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="grid content-stretch">
+            <div className="grid content-stretch z-9999 relative">
               <SideBar
                 contact={contact}
                 sideBar={{ toggleSubMenu, closeSideBar }}

@@ -7,7 +7,7 @@ import { BsPersonAdd } from "react-icons/bs";
 import FadeHeading from "@/components/website/atom/heading/FadeHeading";
 import { Image } from "antd";
 
-const pageName = "about";
+const pageName = "JMD About-Us";
 export async function generateMetadata(
   { params, searchParams }: any,
   parent: ResolvingMetadata

@@ -1,16 +1,12 @@
-// import CoverSwiper from "@/components/website/layout/CoverSwiper";
-// import Blog from "@/components/website/layout/Blog";
 import ContactSection from "@/components/website/layout/ContactSection";
-import Cover from "@/components/website/layout/Cover";
+
 import CoverVisa from "@/components/website/layout/CoverVisa";
-import NewsSection from "@/components/website/layout/NewsSection";
-import OtherSection from "@/components/website/layout/OtherSection";
+
 import LocationSection from "@/components/website/layout/LocationSection";
-import StrongServiceSection from "@/components/website/layout/StrongServiceSection";
-import StickyMenu from "@/components/website/organism/menu/StickyMenu";
+
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+
 import MainHeading from "@/components/website/atom/heading/MainHeading";
 import JmdServiceSection from "@/components/website/layout/JmdSeviceSection";
 import Collapse from "@/components/website/organism/Collapse";
@@ -138,7 +134,7 @@ export default function Home({ params }: { params: { lng: string } }) {
     <div className="">
       <CoverVisa img="/img/cover.png" home={true} />
 
-      <div className="relative">
+      <div className="relative ">
         <div className="container  mx-auto mt-16">
           {/* <img className="absolute" src="/img/our-business-bg.png" alt="" /> */}
           <div className="grid grid-cols-1">
@@ -197,7 +193,7 @@ export default function Home({ params }: { params: { lng: string } }) {
             <div className="flex justify-center items-center mt-6">
               <Link
                 className="text-white bg-[#3462af] rounded-md py-2 px-5 "
-                href={"/visa-workpermit/news-activity"}
+                href={"/news-activity"}
               >
                 {b("more")}
               </Link>
@@ -205,7 +201,7 @@ export default function Home({ params }: { params: { lng: string } }) {
           </div>
         </div>
 
-        <ContactSection home={false} topic="jmd"/>
+        <ContactSection home={false} topic="jmd" />
       </div>
     </div>
   );

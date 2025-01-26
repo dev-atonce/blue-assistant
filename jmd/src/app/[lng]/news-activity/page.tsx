@@ -34,7 +34,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
       <CoverVisa
         // @ts-ignore
         pageName={t("news")}
-        prevPage={{ pageName: t("visa-work"), url: "/visa-workpermit" }}
+        prevPage={{ pageName: t("home"), url: "/" }}
       />
       <div className="container mx-auto ">
         <div className="py-4 flex flex-col gap-3 mt-10">

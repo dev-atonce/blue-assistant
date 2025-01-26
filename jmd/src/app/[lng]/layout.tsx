@@ -60,7 +60,7 @@ const colors = {
   warning: "",
 };
 
-const pageName = "home";
+const pageName = "JMD home";
 export async function generateMetadata(
   { params, searchParams }: any,
   parent: ResolvingMetadata
