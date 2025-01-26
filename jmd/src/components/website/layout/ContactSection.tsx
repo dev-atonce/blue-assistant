@@ -7,9 +7,10 @@ import { useTranslations } from "next-intl";
 
 interface ContactProps {
   home: boolean;
+  topic?: string;
 }
 
-export default function ContactSection({ home }: ContactProps) {
+export default function ContactSection({ home, topic }: ContactProps) {
   const t = useTranslations("contact-form");
   const h = useTranslations("header");
   const {
@@ -85,6 +86,9 @@ export default function ContactSection({ home }: ContactProps) {
               className="col-span-12 lg:col-span-7 text-sm md:text-base"
               onSubmit={handleSubmit(onSubmit)}
             >
+              {topic === 'jmd' && (
+                <input {...register("topic")} type="text" name="topic" id="topic" value={'jmd'} hidden />
+              )}
               {home && (
                 <div className="grid-cols-12 grid mb-4">
                   <div className="col-span-12 md:col-span-3 font-bold text-[#3562AE]">

@@ -10,7 +10,8 @@ const schema = new mongoose.Schema(
     phone: { type: String, required: true },
     service: { type: String },
     detail: { type: String, required: true },
-    status: { type: Boolean, default: false }
+    status: { type: Boolean, default: false },
+    topic: { type: String },
   },
   { timestamps: true }
 );
@@ -28,6 +29,7 @@ schema.methods.toJSON = function () {
     service: this.service,
     detail: this.detail,
     status: this.status,
+    topic: this.topic,
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
   };

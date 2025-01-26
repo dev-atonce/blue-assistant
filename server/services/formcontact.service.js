@@ -74,11 +74,12 @@ const methods = {
         };
 
         let mail = MailGenerator.generate(response);
-
+        let mailto = req.body.topic === 'jmd' ? config.mailToJMD : config.mailTo;
+        
         return new Promise((resolve, reject) => {
             let transporter = nodemailer.createTransport(configMail);
             transporter.sendMail(
-                mailMessage(config.mailTo, "Inquiry Website", mail),
+                mailMessage(mailto, "Inquiry Website", mail),
                 async (error, info) => {
                     if (error) {
                         reject(ErrorBadRequest(error.message));

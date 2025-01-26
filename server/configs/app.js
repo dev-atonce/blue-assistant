@@ -19,4 +19,5 @@ module.exports = {
   mailPass: process.env.MAIL_PASSWORD,
   mailDefault: process.env.MAIL_SENDER_DEFAULT,
   mailTo: process.env.MAIL_TO,
+  mailToJMD: process.env.MAIL_TO_JMD,
 };
