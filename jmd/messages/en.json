@@ -15,10 +15,11 @@
     "location": "Location",
     "about-jmd": "About JMD",
     "first-time": "Get Started",
-    "dep-guide":"Medical Department Guide"
+    "dep-guide": "Medical Department Guide",
+    "jmd-process": "What we do"
   },
   "location": {
-    "h1": "Japanese Medical Desk (JMD) in Various Countries（JMD)"
+    "h1": "Japanese Medical Desk (JMD) in Various Countries"
   },
   "blog-section": {
     "news": "News",
@@ -34,6 +35,7 @@
     "banner": "Feel Secure with Japanese-Speaking Support, Even When Feeling Unwell Abroad."
   },
   "service-section": {
+    "h": "For First-Time Users",
     "fee": "Service Fee",
     "help-info": "Help Info.",
     "institution": "Information on Institutions",
@@ -41,20 +43,11 @@
     "links": "Useful Links",
     "faq": "FAQ",
     "see-more": "See More",
-    "t-1": "Procedure",
-    "t-2": "Obtaining a work visa",
-    "t-3": "Renewal after 2nd year",
-    "t-4": "What is a work permit?",
-    "t-5": "Required documents",
-    "t-6": "Job change/Leaving Thailand",
-    "t-7": "BOI approved company/one-stop service",
-    "t-8": "What is a visa?",
-    "t-9": "Visa type",
-    "t-10": "Required documents",
-    "t-11": "Re-entry permit/re-entry permit",
-    "t-12": "90 day report application",
-    "t-13": "After the 90-day reporting period",
-    "t-14": "Overstay",
+    "t-1": "JMDサービス内容",
+    "t-2": "サービスのご利用の流れ a work visa",
+    "t-3": "海外旅行保険のご利用",
+    "t-4": "診療科別ガイド",
+
     "strong": {
       "h1": "We are dedicated to supporting your life abroad",
       "h2": "with \"friendly, thorough, and prompt\" service.",
@@ -70,8 +63,9 @@
     }
   },
   "about-section": {
-    "heading": "Siam Nistrans was established in 1987 as the Thai subsidiary of Nissin Corporation",
-    "p": "Since then we have provided safe and secure multimodal transport services to our customers across Nissin's global network. In Thailand, we have offices and warehouses in various locations such as Bangkok, Chiangmai, Ayutthaya, Prachinburi, Laem Chabang and Bangpakong, and we offer the best-suited and innovative logistics and packaging solutions by combining our hardware and software platforms in order to satisfy the customers' requirements."
+    "heading": "What is Japanese Medical Desk (JMD)?",
+    "p1": "Japanese Medical Desk (JMD) was established to provide 'Japanese-language medical support' for residents living in regions of Thailand and Southeast Asia where medical facilities are not well-equipped. ",
+    "p2": "We have opened Japanese Medical Desks (JMD) within medical institutions in Thailand, Myanmar, and Laos, where Japanese medical interpreters are stationed to offer Japanese-language medical services."
   },
 
   "form": {

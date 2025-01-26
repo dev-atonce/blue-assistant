@@ -131,6 +131,8 @@ export default function Home({ params }: { params: { lng: string } }) {
   const h = useTranslations("header");
   const l = useTranslations("location");
   const b = useTranslations("blog-section");
+  const a = useTranslations("about-section");
+  const s = useTranslations("service-section");
   const lang = params.lng;
   return (
     <div className="">
@@ -156,22 +158,15 @@ export default function Home({ params }: { params: { lng: string } }) {
             className=" text-[#3562AE] my-10  w-full shadow-lg bg-blue-100/60 rounded-2xl p-2  md:p-4 lg:p-10"
           >
             <div className="mt-[-40px]">
-              <MainHeading
-                text="ジャパニーズメディカル（JMD）とは"
-                heading="2"
-              />
+              <MainHeading text={a("heading")} heading="2" />
             </div>
             <div className="font-semibold text-xs md:text-sm">
-              <p>
-                ジャパニーズメディカルデスク（JMD）は、タイ及び東南アジアにおける医療設備が整っていない地域にお住まいの在住者様の生活に『日本語の医療サポート』をご提供する事を目的とし設立した、「日本語医療サポートデスク」です。
-              </p>
-              <p>
-                タイ・ミャンマー・ラオス各国の医療機関内にジャパニーズメディカルデスク(JMD)を開設、日本語医療通訳が常駐し、日本語医療サービスのご提供を行っております。
-              </p>
+              <p>{a("p1")}</p>
+              <p>{a("p2")}</p>
             </div>
           </div>
           <div id="service" className="py-t-6 pb-20 border-b border-slate-200">
-            <MainHeading text="はじめての方へ" heading="2" />
+            <MainHeading text={s("h")} heading="2" />
             <JmdServiceSection lng={params?.lng} />
           </div>
           <div id="faq" className="py-6 border-b border-slate-100">

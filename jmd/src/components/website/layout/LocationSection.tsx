@@ -9,10 +9,6 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 export default function LocationSection({ lng }: any) {
-  const [modal1, setModal1] = useState(false);
-  const [modal2, setModal2] = useState(false);
-  const [modal3, setModal3] = useState(false);
-  const [modal4, setModal4] = useState(false);
   const lang = lng.toUpperCase();
   const s = useTranslations("service-section");
   const province = {
@@ -67,7 +63,6 @@ export default function LocationSection({ lng }: any) {
     },
   ];
 
-  console.log({ modal1, modal2, modal3, modal4 });
   return (
     <>
       <div className="grid grid-cols-12 lg:px-16 gap-y-4  text-xl text-[#3462af] font-semibold">
@@ -94,6 +89,7 @@ export default function LocationSection({ lng }: any) {
           } else {
             return (
               <Link
+                key={key}
                 href={i?.link}
                 className=" hover:scale-95 transition-all py-3 col-span-12 md:col-span-4  rounded-lg flex flex-col justify-center items-center gap-5"
               >
@@ -106,45 +102,6 @@ export default function LocationSection({ lng }: any) {
             );
           }
         })}
-        {/* <Dropdown menu={{ items }} trigger={["click"]} placement="bottom">
-        <button className="hover:shadow-3 hover:scale-95 transition-all py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
-          <Image
-            src={"/img/visa-workpermit/service-1.png"}
-            alt=""
-            width={120}
-            height={120}
-          ></Image>
-          <p>タイで働くには</p>
-        </button>
-      </Dropdown>
-
-      <button className="hover:shadow-3 hover:scale-95 transition-all py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
-        <Image
-          src={"/img/visa-workpermit/service-2.png"}
-          alt=""
-          width={120}
-          height={120}
-        ></Image>
-        <p>労働許可証</p>
-      </button>
-      <button className="hover:shadow-3 hover:scale-95 transition-all py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
-        <Image
-          src={"/img/visa-workpermit/service-3.png"}
-          alt=""
-          width={120}
-          height={120}
-        ></Image>
-        <p>ビザ</p>
-      </button>
-      <button className="hover:shadow-3 hover:scale-95 transition-all py-3 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5">
-        <Image
-          src={"/img/visa-workpermit/service-4.png"}
-          alt=""
-          width={120}
-          height={120}
-        ></Image>
-        <p>その他</p>
-      </button> */}
       </div>
     </>
   );

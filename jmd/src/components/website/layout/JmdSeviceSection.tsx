@@ -15,7 +15,7 @@ export default function JmdServiceSection({ lng }: any) {
       titleJP: "JMDサービス内容",
       titleEN: "JMDサービス内容",
       titleTH: "JMDサービス内容",
-      link: "/about-us/t-1",
+      link: "/about-us#t-1",
     },
     {
       image: "/img/jmd/s-2-1.png",
@@ -23,7 +23,7 @@ export default function JmdServiceSection({ lng }: any) {
       titleJP: "サービスのご利用の流れ",
       titleEN: "サービスのご利用の流れ",
       titleTH: "サービスのご利用の流れ",
-      link: "/about-us/t-2",
+      link: "/about-us#t-2",
     },
     {
       image: "/img/jmd/s-3-1.png",
@@ -31,7 +31,7 @@ export default function JmdServiceSection({ lng }: any) {
       titleJP: "海外旅行保険のご利用",
       titleEN: "海外旅行保険のご利用",
       titleTH: "海外旅行保険のご利用",
-      link: "/about-us/t-3",
+      link: "/about-us#t-3",
     },
     {
       image: "/img/jmd/s-4-1.png",

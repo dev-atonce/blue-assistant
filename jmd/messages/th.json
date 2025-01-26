@@ -15,8 +15,10 @@
     "location": "พื้นที่ให้บริการ",
     "about-jmd": "เกี่ยวกับ JMD",
     "first-time": "เริ่มใช้งาน",
-    "dep-guide": "แพทย์เฉพาะทาง"
+    "dep-guide": "แพทย์เฉพาะทาง",
+    "jmd-process": "บริการของเรา"
   },
+
   "location": {
     "h1": "Japanese Medical Desk (JMD) in Various Countries"
   },
@@ -34,6 +36,7 @@
     "banner": "Feel Secure with Japanese-Speaking Support, Even When Feeling Unwell Abroad."
   },
   "service-section": {
+    "h": "เริ่มใช้บริการ",
     "fee": "อัตราค่าบริการ",
     "help-info": "ข้อมูลเพิ่มเติม",
     "institution": "การเดินทาง",
@@ -41,20 +44,11 @@
     "links": "เว็บไซต์ที่เป็นประโยชน์",
     "faq": "คำถามที่พบบ่อย",
     "see-more": "บริการทั้งหมดของเรา",
-    "t-1": "ขั้นตอนการยื่นคำร้อง",
-    "t-2": "การขอวีซ่าทำงาน",
-    "t-3": "ขั้นตอนการยื่นคำร้อง【ปีที่ 2 เป็นต้นไป】",
-    "t-4": "ใบอนุญาตทำงานคืออะไร",
-    "t-5": "เอกสารสำคัญประกอบการยื่นขอใบอนุญาตทำงาน",
-    "t-6": "การเปลี่ยนงาน/การเดินทางกลับประเทศ",
-    "t-7": "One Stop Service/ธุรกิจที่ได้รับการส่งเสริมการลงทุน BOI",
-    "t-8": "วีซ่าคืออะไร",
-    "t-9": "ประเภทของวีซ่า",
-    "t-10": "เอกสารสำคัญประกอบการยื่นขอวีซ่า",
-    "t-11": "ใบอนุญาตกลับเข้าประเทศ",
-    "t-12": "การรายงานตัว 90 วัน",
-    "t-13": "การรายงานตัวหลัง 90 วัน",
-    "t-14": "การอยู่เกินกำหนดระยะอนุญาต",
+    "t-1": "JMDサービス内容",
+    "t-2": "サービスのご利用の流れ",
+    "t-3": "海外旅行保険のご利用",
+    "t-4": "診療科別ガイド",
+
     "strong": {
       "h1": "We are dedicated to supporting your life abroad",
       "h2": "with \"friendly, thorough, and prompt\" service.",
@@ -70,8 +64,9 @@
     }
   },
   "about-section": {
-    "heading": "Siam Nistrans เป็นบริษัทในเครือของ \"NISSIN CORPORATION\"",
-    "p": "ที่มีความเชี่ยวชาญด้านโลจิสติกส์แบบครบวงจร ทั้งการขนส่งทางบก ทางทะเล และทางอากาศ ผ่านเครือข่ายที่กว้างขวางและมีคลังสินค้าในหลายพื้นที่ของประเทศไทย ใช้ IT Solution เพื่อตอบสนองความต้องการของลูกค้า รวมถึงบริการขนย้ายสำหรับลูกค้าบุคคลทั่วไป โดยทีมงานคนไทยและญี่ปุ่นที่พร้อมให้บริการอย่างใส่ใจ"
+    "heading": "What is Japanese Medical Desk (JMD)?",
+    "p1": "Japanese Medical Desk (JMD) was established to provide 'Japanese-language medical support' for residents living in regions of Thailand and Southeast Asia where medical facilities are not well-equipped. ",
+    "p2": "We have opened Japanese Medical Desks (JMD) within medical institutions in Thailand, Myanmar, and Laos, where Japanese medical interpreters are stationed to offer Japanese-language medical services."
   },
   "form": {
     "name": "ชื่อผู้ติดต่อ",

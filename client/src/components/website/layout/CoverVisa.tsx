@@ -24,6 +24,7 @@ export default function CoverVisa({ pageName, prevPage, lng }: any) {
             alt="visa-workpermit"
             width={1980}
             height={478}
+            priority={true}
           ></Image>
         </div>
       </div>
