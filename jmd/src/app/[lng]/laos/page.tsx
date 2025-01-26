@@ -13,9 +13,9 @@ import { MdMail } from "react-icons/md";
 import { IoIosCall, IoIosGlobe } from "react-icons/io";
 
 const title = {
-  th: "พระนครศรีอยุธยา",
-  en: "Ayutthaya",
-  jp: "アユタヤ",
+  th: "ประเทศลาว",
+  en: "Laos",
+  jp: "ラオス",
 };
 
 const ContentEN = () => {

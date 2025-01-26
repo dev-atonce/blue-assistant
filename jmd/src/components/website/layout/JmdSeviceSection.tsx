@@ -46,7 +46,11 @@ export default function JmdServiceSection({ lng }: any) {
     <div className="grid grid-cols-12 gap-5  text-xl text-[#3462af] font-semibold">
       {menuItem?.map((i: any, key: any) => {
         return (
-          <button className="group hover:shadow-3 hover:bg-[#3462af] hover:text-white hover:md:translate-y-[-20px] transition-all py-6 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-xl flex flex-col justify-center items-center gap-5">
+          <Link
+            href={i?.link}
+            key={key}
+            className="group hover:shadow-3 hover:bg-[#3462af] hover:text-white hover:md:translate-y-[-20px] transition-all py-6 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-xl flex flex-col justify-center items-center gap-5"
+          >
             <Image
               src={i?.image}
               alt=""
@@ -62,7 +66,7 @@ export default function JmdServiceSection({ lng }: any) {
               className="group-hover:block hidden"
             ></Image>
             <h3 className="font-semibold">{i[`title${lang}`]}</h3>
-          </button>
+          </Link>
         );
       })}
       {/* <Dropdown menu={{ items }} trigger={["click"]} placement="bottom">
