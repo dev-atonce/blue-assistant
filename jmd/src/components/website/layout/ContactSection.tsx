@@ -97,18 +97,6 @@ export default function ContactSection({ home, topic }: ContactProps) {
                   <div className="col-span-12 md:col-span-9">
                     <ul>
                       <li className="mb-3">
-                        <label htmlFor="type1">
-                          <input
-                            {...register("service", { required: true })}
-                            type="radio"
-                            id="type1"
-                            value="医療アシスタンス業務"
-                            className="me-2"
-                          />
-                          {t("option.1")}
-                        </label>
-                      </li>
-                      <li className="mb-3">
                         <label htmlFor="type2">
                           <input
                             {...register("service", { required: true })}
@@ -142,18 +130,6 @@ export default function ContactSection({ home, topic }: ContactProps) {
                             className="me-2"
                           />
                           {t("option.4")}
-                        </label>
-                      </li>
-                      <li className="mb-3">
-                        <label htmlFor="type5">
-                          <input
-                            {...register("service", { required: true })}
-                            type="radio"
-                            id="type5"
-                            value="ビザ＆ワークパーミットコンサルティング事業"
-                            className="me-2"
-                          />
-                          {t("option.5")}
                         </label>
                       </li>
                     </ul>
