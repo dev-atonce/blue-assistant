@@ -7,31 +7,31 @@ import CoverVisa from "@/components/website/layout/CoverVisa";
 
 const pageName = "JMD Home";
 
-export async function generateMetadata(
-  { params, searchParams }: any,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  // read route params
-  const lng = params.lng?.toUpperCase();
+// export async function generateMetadata(
+//   { params, searchParams }: any,
+//   parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//   // read route params
+//   const lng = params.lng?.toUpperCase();
 
-  const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
+//   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
-  // fetch data
-  const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
-    res.json()
-  );
+//   // fetch data
+//   const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
+//     res.json()
+//   );
 
-  return {
-    metadataBase: new URL("https://blue-assistant.co.th"),
-    title: response[`seoTitle${lng}`],
-    description: response[`seoDescription${lng}`],
-    keywords: response[`seoKeyword${lng}`],
-    alternates: {
-      canonical: "./",
-    },
-    // icons: [{ rel: "icon", url: Favicon.src }],
-  };
-}
+//   return {
+//     metadataBase: new URL("https://blue-assistant.co.th"),
+//     title: response[`seoTitle${lng}`],
+//     description: response[`seoDescription${lng}`],
+//     keywords: response[`seoKeyword${lng}`],
+//     alternates: {
+//       canonical: "./",
+//     },
+//     // icons: [{ rel: "icon", url: Favicon.src }],
+//   };
+// }
 
 export default function BlogPage({ params }: { params: { lng: string } }) {
   const t = useTranslations("header");

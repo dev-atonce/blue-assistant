@@ -32,16 +32,28 @@ const ContentEN = () => {
                   width="400"
                   height="400"
                   alt="hospital"
-                  src="/img/visa-workpermit/ministry_map2.png"
+                  src="/img/myanmar/0.jpg"
                   className="object-cover h-full"
                 />
               </div>
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  alt="hospital"
+                  width="400"
+                  height="400"
+                  src="/img/myanmar/2.jpg"
+                  className="h-full object-cover"
+                />
               </div>
 
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/myanmar/3.jpg"
+                  className="object-cover h-full"
+                />
               </div>
             </div>
             <a
@@ -149,16 +161,28 @@ const ContentJP = () => {
                   width="400"
                   height="400"
                   alt="hospital"
-                  src="/img/visa-workpermit/ministry_map2.png"
+                  src="/img/myanmar/0.jpg"
                   className="object-cover h-full"
                 />
               </div>
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  alt="hospital"
+                  width="400"
+                  height="400"
+                  src="/img/myanmar/2.jpg"
+                  className="h-full object-cover"
+                />
               </div>
 
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/myanmar/3.jpg"
+                  className="object-cover h-full"
+                />
               </div>
             </div>
             <a

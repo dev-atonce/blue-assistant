@@ -64,30 +64,36 @@ const consultItems = {
   jp: [
     {
       key: "1",
-      label: <Q text="・When Visiting the Hospital for the First Time" />,
+      label: <Q text="・はじめて病院を受診する場合" />,
       children: (
-        <Ans text="・When visiting a hospital where the Japanese Medical Desk (JMD) is stationed, please contact each JMD via LINE, phone, or email. We will confirm your symptoms and preferred date, and guide you accordingly." />
+        <Ans
+          text="・ジャパニーズメディカルデスク（JMD)の常駐している病院を受診する際は、
+各JMDの連絡先（LINE、電話、メール）へご連絡ください。ご症状やご希望のお日にちをお伺いして、ご案内をさせていただきます。"
+        />
       ),
     },
     {
       key: "2",
-      label: <Q text="・Is it necessary to make an appointment?" />,
+      label: <Q text="・予約は必ず必要ですか？" />,
       children: (
-        <Ans text="・Some departments may not have specialists available. If your schedule allows, please contact JMD in advance to make an appointment." />
+        <Ans
+          text="・診療科によっては専門医が不在の場合もございます。お時間に余裕がある場合は、
+一度JMDへお問いお合わせの上ご予約ください。"
+        />
       ),
     },
     {
       key: "3",
-      label: <Q text="・Can I receive treatment in case of an emergency?" />,
+      label: <Q text="・緊急で受診したい場合も対応してもらえますか？" />,
       children: (
-        <Ans text="・We also provide support for Emergency Room (ER) visits. In some cases, assistance may be provided via on-call (phone interpretation)." />
+        <Ans text="・緊急外来（ER)をご受診の場合も対応しております。場合によってはオンコール（電話通訳）での対応となります。" />
       ),
     },
     {
       key: "4",
-      label: <Q text="・What should I bring to the hospital?" />,
+      label: <Q text="・受診の際には何をもっていけばいいですか？" />,
       children: (
-        <Ans text="・Please bring your passport, insurance policy, and any medications you are currently taking (e.g., medication notebook if available)." />
+        <Ans text="・パスポート、保険証券、常用薬（あればお薬手帳など）をお持ちください。" />
       ),
     },
   ],
@@ -122,7 +128,6 @@ const consultItems = {
     },
   ],
 };
-
 export default function Home({ params }: { params: { lng: string } }) {
   const h = useTranslations("header");
   const l = useTranslations("location");

@@ -30,16 +30,28 @@ const ContentEN = () => {
                   width="400"
                   height="400"
                   alt="hospital"
-                  src="/img/visa-workpermit/ministry_map2.png"
+                  src="/img/laos/5.jpg"
                   className="object-cover h-full"
                 />
               </div>
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  alt="hospital"
+                  width="400"
+                  height="400"
+                  src="/img/laos/1.jpg"
+                  className="h-full object-cover"
+                />
               </div>
 
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/laos/2.jpg"
+                  className="object-cover h-full"
+                />
               </div>
             </div>
             <a
@@ -148,16 +160,28 @@ const ContentEN = () => {
                   width="400"
                   height="400"
                   alt="hospital"
-                  src="/img/visa-workpermit/ministry_map2.png"
+                  src="/img/laos/2.jpg"
                   className="object-cover h-full"
                 />
               </div>
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  alt="hospital"
+                  width="400"
+                  height="400"
+                  src="/img/laos/3.jpg"
+                  className="h-full object-cover"
+                />
               </div>
 
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/laos/4.jpg"
+                  className="object-cover h-full"
+                />
               </div>
             </div>
             <a
@@ -273,16 +297,28 @@ const ContentJP = () => {
                   width="400"
                   height="400"
                   alt="hospital"
-                  src="/img/visa-workpermit/ministry_map2.png"
+                  src="/img/laos/5.jpg"
                   className="object-cover h-full"
                 />
               </div>
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  alt="hospital"
+                  width="400"
+                  height="400"
+                  src="/img/laos/1.jpg"
+                  className="h-full object-cover"
+                />
               </div>
 
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/laos/2.jpg"
+                  className="object-cover h-full"
+                />
               </div>
             </div>
             <a
@@ -387,16 +423,28 @@ const ContentJP = () => {
                   width="400"
                   height="400"
                   alt="hospital"
-                  src="/img/visa-workpermit/ministry_map2.png"
+                  src="/img/laos/2.jpg"
                   className="object-cover h-full"
                 />
               </div>
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  alt="hospital"
+                  width="400"
+                  height="400"
+                  src="/img/laos/3.jpg"
+                  className="h-full object-cover"
+                />
               </div>
 
               <div className="row-span-1 object-cover col-span-6">
-                <AntImage src="/img/visa-workpermit/ministry_map2.png" />
+                <Image
+                  width="400"
+                  height="400"
+                  alt="hospital"
+                  src="/img/laos/4.jpg"
+                  className="object-cover h-full"
+                />
               </div>
             </div>
             <a
@@ -413,6 +461,7 @@ const ContentJP = () => {
             </a>
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
+            <FadeHeading text="AIMC Hospital" heading="2" />
             <div className="pb-6">
               <span className="text-lg mb-2 font-semibold">JMD受付時間</span>
               <p>1: 9:00 - 18:00</p>
