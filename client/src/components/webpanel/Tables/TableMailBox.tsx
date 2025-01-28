@@ -27,7 +27,7 @@ const TableMailBox = () => {
   useEffect(() => {
     fetchContact(pageState);
   }, [fetchContact, pageState]);
-  
+
   return (
     <div className="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-6">
       <div className="max-w-full overflow-x-auto">
@@ -65,7 +65,7 @@ const TableMailBox = () => {
                 </td>
 
                 <td className="text-sm border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <strong>{item.service}</strong>
+                  <strong>{item.service}</strong> {item.topic === 'jmd' && <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">JMD</span>}
                   <p>{item.customer}</p>
                   <p>{item.name_kanji}</p>
                   <p>{item.name_eng}</p>

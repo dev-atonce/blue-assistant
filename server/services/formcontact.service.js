@@ -50,6 +50,7 @@ const methods = {
                 table: [
                     {
                         data: [
+                            { "#": "Topic", detail: req.body.topic },
                             { "#": "Service", detail: req.body.service },
                             { "#": "Customer", detail: req.body.customer },
                             { "#": "Company", detail: req.body.company },

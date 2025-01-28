@@ -205,8 +205,7 @@ export default function Home({ params }: { params: { lng: string } }) {
             </div>
           </div>
         </div>
-
-        <ContactSection home={true} topic="jmd" />
+        <ContactSection />
       </div>
     </div>
   );

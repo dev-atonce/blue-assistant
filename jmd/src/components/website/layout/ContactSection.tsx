@@ -5,12 +5,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useTranslations } from "next-intl";
 
-interface ContactProps {
-  home: boolean;
-  topic?: string;
-}
-
-export default function ContactSection({ home, topic }: ContactProps) {
+export default function ContactSection() {
   const t = useTranslations("contact-form");
   const h = useTranslations("header");
   const {
@@ -86,61 +81,57 @@ export default function ContactSection({ home, topic }: ContactProps) {
               className="col-span-12 lg:col-span-7 text-sm md:text-base"
               onSubmit={handleSubmit(onSubmit)}
             >
-              {topic === 'jmd' && (
-                <input {...register("topic")} type="text" name="topic" id="topic" value={'jmd'} hidden />
-              )}
-              {home && (
-                <div className="grid-cols-12 grid mb-4">
-                  <div className="col-span-12 md:col-span-3 font-bold text-[#3562AE]">
-                    {t("topic")}
-                  </div>
-                  <div className="col-span-12 md:col-span-9">
-                    <ul>
-                      <li className="mb-3">
-                        <label htmlFor="type2">
-                          <input
-                            {...register("service", { required: true })}
-                            type="radio"
-                            id="type2"
-                            value="ジャパニーズメディカルデスク (JMD) 事業 - タイ"
-                            className="me-2"
-                          />
-                          {t("option.2")}
-                        </label>
-                      </li>
-                      <li className="mb-3">
-                        <label htmlFor="type3">
-                          <input
-                            {...register("service", { required: true })}
-                            type="radio"
-                            id="type3"
-                            value="ジャパニーズメディカルデスク (JMD) 事業 - ラオス"
-                            className="me-2"
-                          />
-                          {t("option.3")}
-                        </label>
-                      </li>
-                      <li className="mb-3">
-                        <label htmlFor="type4">
-                          <input
-                            {...register("service", { required: true })}
-                            type="radio"
-                            id="type4"
-                            value="ジャパニーズメディカルデスク (JMD) 事業 - ミャンマー"
-                            className="me-2"
-                          />
-                          {t("option.4")}
-                        </label>
-                      </li>
-                    </ul>
-                    {errors?.service?.type === "required" && (
-                      <p className="text-xs text-red text-end">
-                        {t("validate.require")}
-                      </p>
-                    )}
-                  </div>
+              <input {...register("topic")} type="text" name="topic" id="topic" value={'jmd'} hidden />
+              <div className="grid-cols-12 grid mb-4">
+                <div className="col-span-12 md:col-span-3 font-bold text-[#3562AE]">
+                  {t("topic")}
                 </div>
-              )}
+                <div className="col-span-12 md:col-span-9">
+                  <ul>
+                    <li className="mb-3">
+                      <label htmlFor="type2">
+                        <input
+                          {...register("service", { required: true })}
+                          type="radio"
+                          id="type2"
+                          value="ジャパニーズメディカルデスク (JMD) 事業 - タイ"
+                          className="me-2"
+                        />
+                        {t("option.2")}
+                      </label>
+                    </li>
+                    <li className="mb-3">
+                      <label htmlFor="type3">
+                        <input
+                          {...register("service", { required: true })}
+                          type="radio"
+                          id="type3"
+                          value="ジャパニーズメディカルデスク (JMD) 事業 - ラオス"
+                          className="me-2"
+                        />
+                        {t("option.3")}
+                      </label>
+                    </li>
+                    <li className="mb-3">
+                      <label htmlFor="type4">
+                        <input
+                          {...register("service", { required: true })}
+                          type="radio"
+                          id="type4"
+                          value="ジャパニーズメディカルデスク (JMD) 事業 - ミャンマー"
+                          className="me-2"
+                        />
+                        {t("option.4")}
+                      </label>
+                    </li>
+                  </ul>
+                  {errors?.service?.type === "required" && (
+                    <p className="text-xs text-red text-end">
+                      {t("validate.require")}
+                    </p>
+                  )}
+                </div>
+              </div>
               <div className="border-t border-slate-200 mb-6"></div>
               <div className="mb-4">
                 <div className="grid grid-cols-12 ">
