@@ -1,3 +1,4 @@
+"use-client";
 import FadeHeading from "@/components/website/atom/heading/FadeHeading";
 import MainHeading from "@/components/website/atom/heading/MainHeading";
 import Cover from "@/components/website/layout/Cover";
@@ -11,6 +12,8 @@ import Modal from "@/components/website/layout/Modal";
 import AddressModal from "@/components/website/organism/AddressModal";
 import { MdMail } from "react-icons/md";
 import { IoIosCall, IoIosGlobe } from "react-icons/io";
+import SwiperSquare from "@/components/website/molecule/SwiperSquare";
+import { SiGooglemaps } from "react-icons/si";
 
 const title = {
   th: "ประเทศลาว",
@@ -23,38 +26,9 @@ const ContentEN = () => {
     <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
       <div className=" text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-              <div className="row-span-2 object-cover  col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/5.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  alt="hospital"
-                  width="400"
-                  height="400"
-                  src="/img/laos/1.jpg"
-                  className="h-full object-cover"
-                />
-              </div>
-
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/2.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-            </div>
-            <a
+          <div className=" flex-col col-span-12 lg:col-span-6  w-full">
+            <SwiperSquare imgs={["/img/laos/1.jpg", "/img/laos/2.jpg"]} />
+            {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Kasemrad+International+Hospital+Vientiane/@17.9374208,102.6117105,13z/data=!4m6!3m5!1s0x312467a3522c3837:0x2881e0ccd7dc0a30!8m2!3d17.9396154!4d102.6427276!16s%2Fg%2F11m_w1_72g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
             >
@@ -65,7 +39,7 @@ const ContentEN = () => {
                 src="/img/jmd/la_hos1.png"
                 className="object-cover w-full rounded-lg shadow-lg"
               />
-            </a>
+            </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
             <FadeHeading
@@ -134,7 +108,7 @@ const ContentEN = () => {
                 <p>Emergency Center: 24-hour Service</p>
               </div>
             </div>
-            <div className="flex justify-start gap-4 mt-10">
+            <div className="flex justify-start gap-1 mt-10">
               <a
                 href="https://line.me/ti/p/~@197nlufp"
                 className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
@@ -147,44 +121,24 @@ const ContentEN = () => {
               >
                 <IoIosGlobe size={25} /> WEBSITE
               </a>
+              <a
+                href="https://www.google.com/maps/place/Kasemrad+International+Hospital+Vientiane/@17.9374208,102.6117105,13z/data=!4m6!3m5!1s0x312467a3522c3837:0x2881e0ccd7dc0a30!8m2!3d17.9396154!4d102.6427276!16s%2Fg%2F11m_w1_72g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <SiGooglemaps size={25} />
+                GOOGLE MAP
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div className=" text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-              <div className="row-span-2 object-cover  col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/2.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  alt="hospital"
-                  width="400"
-                  height="400"
-                  src="/img/laos/3.jpg"
-                  className="h-full object-cover"
-                />
-              </div>
-
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/4.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-            </div>
-            <a
+          <div className=" col-span-12 lg:col-span-6  w-full">
+            <SwiperSquare
+              imgs={["/img/laos/3.jpg", "/img/laos/4.jpg", "/img/laos/5.jpg"]}
+            />
+            {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Alliance+International+Medical+Centre/@17.968486,102.5351399,13z/data=!4m6!3m5!1s0x312469aac499a20d:0x4a29c1153843285e!8m2!3d17.9702924!4d102.5746971!16s%2Fg%2F1txnly2q?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
             >
@@ -195,7 +149,7 @@ const ContentEN = () => {
                 src="/img/jmd/la_hos2.png"
                 className="object-cover w-full rounded-lg shadow-lg"
               />
-            </a>
+            </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
             <FadeHeading
@@ -265,7 +219,7 @@ const ContentEN = () => {
                 <p>Emergency Center: 24-hour Service</p>
               </div>
             </div>
-            <div className="flex justify-start gap-4 mt-10">
+            <div className="flex justify-start gap-1 mt-10">
               <a
                 href="https://line.me/ti/p/~@197nlufp"
                 className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
@@ -277,6 +231,13 @@ const ContentEN = () => {
                 className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
               >
                 <IoIosGlobe size={25} /> WEBSITE
+              </a>
+              <a
+                href="https://www.google.com/maps/place/Alliance+International+Medical+Centre/@17.968486,102.5351399,13z/data=!4m6!3m5!1s0x312469aac499a20d:0x4a29c1153843285e!8m2!3d17.9702924!4d102.5746971!16s%2Fg%2F1txnly2q?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <SiGooglemaps size={25} />
+                GOOGLE MAP
               </a>
             </div>
           </div>
@@ -290,38 +251,9 @@ const ContentJP = () => {
     <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
       <div className=" text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-              <div className="row-span-2 object-cover  col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/5.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  alt="hospital"
-                  width="400"
-                  height="400"
-                  src="/img/laos/1.jpg"
-                  className="h-full object-cover"
-                />
-              </div>
-
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/2.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-            </div>
-            <a
+          <div className=" flex-col col-span-12 lg:col-span-6  w-full">
+            <SwiperSquare imgs={["/img/laos/1.jpg", "/img/laos/2.jpg"]} />
+            {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Kasemrad+International+Hospital+Vientiane/@17.9374208,102.6117105,13z/data=!4m6!3m5!1s0x312467a3522c3837:0x2881e0ccd7dc0a30!8m2!3d17.9396154!4d102.6427276!16s%2Fg%2F11m_w1_72g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
             >
@@ -332,7 +264,7 @@ const ContentJP = () => {
                 src="/img/jmd/la_hos1.png"
                 className="object-cover w-full rounded-lg shadow-lg"
               />
-            </a>
+            </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
             <FadeHeading
@@ -397,7 +329,7 @@ const ContentJP = () => {
                 <p>受付時間外は、24時間救急センターで対応</p>
               </div>
             </div>
-            <div className="flex justify-start gap-4 mt-10">
+            <div className="flex justify-start gap-1 mt-10">
               <a
                 href="https://line.me/ti/p/~@197nlufp"
                 className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
@@ -410,44 +342,24 @@ const ContentJP = () => {
               >
                 <IoIosGlobe size={25} /> WEBSITE
               </a>
+              <a
+                href="https://www.google.com/maps/place/Kasemrad+International+Hospital+Vientiane/@17.9374208,102.6117105,13z/data=!4m6!3m5!1s0x312467a3522c3837:0x2881e0ccd7dc0a30!8m2!3d17.9396154!4d102.6427276!16s%2Fg%2F11m_w1_72g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <SiGooglemaps size={25} />
+                GOOGLE MAP
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div className=" text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-              <div className="row-span-2 object-cover  col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/2.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  alt="hospital"
-                  width="400"
-                  height="400"
-                  src="/img/laos/3.jpg"
-                  className="h-full object-cover"
-                />
-              </div>
-
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/laos/4.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-            </div>
-            <a
+          <div className=" col-span-12 lg:col-span-6  w-full">
+            <SwiperSquare
+              imgs={["/img/laos/3.jpg", "/img/laos/4.jpg", "/img/laos/5.jpg"]}
+            />
+            {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Alliance+International+Medical+Centre/@17.968486,102.5351399,13z/data=!4m6!3m5!1s0x312469aac499a20d:0x4a29c1153843285e!8m2!3d17.9702924!4d102.5746971!16s%2Fg%2F1txnly2q?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
             >
@@ -458,7 +370,7 @@ const ContentJP = () => {
                 src="/img/jmd/la_hos2.png"
                 className="object-cover w-full rounded-lg shadow-lg"
               />
-            </a>
+            </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
             <FadeHeading text="AIMC Hospital" heading="2" />
@@ -521,7 +433,7 @@ const ContentJP = () => {
                 <p>受付時間外は、24時間救急センターで対応</p>
               </div>
             </div>
-            <div className="flex justify-start gap-4 mt-10">
+            <div className="flex justify-start gap-1 mt-10">
               <a
                 href="https://line.me/ti/p/~@197nlufp"
                 className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
@@ -533,6 +445,13 @@ const ContentJP = () => {
                 className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
               >
                 <IoIosGlobe size={25} /> WEBSITE
+              </a>
+              <a
+                href="https://www.google.com/maps/place/Alliance+International+Medical+Centre/@17.968486,102.5351399,13z/data=!4m6!3m5!1s0x312469aac499a20d:0x4a29c1153843285e!8m2!3d17.9702924!4d102.5746971!16s%2Fg%2F1txnly2q?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <SiGooglemaps size={25} />
+                GOOGLE MAP
               </a>
             </div>
           </div>

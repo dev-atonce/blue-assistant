@@ -6,14 +6,14 @@ export function Logo({ color, img }: any) {
     <div className="">
       <Link href="/" className="_links">
         {/* {img && ( */}
-        <Image
+        <img
           src={
             img
               ? `${process.env.NEXT_PUBLIC_BASE_URL}${img}`
               : "/img/blue_full_logo.png"
           }
-          alt="rent"
-          width={`400`}
+          alt="blue"
+          width={`300`}
           height={100}
         />
         {/* )} */}

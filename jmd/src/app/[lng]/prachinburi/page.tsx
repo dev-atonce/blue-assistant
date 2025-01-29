@@ -11,6 +11,8 @@ import Modal from "@/components/website/layout/Modal";
 import AddressModal from "@/components/website/organism/AddressModal";
 import { MdMail } from "react-icons/md";
 import { IoIosCall, IoIosGlobe } from "react-icons/io";
+import SwiperSquare from "@/components/website/molecule/SwiperSquare";
+import { SiGooglemaps } from "react-icons/si";
 
 const title = {
   th: "ปราจีนบุรี",
@@ -25,38 +27,12 @@ const ContentEN = () => {
 
       <div className="detail-sty text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-              <div className="row-span-2 object-cover  col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/thailand/1.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  alt="hospital"
-                  width="400"
-                  height="400"
-                  src="/img/thailand/2.jpg"
-                  className="h-full object-cover"
-                />
-              </div>
+          <div className="col-span-12 lg:col-span-6  w-full">
+            <SwiperSquare
+              imgs={["/img/thailand/1.jpg", "/img/thailand/2.jpg"]}
+            />
 
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/thailand/3.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-            </div>
-            <a
+            {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
             >
@@ -67,7 +43,7 @@ const ContentEN = () => {
                 src="/img/jmd/pra_hos.png"
                 className="object-cover w-full rounded-lg shadow-lg"
               />
-            </a>
+            </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
             <div className="pb-6">
@@ -129,7 +105,7 @@ const ContentEN = () => {
                 <p>Emergency Center: 24-hour Service</p>
               </div>
             </div>
-            <div className="flex justify-start gap-4 mt-10">
+            <div className="flex justify-start gap-1 mt-10">
               <a
                 href="https://line.me/ti/p/~@jmd-304"
                 className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
@@ -141,6 +117,13 @@ const ContentEN = () => {
                 className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
               >
                 <IoIosGlobe size={25} /> WEBSITE
+              </a>
+              <a
+                href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <SiGooglemaps size={25} />
+                GOOGLE MAP
               </a>
             </div>
           </div>
@@ -156,38 +139,12 @@ const ContentJP = () => {
 
       <div className="detail-sty text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="flex flex-col col-span-12 lg:col-span-6  w-full">
-            <div className=" grid-flow-col grid grid-rows-2 gap-2 bg-blue-20 grid-cols-12">
-              <div className="row-span-2 object-cover  col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/thailand/1.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  alt="hospital"
-                  width="400"
-                  height="400"
-                  src="/img/thailand/2.jpg"
-                  className="h-full object-cover"
-                />
-              </div>
+          <div className="col-span-12 lg:col-span-6  w-full">
+            <SwiperSquare
+              imgs={["/img/thailand/1.jpg", "/img/thailand/2.jpg"]}
+            />
 
-              <div className="row-span-1 object-cover col-span-6">
-                <Image
-                  width="400"
-                  height="400"
-                  alt="hospital"
-                  src="/img/thailand/3.jpg"
-                  className="object-cover h-full"
-                />
-              </div>
-            </div>
-            <a
+            {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
             >
@@ -198,7 +155,7 @@ const ContentJP = () => {
                 src="/img/jmd/pra_hos.png"
                 className="object-cover w-full rounded-lg shadow-lg"
               />
-            </a>
+            </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
             <div className="pb-6">
@@ -256,7 +213,7 @@ const ContentJP = () => {
                 <p>救急センターは24時間体制</p>
               </div>
             </div>
-            <div className="flex justify-start gap-4 mt-10">
+            <div className="flex justify-start gap-1 mt-10">
               <a
                 href="https://line.me/ti/p/~@jmd-304"
                 className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
@@ -268,6 +225,13 @@ const ContentJP = () => {
                 className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
               >
                 <IoIosGlobe size={25} /> WEBSITE
+              </a>
+              <a
+                href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+              >
+                <SiGooglemaps size={25} />
+                GOOGLE MAP
               </a>
             </div>
           </div>

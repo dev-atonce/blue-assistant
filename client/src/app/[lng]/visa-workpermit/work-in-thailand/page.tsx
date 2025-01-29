@@ -35,13 +35,13 @@ const ContentJP = () => {
             </Link>
             <Link
               href="/visa-workpermit/work-permit#t-4"
-              className="hover:scale-110 absolute top-[5%] left-[70%] text-blue-500"
+              className="hover:scale-110 absolute top-[5%] left-[73%] text-blue-500"
             >
               <FaEye size={20} />
             </Link>
             <Link
               href="/visa-workpermit/visa#t-10"
-              className="hover:scale-110 absolute top-[18%] left-[70%] text-blue-500"
+              className="hover:scale-110 absolute top-[18%] left-[73%] text-blue-500"
             >
               <FaEye size={20} />
             </Link>
