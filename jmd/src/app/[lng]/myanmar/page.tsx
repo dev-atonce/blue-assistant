@@ -12,7 +12,7 @@ import AddressModal from "@/components/website/organism/AddressModal";
 import { MdMail } from "react-icons/md";
 import { IoIosCall, IoIosGlobe } from "react-icons/io";
 import SwiperSquare from "@/components/website/molecule/SwiperSquare";
-import { SiGooglemaps } from "react-icons/si";
+import { SiGooglemaps, SiLine } from "react-icons/si";
 
 const title = {
   th: "ประเทศเมียนมาร์",
@@ -108,7 +108,7 @@ const ContentEN = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -219,7 +219,7 @@ const ContentEN = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -325,7 +325,7 @@ const ContentEN = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -434,7 +434,7 @@ const ContentEN = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -542,7 +542,7 @@ const ContentEN = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -654,7 +654,7 @@ const ContentJP = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -763,7 +763,7 @@ const ContentJP = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -867,7 +867,7 @@ const ContentJP = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -974,7 +974,7 @@ const ContentJP = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -1080,7 +1080,7 @@ const ContentJP = () => {
               </div>
               <div className="flex justify-start gap-1 mt-10">
                 <a
-                  href="https://line.me/ti/p/~@197nlufp"
+                  href="https://line.me/ti/p/~@jmd-mmr"
                   className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
                 >
                   <FaLine size={25} /> ADD LINE
@@ -1133,6 +1133,12 @@ export default function Work({ params }: { params: { lng: string } }) {
               />
               {content}
             </div>
+            <a
+              href="https://line.me/ti/p/~@jmd-mmr"
+              className="fixed right-10 bottom-22 w-20 h-20 border bg-[#3562AE] flex items-center justify-center rounded-full p-2 cursor-pointer text-white z-10 hover:scale-105 transition-all"
+            >
+              <SiLine size={30} />
+            </a>
           </div>
         </div>
       </div>

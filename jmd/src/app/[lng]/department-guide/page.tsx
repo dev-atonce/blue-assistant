@@ -443,9 +443,9 @@ const ContentEN = () => {
 
 const ContentJP = () => {
   return (
-    <div className="grid grid-cols-1 gap-10 text-[#333333] font-medium mb-20">
-      <div className="border-b-2 pb-15 border-[#DBDBDB]">
-        <MainHeading text="医療部門ガイド" heading="1" />
+    <div className="grid grid-cols-1 gap-10 text-[#333333] font-medium mb-20 text-sm">
+      <div className="border-b-2 pb-15 border-[rgb(219,219,219)]">
+        <MainHeading text="診療科別ガイド" heading="1" />
         <div className="grid grid-cols-12 gap-5 py-10  text-slate-600 font-semibold">
           <Link
             href="/department-guide#internal-medicine"
@@ -579,7 +579,7 @@ const ContentJP = () => {
         </p>
       </div>
       <div>
-        <MainHeading text="症状別医療部門ガイド" heading="2" />
+        <MainHeading text="診療科別ガイド" heading="2" />
         <div id="internal-medicine" className="mt-10 flex flex-col gap-2">
           <h2 className="text-2xl">内科</h2>
           <div className="flex gap-2">
@@ -606,7 +606,7 @@ const ContentJP = () => {
             />
             <p className="font-thin">
               <span className="font-bold">対応: </span>{" "}
-              内科では、一般的な風邪やインフルエンザ、胃腸のトラブル、
+              一般的な風邪やインフルエンザ、胃腸のトラブル、
               慢性疾患など幅広い症状に対応します。予防接種も行っています。
             </p>
           </div>
@@ -637,7 +637,7 @@ const ContentJP = () => {
             />
             <p className="font-thin">
               <span className="font-bold">対応: </span>{" "}
-              外科では、外傷や手術が必要な病状に対応します。緊急処置や
+              外傷や手術が必要な病状に対応します。緊急処置や
               術後のケアも含まれます。
             </p>
           </div>
@@ -667,7 +667,7 @@ const ContentJP = () => {
             />
             <p className="font-thin">
               <span className="font-bold">対応: </span>{" "}
-              整形外科は、骨や関節、筋肉のトラブルに特化しています。診
+              骨や関節、筋肉のトラブルに特化しています。診
               断から治療、リハビリまで包括的にサポートします。
             </p>
           </div>
@@ -683,7 +683,7 @@ const ContentJP = () => {
               height={25}
             />
             <p className="font-thin">
-              <span className="font-bold">症状: </span> など。
+              <span className="font-bold">症状: </span>
               手術後の回復、慢性的な腰痛や肩こり、スポーツ後のリハビリ
             </p>
           </div>
@@ -697,7 +697,7 @@ const ContentJP = () => {
             />
             <p className="font-thin">
               <span className="font-bold">対応: </span>{" "}
-              リハビリテーション科では、身体機能の回復や改善を目指し、
+              身体機能の回復や改善を目指し、
               個々の状態に応じたリハビリプランを提供します。
             </p>
           </div>
@@ -727,7 +727,7 @@ const ContentJP = () => {
             />
             <p className="font-thin">
               <span className="font-bold">対応: </span>{" "}
-              眼科では、視力検査や目の健康診断、目の病気の治療を行いま す。
+              視力検査や目の健康診断、目の病気の治療を行いま す。
             </p>
           </div>
         </div>
@@ -756,7 +756,7 @@ const ContentJP = () => {
             />
             <p className="font-thin">
               <span className="font-bold">対応: </span>{" "}
-              耳鼻咽喉科は、耳、鼻、のどのトラブルに特化しています。アレルギーの診断や治療も行って
+              耳、鼻、のどのトラブルに特化しています。アレルギーの診断や治療も行って
               います。
             </p>
           </div>
@@ -788,12 +788,12 @@ const ContentJP = () => {
             <div>
               <p className="font-thin">
                 <span className="font-bold">対応: </span>{" "}
-                救急科では、生命の危険がある緊急事態に迅速に対応します。24時間体制で、初期治療から専
+                生命の危険がある緊急事態に迅速に対応します。24時間体制で、初期治療から専
                 門医への引き継ぎまでを行います。
               </p>
               <p className="font-thin">
                 <span className="font-thin text-[#FF4E4E]">注意: </span>{" "}
-                土救急外来では一時的な応急処置を実施することも多いため、翌日あるいは日中などに専門医
+                救急外来では一時的な応急処置を実施することも多いため、翌日あるいは日中などに専門医
                 による再診をしていただく場合もございます。
               </p>
             </div>
@@ -810,9 +810,8 @@ const ContentJP = () => {
               height={25}
             />
             <p className="font-thin">
-              <span className="font-bold">症状: </span> Regular health checks,
-              early disease detection, health status confirmation. Also
-              conducted for license renewals or work permit renewals.
+              <span className="font-bold">症状: </span>{" "}
+              定期的な健康チェック、病気の早期発見、健康状態の確認。免許の更新や、労働許可証の更新のための健康診断も行います。
             </p>
           </div>
           <div className="flex gap-2">
@@ -824,15 +823,13 @@ const ContentJP = () => {
               height={25}
             />
             <p className="font-thin">
-              <span className="font-bold">対応: </span> Health check-ups involve
-              comprehensive health evaluations through blood tests, urine tests,
-              chest X-rays, ECGs, etc. Referrals to specialists are made as
-              needed.
+              <span className="font-bold">対応: </span>{" "}
+              血液検査や尿検査、胸部レントゲン、心電図などを通じて総合的に健康状態を評価します。必要に応じて各専門医への紹介も行います。
             </p>
           </div>
         </div>
         <div id="other-information" className="mt-10 flex flex-col gap-2">
-          <h2 className="text-2xl">その他の情報</h2>
+          <h2 className="text-2xl">その他</h2>
           <div className="flex gap-2">
             <Image
               className="object-contain object-top"
@@ -841,10 +838,8 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
-              <span className="font-bold">症状: </span> Regular health checks,
-              early disease detection, health status confirmation. Also
-              conducted for license renewals or work permit renewals.
+            <p className="font-thin text-red-800">
+              専門医の医師が不在、もしくは診察日でない場合は、まずは内科や外科等の対応可能な意思にて診察と処方を行います。その後、必要に応じて専門医の予約をお取りしています。
             </p>
           </div>
           <div className="flex gap-2">
@@ -855,11 +850,20 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
-              <span className="font-bold">対応: </span> Health check-ups involve
-              comprehensive health evaluations through blood tests, urine tests,
-              chest X-rays, ECGs, etc. Referrals to specialists are made as
-              needed.
+            <p className="font-thin text-red-800">
+              各専門診療科の有無、治療内容については各医療機関にて異なりますため、
+            </p>
+          </div>
+          <div className="flex gap-2">
+            <Image
+              className="object-contain object-top"
+              src={"/img/jmd/department-guide/icon-guide.png"}
+              alt="Internall Medicine"
+              width={25}
+              height={25}
+            />
+            <p className="font-thin text-red-800">
+              詳しくは各国のジャパニーズメディカルデスク（JMD）へお問い合わせください。
             </p>
           </div>
         </div>

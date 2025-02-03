@@ -13,7 +13,7 @@ import AddressModal from "@/components/website/organism/AddressModal";
 import { MdMail } from "react-icons/md";
 import { IoIosCall, IoIosGlobe } from "react-icons/io";
 import SwiperSquare from "@/components/website/molecule/SwiperSquare";
-import { SiGooglemaps } from "react-icons/si";
+import { SiGooglemaps, SiLine } from "react-icons/si";
 
 const title = {
   th: "ประเทศลาว",
@@ -487,6 +487,12 @@ export default function Work({ params }: { params: { lng: string } }) {
               />
               {content}
             </div>
+            <a
+              href="https://line.me/ti/p/~@197nlufp"
+              className="fixed right-10 bottom-22 w-20 h-20 border bg-[#3562AE] flex items-center justify-center rounded-full p-2 cursor-pointer text-white z-10 hover:scale-105 transition-all"
+            >
+              <SiLine size={30} />
+            </a>
           </div>
         </div>
       </div>

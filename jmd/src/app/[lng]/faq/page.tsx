@@ -10,7 +10,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Ans = ({ text }: any) => {
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm">
+    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 text-white rounded-lg">
       <p>{text}</p>
     </div>
   );

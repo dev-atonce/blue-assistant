@@ -23,3 +23,9 @@ body {
 .ql-editor img {
   margin: auto;
 }
+
+.ant-dropdown-menu-item:hover {
+  background-color: #3562ae !important;
+  color: white !important;
+  font-weight: bold !important;
+}

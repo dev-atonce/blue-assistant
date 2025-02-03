@@ -1,5 +1,5 @@
 "use client";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { PageSettingContext } from "@/contexts/PageSettingContext";
 import Link from "next/link";
 
@@ -7,9 +7,11 @@ import { FaPhone } from "react-icons/fa6";
 import Image from "next/image";
 import { MdEmail, MdOutlineMailOutline } from "react-icons/md";
 import BackToTopBtn from "../atom/button/BackToTopBtn";
+import Modal from "./Modal";
 
 export default function Footer({ contact, colors, owner, lng }: any) {
   const { primaryColor }: any = useContext(PageSettingContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -73,13 +75,27 @@ export default function Footer({ contact, colors, owner, lng }: any) {
               </div>
             </div>
             <div className="col-span-6 flex justify-start xl:justify-end">
-              <a
-                className=""
-                href="https://www.google.com/maps/place/Blue+Assistance+Company+Limited/data=!4m2!3m1!1s0x0:0x2cd7d65872b3b0bf?sa=X&ved=1t:2428&ictx=111"
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="flex flex-col items-start"
+                // href="https://www.google.com/maps/place/Blue+Assistance+Company+Limited/data=!4m2!3m1!1s0x0:0x2cd7d65872b3b0bf?sa=X&ved=1t:2428&ictx=111"
               >
                 <strong className="mb-2 block">Google Map</strong>
                 <img src="/img/image.png" alt="google map" />
-              </a>
+              </button>
+              <Modal
+                // @ts-ignore
+                modalContent={
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.655604628866!2d100.56208869444275!3d13.739288686437572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee366cbf9bf%3A0x2cd7d65872b3b0bf!2sBlue%20Assistance%20Company%20Limited!5e0!3m2!1sen!2sth!4v1738564635514!5m2!1sen!2sth"
+                    width="100%"
+                    height="600"
+                    loading="lazy"
+                  ></iframe>
+                }
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+              />
             </div>
           </div>
         </div>

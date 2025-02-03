@@ -18,7 +18,9 @@ export default function VisaServiceSection({ lng }: any) {
         {
           key: "1",
           label: (
-            <Link href="/visa-workpermit/work-in-thailand#t-1">{s("t-1")}</Link>
+            <Link className="" href="/visa-workpermit/work-in-thailand#t-1">
+              {s("t-1")}
+            </Link>
           ),
         },
         {

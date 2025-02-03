@@ -17,6 +17,8 @@ export default function StrongServiceSection() {
             {s("strong.h3")}
             <br />
             {s("strong.h4")}
+            <br />
+            {s("strong.h5")}
           </p>
           <div className="grid grid-cols-12 gap-y-8 md:gap-2 lg:gap-x-4 mt-20 text-[#0C2B4B]">
             <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">

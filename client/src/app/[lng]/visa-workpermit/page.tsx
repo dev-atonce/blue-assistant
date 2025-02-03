@@ -6,6 +6,7 @@ import Image from "next/image";
 import VisaServiceSection from "@/components/website/layout/VisaServiceSection";
 import ContactSection from "@/components/website/layout/ContactSection";
 import { useTranslations } from "next-intl";
+import AddressSection from "@/components/website/layout/AddressSection";
 
 export default function VisaWorkpermit({
   params,
@@ -116,39 +117,7 @@ export default function VisaWorkpermit({
             </div>
           </div>
         </div>
-        <div className="container py-10 border-b">
-          <div className="">
-            <MainHeading text={h("contact")} heading="2" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-              <div className="col-span-1 text-[#3D3D3D]">
-                <div>
-                  <strong>Address :</strong>
-                  <p className="whitespace-pre-wrap">
-                    No.D 9th Floor, PRIME BUILDING,
-                    <br />
-                    24 Sukhumvit Soi 21(Asoke), Sukhumvit Road,
-                    <br />
-                    Klongtoey-Nua, Wattana, Bangkok 10110, Thailand.
-                  </p>
-                </div>
-                <div>
-                  <strong>Telephone :</strong> +66 (0)2-661-7687~88
-                </div>
-                <div>
-                  <strong>Email : </strong>visa@blue-assistance.co.th
-                </div>
-              </div>
-              <div className="col-span-1">
-                <Image
-                  src={"/img/visa-workpermit/map.png"}
-                  alt=""
-                  width={600}
-                  height={400}
-                ></Image>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AddressSection />
         <ContactSection home={false} />
       </div>
     </>

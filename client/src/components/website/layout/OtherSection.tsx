@@ -6,26 +6,32 @@ export default function OtherSection() {
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-6">
               <h6 className="text-3xl font-bold my-2 text-[#3562AE] text-end">
-                Blue Assistance
+                Blue Ground{" "}
               </h6>
-              <div className="zoom-effect-image">
+              <a
+                href="https://www.blue-ground.com/"
+                className="zoom-effect-image"
+              >
                 <img
-                  src="/img/Rectangle 158.png"
+                  src="/img/link1.jpg"
                   alt="Blue Assistance"
-                  className="w-full"
+                  className="w-full h-[70%] md:h-[50%] object-cover"
                 />
-              </div>
+              </a>
             </div>
             <div className="col-span-12 md:col-span-6">
-              <div className="zoom-effect-image">
+              <a
+                href="https://bluelife-insurance.com/companies/11"
+                className="zoom-effect-image"
+              >
                 <img
-                  src="/img/Rectangle 159.png "
+                  src="/img/link2.jpg"
                   alt="Blue Assistance"
-                  className="w-full"
+                  className="w-full h-[50%] object-cover"
                 />
-              </div>
+              </a>
               <h6 className="text-3xl font-bold my-2 text-[#3562AE]">
-                Blue Assistance
+                Bluelife
               </h6>
             </div>
           </div>
