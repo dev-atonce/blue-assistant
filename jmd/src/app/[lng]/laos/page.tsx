@@ -135,9 +135,7 @@ const ContentEN = () => {
       <div className=" text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
           <div className=" col-span-12 lg:col-span-6  w-full">
-            <SwiperSquare
-              imgs={["/img/laos/3.jpg", "/img/laos/4.jpg", "/img/laos/5.jpg"]}
-            />
+            <SwiperSquare imgs={["/img/laos/3.jpg", "/img/laos/4.jpg"]} />
             {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Alliance+International+Medical+Centre/@17.968486,102.5351399,13z/data=!4m6!3m5!1s0x312469aac499a20d:0x4a29c1153843285e!8m2!3d17.9702924!4d102.5746971!16s%2Fg%2F1txnly2q?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
@@ -356,9 +354,7 @@ const ContentJP = () => {
       <div className=" text-sm ">
         <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
           <div className=" col-span-12 lg:col-span-6  w-full">
-            <SwiperSquare
-              imgs={["/img/laos/3.jpg", "/img/laos/4.jpg", "/img/laos/5.jpg"]}
-            />
+            <SwiperSquare imgs={["/img/laos/3.jpg", "/img/laos/4.jpg"]} />
             {/* <a
               className="rounded-lg shadow-lg"
               href="https://www.google.com/maps/place/Alliance+International+Medical+Centre/@17.968486,102.5351399,13z/data=!4m6!3m5!1s0x312469aac499a20d:0x4a29c1153843285e!8m2!3d17.9702924!4d102.5746971!16s%2Fg%2F1txnly2q?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
@@ -373,7 +369,7 @@ const ContentJP = () => {
             </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
-            <FadeHeading text="AIMC Hospital" heading="2" />
+            <FadeHeading text="AIMC" heading="2" />
             <div className="pb-6">
               <span className="text-lg mb-2 font-semibold">JMD受付時間</span>
               <p>1: 9:00 - 18:00</p>

@@ -141,7 +141,7 @@ const ContentEN = () => {
           <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
             <div className="col-span-12 lg:col-span-6  ">
               <SwiperSquare
-                imgs={["/img/myanmar/mpm.jpg", "/img/myanmar/mpm2.jpg"]}
+                imgs={["/img/myanmar/mpm.jpg", "/img/myanmar/1.jpg"]}
               />
               {/* <a
               className="rounded-lg shadow-lg"
@@ -358,7 +358,7 @@ const ContentEN = () => {
                 imgs={[
                   "/img/myanmar/ar1.jpg",
                   "/img/myanmar/0.jpg",
-                  "/img/myanmar/1.jpg",
+                  "/img/myanmar/mpm2.jpg",
                 ]}
               />
               {/* <a
@@ -687,7 +687,7 @@ const ContentJP = () => {
           <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
             <div className="col-span-12 lg:col-span-6  w-full">
               <SwiperSquare
-                imgs={["/img/myanmar/mpm.jpg", "/img/myanmar/mpm2.jpg"]}
+                imgs={["/img/myanmar/mpm.jpg", "/img/myanmar/1.jpg"]}
               />
               {/* <a
                 className="rounded-lg shadow-lg"
@@ -900,7 +900,7 @@ const ContentJP = () => {
                 imgs={[
                   "/img/myanmar/ar1.jpg",
                   "/img/myanmar/0.jpg",
-                  "/img/myanmar/1.jpg",
+                  "/img/myanmar/mpm2.jpg",
                 ]}
               />
               {/* <a

@@ -137,7 +137,7 @@ const ContentEN = () => {
             </p>
           </Link>
         </div>
-        <p className="text-md font-thin">
+        <p className="text-md ">
           Please note that the availability of each specialty and the scope of
           treatment may vary depending on the medical institution. For more
           details, please contact the Japanese Medical Desk (JMD) in each
@@ -159,7 +159,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Fever, cough, sore
               throat, stomach ache, abdominal pain, fatigue, dizziness, high
               blood pressure, diabetes management, etc.
@@ -173,7 +173,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Internal Medicine deals
               with a wide range of symptoms including common colds, influenza,
               gastrointestinal issues, and chronic diseases. They may also
@@ -192,7 +192,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Cuts, burns,
               fractures, conditions requiring surgery, skin tumors or growths,
               etc.
@@ -206,7 +206,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Surgery department
               handles injuries and conditions requiring surgical intervention.
               This includes emergency procedures and post-operative care.
@@ -223,7 +223,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Joint pain, muscle
               pain, fractures, sprains, sports injuries, rheumatism, etc
             </p>
@@ -236,7 +236,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Orthopedics specializes
               in bone, joint, and muscle issues. They provide comprehensive
               support from diagnosis to treatment and rehabilitation.
@@ -253,7 +253,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Post-surgery
               recovery, chronic back pain or stiff shoulders, sports-related
               rehabilitation, etc.
@@ -267,7 +267,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Rehabilitation
               department aims to restore and improve physical function, offering
               individualized rehab plans.
@@ -284,7 +284,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Vision loss, eye
               pain, blurred vision, conjunctivitis, cataracts, glaucoma, etc.
             </p>
@@ -297,13 +297,13 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Ophthalmology conducts
               eye examinations, eye health checks, and treats eye diseases.
             </p>
           </div>
         </div>
-        <div id="ophthalmology-ent" className="mt-10 flex flex-col gap-2">
+        <div id="otolaryngology-ent" className="mt-10 flex flex-col gap-2">
           <h2 className="text-2xl">Otolaryngology (ENT)</h2>
           <div className="flex gap-2">
             <Image
@@ -313,7 +313,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Tinnitus, hearing
               loss, nasal congestion, sore throat, hay fever, tonsillitis, sleep
               apnea, etc.
@@ -327,7 +327,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> ENT specializes in ear,
               nose, and throat issues. They also diagnose and treat allergies.
             </p>
@@ -343,7 +343,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Sudden injuries or
               accidents, acute chest pain, difficulty breathing, loss of
               consciousness, severe allergic reactions, poisoning, etc.
@@ -358,16 +358,16 @@ const ContentEN = () => {
               height={25}
             />
             <div>
-              <p className="font-thin">
+              <p className="">
                 <span className="font-bold">Care: </span> Emergency Medicine
                 responds quickly to life-threatening situations. They operate
                 24/7, providing initial treatment and referrals to specialists.
               </p>
-              <p className="font-thin">
-                <span className="font-thin text-[#FF4E4E]">Note: </span>{" "}
-                Emergency departments often provide temporary first aid, so you
-                may need to follow up with a specialist the next day or during
-                regular hours.
+              <p className="">
+                <span className=" text-[#FF4E4E]">Note: </span> Emergency
+                departments often provide temporary first aid, so you may need
+                to follow up with a specialist the next day or during regular
+                hours.
               </p>
             </div>
           </div>
@@ -382,7 +382,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Regular health
               checks, early disease detection, health status confirmation. Also
               conducted for license renewals or work permit renewals.
@@ -396,7 +396,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Health check-ups involve
               comprehensive health evaluations through blood tests, urine tests,
               chest X-rays, ECGs, etc. Referrals to specialists are made as
@@ -414,7 +414,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Symptoms: </span> Regular health
               checks, early disease detection, health status confirmation. Also
               conducted for license renewals or work permit renewals.
@@ -428,7 +428,7 @@ const ContentEN = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">Care: </span> Health check-ups involve
               comprehensive health evaluations through blood tests, urine tests,
               chest X-rays, ECGs, etc. Referrals to specialists are made as
@@ -574,7 +574,7 @@ const ContentJP = () => {
             </p>
           </Link>
         </div>
-        <p className="text-md font-thin">
+        <p className="text-md ">
           各専門科の利用可能性や治療範囲は、医療機関によって異なる場合があります。詳細については、各国の日本医療デスク（JMD）にお問い合わせください。
         </p>
       </div>
@@ -590,7 +590,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               発熱、咳、のどの痛み、胃痛、腹痛、疲労感、めまい、高血
               圧、糖尿病の管理など。
@@ -604,7 +604,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               一般的な風邪やインフルエンザ、胃腸のトラブル、
               慢性疾患など幅広い症状に対応します。予防接種も行っています。
@@ -621,7 +621,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               切り傷、やけど、骨折、手術が必要な状態、皮膚の腫瘍やでき
               ものなど。
@@ -635,7 +635,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               外傷や手術が必要な病状に対応します。緊急処置や
               術後のケアも含まれます。
@@ -652,7 +652,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               関節痛、筋肉痛、骨折、捻挫、スポーツ障害、リウマチなど。
             </p>
@@ -665,7 +665,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               骨や関節、筋肉のトラブルに特化しています。診
               断から治療、リハビリまで包括的にサポートします。
@@ -682,7 +682,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>
               手術後の回復、慢性的な腰痛や肩こり、スポーツ後のリハビリ
             </p>
@@ -695,7 +695,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               身体機能の回復や改善を目指し、
               個々の状態に応じたリハビリプランを提供します。
@@ -712,7 +712,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               視力低下、目の痛み、かすみ目、結膜炎、白内障、緑内障な ど。
             </p>
@@ -725,13 +725,13 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               視力検査や目の健康診断、目の病気の治療を行いま す。
             </p>
           </div>
         </div>
-        <div id="ophthalmology-ent" className="mt-10 flex flex-col gap-2">
+        <div id="otolaryngology-ent" className="mt-10 flex flex-col gap-2">
           <h2 className="text-2xl">耳鼻咽喉科</h2>
           <div className="flex gap-2">
             <Image
@@ -741,7 +741,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               耳鳴り、難聴、鼻づまり、のどの痛み、花粉症、扁桃炎など。
             </p>
@@ -754,7 +754,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               耳、鼻、のどのトラブルに特化しています。アレルギーの診断や治療も行って
               います。
@@ -771,7 +771,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               夜間に発症した病気や、急な怪我や事故、急性の胸痛、呼吸困難、意識喪失、重篤なアレルギ
               一反応、中毒など。
@@ -786,13 +786,13 @@ const ContentJP = () => {
               height={25}
             />
             <div>
-              <p className="font-thin">
+              <p className="">
                 <span className="font-bold">対応: </span>{" "}
                 生命の危険がある緊急事態に迅速に対応します。24時間体制で、初期治療から専
                 門医への引き継ぎまでを行います。
               </p>
-              <p className="font-thin">
-                <span className="font-thin text-[#FF4E4E]">注意: </span>{" "}
+              <p className="">
+                <span className=" text-[#FF4E4E]">注意: </span>{" "}
                 救急外来では一時的な応急処置を実施することも多いため、翌日あるいは日中などに専門医
                 による再診をしていただく場合もございます。
               </p>
@@ -809,7 +809,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">症状: </span>{" "}
               定期的な健康チェック、病気の早期発見、健康状態の確認。免許の更新や、労働許可証の更新のための健康診断も行います。
             </p>
@@ -822,7 +822,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin">
+            <p className="">
               <span className="font-bold">対応: </span>{" "}
               血液検査や尿検査、胸部レントゲン、心電図などを通じて総合的に健康状態を評価します。必要に応じて各専門医への紹介も行います。
             </p>
@@ -838,7 +838,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin text-red-800">
+            <p className=" ">
               専門医の医師が不在、もしくは診察日でない場合は、まずは内科や外科等の対応可能な意思にて診察と処方を行います。その後、必要に応じて専門医の予約をお取りしています。
             </p>
           </div>
@@ -850,7 +850,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin text-red-800">
+            <p className=" ">
               各専門診療科の有無、治療内容については各医療機関にて異なりますため、
             </p>
           </div>
@@ -862,7 +862,7 @@ const ContentJP = () => {
               width={25}
               height={25}
             />
-            <p className="font-thin text-red-800">
+            <p className=" ">
               詳しくは各国のジャパニーズメディカルデスク（JMD）へお問い合わせください。
             </p>
           </div>
