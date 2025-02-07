@@ -3,10 +3,12 @@ const { parse } = require("url");
 const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
-const hostname =
-  process.env.NODE_ENV !== "production" ? "localhost" : "jmd.oncewebdesign.com";
 // const hostname =
-//   process.env.NODE_ENV !== "production" ? "localhost" : "blue-assistance.co.th";
+//   process.env.NODE_ENV !== "production" ? "localhost" : "jmd.oncewebdesign.com";
+const hostname =
+  process.env.NODE_ENV !== "production"
+    ? "localhost"
+    : "jmd.blue-assistance.co.th";
 const port = 3000;
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port });
