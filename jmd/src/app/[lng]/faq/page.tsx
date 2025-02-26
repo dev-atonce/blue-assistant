@@ -10,7 +10,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Ans = ({ text }: any) => {
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 text-white rounded-lg">
+    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 font-semibold text-white rounded-lg">
       <p>{text}</p>
     </div>
   );
@@ -100,7 +100,7 @@ const consultItems = {
       key: "3",
       label: <Q text="・緊急で受診したい場合も対応してもらえますか？" />,
       children: (
-        <Ans text="・緊急外来（ER)をご受診の場合も対応しております。場合によってはオンコール（電話通訳）での対応となります。" />
+        <Ans text="・緊急外来 （ER）をご受診の場合も対応しております。場合によってはオンコール（電話通訳）での対応となります。" />
       ),
     },
     {
@@ -274,7 +274,7 @@ const interpretItem = {
       key: "2",
       label: <Q text="・JMD受付時間外の対応はしていただけますか？" />,
       children: (
-        <Ans text="・・対応可能です。時間外はオンコール（お電話）での対応となる場合もございます。お急ぎの場合は各JMDの連絡先までお電話ください。" />
+        <Ans text="・対応可能です。時間外はオンコール（お電話）での対応となる場合もございます。お急ぎの場合は各JMDの連絡先までお電話ください。" />
       ),
     },
     {

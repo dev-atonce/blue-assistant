@@ -61,18 +61,18 @@ export default function ContactSection() {
         <div className="container  mx-auto  py-20 text-slate-800">
           <div className="grid grid-cols-1">
             <h3 className="text-5xl font-bold">
-              <span className="relative text-[#3562AE] py-4">
+              <span className="relative text-[#3562AE] py-4 border-b-4 border-orange-400 w-fit pb-4 ">
                 {h("contact")}
-                <div className="absolute border-b-4 border-orange-300 bottom-0 min-w-32"></div>
+                {/* <div className="absolute border-b-4 border-orange-300 bottom-0 min-w-32"></div> */}
               </span>
             </h3>
           </div>
           <div className="mt-20 grid grid-cols-12 gap-6">
             <div className="hidden lg:block col-span-5">
               <Image
-                src="/img/Rectangle 171.png"
+                src="/img/contact.jpg"
                 alt="blue-assistant"
-                className="w-100"
+                className="h-[70%] object-cover"
                 height={500}
                 width={500}
               />
@@ -81,7 +81,14 @@ export default function ContactSection() {
               className="col-span-12 lg:col-span-7 text-sm md:text-base"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <input {...register("topic")} type="text" name="topic" id="topic" value={'jmd'} hidden />
+              <input
+                {...register("topic")}
+                type="text"
+                name="topic"
+                id="topic"
+                value={"jmd"}
+                hidden
+              />
               <div className="grid-cols-12 grid mb-4">
                 <div className="col-span-12 md:col-span-3 font-bold text-[#3562AE]">
                   {t("topic")}

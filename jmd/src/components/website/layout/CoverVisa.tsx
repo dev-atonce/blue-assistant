@@ -23,13 +23,13 @@ export default function CoverVisa({ pageName, prevPage, lng, home, img }: any) {
       <div
         className={`${
           home ? "bg-[#3462af] text-white" : "bg-slate-200 text-slate-700"
-        } shadow-lg  py-4  sticky top-0 z-40`}
+        } shadow-lg  py-4  sticky top-0 z-40 hidden md:block`}
       >
-        <div className="container h-full flex justify-center items-center gap-2 sm:gap-4 xl:gap-12 text-[8px] md:text-xs lg:text-[16px] font-semibold">
+        <div className="container h-full flex justify-center items-center gap-2 sm:gap-4 xl:gap-12 text-[8px] md:text-xs lg:text-[16px] font-semibold ">
           <Link href={"/#location"}>{t("location")}</Link>
           <Link href={"/#about"}>{t("about-jmd")}</Link>
           <Link href={"/#service"}>{t("service")}</Link>
-          <Link href={"/blog"}>{t("blog")}</Link>
+          <Link href={"/news-activity"}>{t("news")}</Link>
           <Link href={"/#faq"}>{t("faq")}</Link>
           <Link href={"/#contact"}>{t("contact")}</Link>
         </div>

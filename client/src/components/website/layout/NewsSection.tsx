@@ -9,7 +9,7 @@ export default function NewsSection(lng: { lng: string }) {
       <section id="news-activity" className="news-section bg-white">
         <div className="container  mx-auto  py-20">
           <h5 className="text-5xl font-bold text-[#3562AE] text-center mb-10">
-            <span className="border-b-4 border-orange-300 w-auto">
+            <span className="border-b-4 border-orange-400 w-fit pb-4 w-auto">
               {b("blog")}
             </span>
           </h5>

@@ -16,7 +16,7 @@ import { FaPlus } from "react-icons/fa";
 import NewsList from "@/components/website/layout/NewsList";
 const Ans = ({ text }: any) => {
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 text-white rounded-lg">
+    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 text-white font-semibold rounded-lg">
       <p>{text}</p>
     </div>
   );
@@ -148,8 +148,10 @@ export default function Home({ params }: { params: { lng: string } }) {
                 id="location"
                 className="font-bold text-3xl text-center relative flex items-center justify-center mb-14"
               >
-                <div className="mb-4 text-[#3562AE]">{l("h1")}</div>
-                <div className="border-b-4 border-orange-200 w-[100px] absolute bottom-0 mt-4"></div>
+                <div className="mb-4 text-[#3562AE] border-b-4 border-orange-400 w-fit pb-4">
+                  {l("h1")}
+                </div>
+                {/* <div className="border-b-4 border-orange-200 w-[100px] absolute bottom-0 mt-4"></div> */}
               </h2>
             </div>
           </div>

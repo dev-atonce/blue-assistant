@@ -91,14 +91,14 @@ const ContentJP = () => {
               <p>
                 オーバーステイ（不法滞在）をした外国人には、タイ政府が罰金及び国外退去、再入国不可等の罰則が与えられます。
                 <br />
-                以下2016年3月20日、政令となります。（在タイ日本大使館ウェッブ情報より）
+                以下2016年3月20日、政令となります。（在京タイ大使館Web情報より）
                 <br />
                 <a
                   className="text-blue-700"
                   target="_blank"
-                  href="https://www.th.emb-japan.go.jp/jp/news/160226.html"
+                  href="https://site.thaiembassy.jp/jp/news/consular/4575/?sphrase_id=4517320"
                 >
-                  https://www.th.emb-japan.go.jp/jp/news/160226.htm
+                  https://site.thaiembassy.jp/jp/news/consular/4575/?sphrase_id=4517320
                 </a>
               </p>
 

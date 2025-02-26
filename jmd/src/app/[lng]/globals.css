@@ -29,3 +29,14 @@ body {
   color: white !important;
   font-weight: bold !important;
 }
+
+/* offset */
+
+div:target {
+  padding-top: 50px; /*height of your navbar*/
+  margin-top: -50px;
+}
+
+.ant-image-preview-wrap {
+  background-color: white !important;
+}

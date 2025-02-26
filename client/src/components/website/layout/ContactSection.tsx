@@ -64,23 +64,45 @@ export default function ContactSection({ home }: ContactProps) {
       <div id="contact" className="bg-[#fafafa] text-[#333333]">
         <div className="container  mx-auto  py-20 text-slate-800">
           <div className="grid grid-cols-1">
-            <h3 className="text-5xl font-bold">
+            <h3 className="text-5xl font-bold border-b-4 border-orange-400 w-fit pb-4">
               <span className="relative text-[#3562AE] py-4">
                 {h("contact")}
-                <div className="absolute border-b-4 border-orange-300 bottom-0 min-w-32"></div>
               </span>
             </h3>
           </div>
           <div className="mt-20 grid grid-cols-12 gap-6">
-            <div className="hidden lg:block col-span-5">
+            <div className="lg:col-span-5 col-span-12">
               <Image
-                src="/img/Rectangle 171.png"
+                src="/img/contact.jpg"
                 alt="blue-assistant"
-                className="w-100"
+                className="h-[50%] object-cover hidden lg:block"
                 height={500}
                 width={500}
               />
+              <div className="py-4 grid grid-cols-3 gap-y-2">
+                <p className="col-span-3">
+                  弊社へのお問い合わせ・ご質問・お見積の依頼などは下記のメールアドレスよりお問い合わせください。お問い合わせ内容確認後、ご連絡させて頂きます。
+                  <br />
+                  どうぞご気軽にご連絡ください。
+                  <br />
+                  営業日の関係上、ご返信が遅れる場合がございます。ご了承ください。
+                </p>
+                <div className="font-semibold">Email : </div>
+                <a
+                  href="mailto:visa@blue-assistance.co.th"
+                  className="col-span-2"
+                >
+                  visa@blue-assistance.co.th
+                </a>
+                <div className="font-semibold">Tel : </div>
+                <div className="col-span-2">02-661-7687~88</div>
+                <div className="font-semibold">日本人担当 :</div>
+                <div className="col-span-2">大森(おおもり)</div>
+                <div className="font-semibold">タイ人担当 : </div>
+                <div className="col-span-2">Yim</div>
+              </div>
             </div>
+
             <form
               className="col-span-12 lg:col-span-7 text-sm md:text-base"
               onSubmit={handleSubmit(onSubmit)}
@@ -110,7 +132,7 @@ export default function ContactSection({ home }: ContactProps) {
                             {...register("service", { required: true })}
                             type="radio"
                             id="type2"
-                            value="ジャパニーズメディカルデスク (JMD) 事業 - タイ"
+                            value="ジャパニーズメディカルデスク (JMD) - タイ"
                             className="me-2"
                           />
                           {t("option.2")}
@@ -122,7 +144,7 @@ export default function ContactSection({ home }: ContactProps) {
                             {...register("service", { required: true })}
                             type="radio"
                             id="type3"
-                            value="ジャパニーズメディカルデスク (JMD) 事業 - ラオス"
+                            value="ジャパニーズメディカルデスク (JMD) - ラオス"
                             className="me-2"
                           />
                           {t("option.3")}
@@ -134,7 +156,7 @@ export default function ContactSection({ home }: ContactProps) {
                             {...register("service", { required: true })}
                             type="radio"
                             id="type4"
-                            value="ジャパニーズメディカルデスク (JMD) 事業 - ミャンマー"
+                            value="ジャパニーズメディカルデスク (JMD) - ミャンマー"
                             className="me-2"
                           />
                           {t("option.4")}
@@ -146,7 +168,7 @@ export default function ContactSection({ home }: ContactProps) {
                             {...register("service", { required: true })}
                             type="radio"
                             id="type5"
-                            value="ビザ＆ワークパーミットコンサルティング事業"
+                            value="ビザ＆ワークパーミット"
                             className="me-2"
                           />
                           {t("option.5")}

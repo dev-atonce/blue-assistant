@@ -24,8 +24,8 @@ export default function StrongServiceSection() {
             <div className="col-span-12 md:col-span-4 bg-white p-6 rounded-2xl border">
               <div className="flex justify-center h-32">
                 <img
-                  src="/img/our-business/Group 229.png"
-                  alt="19年の実績と経験"
+                  src="/img/our-business/20years.png"
+                  alt="20年の実績と経験"
                 />
               </div>
               <h6 className="mt-6 text-center">

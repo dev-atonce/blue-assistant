@@ -49,23 +49,23 @@ export default function JmdServiceSection({ lng }: any) {
           <Link
             href={i?.link}
             key={key}
-            className="group hover:shadow-3 hover:bg-[#3462af] hover:text-white hover:md:translate-y-[-20px] transition-all py-6 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-xl flex flex-col justify-center items-center gap-5"
+            className="group hover:shadow-3   hover:md:translate-y-[-20px] transition-all p-4 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-xl flex flex-col justify-center items-center gap-5"
           >
             <Image
               src={i?.image}
               alt=""
-              width={180}
-              height={180}
-              className="group-hover:hidden"
+              width={200}
+              height={200}
+              className="w-full h-full"
             ></Image>
-            <Image
+            {/* <Image
               src={i?.image2}
               alt=""
               width={180}
               height={180}
               className="group-hover:block hidden"
-            ></Image>
-            <h3 className="font-semibold">{i[`title${lang}`]}</h3>
+            ></Image> */}
+            {/* <h3 className="font-semibold">{i[`title${lang}`]}</h3> */}
           </Link>
         );
       })}

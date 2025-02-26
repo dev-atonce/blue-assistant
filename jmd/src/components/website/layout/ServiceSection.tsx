@@ -61,7 +61,7 @@ export default async function ServiceSection({ data, lng }: any) {
       descriptionEN:
         " medical assistance in Thailand, Myanmar, and Laos. Our Japanese interpreters assist with cashless medical consultations locally.",
       id: "jmd",
-      image: "/img/our-business/Rectangle 162.png",
+      image: "/img/our-business/JMD_logo.png",
       // to do
       // link: "https://jmd.blue-assistance.co.th",
       link: "https://jmd.oncewebdesign.com",

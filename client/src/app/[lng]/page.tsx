@@ -31,11 +31,17 @@ export default function Home({ params }: { params: { lng: string } }) {
             >
               <div>
                 <p className="text-white font-bold text-2xl xl:text-6xl drop-shadow-md py-4">
-                  Always By Your Side
+                  医療アシスタンス、
                 </p>
-                <h1 className="text-white font-bold text-2xl xl:text-4xl drop-shadow-md">
+                <p className="text-white font-bold text-2xl xl:text-6xl drop-shadow-md py-4">
+                  ビザ・ワークパーミットのお手伝いは
+                </p>
+                <p className="text-white font-bold text-2xl xl:text-6xl drop-shadow-md py-4">
+                  ブルーアシスタンスまで
+                </p>
+                {/* <h1 className="text-white font-bold text-2xl xl:text-4xl drop-shadow-md">
                   Blue Assistance Co., Ltd.
-                </h1>
+                </h1> */}
               </div>
             </div>
           </div>
@@ -53,8 +59,10 @@ export default function Home({ params }: { params: { lng: string } }) {
                 id="our-business"
                 className="font-bold text-5xl text-center relative flex items-center justify-center mb-14"
               >
-                <div className="mb-4 text-[#3562AE]">{h("our-business")}</div>
-                <div className="border-b-4 border-orange-200 w-[100px] absolute bottom-0 mt-4"></div>
+                <div className="mb-4 text-[#3562AE] border-b-4 border-orange-400 w-fit pb-4">
+                  {h("our-business")}
+                </div>
+                {/* <div className="border-b-4 border-orange-200 w-[100px] absolute bottom-0 mt-4"></div> */}
               </h3>
             </div>
           </div>
