@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Logo({ color, img }: any) {
   return (
     <div className="">
-      <Link href="/" className="_links">
+      <a href="https://blue-assistance.co.th/" className="_links">
         {/* {img && ( */}
         <img
           src={
@@ -17,7 +17,7 @@ export function Logo({ color, img }: any) {
           height={100}
           // quality={100}
         />
-      </Link>
+      </a>
     </div>
   );
 }

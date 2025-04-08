@@ -46,9 +46,9 @@ export default async function ServiceSection({ data, lng }: any) {
       descriptionEN:
         "Medical assistance services in Thailand and Indochina, we provide payment agency services to medical institutions and support for domestic and international medical transportation.",
 
-      id: "customer-support",
+      id: "medical-assistance",
       image: "/img/our-business/Group 280.png",
-      modal: modalContent,
+      // modal: modalContent,
     },
     {
       serviceNameTH: "ศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD)",

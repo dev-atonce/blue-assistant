@@ -56,13 +56,13 @@ export default function SocialMedia({ language }: any) {
         >
           <SiLine size={25} />
         </a> */}
-        <a
+        {/* <a
           href={`mailto:medical@blue-assistance.co.th`}
           target="_blank"
           className={` hover:text-white bg-white border transition-all ease-in-out border-[#dcdcdc] drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
         >
           <MdMail size={25} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

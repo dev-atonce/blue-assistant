@@ -22,7 +22,7 @@ export default function CoverVisa({ pageName, prevPage, lng }: any) {
                 className="text-[8px] sm:text-base lg:text-xl 2xl:text-2xl drop-shadow-xl "
                 style={{ textShadow: "1px 1px white" }}
               >
-                タイ国内でのワークパーミット（労働許可証）&ビザのことは弊社にお任せください！
+                タイ国内でのビザ＆労働許可証のことは弊社にお任せください ！
               </span>
             </div>
           </div>
@@ -36,8 +36,8 @@ export default function CoverVisa({ pageName, prevPage, lng }: any) {
           ></Image>
         </div>
       </div>
-      <div className="shadow-lg bg-[#3462af] py-4 text-white sticky top-0 z-50">
-        <div className="container h-full flex justify-center items-center gap-2 sm:gap-4 xl:gap-12 text-[8px] md:text-xs lg:text-[16px] font-semibold">
+      <div className="shadow-lg bg-[#3462af] py-4 text-white sticky top-0 z-50 hidden md:block">
+        <div className="container h-full hidden md:flex justify-center items-center gap-2 sm:gap-8 xl:gap-16 text-[8px] md:text-xs lg:text-[16px] font-semibold ">
           <Link href={"/visa-workpermit"}>{t("visa-work")}</Link>
           <Link href={"/visa-workpermit#service"}>{t("service")}</Link>
           <Link href={"/visa-workpermit#info"}>{t("help-info")}</Link>

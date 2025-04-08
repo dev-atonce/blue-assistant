@@ -25,7 +25,7 @@ export default function SwiperSquare({ imgs }: any) {
               alt={"hospital"}
               width={500}
               height={500}
-              className=" object-cover  w-full aspect-[1/1]"
+              className=" object-cover aspect-[3/2] object-top"
             />
           </div>
         </SwiperSlide>

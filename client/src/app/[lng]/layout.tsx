@@ -2,7 +2,13 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Header from "@/components/website/layout/Header";
 import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
-import { Noto_Sans, Noto_Sans_JP, Roboto, Kanit } from "next/font/google";
+import {
+  Noto_Sans,
+  Noto_Sans_JP,
+  Roboto,
+  Kanit,
+  Zen_Old_Mincho,
+} from "next/font/google";
 import { ConfigProvider } from "antd";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Favicon from "../[lng]/favicon.ico";
@@ -12,6 +18,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import CookiePopUp from "@/components/website/layout/CookiePopUp";
 
 const noto = Noto_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -32,6 +39,14 @@ const kanit = Kanit({
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
+});
+
+const mincho = Zen_Old_Mincho({
+  weight: ["400", "500", "600", "700", "900"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mincho",
 });
 
 const owner = {
@@ -116,18 +131,19 @@ export default async function RootLayout({
       >
         <PageSettingProvider>
           <body
-            className={
+            className={`${
               lng == "jp"
                 ? `${notoJP.className} `
                 : lng == "th"
                 ? `${kanit.className}`
                 : `${noto.className} `
-            }
+            }, ${mincho.variable}`}
           >
             <NextIntlClientProvider messages={messages}>
               <Header colors={colors} owner={owner} lng={lng} />
               {children}
               <Footer colors={colors} owner={owner} lng={lng} />
+              <CookiePopUp />
             </NextIntlClientProvider>
           </body>
           <GoogleTagManager gtmId="GTM-MFH3RWL8" />

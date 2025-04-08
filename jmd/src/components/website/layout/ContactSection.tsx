@@ -60,7 +60,7 @@ export default function ContactSection() {
       <div id="contact" className="bg-[#fafafa] text-[#333333]">
         <div className="container  mx-auto  py-20 text-slate-800">
           <div className="grid grid-cols-1">
-            <h3 className="text-5xl font-bold">
+            <h3 className="text-4xl font-bold">
               <span className="relative text-[#3562AE] py-4 border-b-4 border-orange-400 w-fit pb-4 ">
                 {h("contact")}
                 {/* <div className="absolute border-b-4 border-orange-300 bottom-0 min-w-32"></div> */}

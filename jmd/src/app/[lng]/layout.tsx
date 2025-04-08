@@ -12,6 +12,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import CookiePopUp from "@/components/website/layout/CookiePopUp";
+
 
 const noto = Noto_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -131,6 +133,7 @@ export default async function RootLayout({
             </NextIntlClientProvider>
           </body>
           <GoogleTagManager gtmId="GTM-NFJTH8PW" />
+          <CookiePopUp />
         </PageSettingProvider>
       </ConfigProvider>
     </html>

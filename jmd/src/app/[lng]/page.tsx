@@ -16,7 +16,7 @@ import { FaPlus } from "react-icons/fa";
 import NewsList from "@/components/website/layout/NewsList";
 const Ans = ({ text }: any) => {
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 text-white font-semibold rounded-lg">
+    <div className="flex justify-between items-center text-xs md:text-sm bg-[#3562AE]  p-4 text-white font-semibold rounded-lg">
       <p>{text}</p>
     </div>
   );
@@ -64,7 +64,7 @@ const consultItems = {
   jp: [
     {
       key: "1",
-      label: <Q text="・はじめて病院を受診する場合" />,
+      label: <Q text="・はじめて病院を受診する場合は？" />,
       children: (
         <Ans
           text="・ジャパニーズメディカルデスク（JMD)の常駐している病院を受診する際は、

@@ -22,114 +22,115 @@ const title = {
 
 const ContentEN = () => {
   return (
-    <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
-      <FadeHeading text="Kasemrad Hospital Prachinburi" heading="2" />
+    <ContentJP />
+    // <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
+    //   <FadeHeading text="Kasemrad Hospital Prachinburi" heading="2" />
 
-      <div className="detail-sty text-sm ">
-        <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
-          <div className="col-span-12 lg:col-span-6  w-full">
-            <SwiperSquare
-              imgs={["/img/thailand/1.jpg", "/img/thailand/2.jpg"]}
-            />
+    //   <div className="detail-sty text-sm ">
+    //     <div className="w-full grid grid-cols-12 gap-y-10 lg:gap-x-10 py-6 bg ">
+    //       <div className="col-span-12 lg:col-span-6  w-full">
+    //         <SwiperSquare
+    //           imgs={["/img/thailand/1.jpg", "/img/thailand/2.jpg"]}
+    //         />
 
-            {/* <a
-              className="rounded-lg shadow-lg"
-              href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
-            >
-              <Image
-                width="400"
-                height="400"
-                alt="hospital"
-                src="/img/jmd/pra_hos.png"
-                className="object-cover w-full rounded-lg shadow-lg"
-              />
-            </a> */}
-          </div>
-          <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
-            <div className="pb-6">
-              <span className="text-lg mb-2 font-semibold">
-                JMD Reception Hours
-              </span>
-              <p>Mon- Fri: 8:00 - 20:00</p>
-              <p>Sat・Sun・Public Holidays :　8:00 - 17:00</p>
-            </div>
-            <div className="pb-6">
-              <span className="text-lg mb-2 font-semibold">
-                Dedicated Line for JMD
-              </span>
-              <div className="flex gap-2 items-center">
-                <div
-                  className={` hover:text-white bg-white border border-blue-700 transition-all ease-in-out  drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-                >
-                  <IoIosCall size={25} />
-                </div>
-                <div>
-                  <div>+66-(0) 93-124-9496 北村</div>
-                  <div>+66-(0) 63-197-5989 ビア（BEER）</div>
-                </div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <div
-                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-                >
-                  <MdMail size={25} />
-                </div>
-                <div>
-                  <div>jmd-304@blue-assistance.co.th</div>
-                </div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <div
-                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-                >
-                  <FaHospital size={25} />
-                </div>
-                <div>
-                  <div>037 627 000</div>
-                </div>
-              </div>
-            </div>
-            <div className="grid lg:grid-cols-12 gap-4">
-              <div className="col-span-4 font-bold">Hospital info :</div>
-              <div className="col-span-8">
-                カセムラート病院プラチンブリ　Kasemrad Hospital Prachinburi
-              </div>
-              <div className="col-span-4 font-bold">Address：</div>
-              <div className="col-span-8">
-                766 Moo 10 Tha Tum, Si maha Phot, Prachinburi 25140 Thailand
-              </div>
-              <div className="col-span-4 font-bold">Reception Hours： </div>
-              <div className="col-span-8">
-                <p>General out-patient：8AM-8PM</p>
-                <p>Night out-patient：8PM - 8AM</p>
-                <p>Emergency Center: 24-hour Service</p>
-              </div>
-            </div>
-            <div className="flex justify-start gap-1 mt-10">
-              <a
-                href="https://line.me/ti/p/~@jmd-304"
-                className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
-              >
-                <FaLine size={25} /> ADD LINE
-              </a>
-              <a
-                href="https://www.rajthanee.com/en/"
-                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
-              >
-                <IoIosGlobe size={25} /> WEBSITE
-              </a>
-              <a
-                href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
-                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
-              >
-                <SiGooglemaps size={25} />
-                GOOGLE MAP
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    //         {/* <a
+    //           className="rounded-lg shadow-lg"
+    //           href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+    //         >
+    //           <Image
+    //             width="400"
+    //             height="400"
+    //             alt="hospital"
+    //             src="/img/jmd/pra_hos.png"
+    //             className="object-cover w-full rounded-lg shadow-lg"
+    //           />
+    //         </a> */}
+    //       </div>
+    //       <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
+    //         <div className="pb-6">
+    //           <span className="text-lg mb-2 font-semibold">
+    //             JMD Reception Hours
+    //           </span>
+    //           <p>Mon- Fri: 8:00 - 20:00</p>
+    //           <p>Sat・Sun・Public Holidays :　8:00 - 17:00</p>
+    //         </div>
+    //         <div className="pb-6">
+    //           <span className="text-lg mb-2 font-semibold">
+    //             Dedicated Line for JMD
+    //           </span>
+    //           <div className="flex gap-2 items-center">
+    //             <div
+    //               className={` hover:text-white bg-white border border-blue-700 transition-all ease-in-out  drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+    //             >
+    //               <IoIosCall size={25} />
+    //             </div>
+    //             <div>
+    //               <div>+66-(0) 93-124-9496 北村</div>
+    //               <div>+66-(0) 63-197-5989 ビア（BEER）</div>
+    //             </div>
+    //           </div>
+    //           <div className="flex gap-2 items-center">
+    //             <div
+    //               className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+    //             >
+    //               <MdMail size={25} />
+    //             </div>
+    //             <div>
+    //               <div>jmd-304@blue-assistance.co.th</div>
+    //             </div>
+    //           </div>
+    //           <div className="flex gap-2 items-center">
+    //             <div
+    //               className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
+    //             >
+    //               <FaHospital size={25} />
+    //             </div>
+    //             <div>
+    //               <div>037 627 000</div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //         <div className="grid lg:grid-cols-12 gap-4">
+    //           <div className="col-span-4 font-bold">Hospital info :</div>
+    //           <div className="col-span-8">
+    //             カセムラート病院プラチンブリ　Kasemrad Hospital Prachinburi
+    //           </div>
+    //           <div className="col-span-4 font-bold">Address：</div>
+    //           <div className="col-span-8">
+    //             766 Moo 10 Tha Tum, Si maha Phot, Prachinburi 25140 Thailand
+    //           </div>
+    //           <div className="col-span-4 font-bold">Reception Hours： </div>
+    //           <div className="col-span-8">
+    //             <p>General out-patient：8:00-20:00</p>
+    //             <p>Night out-patient：20:00-8:00</p>
+    //             <p>Emergency Center: 24-hour Service</p>
+    //           </div>
+    //         </div>
+    //         <div className="flex justify-start gap-1 mt-10">
+    //           <a
+    //             href="https://line.me/ti/p/~@jmd-304"
+    //             className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+    //           >
+    //             <FaLine size={25} /> ADD LINE
+    //           </a>
+    //           <a
+    //             href="https://www.rajthanee.com/en/"
+    //             className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+    //           >
+    //             <IoIosGlobe size={25} /> WEBSITE
+    //           </a>
+    //           <a
+    //             href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+    //             className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+    //           >
+    //             <SiGooglemaps size={25} />
+    //             GOOGLE MAP
+    //           </a>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 const ContentJP = () => {
@@ -158,10 +159,12 @@ const ContentJP = () => {
             </a> */}
           </div>
           <div className="text-blue-900 w-full col-span-12 lg:col-span-6">
-            <div className="pb-6">
-              <span className="text-lg mb-2 font-semibold">JMD受付時間</span>
-              <p>月～金: 8:00 - 20:00</p>
-              <p>土・日・祝日 :　8:00 - 17:00</p>
+            <div className="pb-6 ">
+              <span className="text-lg mb-2 font-semibold col-span-6">
+                JMD受付時間
+              </span>
+              <p>月～金 &nbsp;&nbsp;: 8:00 - 20:00</p>
+              <p>土日祝&nbsp;&nbsp;&nbsp;: 8:00 - 17:00</p>
             </div>
             <div className="pb-6">
               <span className="text-lg mb-2 font-semibold">JMD専用ライン</span>
@@ -186,16 +189,14 @@ const ContentJP = () => {
                   <div>jmd-304@blue-assistance.co.th</div>
                 </div>
               </div>
-              <div className="flex gap-2 items-center">
-                <div
-                  className={` hover:text-white bg-white border  border-blue-700 transition-all ease-in-out drop-shadow-[0_0_2px_rgba(0,0,0,0.125)] focus:outline-none  hover:bg-[#3d5daa] focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm p-2 w-10 h-10 me-2 mb-2   flex items-center justify-center`}
-                >
-                  <FaHospital size={25} />
-                </div>
-                <div>
-                  <div>037 627 000</div>
-                </div>
-              </div>
+            </div>
+            <div className="flex   py-6">
+              <a
+                href="https://line.me/ti/p/~@jmd-304"
+                className="flex gap-1  items-center bg-[#3562AE] text-white py-2 px-2 rounded-lg hover:bg-[#FDBD59]  justify-center"
+              >
+                <FaLine size={25} /> ADD LINE
+              </a>
             </div>
             <div className="grid lg:grid-cols-12 gap-4">
               <div className="col-span-4 font-bold">病院情報：</div>
@@ -206,29 +207,28 @@ const ContentJP = () => {
               <div className="col-span-8">
                 766 Moo 10 Tha Tum, Si maha Phot, Prachinburi 25140 Thailand
               </div>
+
               <div className="col-span-4 font-bold">受付時間： </div>
               <div className="col-span-8">
-                <p>一般外来：8AM-8PM</p>
-                <p>夜間外来：8PM - 8AM</p>
+                <p>一般外来：8:00-20:00</p>
+                <p>夜間外来：20:00-8:00</p>
                 <p>救急センターは24時間体制</p>
+              </div>
+              <div className={`col-span-4 font-bold`}>病院の電話番号</div>
+              <div className="col-span-8">
+                <div>+66(0)37-627-000</div>
               </div>
             </div>
             <div className="flex justify-start gap-1 mt-10">
               <a
-                href="https://line.me/ti/p/~@jmd-304"
-                className="flex gap-2  items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
-              >
-                <FaLine size={25} /> ADD LINE
-              </a>
-              <a
-                href="https://www.rajthanee.com/en/"
-                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+                href="https://www.kasemrad.co.th/prachinburi/en/site/home"
+                className="flex gap-1 items-center bg-[#3562AE] text-white py-1 px-1 rounded-lg hover:bg-[#FDBD59]"
               >
                 <IoIosGlobe size={25} /> WEBSITE
               </a>
               <a
                 href="https://www.google.com/maps/place/Kasemrad+Hospital+Prachinburi/@13.8964829,101.5792155,14z/data=!4m6!3m5!1s0x311cf146d1dea03b:0x4a6704d4d9906ac0!8m2!3d13.8990979!4d101.5957656!16s%2Fg%2F11bzr6p83g?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
-                className="flex gap-2 items-center bg-[#3562AE] text-white py-2 px-4 rounded-lg hover:bg-[#FDBD59]"
+                className="flex gap-1 items-center bg-[#3562AE] text-white py-1 px-1 rounded-lg hover:bg-[#FDBD59]"
               >
                 <SiGooglemaps size={25} />
                 GOOGLE MAP
@@ -241,7 +241,7 @@ const ContentJP = () => {
   );
 };
 const ContentTH = () => {
-  return <ContentEN />;
+  return <ContentJP />;
 };
 export default function Work({ params }: { params: { lng: string } }) {
   const lang = params?.lng;

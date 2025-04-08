@@ -117,7 +117,8 @@ export default function VisaWorkpermit({
             </div>
           </div>
         </div>
-        <AddressSection />
+        {/* <AddressSection /> */}
+        {/* @ts-ignore */}
         <ContactSection home={false} />
       </div>
     </>

@@ -2,7 +2,7 @@
   "name": "blue-assistant",
   "version": "0.1.0",
   "private": true,
-  "homepage": "jmd.oncewebdesign.com/",
+  "homepage": "jmd.blue-assistance.co.th/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

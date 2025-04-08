@@ -173,3 +173,8 @@
 2025-01-29 03:40:07 [undefined] error: "{\"status\":401,\"message\":\"jwt malformed\",\"code\":\"invalid_token\"}"
 2025-01-29 03:47:44 [undefined] error: "[res.error]:"
 2025-01-29 03:47:44 [undefined] error: "page: not found"
+2025-03-26 13:43:26 [undefined] error: "{\"status\":404,\"message\":\"Endpoint Not Found\"}"
+2025-03-26 13:43:28 [undefined] error: "{\"status\":404,\"message\":\"Endpoint Not Found\"}"
+2025-03-26 13:43:35 [undefined] error: "{\"status\":404,\"message\":\"Endpoint Not Found\"}"
+2025-03-26 13:43:49 [undefined] error: "{\"status\":404,\"message\":\"Endpoint Not Found\"}"
+2025-03-26 13:44:55 [undefined] error: "{\"status\":401,\"message\":\"No authorization token was found\",\"code\":\"credentials_required\"}"

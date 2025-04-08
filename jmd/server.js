@@ -4,7 +4,7 @@ const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname =
-  process.env.NODE_ENV !== "production" ? "localhost" : "jmd.oncewebdesign.com";
+  process.env.NODE_ENV !== "production" ? "localhost" : "jmd.blue-assistance.co.th";
 // const hostname =
 //   process.env.NODE_ENV !== "production"
 //     ? "localhost"

@@ -46,6 +46,26 @@ const ContentJP = () => {
               <FaEye size={20} />
             </Link>
           </div>
+          <div className="flex flex-col gap-2  text-sm sm:text-base">
+            <p>※補足説明</p>
+            <p className="font-bold">3.労働許可証の申請について</p>
+            <ul className="list-disc pl-6">
+              <li>労働省申請の場合：10日程度</li>
+              <li>ワンストップサービスの場合：1日</li>
+            </ul>
+            <p className="font-bold">4.就労ビザの延長申請について</p>
+            <ul className="list-disc pl-6">
+              <li>
+                移民局申請 の場合 : 滞在許可期限45日前以降から申請可能 です。
+                <br />
+                申請後21日間の審査期間後、入国日の滞在許可期限より換算して1年迄発行されます。
+              </li>
+              <li>
+                ワンストップサービスでの申請 :
+                入国日より90日以内に申請が必要です。1年から最長2年まで発行されます。
+              </li>
+            </ul>
+          </div>
         </div>
         <div id="t-2" className="py-4 md:py-10 border-b-2 border-slate-200">
           <FadeHeading
@@ -101,6 +121,17 @@ const ContentJP = () => {
             >
               <FaEye size={20} />
             </Link>
+          </div>
+          <div className="flex flex-col gap-2 mt-6  text-sm sm:text-base">
+            <p>※補足説明</p>
+            <p className="font-bold">２.就労ビザの更新申請について</p>
+            <ul className="list-disc pl-6">
+              <li>
+                移民局申請 の場合：滞在許可期限45日前以降から申請可能 です。
+                <br />
+                申請後21日間の審査期間後、入国日の滞在許可期限より換算して1年迄発行されます。
+              </li>
+            </ul>
           </div>
         </div>
       </div>

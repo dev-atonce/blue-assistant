@@ -14,7 +14,9 @@ const PriceJP = () => {
           ※下記料金には役所への発行手数料は含まれておりません。
         </p>
 
-        <p>代行手数料には別途VAT(7%)がかかります。</p>
+        <p className="text-xl font-semibold">
+          ※代行手数料には別途VAT (7%) がかかります。
+        </p>
         <div className="grid grid-cols-12 gap-5 py-20  text-slate-600 font-semibold">
           <Link
             href="/visa-workpermit/price#work-permit"
@@ -88,7 +90,7 @@ const PriceJP = () => {
           </Link>
           <Link
             href="/visa-workpermit/price#insurance"
-            className="bg-slate-50 py-10 border rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4"
+            className="bg-slate-50 py-10 border-2 shadow-blue-400 border-blue-400 rounded-lg shadow-lg flex flex-col justify-center items-center gap-5  col-span-6 md:col-span-4 "
           >
             <Image
               src={"/img/visa-workpermit/insurance-icon.png"}
@@ -103,166 +105,173 @@ const PriceJP = () => {
         </div>
       </div>
       <div className="flex flex-col gap-6 border-b-2 py-6 border-slate-400">
-        <span className="text-xl font-semibold text-[#3562AE]">
-          一般現地法人(１名/１件あたり）
-        </span>
         <div
           id="work-permit"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
+          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base pt-16 "
         >
+          <span className="text-xl font-semibold text-[#3562AE]">
+            一般現地法人(１名/１件あたり）
+          </span>
           <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">労働許可証 Work permit</div>
+            <div className="w-[60%] md:w-[80%] ">労働許可証 Work permit</div>
             <div className="w-[10%] "></div>
             <div className="w-[10%] "></div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">新規申請手続き・1年間</div>
-              <div className="w-[10%]">10,000 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">新規申請手続き・1年間</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%]  md:w-[10%]  pr-2">10,000 </div>
             </div>
           </div>
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">更新手続き</div>
-              <div className="w-[10%]">7,500 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">更新手続き</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">7,500 </div>
             </div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">記載内容変更</div>
-              <div className="w-[10%]">3,500 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">記載内容変更</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">3,500 </div>
             </div>
           </div>
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">返却</div>
-              <div className="w-[10%]">2,000 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">返却</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">2,000 </div>
             </div>
           </div>
         </div>
         <div
           id="visa"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
+          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base pt-16"
         >
           <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">滞在許可 Visa</div>
+            <div className="w-[60%] md:w-[80%] ">滞在許可 Visa</div>
             <div className="w-[10%] "></div>
             <div className="w-[10%] "></div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
+              <div className="w-[60%] md:w-[80%]">
                 ノンイミグラントBビザ・新規&更新手続き・1年間
               </div>
-              <div className="w-[10%]">12,000 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">12,000 </div>
             </div>
           </div>
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">タイ国内でのBビザへの切り替え</div>
-              <div className="w-[10%]">13,000 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">
+                タイ国内でのBビザへの切り替え
+              </div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">13,000 </div>
             </div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">留学・学生ビザ</div>
-              <div className="w-[10%]">10,000 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">留学・学生ビザ</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">10,000 </div>
             </div>
           </div>
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
+              <div className="w-[60%] md:w-[80%]">
                 配偶者・家族　ノンイミグラントOビザ・大人
               </div>
-              <div className="w-[10%]">7,000</div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">7,000</div>
             </div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
+              <div className="w-[60%] md:w-[80%]">
                 配偶者・家族　ノンイミグラントOビザ・子供
               </div>
-              <div className="w-[10%]">4,000 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">4,000 </div>
             </div>
           </div>
         </div>
         <div
           id="ninety-day"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
+          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base pt-16"
         >
           <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">90日レポート 90days report</div>
+            <div className="w-[60%] md:w-[80%] ">
+              90日レポート 90days report
+            </div>
             <div className="w-[10%] "></div>
             <div className="w-[10%] "></div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">90日ごとのイミグレーション出頭代行</div>
-              <div className="w-[10%]">1,500 </div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">
+                90日ごとのイミグレーション出頭代行
+              </div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">1,000 </div>
             </div>
           </div>
         </div>
         <div
           id="re-entry"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-10"
+          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base pt-16"
         >
           <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">再入国許可証 Re-entry permit</div>
-            <div className="w-[10%] "></div>
-            <div className="w-[10%] "></div>
-          </div>
-          <div className="text-slate-600">
-            <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
-                新規申ノンイミグラントBビザ・新規&更新手続き・1年間請手続き・1年間
-              </div>
-              <div className="w-[10%]">10,000</div>
-              <div className="w-[10%] ">THB</div>
+            <div className="w-[60%] md:w-[80%] ">
+              再入国許可証 Re-entry permit
             </div>
+            <div className="w-[10%] "></div>
+            <div className="w-[10%] "></div>
           </div>
+
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">新規申請手続き・1年間</div>
-              <div className="w-[10%]">10,000</div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">
+                リエントリー手続き（シングル・マルチプル）
+              </div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">1,500</div>
             </div>
           </div>
         </div>
-        <span className="text-xl font-semibold text-[#3562AE]">
-          B.O.I事業（1名/１件あたり
-          ワークパーミット（労働許可証）＋滞在許可（ビザ））
-        </span>
+
         <div
           id="boi"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6"
+          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base pt-16"
         >
+          <span className="text-xl font-semibold text-[#3562AE]">
+            B.O.I事業（1名/１件あたり
+            ワークパーミット（労働許可証）＋滞在許可（ビザ））
+          </span>
           <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">新規申請及び更新手続き</div>
+            <div className="w-[60%] md:w-[80%] ">新規申請及び更新手続き</div>
             <div className="w-[10%] "></div>
             <div className="w-[10%] "></div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">1年間 (New & Renew 1year)</div>
-              <div className="w-[10%]">20,000</div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">
+                1年間 (New & Renew 1year)
+              </div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">20,000</div>
             </div>
           </div>
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">2年間 (New & Renew 2years)</div>
-              <div className="w-[10%]">40,000</div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">
+                2年間 (New & Renew 2years)
+              </div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">40,000</div>
             </div>
           </div>
         </div>
@@ -277,84 +286,85 @@ const PriceJP = () => {
             申請代行料はタイ国情勢や企業設立内容により、変更になる場合がございます。
           </p>
         </div>
-        <span className="text-xl font-semibold text-[#3562AE]">
-          役所への発行手数料
-        </span>
+
         <div
           id="insurance"
-          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6"
+          className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base pt-16"
         >
+          <span className="text-xl font-semibold text-[#3562AE]">
+            役所への発行手数料
+          </span>
           <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-            <div className="w-[80%] ">一般法人／個人の場合</div>
+            <div className="w-[60%] md:w-[80%] ">一般法人／個人の場合</div>
             <div className="w-[10%] "></div>
             <div className="w-[10%] "></div>
           </div>
           <div className="text-slate-600">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">滞在許可（ビザ）</div>
-              <div className="w-[10%]">1,900</div>
-              <div className="w-[10%] ">THB</div>
+              <div className="w-[60%] md:w-[80%]">滞在許可（ビザ）</div>
+              <div className="w-[20%]  text-end pr-2 ">THB</div>
+              <div className="w-[10%] md:w-[10%]  pr-2">1,900</div>
             </div>
           </div>
           <div className="text-slate-600 bg-slate-50">
             <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-              <div className="w-[80%]">
+              <div className="w-[60%] md:w-[80%]">
                 労働許可証（ワークパーミット）　※原則1年
               </div>
-              <div className="w-[10%] ">THB</div>
-              <div className="w-[10%]">3,100</div>
+              <div className="w-[20%] text-end pr-2">THB</div>
+              <div className="w-[10%] md:w-[10%]   pr-2">3,100</div>
             </div>
           </div>
           <div className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6">
             <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-              <div className="w-[80%] ">BOI企業の場合</div>
+              <div className="w-[60%] md:w-[80%] ">BOI企業の場合</div>
               <div className="w-[10%] "></div>
               <div className="w-[10%] "></div>
             </div>
             <div className="text-slate-600">
               <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">滞在許可（ビザ）</div>
-                <div className="w-[10%]">1,900 </div>
-                <div className="w-[10%] ">THB</div>
+                <div className="w-[60%] md:w-[80%]">滞在許可（ビザ）</div>
+                <div className="w-[20%]  text-end pr-2 ">THB</div>
+                <div className="w-[10%] md:w-[10%]  pr-2">1,900 </div>
               </div>
             </div>
             <div className="text-slate-600 bg-slate-50">
               <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">
+                <div className="w-[60%] md:w-[80%]">
                   労働許可証（ワークパーミット）1年分
                 </div>
-                <div className="w-[10%]">3,000</div>
-                <div className="w-[10%] ">THB</div>
+                <div className="w-[20%]  text-end pr-2 ">THB</div>
+                <div className="w-[10%] md:w-[10%]  pr-2">3,000</div>
               </div>
             </div>
             <div className="text-slate-600">
               <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">
+                <div className="w-[60%] md:w-[80%]">
                   労働許可証（ワークパーミット）2年以上
                 </div>
-                <div className="w-[10%]">6,000</div>
-                <div className="w-[10%] ">THB</div>
+                <div className="w-[20%]  text-end pr-2 ">THB</div>
+                <div className="w-[10%] md:w-[10%]  pr-2">6,000</div>
               </div>
             </div>
           </div>
           <div className="font-bold w-full flex flex-col gap-1 text-xs sm:text-base py-6">
             <div className="flex bg-[#3562AE] rounded-lg py-2 px-4 text-white text-sm md:text-lg">
-              <div className="w-[80%] ">リエントリービザ</div>
+              <div className="w-[60%] md:w-[80%] ">リエントリービザ</div>
               <div className="w-[10%] "></div>
               <div className="w-[10%] "></div>
             </div>
             <div className="text-slate-600">
               <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">シングル</div>
-                <div className="w-[10%]">1,000</div>
-                <div className="w-[10%] ">THB</div>
+                <div className="w-[60%] md:w-[80%]">シングル</div>
+                <div className="w-[20%]  text-end pr-2 ">THB</div>
+                <div className="w-[10%] md:w-[10%]  pr-2">1,000</div>
               </div>
             </div>
             <div className="text-slate-600 bg-slate-50">
               <div className="flex rounded-lg py-4 px-4 border-b border-white ">
-                <div className="w-[80%]">マルチプル</div>
-                <div className="w-[10%]">3,800 </div>
-                <div className="w-[10%] ">THB</div>
+                <div className="w-[60%] md:w-[80%]">マルチプル</div>
+                <div className="w-[20%]  text-end pr-2 ">THB</div>
+                <div className="w-[10%] md:w-[10%]  pr-2">3,800 </div>
               </div>
             </div>
           </div>
@@ -363,7 +373,7 @@ const PriceJP = () => {
             <p className="text-base ">
               上記発生手数料は予告なしに変更する場合がございます。申請時にご確認をお願いいたします。
             </p>
-            <p className="text-base text-end">更新日：2025年1月</p>
+            <p className="text-base ">更新日：2025年1月</p>
             <div className="text-center py-10">
               <Link
                 href="/visa-workpermit#contact"

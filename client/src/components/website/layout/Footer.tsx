@@ -74,7 +74,7 @@ export default function Footer({ contact, colors, owner, lng }: any) {
                 </div>
               </div>
             </div>
-            <div className="col-span-6 flex justify-start xl:justify-end">
+            <div className="col-span-6 flex flex-col justify-start xl:justify-end">
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="flex flex-col items-start"
@@ -83,6 +83,14 @@ export default function Footer({ contact, colors, owner, lng }: any) {
                 <strong className="mb-2 block">Google Map</strong>
                 <img src="/img/image.png" alt="google map" />
               </button>
+              {/* to do link */}
+              <a
+                href="https://blue-assistance.co.th/jp/cookie-policy"
+                className="my-2 underline"
+              >
+                Privacy Policy
+              </a>
+
               <Modal
                 // @ts-ignore
                 modalContent={

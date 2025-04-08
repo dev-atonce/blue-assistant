@@ -7,3 +7,9 @@
 .env
 
 *.zip
+
+Dockerfile
+
+.dockerignore
+
+docker-compose.yml

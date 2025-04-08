@@ -4,9 +4,7 @@ const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname =
-  process.env.NODE_ENV !== "production"
-    ? "localhost"
-    : "blue.oncewebdesign.com";
+  process.env.NODE_ENV !== "production" ? "localhost" : "blue-assistance.co.th";
 // const hostname =
 //   process.env.NODE_ENV !== "production" ? "localhost" : "blue-assistance.co.th";
 const port = 3000;

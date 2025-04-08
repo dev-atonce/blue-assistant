@@ -43,29 +43,31 @@ export default function JmdServiceSection({ lng }: any) {
     },
   ];
   return (
-    <div className="grid grid-cols-12 gap-5  text-xl text-[#3462af] font-semibold">
+    <div className="grid grid-cols-12 gap-5  text-xl text-[#3462af] font-semibold px-10 sm:px-0 md:px-0 mx-auto">
       {menuItem?.map((i: any, key: any) => {
         return (
           <Link
             href={i?.link}
             key={key}
-            className="group hover:shadow-3   hover:md:translate-y-[-20px] transition-all p-4 col-span-12 md:col-span-6 xl:col-span-3 border rounded-lg shadow-xl flex flex-col justify-center items-center gap-5"
+            className="group hover:shadow-3   hover:md:translate-y-[-20px] transition-all p-2 col-span-12 sm:col-span-3 xl:col-span-3 border rounded-lg shadow-xl flex flex-col justify-center items-center gap-5 "
           >
-            <Image
+            {/* <Image
               src={i?.image}
               alt=""
               width={200}
               height={200}
               className="w-full h-full"
-            ></Image>
-            {/* <Image
-              src={i?.image2}
+            ></Image> */}
+            <Image
+              src={i?.image}
               alt=""
               width={180}
               height={180}
-              className="group-hover:block hidden"
-            ></Image> */}
-            {/* <h3 className="font-semibold">{i[`title${lang}`]}</h3> */}
+              className="w-full h-full"
+            ></Image>
+            <h3 className="font-semibold sm:text-xs lg:text-base xl:text-lg ">
+              {i[`title${lang}`]}
+            </h3>
           </Link>
         );
       })}

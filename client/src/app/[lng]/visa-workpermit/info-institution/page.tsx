@@ -37,10 +37,10 @@ const GovComplexDirection = () => {
       <h4 className="font-bold text-lg text-blue-900">公共交通機関の場合</h4>
       <div className="py-4">
         <h5 className="font-semibold">電車</h5>
-        <p>BTS 「ワットプラシー～駅」にて下車</p>
-        <p>※駅からkm、車/バイクタクシーで10分</p>
+        <p>BTS「ワット・プラシーマハタート駅」にて下車</p>
+        <p>※駅から4km、車/バイクタクシーで10分</p>
         <p>→MRTピンクラインにも接続しています</p>
-        <p>MRTピンクライン/ ガバメントコンプレックス 下車</p>
+        <p>MRTピンクライン「ガバメントコンプレックス」下車</p>
         <p>
           ※入口からB棟まで1.5kmほどあり。Chang Watthana
           soi７側の入口から無料シャトルバスが定期運行中
@@ -58,20 +58,26 @@ const GovComplexDirection = () => {
 const OneStopDirection = () => {
   return (
     <div>
-      <h4 className="font-bold text-lg text-blue-900">公共交通機関の場合</h4>
+      <h4 className="font-bold text-lg text-blue-900">
+        公共交通機関ご利用の場合
+      </h4>
       <div className="py-4">
         <h5 className="font-semibold">電車</h5>
-        <p>MRT ブルーライン　サムヤーン駅下車</p>
+        <p>MRT ルンピニ駅</p>
+        <p>　※B1改札口がParadeゾーンの地下1階に直結</p>
+        <p>BTS プルンチット駅　</p>
+        <p>　※2番出口、SIAM PHARMACY前から無料シャトルバスが運行中</p>
+        <p>One Bangkokホームページより</p>
         <p>
-          2番改札を出て、ジャムジュリースクエアへ
-          スターバックス付近にエレベーターあり
+          　
+          <a
+            href="https://uat.onebangkok.com/en/location/
+"
+          >
+            https://uat.onebangkok.com/en/location/
+          </a>
         </p>
       </div>
-      <h5 className="font-semibold">タクシー/バイクタクシーのドライバーへ</h5>
-      <p>
-        タイ語で「パイ ジャムジュリースクエア カー/クラップ 」とお伝え下さい。
-      </p>
-      <p>🚕 ไปจามจุรีสแควร์ค่ะ</p>
     </div>
   );
 };
@@ -138,32 +144,41 @@ const AccessJP = () => {
         </div>
         <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
           <FadeHeading
-            text="ワンストップサービス（サムヤーン） One Stop Service"
+            text="ワンストップサービス（バンコク） One Stop Service"
             heading="2"
           />
           <h3 className="py-4 font-bold text-lg text-blue-900">
-            319 Chamchuri Square Building 18th Floor, Phayathai Road, Pathumwan,
-            Bangkok 10330
+            One Bangkok (Parade Zone 6th Floor), Witthayu Rd, Lumphini, Pathum
+            Wan, Bangkok 10330
           </h3>
 
           <div className="detail-sty text-sm ">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
-              <a href="https://www.google.com/maps/place/One+Stop+Services+Center,+Chamchuri+Square,+Bangkok/@13.732811,100.530569,17z/data=!4m6!3m5!1s0x30e29f2ac68b5641:0x9cd402b24ad3ccb4!8m2!3d13.7328114!4d100.5305685!16s%2Fg%2F1pzpnghzk?ll=13.732811,100.530569&z=17&t=m&gl=TH&mapclient=embed&cid=11300660329762245812&entry=tts&g_ep=EgoyMDI0MDkyMy4wKgBIAVAD">
+              <a href="https://www.google.com/maps/place/Parade+at+One+Bangkok/@13.7262365,100.54701,20z/data=!4m6!3m5!1s0x30e29f002e98e36b:0x4189f38aabf3daea!8m2!3d13.7261218!4d100.547236!16s%2Fg%2F11y8302nff?entry=tts&g_ep=EgoyMDI1MDMxOS4yIPu8ASoASAFQAw%3D%3D&skid=0d10c0ca-b33c-426b-b84b-60a4d9c698db">
                 <Image
                   alt="map"
                   height="500"
                   width="500"
-                  src="/img/visa-workpermit/cham_map.png"
-                  className="w-full"
+                  src="/img/visa-workpermit/one-bkk.png"
+                  className="w-full h-full object-contain"
                 />
               </a>
-              <AntImage src="/img/visa-workpermit/cham_map2.png" />
+              <AntImage src="/img/one-stop.jpg" />
             </div>
-            <div className="flex flex-col md:flex-row align-center md:justify-between">
-              <p>
-                MRTサムヤーン駅直結、Chamuchuri squareのオフィス棟18階です。
-              </p>
+            <div className="flex flex-col md:flex-row-reverse items-center md:justify-between  ">
               <AddressModal modalContent={<OneStopDirection />} />
+              <p className="py-6">
+                ※2025年3月17日より「One Bangkok」に場所が移転いたしました。
+                <br />
+                One Bangkok Building (6th-7th Floor, Parade zone) <br />
+                地図：
+                <a
+                  className=""
+                  href="https://maps.app.goo.gl/3R6SGwzwyBJMJTPe9"
+                >
+                  https://maps.app.goo.gl/3R6SGwzwyBJMJTPe9
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -234,32 +249,41 @@ const AccessEN = () => {
         </div>
         <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
           <FadeHeading
-            text="ワンストップサービス（サムヤーン） One Stop Service"
+            text="ワンストップサービス（バンコク） One Stop Service"
             heading="2"
           />
           <h3 className="py-4 font-bold text-lg text-blue-900">
-            319 Chamchuri Square Building 18th Floor, Phayathai Road, Pathumwan,
-            Bangkok 10330
+            One Bangkok (Parade Zone 6th Floor), Witthayu Rd, Lumphini, Pathum
+            Wan, Bangkok 10330
           </h3>
 
           <div className="detail-sty text-sm ">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
-              <a href="https://www.google.com/maps/place/One+Stop+Services+Center,+Chamchuri+Square,+Bangkok/@13.732811,100.530569,17z/data=!4m6!3m5!1s0x30e29f2ac68b5641:0x9cd402b24ad3ccb4!8m2!3d13.7328114!4d100.5305685!16s%2Fg%2F1pzpnghzk?ll=13.732811,100.530569&z=17&t=m&gl=TH&mapclient=embed&cid=11300660329762245812&entry=tts&g_ep=EgoyMDI0MDkyMy4wKgBIAVAD">
+              <a href="https://www.google.com/maps/place/Parade+at+One+Bangkok/@13.7262365,100.54701,20z/data=!4m6!3m5!1s0x30e29f002e98e36b:0x4189f38aabf3daea!8m2!3d13.7261218!4d100.547236!16s%2Fg%2F11y8302nff?entry=tts&g_ep=EgoyMDI1MDMxOS4yIPu8ASoASAFQAw%3D%3D&skid=0d10c0ca-b33c-426b-b84b-60a4d9c698db">
                 <Image
                   alt="map"
                   height="500"
                   width="500"
-                  src="/img/visa-workpermit/cham_map.png"
-                  className="w-full"
+                  src="/img/visa-workpermit/one-bkk.png"
+                  className="w-full h-full object-contain"
                 />
               </a>
-              <AntImage src="/img/visa-workpermit/cham_map2.png" />
+              <AntImage src="/img/one-stop.jpg" />
             </div>
-            <div className="flex flex-col md:flex-row align-center md:justify-between">
-              <p>
-                MRTサムヤーン駅直結、Chamuchuri squareのオフィス棟18階です。
-              </p>
+            <div className="flex flex-col  align-center md:justify-between">
               <AddressModal modalContent={<OneStopDirection />} />
+              <p className="py-6">
+                ※2025年3月17日より「One Bangkok」に場所が移転いたしました。
+                <br />
+                One Bangkok Building (6th-7th Floor, Parade zone) <br />
+                地図：
+                <a
+                  className=""
+                  href="https://maps.app.goo.gl/3R6SGwzwyBJMJTPe9"
+                >
+                  https://maps.app.goo.gl/3R6SGwzwyBJMJTPe9
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -330,32 +354,41 @@ const AccessTH = () => {
         </div>
         <div className="py-4 md:py-10 border-b-2 border-slate-200 ">
           <FadeHeading
-            text="ワンストップサービス（サムヤーン） One Stop Service"
+            text="ワンストップサービス（バンコク） One Stop Service"
             heading="2"
           />
           <h3 className="py-4 font-bold text-lg text-blue-900">
-            319 Chamchuri Square Building 18th Floor, Phayathai Road, Pathumwan,
-            Bangkok 10330
+            One Bangkok (Parade Zone 6th Floor), Witthayu Rd, Lumphini, Pathum
+            Wan, Bangkok 10330
           </h3>
 
           <div className="detail-sty text-sm ">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
-              <a href="https://www.google.com/maps/place/One+Stop+Services+Center,+Chamchuri+Square,+Bangkok/@13.732811,100.530569,17z/data=!4m6!3m5!1s0x30e29f2ac68b5641:0x9cd402b24ad3ccb4!8m2!3d13.7328114!4d100.5305685!16s%2Fg%2F1pzpnghzk?ll=13.732811,100.530569&z=17&t=m&gl=TH&mapclient=embed&cid=11300660329762245812&entry=tts&g_ep=EgoyMDI0MDkyMy4wKgBIAVAD">
+              <a href="https://www.google.com/maps/place/Parade+at+One+Bangkok/@13.7262365,100.54701,20z/data=!4m6!3m5!1s0x30e29f002e98e36b:0x4189f38aabf3daea!8m2!3d13.7261218!4d100.547236!16s%2Fg%2F11y8302nff?entry=tts&g_ep=EgoyMDI1MDMxOS4yIPu8ASoASAFQAw%3D%3D&skid=0d10c0ca-b33c-426b-b84b-60a4d9c698db">
                 <Image
                   alt="map"
                   height="500"
                   width="500"
-                  src="/img/visa-workpermit/cham_map.png"
-                  className="w-full"
+                  src="/img/visa-workpermit/one-bkk.png"
+                  className="w-full h-full object-contain"
                 />
               </a>
-              <AntImage src="/img/visa-workpermit/cham_map2.png" />
+              <AntImage src="/img/one-stop.jpg" />
             </div>
-            <div className="flex flex-col md:flex-row align-center md:justify-between">
-              <p>
-                MRTサムヤーン駅直結、Chamuchuri squareのオフィス棟18階です。
-              </p>
+            <div className="flex flex-col  align-center md:justify-between">
               <AddressModal modalContent={<OneStopDirection />} />
+              <p className="py-6">
+                ※2025年3月17日より「One Bangkok」に場所が移転いたしました。
+                <br />
+                One Bangkok Building (6th-7th Floor, Parade zone) <br />
+                地図：
+                <a
+                  className=""
+                  href="https://maps.app.goo.gl/3R6SGwzwyBJMJTPe9"
+                >
+                  https://maps.app.goo.gl/3R6SGwzwyBJMJTPe9
+                </a>
+              </p>
             </div>
           </div>
         </div>

@@ -7,9 +7,10 @@ import { useTranslations } from "next-intl";
 
 interface ContactProps {
   home: boolean;
+  medical: boolean;
 }
 
-export default function ContactSection({ home }: ContactProps) {
+export default function ContactSection({ home, medical }: ContactProps) {
   const t = useTranslations("contact-form");
   const h = useTranslations("header");
   const {
@@ -64,7 +65,11 @@ export default function ContactSection({ home }: ContactProps) {
       <div id="contact" className="bg-[#fafafa] text-[#333333]">
         <div className="container  mx-auto  py-20 text-slate-800">
           <div className="grid grid-cols-1">
-            <h3 className="text-5xl font-bold border-b-4 border-orange-400 w-fit pb-4">
+            <h3
+              className={`${
+                home ? "text-5xl" : "text-4xl"
+              } font-bold border-b-4 border-orange-400 w-fit pb-4`}
+            >
               <span className="relative text-[#3562AE] py-4">
                 {h("contact")}
               </span>
@@ -73,41 +78,77 @@ export default function ContactSection({ home }: ContactProps) {
           <div className="mt-20 grid grid-cols-12 gap-6">
             <div className="lg:col-span-5 col-span-12">
               <Image
-                src="/img/contact.jpg"
+                src={"/img/contact.jpg"}
                 alt="blue-assistant"
-                className="h-[50%] object-cover hidden lg:block"
+                className={`${
+                  home && !medical
+                    ? "h-[70%]"
+                    : home && medical
+                    ? "h-full"
+                    : "h-[50%] "
+                } object-cover hidden lg:block`}
                 height={500}
                 width={500}
               />
-              <div className="py-4 grid grid-cols-3 gap-y-2">
-                <p className="col-span-3">
-                  弊社へのお問い合わせ・ご質問・お見積の依頼などは下記のメールアドレスよりお問い合わせください。お問い合わせ内容確認後、ご連絡させて頂きます。
-                  <br />
-                  どうぞご気軽にご連絡ください。
-                  <br />
-                  営業日の関係上、ご返信が遅れる場合がございます。ご了承ください。
-                </p>
-                <div className="font-semibold">Email : </div>
-                <a
-                  href="mailto:visa@blue-assistance.co.th"
-                  className="col-span-2"
-                >
-                  visa@blue-assistance.co.th
-                </a>
-                <div className="font-semibold">Tel : </div>
-                <div className="col-span-2">02-661-7687~88</div>
-                <div className="font-semibold">日本人担当 :</div>
-                <div className="col-span-2">大森(おおもり)</div>
-                <div className="font-semibold">タイ人担当 : </div>
-                <div className="col-span-2">Yim</div>
-              </div>
+              {!home && (
+                <div className="py-4 grid grid-cols-3 gap-y-2">
+                  <p className="col-span-3">
+                    弊社へのお問い合わせ・ご質問・お見積の依頼などは下記のメールアドレスよりお問い合わせください。お問い合わせ内容確認後、ご連絡させて頂きます。
+                    <br />
+                    どうぞご気軽にご連絡ください。
+                    <br />
+                    営業日の関係上、ご返信が遅れる場合がございます。ご了承ください。
+                  </p>
+                  <div className="font-semibold">Email : </div>
+                  <a
+                    href="mailto:visa@blue-assistance.co.th"
+                    className="col-span-2"
+                  >
+                    visa@blue-assistance.co.th
+                  </a>
+                  <div className="font-semibold">Tel : </div>
+                  <div className="col-span-2">02-661-7687~88</div>
+                  <div className="font-semibold">日本人担当 :</div>
+                  <div className="col-span-2">大森(おおもり)</div>
+                  <div className="font-semibold">タイ人担当 : </div>
+                  <div className="col-span-2">Yim</div>
+                </div>
+              )}
             </div>
 
             <form
               className="col-span-12 lg:col-span-7 text-sm md:text-base"
               onSubmit={handleSubmit(onSubmit)}
             >
-              {home && (
+              {home && medical && (
+                <div className="grid-cols-12 grid mb-4">
+                  <div className="col-span-12 md:col-span-3 font-bold text-[#3562AE]">
+                    {t("topic")}
+                  </div>
+                  <div className="col-span-12 md:col-span-9">
+                    <ul>
+                      <li className="mb-3">
+                        <label htmlFor="type1">
+                          <input
+                            {...register("service", { required: true })}
+                            type="radio"
+                            id="type1"
+                            value="医療アシスタンス業務"
+                            className="me-2"
+                          />
+                          {t("option.1")}
+                        </label>
+                      </li>
+                    </ul>
+                    {errors?.service?.type === "required" && (
+                      <p className="text-xs text-red text-end">
+                        {t("validate.require")}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              )}
+              {home && !medical && (
                 <div className="grid-cols-12 grid mb-4">
                   <div className="col-span-12 md:col-span-3 font-bold text-[#3562AE]">
                     {t("topic")}

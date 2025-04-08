@@ -10,7 +10,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Ans = ({ text }: any) => {
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm bg-blue-900 p-4 font-semibold text-white rounded-lg">
+    <div className="flex justify-between items-center text-xs md:text-sm bg-[#3462AF] p-4 font-semibold text-white rounded-lg">
       <p>{text}</p>
     </div>
   );
@@ -78,7 +78,7 @@ const consultItems = {
   jp: [
     {
       key: "1",
-      label: <Q text="・はじめて病院を受診する場合" />,
+      label: <Q text="・はじめて病院を受診する場合は？" />,
       children: (
         <Ans
           text="・ジャパニーズメディカルデスク（JMD)の常駐している病院を受診する際は、
@@ -179,7 +179,7 @@ const hospitalItems = {
     },
     {
       key: "2",
-      label: <Q text="・検査が必要となった場合は、すぐに受けられるますか？" />,
+      label: <Q text="・検査が必要となった場合は、すぐに受けられますか？" />,
       children: (
         <Ans text="・日本と異なり設備の数が少ない場合がございます。その場合は別日にご案内をさせて頂く場合もございます。" />
       ),
@@ -267,7 +267,7 @@ const interpretItem = {
       key: "1",
       label: <Q text="・対応言語は？" />,
       children: (
-        <Ans text="・タイ語、ラオス後、ミャンマー語といった各国の言語から日本語への通訳をいたします。" />
+        <Ans text="・タイ語、ラオス語、ミャンマー語といった各国の言語から日本語への通訳をいたします。" />
       ),
     },
     {
@@ -404,7 +404,7 @@ const billingItems = {
     {
       key: "2",
       label: (
-        <Q text="・クレジットカードを持っていますが、海外旅行保険が付帯しているかどうかわかりません" />
+        <Q text="・クレジットカードを持っていますが、海外旅行保険が付帯しているかどうかわかりません。" />
       ),
       children: (
         <Ans
@@ -416,22 +416,29 @@ const billingItems = {
     {
       key: "3",
       label: (
-        <Q text="・有効な保険証を持っていればキャッシュレス受診が可能でしょうか" />
+        <Q text="・有効な保険証を持っていればキャッシュレス受診が可能でしょうか?" />
       ),
+
       children: (
-        <Ans text="・ご受診の内容によってはキャッシュレスサービスが受けられない場合がございます。海外旅行保険のご利用について、をご参照ください。また、事前に保険会社様へお問い合わせください" />
+        <div className=" text-xs md:text-sm bg-[#3462AF] p-4 font-semibold text-white rounded-lg">
+          ・ご受診の内容によってはキャッシュレスサービスが受けられない場合がございます。
+          <Link className="underline" href="/about-us#t-3">
+            海外旅行保険のご利用について、
+          </Link>
+          をご参照ください。また、事前に保険会社様へお問い合わせください
+        </div>
       ),
     },
     {
       key: "4",
-      label: <Q text="・治療費の立て替えが必要な場合とはどんな時か" />,
+      label: <Q text="・治療費の立て替えが必要な場合とはどんな時ですか？" />,
       children: (
         <Ans text="・お持ちの保険の有効性の確認が取れない場合や、ご受診の内容が保険対象外の可能性がある場合はご利用いただけません。詳しくは各JMDもしくはご加入の保険会社様へお問い合わせください。" />
       ),
     },
     {
       key: "5",
-      label: <Q text="・支払いの際にクレジットカードは使えますか" />,
+      label: <Q text="・支払いの際にクレジットカードは使えますか?" />,
       children: (
         <Ans text="・ほとんどの医療機関でご利用可能です。ご利用できるカードの種類については、各JMDへお問い合わせください。" />
       ),
