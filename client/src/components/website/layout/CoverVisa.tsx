@@ -2,6 +2,14 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import Breadcrumb from "../molecule/Breadcrumb";
 import { useTranslations } from "next-intl";
+import { Kanit } from "next/font/google";
+
+const kanit = Kanit({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+})
 export default function CoverVisa({ pageName, prevPage, lng }: any) {
   const t = useTranslations("header");
   //   // to do z-inddex
@@ -36,6 +44,7 @@ export default function CoverVisa({ pageName, prevPage, lng }: any) {
           ></Image>
         </div>
       </div>
+      <div className={`${ lng == "th" ? `${kanit.className}` : `` }`}>
       <div className="shadow-lg bg-[#3462af] py-4 text-white sticky top-0 z-50 hidden md:block">
         <div className="container h-full hidden md:flex justify-center items-center gap-2 sm:gap-8 xl:gap-16 text-[8px] md:text-xs lg:text-[16px] font-semibold ">
           <Link href={"/visa-workpermit"}>{t("visa-work")}</Link>
@@ -45,6 +54,7 @@ export default function CoverVisa({ pageName, prevPage, lng }: any) {
           <Link href={"/visa-workpermit/faq"}>{t("faq")}</Link>
           <Link href={"/visa-workpermit#contact"}>{t("contact")}</Link>
         </div>
+      </div>
       </div>
       <div className="bg-slate-500/10  w-full hidden md:block">
         <div className="container mx-auto">

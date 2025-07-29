@@ -130,10 +130,10 @@ export default async function RootLayout({
               <Header colors={colors} owner={owner} lng={lng} />
               {children}
               <Footer colors={colors} owner={owner} lng={lng} />
+              <CookiePopUp />
             </NextIntlClientProvider>
           </body>
           <GoogleTagManager gtmId="GTM-NFJTH8PW" />
-          <CookiePopUp />
         </PageSettingProvider>
       </ConfigProvider>
     </html>

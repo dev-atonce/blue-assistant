@@ -104,6 +104,12 @@ const AboutJP = () => {
             <p className="mb-6">
               当社は、保有する個人情報に関して適用されるタイ王国の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。{" "}
             </p>
+            <a href="/BA2.pdf" className="text-blue-800" target="_blank" rel="noopener noreferrer">
+              Privacy Policy (PDPA) TH/EN
+            </a>
+            <a href="/BA3.pdf" className="text-blue-800" target="_blank" rel="noopener noreferrer">
+              Privacy Notice
+            </a>
           </div>
         </div>
       </div>

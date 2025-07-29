@@ -63,8 +63,8 @@ export default async function ServiceSection({ data, lng }: any) {
       id: "jmd",
       image: "/img/JMD_logo.png",
       // to do link
-      // link: "https://jmd.blue-assistance.co.th",
-      link: "https://jmd.oncewebdesign.com",
+      link: "https://jmd.blue-assistance.co.th",
+      // link: "https://jmd.oncewebdesign.com",
     },
     {
       serviceNameTH: "ธุรกิจให้คำปรึกษาด้านวีซ่าและใบอนุญาตทำงาน",

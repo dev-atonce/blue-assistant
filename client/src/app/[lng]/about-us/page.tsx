@@ -75,7 +75,7 @@ const AboutTH = () => {
             </span>
             <ul className="list-disc pl-8">
               <li>
-                ให้บริการธุรกิจตัวแทนสำหรับช่วยเหลือในประเทศไทยมานานกว่า 10 ปี
+                ให้บริการธุรกิจตัวแทนสำหรับช่วยเหลือในประเทศไทยมานานกว่า 20 ปี
               </li>
               <li>
                 รามีเครือข่ายและข้อมูลสำคัญที่จำเป็นต่อการให้ความช่วยเหลือ
@@ -192,35 +192,35 @@ const AboutTH = () => {
           <div className="col-span-2 font-bold">2015</div>
           <div className="col-span-10">
             จัดทำเคาน์เตอร์ให้ความช่วยเหลือด้านการแพทย์ภาษาญี่ปุ่น
-            เริ่มธุรกิจศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD)
+            เริ่มธุรกิจศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น <span className="font-inter"> (JMD) </span> 
           </div>
           <div className="col-span-2 font-bold">2016</div>
           <div className="col-span-10">
             ก่อตั้งบริษัท Blue Assistance Myanmar
             และเริ่มธุรกิจให้ความช่วยเหลือด้านการแพทย์ในประเทศเมียนมาร์
-            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD)
+            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น <span className="font-inter"> (JMD) </span> 
             ในคลินิกสมิติเวชโรงพยาบาลปารามี เมืองย่างกุ้ง
             จัดทำเคาน์เตอร์ให้ความช่วยเหลือด้านการแพทย์ภาษาญี่ปุ่น
           </div>
 
           <div className="col-span-2 font-bold">2018</div>
           <div className="col-span-10">
-            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD)
+            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น <span className="font-inter"> (JMD) </span> 
             ในโรงพยาบาลราชธานี จังหวัดพระนครศรีอยุธยา ประเทศไทย
           </div>
           <div className="col-span-2 font-bold">2019</div>
           <div className="col-span-10">
-            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD) ในศูนย์การแพทย์
-            Alliance International Medical Centre (AIMC) ประเทศลาว
+            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น <span className="font-inter"> (JMD) </span> ในศูนย์การแพทย์
+            Alliance International Medical Centre <span className="font-inter"> (AIMC) </span> ประเทศลาว
           </div>
           <div className="col-span-2 font-bold">2021</div>
           <div className="col-span-10">
-            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD)
+            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น <span className="font-inter"> (JMD) </span> 
             ในโรงพยาบาลเกษมราษฎร์ ปราจีนบุรี จังหวัดปราจีนบุรี ประเทศไทย.
           </div>
           <div className="col-span-2 font-bold">2022</div>
           <div className="col-span-10">
-            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น (JMD) ในเกษมราษฎร์
+            จัดตั้งศูนย์บริการด้านการแพทย์สำหรับชาวญี่ปุ่น <span className="font-inter"> (JMD) </span> ในเกษมราษฎร์
             อินเตอร์เนชันแนล เวียงจันทน์ ประเทศลาว
           </div>
         </div>
@@ -365,34 +365,34 @@ const AboutEN = () => {
           <div className="col-span-2 font-bold">2015</div>
           <div className="col-span-10">
             Established a Japanese-language medical assistance counter and
-            started a Japanese Medical Services Center (JMD) business.
+            started a Japanese Medical Services Center <span className="font-inter"> (JMD) </span> business.
           </div>
           <div className="col-span-2 font-bold">2016</div>
           <div className="col-span-10">
             Established Blue Assistance Myanmar and started medical assistance
-            business in Myanmar. Set up Japanese Medical Services (JMD) Center
+            business in Myanmar. Set up Japanese Medical Services <span className="font-inter"> (JMD) </span> Center
             in Samitivej Parami Hospital, Yangon. Set up Japanese Medical
             Assistance Counter.
           </div>
 
           <div className="col-span-2 font-bold">2018</div>
           <div className="col-span-10">
-            Establishment of a Japanese Medical Service Center (JMD) at Rajthani
+            Establishment of a Japanese Medical Service Center <span className="font-inter"> (JMD) </span> at Rajthani
             Hospital, Phra Nakhon Si Ayutthaya Province, Thailand
           </div>
           <div className="col-span-2 font-bold">2019</div>
           <div className="col-span-10">
-            Establishment of Japanese Medical Services (JMD) Center at Alliance
-            International Medical Centre (AIMC), Laos.
+            Establishment of Japanese Medical Services <span className="font-inter"> (JMD) </span> Center at Alliance
+            International Medical Centre <span className="font-inter"> (AIMC) </span>, Laos.
           </div>
           <div className="col-span-2 font-bold">2021</div>
           <div className="col-span-10">
-            Established a Japanese Medical Service Center (JMD) at Kasemrad
+            Established a Japanese Medical Service Center <span className="font-inter"> (JMD) </span> at Kasemrad
             Prachinburi Hospital, Prachinburi Province, Thailand.
           </div>
           <div className="col-span-2 font-bold">2022</div>
           <div className="col-span-10">
-            Established a Japanese Medical Service Center (JMD) at Kasemrad
+            Established a Japanese Medical Service Center <span className="font-inter"> (JMD) </span> at Kasemrad
             International, Vientiane, Laos.
           </div>
         </div>
@@ -531,31 +531,30 @@ const AboutJP = () => {
           </div>
           <div className="col-span-2 font-bold">2015年</div>
           <div className="col-span-10">
-            日本語医療サポートデスク、ジャパニーズメディカルデスク（JMD）業務開
+            日本語医療サポートデスク、ジャパニーズメディカルデスク <span className="font-inter"> (JMD) </span> 業務開始
           </div>
           <div className="col-span-2 font-bold">2016年</div>
           <div className="col-span-10">
-            ブルーアシスタンス・ミャンマー設立。ミャンマーにおける医療アシスタンス業務開始
-            <br />
-            ヤンゴン・サミティベートパラミークリニック内にジャパニーズメディカルデスク(JMD)
+            ブルーアシスタンス・ミャンマー設立。ミャンマーにおける医療アシスタンス業務開始 <br/>
+            ヤンゴン・サミティベートパラミークリニック内にジャパニーズメディカルデスク<span className="font-inter"> (JMD) </span> 
             開設、日本語医療サービス開始
           </div>
 
           <div className="col-span-2 font-bold">2018年</div>
           <div className="col-span-10">
-            タイ・アユタヤ県・ラチャタニー病院内にジャパニーズメディカルデスク（JMD）開設
+            タイ・アユタヤ県・ラチャタニー病院内にジャパニーズメディカルデスク <span className="font-inter"> (JMD) </span> 開設
           </div>
           <div className="col-span-2 font-bold">2019年</div>
           <div className="col-span-10">
-            ラオス・アライアンスインターナショナルメディカルセンター（AIMC）内にジャパニーズメディカルデスク(JMD)開設
+            ラオス・アライアンスインターナショナルメディカルセンター <span className="font-inter"> AIMC </span> 内にジャパニーズメディカルデスク<span className="font-inter"> (JMD) </span> 開設
           </div>
           <div className="col-span-2 font-bold">2021年</div>
           <div className="col-span-10">
-            タイ・プラチンブリ県・カセムラート病院プラチンブリ内にジャパニーズメディカルデスク(JMD)開設
+            タイ・プラチンブリ県・カセムラート病院プラチンブリ内にジャパニーズメディカルデスク<span className="font-inter"> (JMD) </span> 開設
           </div>
           <div className="col-span-2 font-bold">2022年</div>
           <div className="col-span-10">
-            ラオス・カセムラートインターナショナル病院ビエンチャン内にジャパニーズメディカルデスク（JMD）開設
+            ラオス・カセムラートインターナショナル病院ビエンチャン内にジャパニーズメディカルデスク <span className="font-inter"> (JMD) </span> 開設
           </div>
         </div>
       </div>

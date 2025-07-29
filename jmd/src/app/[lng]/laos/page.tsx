@@ -326,7 +326,7 @@ const ContentJP = () => {
 
               <div className="col-span-4 font-bold">受付時間： </div>
               <div className="col-span-8">
-                <p>外来受付：8:00-20:00</p>
+                <p>外来受付：8:00-17:00</p>
 
                 <p>受付時間外は、24時間救急センターで対応</p>
               </div>

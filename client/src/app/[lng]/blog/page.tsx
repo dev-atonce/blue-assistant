@@ -37,7 +37,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
   return (
     <>
       <Cover
-        pageName={t("blog")}
+        pageName={t("news")}
         image="/img/service/news_banner.jpg"
         prevPage={{ pageName: t("home"), url: "/" }}
         noHeading={true}
@@ -45,7 +45,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
       <div className="container mx-auto ">
         <div className="py-4 flex flex-col gap-3 mt-10">
           {/* news */}
-          <h1 className="font-bold text-4xl text-[#3562AE] ">{t("blog")}</h1>
+          <h1 className="font-bold text-4xl text-[#3562AE] ">{t("news")}</h1>
           <div className="h-1 w-16 bg-orange-400"></div>
         </div>
         <BlogSection

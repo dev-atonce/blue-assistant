@@ -140,7 +140,17 @@ export default async function RootLayout({
             }, ${mincho.variable}`}
           >
             <NextIntlClientProvider messages={messages}>
-              <Header colors={colors} owner={owner} lng={lng} />
+              <div
+                className={`${
+                  lng == "jp"
+                    ? `${notoJP.className} `
+                    : lng == "th"
+                    ? `${kanit.className}`
+                    : `${noto.className} `
+                } ${mincho.variable}`}
+              >
+                <Header colors={colors} owner={owner} lng={lng} />
+              </div>
               {children}
               <Footer colors={colors} owner={owner} lng={lng} />
               <CookiePopUp />

@@ -20,7 +20,7 @@ export default function VisaWorkpermit({
   return (
     <>
       <div className="visa-workpermit">
-        <CoverVisa />
+        <CoverVisa lng={params?.lng} />
         <div className="container py-10">
           <div className="mb-[80px] " id="service">
             <MainHeading text={h("service")} heading="2" />

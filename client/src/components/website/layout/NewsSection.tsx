@@ -4,13 +4,14 @@ import { useTranslations } from "next-intl";
 
 export default function NewsSection(lng: { lng: string }) {
   const b = useTranslations("blog-section");
+  const h = useTranslations("header");
   return (
     <>
       <section id="news-activity" className="news-section bg-white">
         <div className="container  mx-auto  py-20">
           <h5 className="text-5xl font-bold text-[#3562AE] text-center mb-10">
             <span className="border-b-4 border-orange-400 w-fit pb-4 w-auto">
-              {b("blog")}
+              {h("news")}
             </span>
           </h5>
 
