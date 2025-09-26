@@ -52,6 +52,7 @@ const AboutJP = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -66,6 +67,7 @@ const AboutJP = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -81,6 +83,7 @@ const AboutJP = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -95,6 +98,7 @@ const AboutJP = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -113,6 +117,7 @@ const AboutJP = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -191,6 +196,7 @@ const AboutJP = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
             <div className="col-span-12 sm:col-span-4">
@@ -200,6 +206,7 @@ const AboutJP = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
             <div className="col-span-12 sm:col-span-4">
@@ -209,6 +216,7 @@ const AboutJP = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
           </div>
@@ -264,6 +272,7 @@ const AboutEN = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -278,6 +287,7 @@ const AboutEN = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -292,6 +302,7 @@ const AboutEN = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -306,6 +317,7 @@ const AboutEN = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -324,6 +336,7 @@ const AboutEN = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -401,6 +414,7 @@ const AboutEN = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
             <div className="col-span-12 sm:col-span-4">
@@ -410,6 +424,7 @@ const AboutEN = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
             <div className="col-span-12 sm:col-span-4">
@@ -419,6 +434,7 @@ const AboutEN = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
           </div>
@@ -470,6 +486,7 @@ const AboutTH = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -483,6 +500,7 @@ const AboutTH = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -498,6 +516,7 @@ const AboutTH = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -513,6 +532,7 @@ const AboutTH = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -531,6 +551,7 @@ const AboutTH = () => {
                   alt="icon"
                   width="70"
                   height="70"
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -607,6 +628,7 @@ const AboutTH = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
             <div className="col-span-12 sm:col-span-4">
@@ -616,6 +638,7 @@ const AboutTH = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
             <div className="col-span-12 sm:col-span-4">
@@ -625,6 +648,7 @@ const AboutTH = () => {
                 width="400"
                 height="400"
                 className="w-full"
+                unoptimized
               />
             </div>
           </div>
@@ -652,6 +676,7 @@ export default function Home({ params }: { params: { lng: string } }) {
             alt="Blue Assistance"
             className="w-full"
             priority={true}
+            unoptimized
           />
         </div>
       </section>

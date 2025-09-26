@@ -20,6 +20,7 @@ export default function Cover({
           quality={80}
           alt="cover"
           priority={true}
+          unoptimized
         />
         <div className="container  mx-auto lg:block hidden">
           <div

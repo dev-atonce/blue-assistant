@@ -16,6 +16,7 @@ export default function CoverVisa({ pageName, prevPage, lng, home, img }: any) {
             width={1980}
             height={478}
             priority={true}
+            unoptimized
           ></Image>
         </div>
       </div>
