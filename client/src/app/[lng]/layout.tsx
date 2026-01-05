@@ -157,6 +157,7 @@ export default async function RootLayout({
             </NextIntlClientProvider>
           </body>
           <GoogleTagManager gtmId="GTM-MFH3RWL8" />
+          <GoogleTagManager gtmId="GTM-55WXXZXS" />
         </PageSettingProvider>
       </ConfigProvider>
     </html>
