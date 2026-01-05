@@ -86,6 +86,9 @@ export async function generateMetadata(
       canonical: "./",
     },
     icons: [{ rel: "icon", url: Favicon.src }],
+    verification: {
+      google: "ksJfjVzL5s4Y6zIQyeD4TEzwLeGd9C8k6d0CEZiDKQA",
+    },
   };
 }
 
