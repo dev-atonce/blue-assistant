@@ -23,8 +23,8 @@ const menuGroups = [
         label: "News & Activity",
         route: "",
         children: [
-          { label: "Blog", route: "/webpanel/blog" },
-          { label: "News", route: "/webpanel/news" },
+          { label: "VISA", route: "/webpanel/blog" },
+          { label: "JWD", route: "/webpanel/news" },
         ],
       },
       {

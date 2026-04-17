@@ -74,7 +74,7 @@ const FormBlog = ({
         </div>
         <div className="col-span-1">
           <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Module
+            Category
           </label>
           <select
             name="module"
@@ -82,9 +82,10 @@ const FormBlog = ({
             onChange={setItemState}
             className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           >
-            <option value="" disabled>Select module</option>
-            <option value="jmd">JMD</option>
-            <option value="visa">VISA</option>
+            <option value="" disabled>Select category</option>
+            <option value="news">News</option>
+            <option value="visa">Visa</option>
+            <option value="work_permit">Work Permit</option>
           </select>
         </div>
         <div className="col-span-2">

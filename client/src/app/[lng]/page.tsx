@@ -89,7 +89,9 @@ export default function Home({ params }: { params: { lng: string } }) {
           <ServiceSection lng={params.lng} />
         </div>
         <StrongServiceSection />
-        <NewsSection lng={params.lng} />
+        <NewsSection lng={params.lng} category="news"/>
+        <NewsSection lng={params.lng} category="visa"/>
+        <NewsSection lng={params.lng} category="work_permit"/>
         {/* @ts-ignore */}
         <ContactSection home={true} />
         <OtherSection />

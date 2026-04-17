@@ -45,7 +45,7 @@ const TableBlog = () => {
                 Created
               </th>
               <th className="px-4 py-4 font-medium text-black dark:text-white">
-                Module
+                Category
               </th>
               <th className="px-4 py-4 font-medium text-black dark:text-white">
                 Action
