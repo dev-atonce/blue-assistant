@@ -22,6 +22,11 @@ export default function LocationSection({ lng }: any) {
       jp: "プラチンブリ",
       en: "Prachinburi",
     },
+    p3: {
+      th: "กรุงเทพมหานคร",
+      jp: "バンコク",
+      en: "Bangkok",
+    },
   };
 
   const menuItem = [
@@ -43,6 +48,13 @@ export default function LocationSection({ lng }: any) {
           label: (
             // @ts-ignore
             <Link href="/prachinburi">{province?.p2[lng]}</Link>
+          ),
+        },
+        {
+          key: "3",
+          label: (
+            // @ts-ignore
+            <Link href="/bangkok">{province?.p3[lng]}</Link>
           ),
         },
       ],
