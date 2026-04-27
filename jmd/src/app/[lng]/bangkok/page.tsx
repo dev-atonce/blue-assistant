@@ -67,10 +67,25 @@ const ContentJP = () => {
                 </div>
               </div>
             </div>
+            <div className="flex flex-col items-start py-6 gap-3">
+              <Image
+                src="/img/thailand/M_gainfriends_2dbarcodes_BW.png"
+                alt="LINE QR Code"
+                width={150}
+                height={150}
+                className="rounded-lg border bg-white p-1"
+              />
+              {/* <a
+                href="https://line.me/ti/p/~@771xhwzh"
+                className="flex gap-1 items-center bg-[#3562AE] text-white py-2 px-2 rounded-lg hover:bg-[#FDBD59] justify-center"
+              >
+                <FaLine size={25} /> ADD LINE
+              </a> */}
+            </div>
             <div className="grid lg:grid-cols-12 gap-4 mt-6">
               <div className="col-span-4 font-bold">病院情報：</div>
               <div className="col-span-8">
-                バンコククリスチャン病院　Bangkok Christian Hospital
+                バンコククリスチャン病院　<br/>Bangkok Christian Hospital
               </div>
               <div className="col-span-4 font-bold">病院の住所</div>
               <div className="col-span-8">
@@ -142,6 +157,12 @@ export default function Work({ params }: { params: { lng: string } }) {
 
               {content}
             </div>
+            <a
+              href="https://line.me/ti/p/~@771xhwzh"
+              className="fixed right-10 bottom-22 w-20 h-20 border bg-[#3562AE] flex items-center justify-center rounded-full p-2 cursor-pointer text-white z-10 hover:scale-105 transition-all"
+            >
+              <SiLine size={30} />
+            </a>
           </div>
         </div>
       </div>
