@@ -33,6 +33,8 @@ const ContentJP = () => {
               imgs={[
                 "/img/thailand/BCH1.jpg",
                 "/img/thailand/BCH2.jpg",
+                "/img/thailand/Desk1.jpg",
+                "/img/thailand/Desk2.jpg",
               ]}
             />
           </div>
@@ -67,22 +69,15 @@ const ContentJP = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-start py-6 gap-3">
-              <Image
-                src="/img/thailand/M_gainfriends_2dbarcodes_BW.png"
-                alt="LINE QR Code"
-                width={150}
-                height={150}
-                className="rounded-lg border bg-white p-1"
-              />
-              {/* <a
+            <div className="flex py-6">
+              <a
                 href="https://line.me/ti/p/~@771xhwzh"
                 className="flex gap-1 items-center bg-[#3562AE] text-white py-2 px-2 rounded-lg hover:bg-[#FDBD59] justify-center"
               >
                 <FaLine size={25} /> ADD LINE
-              </a> */}
+              </a>
             </div>
-            <div className="grid lg:grid-cols-12 gap-4 mt-6">
+            <div className="grid lg:grid-cols-12 gap-4">
               <div className="col-span-4 font-bold">病院情報：</div>
               <div className="col-span-8">
                 バンコククリスチャン病院　<br/>Bangkok Christian Hospital
