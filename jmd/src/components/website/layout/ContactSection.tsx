@@ -12,7 +12,7 @@ export default function ContactSection() {
     reset,
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm();
 
   const onSubmit = async (data: any) => {
@@ -311,7 +311,7 @@ export default function ContactSection() {
                 </div>
                 <div className="w-full col-span-12 md:col-span-9">
                   <textarea
-                    {...register("detail", { required: true, maxLength: 100 })}
+                    {...register("detail", { required: true })}
                     rows={5}
                     placeholder={``}
                     className="w-full border rounded-md text-slate-500 focus:outline-blue-400 py-2 px-4"
@@ -321,14 +321,10 @@ export default function ContactSection() {
                       {t("validate.require")}
                     </p>
                   )}
-                  {errors?.detail?.type === "maxLength" && (
-                    <p className="text-xs text-red text-end">
-                      {t("validate.maxLenght", { maxLenght: 100 })}
-                    </p>
-                  )}
                   <button
-                    type="submit"
-                    className="border py-2 px-4 rounded-md bg-[#3562AE] text-white hover:bg-[#FDBD59] w-full md:w-fit"
+                    type="submit" 
+                    disabled={isSubmitting} 
+                    className="border py-2 px-4 rounded-md bg-[#3562AE] text-white hover:bg-[#FDBD59] w-full md:w-fit disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {t("send")}
                   </button>
