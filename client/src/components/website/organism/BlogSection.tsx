@@ -32,7 +32,7 @@ const BlogSection = ({ limit, home, type, lng, module, forPage}: BlogSectionProp
 
   useEffect(() => {
     fetchBlog(page, limit);
-  }, [page, limit]);
+  }, [page, limit, module, type]);
 
   return (
     <>
