@@ -119,7 +119,7 @@ export default function VisaWorkpermit({
         </div>
         {/* <AddressSection /> */}
         {/* @ts-ignore */}
-        <ContactSection home={false} />
+        <ContactSection home={false} visa={true} />
       </div>
     </>
   );

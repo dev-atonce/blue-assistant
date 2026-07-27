@@ -7,10 +7,11 @@ import { useTranslations } from "next-intl";
 
 interface ContactProps {
   home: boolean;
-  medical: boolean;
+  medical?: boolean;
+  visa?: boolean;
 }
 
-export default function ContactSection({ home, medical }: ContactProps) {
+export default function ContactSection({ home, medical, visa }: ContactProps) {
   const t = useTranslations("contact-form");
   const h = useTranslations("header");
   const {
@@ -126,66 +127,74 @@ export default function ContactSection({ home, medical }: ContactProps) {
                 </div>
                 <div className="col-span-12 md:col-span-9">
                   <ul>
-                    <li className="mb-3">
-                      <label htmlFor="type1">
-                        <input
-                          {...register("service", { required: true })}
-                          type="radio"
-                          id="type1"
-                          value="医療アシスタンス業務"
-                          className="me-2"
-                        />
-                        {t("option.1")}
-                      </label>
-                    </li>
-                    <li className="mb-3">
-                      <label htmlFor="type2">
-                        <input
-                          {...register("service", { required: true })}
-                          type="radio"
-                          id="type2"
-                          value="ジャパニーズメディカルデスク (JMD) - タイ"
-                          className="me-2"
-                        />
-                        {t("option.2")}
-                      </label>
-                    </li>
-                    <li className="mb-3">
-                      <label htmlFor="type3">
-                        <input
-                          {...register("service", { required: true })}
-                          type="radio"
-                          id="type3"
-                          value="ジャパニーズメディカルデスク (JMD) - ラオス"
-                          className="me-2"
-                        />
-                        {t("option.3")}
-                      </label>
-                    </li>
-                    <li className="mb-3">
-                      <label htmlFor="type4">
-                        <input
-                          {...register("service", { required: true })}
-                          type="radio"
-                          id="type4"
-                          value="ジャパニーズメディカルデスク (JMD) - ミャンマー"
-                          className="me-2"
-                        />
-                        {t("option.4")}
-                      </label>
-                    </li>
-                    <li className="mb-3">
-                      <label htmlFor="type5">
-                        <input
-                          {...register("service", { required: true })}
-                          type="radio"
-                          id="type5"
-                          value="ビザ＆ワークパーミット"
-                          className="me-2"
-                        />
-                        {t("option.5")}
-                      </label>
-                    </li>
+                    {!visa && (
+                      <li className="mb-3">
+                        <label htmlFor="type1">
+                          <input
+                            {...register("service", { required: true })}
+                            type="radio"
+                            id="type1"
+                            value="医療アシスタンス業務"
+                            className="me-2"
+                          />
+                          {t("option.1")}
+                        </label>
+                      </li>
+                    )}
+                    {!medical && !visa && (
+                      <>
+                        <li className="mb-3">
+                          <label htmlFor="type2">
+                            <input
+                              {...register("service", { required: true })}
+                              type="radio"
+                              id="type2"
+                              value="ジャパニーズメディカルデスク (JMD) - タイ"
+                              className="me-2"
+                            />
+                            {t("option.2")}
+                          </label>
+                        </li>
+                        <li className="mb-3">
+                          <label htmlFor="type3">
+                            <input
+                              {...register("service", { required: true })}
+                              type="radio"
+                              id="type3"
+                              value="ジャパニーズメディカルデスク (JMD) - ラオス"
+                              className="me-2"
+                            />
+                            {t("option.3")}
+                          </label>
+                        </li>
+                        <li className="mb-3">
+                          <label htmlFor="type4">
+                            <input
+                              {...register("service", { required: true })}
+                              type="radio"
+                              id="type4"
+                              value="ジャパニーズメディカルデスク (JMD) - ミャンマー"
+                              className="me-2"
+                            />
+                            {t("option.4")}
+                          </label>
+                        </li>
+                      </>
+                    )}
+                    {!medical && (
+                      <li className="mb-3">
+                        <label htmlFor="type5">
+                          <input
+                            {...register("service", { required: true })}
+                            type="radio"
+                            id="type5"
+                            value="ビザ＆ワークパーミット"
+                            className="me-2"
+                          />
+                          {t("option.5")}
+                        </label>
+                      </li>
+                    )}
                   </ul>
                   {errors?.service?.type === "required" && (
                     <p className="text-xs text-red text-end">
